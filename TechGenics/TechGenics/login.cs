@@ -15,27 +15,20 @@ namespace TechGenics
         public login_signup()
         {
             InitializeComponent();
-            //testing
+            
         }
 
         loading loadScreen = new loading();
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            //pnlLogin.Visible = false;
-            pnlSignUp.Visible = true;
-
-            timer1.Start();
-        }
-                               
-        private void button1_Click(object sender, EventArgs e)
+                                      
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             pnlLogin.Visible = true;
-            //pnlSignUp.Visible = false;
+            
             timer3.Start();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnMode_Click(object sender, EventArgs e)
         {
             if(btnMode.BackColor == Color.DarkGray)
             {
@@ -57,8 +50,8 @@ namespace TechGenics
             btnMode.Text = "Dark Mode";
 
             //login
-            userIcon.Image = Properties.Resources.user2_dark;
-            passIcon.Image = Properties.Resources.pass2_dark;
+            pboUserIcon.Image = Properties.Resources.user2_dark;
+            pboPassIcon.Image = Properties.Resources.pass2_dark;
             
             txtUsername.BackColor = Color.Black;
             txtUsername.ForeColor = Color.White;
@@ -88,8 +81,8 @@ namespace TechGenics
             btnMode.Text = "Light Mode";
 
             //login
-            userIcon.Image = Properties.Resources.uLightmode;
-            passIcon.Image = Properties.Resources.lightmode;
+            pboUserIcon.Image = Properties.Resources.uLightmode;
+            pboPassIcon.Image = Properties.Resources.lightmode;
           
             txtUsername.BackColor = Color.DarkGray;
             txtUsername.ForeColor = Color.Black;
@@ -111,11 +104,6 @@ namespace TechGenics
             txtSCPass.ForeColor = Color.Black;
         }
                         
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            //txtUsername.Clear();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -124,7 +112,7 @@ namespace TechGenics
             
         }
 
-        private void txtUsername_Click_1(object sender, EventArgs e)
+        private void txtUsername_Click(object sender, EventArgs e)
         {
             txtUsername.Clear();
         }
@@ -186,6 +174,47 @@ namespace TechGenics
             txtPassword.Clear();
             txtPassword.UseSystemPasswordChar = true;
         }
+
+        
+        private void lblSignUp_Click(object sender, EventArgs e)
+        {
+            pnlSignUp.Visible = true;
+
+            timer1.Start();
+        }
+
+        private void txtFirst_Click(object sender, EventArgs e)
+        {
+            txtFirst.Clear();
+        }
+
+        private void txtLast_Click(object sender, EventArgs e)
+        {
+            txtLast.Clear();
+        }
+
+        private void txtSUser_Click(object sender, EventArgs e)
+        {
+            txtSUser.Clear();
+        }
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+            txtEmail.Clear();
+        }
+
+        private void txtSPass_Click(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void txtSCPass_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
 
         //backend
     }

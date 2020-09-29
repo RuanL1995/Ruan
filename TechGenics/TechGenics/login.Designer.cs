@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblForgotPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSignUp = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.passIcon = new System.Windows.Forms.PictureBox();
-            this.userIcon = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pboPassIcon = new System.Windows.Forms.PictureBox();
+            this.pboUserIcon = new System.Windows.Forms.PictureBox();
+            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,20 +53,20 @@
             this.txtSCPass = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlSignUp = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.txtSPass = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pboLogoSignUp = new System.Windows.Forms.PictureBox();
             this.btnMode = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.pnlLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboUserIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.pnlSignUp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -89,16 +89,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "_________________________";
             // 
-            // label3
+            // lblForgotPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label3.Location = new System.Drawing.Point(124, 342);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Forgot Password";
+            this.lblForgotPassword.AutoSize = true;
+            this.lblForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPassword.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblForgotPassword.Location = new System.Drawing.Point(124, 342);
+            this.lblForgotPassword.Name = "lblForgotPassword";
+            this.lblForgotPassword.Size = new System.Drawing.Size(138, 18);
+            this.lblForgotPassword.TabIndex = 9;
+            this.lblForgotPassword.Text = "Forgot Password";
             // 
             // btnLogin
             // 
@@ -126,66 +126,66 @@
             this.txtUsername.Size = new System.Drawing.Size(115, 19);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.Text = "Username";
-            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click_1);
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
-            // label4
+            // lblSignUp
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label4.Location = new System.Drawing.Point(155, 435);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 18);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Sign Up";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblSignUp.AutoSize = true;
+            this.lblSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUp.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblSignUp.Location = new System.Drawing.Point(155, 435);
+            this.lblSignUp.Name = "lblSignUp";
+            this.lblSignUp.Size = new System.Drawing.Size(67, 18);
+            this.lblSignUp.TabIndex = 10;
+            this.lblSignUp.Text = "Sign Up";
+            this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
             // 
             // pnlLogin
             // 
-            this.pnlLogin.Controls.Add(this.passIcon);
-            this.pnlLogin.Controls.Add(this.userIcon);
-            this.pnlLogin.Controls.Add(this.picLogo);
+            this.pnlLogin.Controls.Add(this.pboPassIcon);
+            this.pnlLogin.Controls.Add(this.pboUserIcon);
+            this.pnlLogin.Controls.Add(this.pboLogo);
             this.pnlLogin.Controls.Add(this.txtPassword);
-            this.pnlLogin.Controls.Add(this.label4);
+            this.pnlLogin.Controls.Add(this.lblSignUp);
             this.pnlLogin.Controls.Add(this.txtUsername);
             this.pnlLogin.Controls.Add(this.btnLogin);
-            this.pnlLogin.Controls.Add(this.label3);
+            this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(336, 85);
+            this.pnlLogin.Location = new System.Drawing.Point(330, 82);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
             // 
-            // passIcon
+            // pboPassIcon
             // 
-            this.passIcon.Image = global::TechGenics.Properties.Resources.pass2_dark;
-            this.passIcon.Location = new System.Drawing.Point(73, 263);
-            this.passIcon.Name = "passIcon";
-            this.passIcon.Size = new System.Drawing.Size(42, 36);
-            this.passIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.passIcon.TabIndex = 14;
-            this.passIcon.TabStop = false;
+            this.pboPassIcon.Image = global::TechGenics.Properties.Resources.pass2_dark;
+            this.pboPassIcon.Location = new System.Drawing.Point(73, 263);
+            this.pboPassIcon.Name = "pboPassIcon";
+            this.pboPassIcon.Size = new System.Drawing.Size(42, 36);
+            this.pboPassIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboPassIcon.TabIndex = 14;
+            this.pboPassIcon.TabStop = false;
             // 
-            // userIcon
+            // pboUserIcon
             // 
-            this.userIcon.Image = global::TechGenics.Properties.Resources.user2_dark;
-            this.userIcon.Location = new System.Drawing.Point(73, 222);
-            this.userIcon.Name = "userIcon";
-            this.userIcon.Size = new System.Drawing.Size(42, 36);
-            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userIcon.TabIndex = 13;
-            this.userIcon.TabStop = false;
+            this.pboUserIcon.Image = global::TechGenics.Properties.Resources.user2_dark;
+            this.pboUserIcon.Location = new System.Drawing.Point(73, 222);
+            this.pboUserIcon.Name = "pboUserIcon";
+            this.pboUserIcon.Size = new System.Drawing.Size(42, 36);
+            this.pboUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboUserIcon.TabIndex = 13;
+            this.pboUserIcon.TabStop = false;
             // 
-            // picLogo
+            // pboLogo
             // 
-            this.picLogo.Image = global::TechGenics.Properties.Resources.logo2;
-            this.picLogo.Location = new System.Drawing.Point(111, 41);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(153, 145);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 12;
-            this.picLogo.TabStop = false;
+            this.pboLogo.Image = global::TechGenics.Properties.Resources.logo2;
+            this.pboLogo.Location = new System.Drawing.Point(111, 41);
+            this.pboLogo.Name = "pboLogo";
+            this.pboLogo.Size = new System.Drawing.Size(153, 145);
+            this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboLogo.TabIndex = 12;
+            this.pboLogo.TabStop = false;
             // 
             // txtPassword
             // 
@@ -199,7 +199,6 @@
             this.txtPassword.TabIndex = 11;
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnRegister
             // 
@@ -214,7 +213,7 @@
             this.btnRegister.TabIndex = 8;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label5
             // 
@@ -237,6 +236,7 @@
             this.txtFirst.Size = new System.Drawing.Size(115, 19);
             this.txtFirst.TabIndex = 12;
             this.txtFirst.Text = "First Name";
+            this.txtFirst.Click += new System.EventHandler(this.txtFirst_Click);
             // 
             // label6
             // 
@@ -259,6 +259,7 @@
             this.txtLast.Size = new System.Drawing.Size(115, 19);
             this.txtLast.TabIndex = 14;
             this.txtLast.Text = "Surname";
+            this.txtLast.Click += new System.EventHandler(this.txtLast_Click);
             // 
             // label7
             // 
@@ -281,6 +282,7 @@
             this.txtEmail.Size = new System.Drawing.Size(115, 19);
             this.txtEmail.TabIndex = 16;
             this.txtEmail.Text = "Email";
+            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
             // label8
             // 
@@ -303,6 +305,7 @@
             this.txtSUser.Size = new System.Drawing.Size(115, 19);
             this.txtSUser.TabIndex = 18;
             this.txtSUser.Text = "Username";
+            this.txtSUser.Click += new System.EventHandler(this.txtSUser_Click);
             // 
             // label10
             // 
@@ -325,6 +328,7 @@
             this.txtSCPass.Size = new System.Drawing.Size(139, 19);
             this.txtSCPass.TabIndex = 20;
             this.txtSCPass.Text = "Confirm Password";
+            this.txtSCPass.TextChanged += new System.EventHandler(this.txtSCPass_TextChanged);
             // 
             // label9
             // 
@@ -338,9 +342,9 @@
             // 
             // pnlSignUp
             // 
-            this.pnlSignUp.Controls.Add(this.label11);
+            this.pnlSignUp.Controls.Add(this.lblTitle);
             this.pnlSignUp.Controls.Add(this.txtSPass);
-            this.pnlSignUp.Controls.Add(this.pictureBox4);
+            this.pnlSignUp.Controls.Add(this.pboLogoSignUp);
             this.pnlSignUp.Controls.Add(this.label9);
             this.pnlSignUp.Controls.Add(this.txtSCPass);
             this.pnlSignUp.Controls.Add(this.label10);
@@ -359,16 +363,16 @@
             this.pnlSignUp.TabIndex = 12;
             this.pnlSignUp.Visible = false;
             // 
-            // label11
+            // lblTitle
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label11.Location = new System.Drawing.Point(166, 77);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 33);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Sign Up";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblTitle.Location = new System.Drawing.Point(166, 77);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(125, 33);
+            this.lblTitle.TabIndex = 24;
+            this.lblTitle.Text = "Sign Up";
             // 
             // txtSPass
             // 
@@ -381,16 +385,17 @@
             this.txtSPass.Size = new System.Drawing.Size(139, 19);
             this.txtSPass.TabIndex = 23;
             this.txtSPass.Text = "Password";
+            this.txtSPass.Click += new System.EventHandler(this.txtSPass_Click);
             // 
-            // pictureBox4
+            // pboLogoSignUp
             // 
-            this.pictureBox4.Image = global::TechGenics.Properties.Resources.logo2;
-            this.pictureBox4.Location = new System.Drawing.Point(28, 64);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 77);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 22;
-            this.pictureBox4.TabStop = false;
+            this.pboLogoSignUp.Image = global::TechGenics.Properties.Resources.logo2;
+            this.pboLogoSignUp.Location = new System.Drawing.Point(28, 64);
+            this.pboLogoSignUp.Name = "pboLogoSignUp";
+            this.pboLogoSignUp.Size = new System.Drawing.Size(100, 77);
+            this.pboLogoSignUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboLogoSignUp.TabIndex = 22;
+            this.pboLogoSignUp.TabStop = false;
             // 
             // btnMode
             // 
@@ -405,7 +410,7 @@
             this.btnMode.TabIndex = 15;
             this.btnMode.Text = "Dark Mode";
             this.btnMode.UseVisualStyleBackColor = false;
-            this.btnMode.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
             // 
             // timer1
             // 
@@ -443,12 +448,12 @@
             this.Text = "Form1";
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboUserIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,10 +461,10 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSignUp;
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label label5;
@@ -475,17 +480,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pnlSignUp;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pboLogo;
+        private System.Windows.Forms.PictureBox pboLogoSignUp;
         private System.Windows.Forms.TextBox txtSPass;
         private System.Windows.Forms.Button btnMode;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
-        private System.Windows.Forms.PictureBox passIcon;
-        private System.Windows.Forms.PictureBox userIcon;
+        private System.Windows.Forms.PictureBox pboPassIcon;
+        private System.Windows.Forms.PictureBox pboUserIcon;
     }
 }
 
