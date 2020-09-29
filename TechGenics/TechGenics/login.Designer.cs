@@ -152,7 +152,7 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(330, 82);
+            this.pnlLogin.Location = new System.Drawing.Point(333, 85);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
@@ -328,7 +328,7 @@
             this.txtSCPass.Size = new System.Drawing.Size(139, 19);
             this.txtSCPass.TabIndex = 20;
             this.txtSCPass.Text = "Confirm Password";
-            this.txtSCPass.TextChanged += new System.EventHandler(this.txtSCPass_TextChanged);
+            this.txtSCPass.Click += new System.EventHandler(this.txtSCPass_Click);
             // 
             // label9
             // 

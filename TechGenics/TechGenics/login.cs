@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using Microsoft.VisualBasic;
 
 namespace TechGenics
 {
@@ -20,12 +22,61 @@ namespace TechGenics
 
         loading loadScreen = new loading();
 
+        //email info
+        public string emailAddress = "techGenics624@gmail.com";
+        public string emailPassword = "@ITRI624";
+        public string emailSubject = "Welcome to TechGenics";
+        public string validationCode;
+        public string userName;
+        
                                       
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            userName = txtFirst.Text;
+
             pnlLogin.Visible = true;
+            pnlLogin.Enabled = false;
             
             timer3.Start();
+
+
+            //send email
+            Random random = new Random();
+            validationCode = random.Next(0, 1000).ToString();
+
+            using (MailMessage mail = new MailMessage())
+            {
+                try
+                {
+                    //MailMessage mail = new MailMessage();
+                    SmtpClient smpt = new SmtpClient("smtp.gmail.com", 587);
+                    mail.From = new MailAddress(emailAddress);
+                    mail.To.Add(new MailAddress(txtEmail.Text));
+                    mail.Subject = emailSubject;
+                    mail.Body = "Hello " + userName + ", \n\n " + "Please enter the following code before proceeding to Login." + "\n" + validationCode;
+
+                    smpt.Port = 587;
+                    smpt.Credentials = new System.Net.NetworkCredential(emailAddress, emailPassword);
+                    smpt.EnableSsl = true;
+                    smpt.Send(mail);
+
+                    //popup saying email has been sent
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            //inputBox for email validate
+            string userCode = Interaction.InputBox("Enter Code", "Validation");
+            if (userCode == validationCode)
+            {
+                pnlLogin.Enabled = true;
+            }
+            
         }
 
         private void btnMode_Click(object sender, EventArgs e)
@@ -209,7 +260,7 @@ namespace TechGenics
             txtPassword.UseSystemPasswordChar = true;
         }
 
-        private void txtSCPass_TextChanged(object sender, EventArgs e)
+        private void txtSCPass_Click(object sender, EventArgs e)
         {
             txtPassword.Clear();
             txtPassword.UseSystemPasswordChar = true;
