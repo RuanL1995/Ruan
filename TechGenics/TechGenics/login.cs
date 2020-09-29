@@ -15,8 +15,7 @@ namespace TechGenics
         public login_signup()
         {
             InitializeComponent();
-            //test push
-            //test push Ruan 2
+            
         }
 
         loading loadScreen = new loading();

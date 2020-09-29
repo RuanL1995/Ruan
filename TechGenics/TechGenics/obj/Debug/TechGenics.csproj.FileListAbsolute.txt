@@ -9,3 +9,14 @@ C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineer
 C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
 C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.loading.resources
 C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.main.resources
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe.config
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.main.resources
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.Properties.Resources.resources
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.loading.resources
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.GenerateResource.cache
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
