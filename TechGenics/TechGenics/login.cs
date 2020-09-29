@@ -27,12 +27,12 @@ namespace TechGenics
         public string emailPassword = "@ITRI624";
         public string emailSubject = "Welcome to TechGenics";
         public string validationCode;
-        public string userName;
+        public string userFirstName;
         
                                       
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            userName = txtFirst.Text;
+            userFirstName = txtFirst.Text;
 
             pnlLogin.Visible = true;
             pnlLogin.Enabled = false;
@@ -53,16 +53,13 @@ namespace TechGenics
                     mail.From = new MailAddress(emailAddress);
                     mail.To.Add(new MailAddress(txtEmail.Text));
                     mail.Subject = emailSubject;
-                    mail.Body = "Hello " + userName + ", \n\n " + "Please enter the following code before proceeding to Login." + "\n" + validationCode;
+                    mail.Body = "Hello " + userFirstName + ", \n\n" + "Please enter the following code before proceeding to Login." + "\n" + validationCode;
 
                     smpt.Port = 587;
                     smpt.Credentials = new System.Net.NetworkCredential(emailAddress, emailPassword);
                     smpt.EnableSsl = true;
                     smpt.Send(mail);
-
-                    //popup saying email has been sent
-
-
+                                        
                 }
                 catch (Exception ex)
                 {
@@ -76,6 +73,8 @@ namespace TechGenics
             {
                 pnlLogin.Enabled = true;
             }
+
+          
             
         }
 
@@ -157,6 +156,10 @@ namespace TechGenics
                         
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //check valid login 
+
+
+
             this.Hide();
             this.Enabled = false;
             loadScreen.Show();
@@ -266,7 +269,15 @@ namespace TechGenics
             txtPassword.UseSystemPasswordChar = true;
         }
 
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            //To be added later
+            
+        }
 
-        //backend
+        private void showToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
     }
 }
