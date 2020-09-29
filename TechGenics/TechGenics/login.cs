@@ -15,6 +15,7 @@ namespace TechGenics
         public login_signup()
         {
             InitializeComponent();
+            //test push
         }
 
         loading loadScreen = new loading();
