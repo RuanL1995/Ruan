@@ -16,7 +16,6 @@ namespace TechGenics
         {
             InitializeComponent();
             //test push
-            //test push Ruan 2
         }
 
         loading loadScreen = new loading();
