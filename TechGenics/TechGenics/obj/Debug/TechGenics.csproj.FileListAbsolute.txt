@@ -1,0 +1,11 @@
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\bin\Debug\TechGenics.exe.config
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\bin\Debug\TechGenics.exe
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.Properties.Resources.resources
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.GenerateResource.cache
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.exe
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.loading.resources
+C:\2020\NWU\Hons\Modules\Second Semester\ITRI 624 - Information Systems Engineering\Ruan-master\Ruan-master\TechGenics\TechGenics\obj\Debug\TechGenics.main.resources
