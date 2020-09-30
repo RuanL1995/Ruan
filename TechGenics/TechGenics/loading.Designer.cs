@@ -193,6 +193,7 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "0 %";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+           
             // 
             // timer1
             // 

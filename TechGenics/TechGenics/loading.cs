@@ -28,23 +28,15 @@ namespace TechGenics
         int loadingSpeed = 2;
         float initialPercentage = 0;
 
+        frmMainAdmin admin = new frmMainAdmin();
+
         public loading()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 7, 7));
         }
-
-       
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            
-        }
-
+             
+     
         private void loading_Load_1(object sender, EventArgs e)
         {
             timer1.Start();
@@ -144,7 +136,10 @@ namespace TechGenics
             {
                 System.Threading.Thread.Sleep(2000);
                 this.Close();
+                admin.Show();
             }
         }
+
+        
     }
 }

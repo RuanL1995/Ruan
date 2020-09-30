@@ -14,10 +14,10 @@ C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\bin\Debug\TechGe
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
-C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.main.resources
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.Properties.Resources.resources
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.loading.resources
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.GenerateResource.cache
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CoreCompileInputs.cache
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmMainAdmin.resources
