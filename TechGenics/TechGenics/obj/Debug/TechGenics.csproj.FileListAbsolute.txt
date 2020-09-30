@@ -20,3 +20,4 @@ C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGe
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.GenerateResource.cache
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CoreCompileInputs.cache
