@@ -22,7 +22,7 @@ namespace TechGenics
         private void customDesign()
         {
             pnlPhasesSub.Visible = false;
-            //pnlDiagramsSub.Visible = false;
+            pnlDiagramsSub.Visible = false;
         }
 
         //hide SubMenus
@@ -33,10 +33,10 @@ namespace TechGenics
                 pnlPhasesSub.Visible = false;
             }
 
-            /*if (pnlDiagramsSub.Visible == true)
+            if (pnlDiagramsSub.Visible == true)
             {
                 pnlDiagramsSub.Visible = false;
-            }*/
+            }
 
         }
 
@@ -53,19 +53,6 @@ namespace TechGenics
                 pnlSideMenu.Visible = false;
             }
         }
-
-        private void btnPhases_Click(object sender, EventArgs e)
-        {
-            showSubs(pnlPhasesSub);
-        }
-
-        private void btnInitiation_Click(object sender, EventArgs e)
-        {
-            //openChildForm(new formName());
-
-            hideSubs();
-        }
-
 
         //child forms
         private Form frmActive = null;
@@ -86,6 +73,20 @@ namespace TechGenics
             frmChild.Show();
         }
 
+        //buttons
+        //phases menu
+        private void btnPhases_Click(object sender, EventArgs e)
+        {
+            showSubs(pnlPhasesSub);
+        }
+
+        private void btnInitiation_Click(object sender, EventArgs e)
+        {
+            //openChildForm(new formName());
+
+            hideSubs();
+        }           
+
         private void btnPlanning_Click(object sender, EventArgs e)
         {
             hideSubs();
@@ -101,14 +102,13 @@ namespace TechGenics
             hideSubs();
         }
 
+        //diagrams menu
         private void btnDiagrams_Click(object sender, EventArgs e)
         {
-            //showSubs(pnlDiagramsSub);
+            showSubs(pnlDiagramsSub);
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
+        
 
-        }
     }
 }
