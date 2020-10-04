@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechGenics", "TechGenics\Te
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TGDBProj", "TGDBProj\TGDBProj.sqlproj", "{1C6E5DD1-678F-49EF-BF4C-50F5FEF1860B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RGSetup", "RGSetup\RGSetup.vdproj", "{7157EA39-6ED2-4494-88D7-50C1BCF693C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,8 @@ Global
 		{1C6E5DD1-678F-49EF-BF4C-50F5FEF1860B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C6E5DD1-678F-49EF-BF4C-50F5FEF1860B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C6E5DD1-678F-49EF-BF4C-50F5FEF1860B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7157EA39-6ED2-4494-88D7-50C1BCF693C8}.Debug|Any CPU.ActiveCfg = Debug
+		{7157EA39-6ED2-4494-88D7-50C1BCF693C8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
