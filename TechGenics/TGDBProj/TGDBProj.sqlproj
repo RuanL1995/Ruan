@@ -62,4 +62,7 @@
     <Folder Include="dbo\Triggers" />
     <Folder Include="dbo\Views" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\tblTest.sql" />
+  </ItemGroup>
 </Project>
