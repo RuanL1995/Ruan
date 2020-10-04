@@ -1,9 +1,0 @@
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\bin\Debug\TGDB.dacpac
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\bin\Debug\TGDB.dll
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\bin\Debug\TGDB.pdb
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\obj\Debug\Model.xml
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\obj\Debug\refactor.xml
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\obj\Debug\postdeploy.sql
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\obj\Debug\predeploy.sql
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\obj\Debug\TGDB.dll
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDB\obj\Debug\TGDB.pdb
