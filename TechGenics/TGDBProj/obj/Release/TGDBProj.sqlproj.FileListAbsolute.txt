@@ -1,0 +1,9 @@
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\bin\Release\TGDBProj.dacpac
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\bin\Release\TGDBProj.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\bin\Release\TGDBProj.pdb
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Release\Model.xml
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Release\refactor.xml
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Release\postdeploy.sql
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Release\predeploy.sql
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Release\TGDBProj.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Release\TGDBProj.pdb
