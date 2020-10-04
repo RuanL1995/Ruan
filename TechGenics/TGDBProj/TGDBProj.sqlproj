@@ -67,6 +67,6 @@
     <Build Include="dbo\Tables\tblTest.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Publish\TGDBProj.publish.xml" />
+    <None Include="Publish\TGDB.publish.publish.xml" />
   </ItemGroup>
 </Project>
