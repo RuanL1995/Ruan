@@ -6,7 +6,7 @@
     <Name>TGDB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{28491632-7db6-408b-86c4-31c8d6230b55}</ProjectGuid>
+    <ProjectGuid>{dd6bf802-24b2-4e4e-b7c4-a9f1208c30ac}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
