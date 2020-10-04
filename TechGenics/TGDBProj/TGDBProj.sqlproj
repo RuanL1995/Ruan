@@ -61,8 +61,12 @@
     <Folder Include="dbo\Stored Procedures" />
     <Folder Include="dbo\Triggers" />
     <Folder Include="dbo\Views" />
+    <Folder Include="Publish" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\tblTest.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Publish\TGDBProj.publish.xml" />
   </ItemGroup>
 </Project>
