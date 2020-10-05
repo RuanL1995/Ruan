@@ -10,3 +10,9 @@ C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb
+C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\bin\Debug\TGDBProj.dacpac
+C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\bin\Debug\TGDBProj.dll
+C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\bin\Debug\TGDBProj.pdb
+C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
+C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
+C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb

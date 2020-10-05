@@ -65,8 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\tblTest.sql" />
+    <Build Include="dbo\Tables\tblUser.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TGDBProj.refactorlog" />
   </ItemGroup>
 </Project>
