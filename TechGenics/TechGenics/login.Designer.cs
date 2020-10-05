@@ -153,10 +153,11 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(333, 85);
+            this.pnlLogin.Location = new System.Drawing.Point(325, 84);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
+            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
             // pboPassIcon
             // 
@@ -358,7 +359,7 @@
             this.pnlSignUp.Controls.Add(this.txtFirst);
             this.pnlSignUp.Controls.Add(this.label5);
             this.pnlSignUp.Controls.Add(this.btnRegister);
-            this.pnlSignUp.Location = new System.Drawing.Point(333, 85);
+            this.pnlSignUp.Location = new System.Drawing.Point(328, 81);
             this.pnlSignUp.Name = "pnlSignUp";
             this.pnlSignUp.Size = new System.Drawing.Size(379, 549);
             this.pnlSignUp.TabIndex = 12;

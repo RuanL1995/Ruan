@@ -4,3 +4,9 @@ C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj.dacpac
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj.dll
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj.pdb
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
+C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb

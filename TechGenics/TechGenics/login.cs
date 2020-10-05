@@ -44,7 +44,7 @@ namespace TechGenics
             Random random = new Random();
             validationCode = random.Next(0, 1000).ToString();
 
-            using (MailMessage mail = new MailMessage())
+            /*using (MailMessage mail = new MailMessage())
             {
                 try
                 {
@@ -61,7 +61,8 @@ namespace TechGenics
                     smpt.Credentials = new System.Net.NetworkCredential(emailAddress, emailPassword);
                     smpt.EnableSsl = true;
                     smpt.Send(mail);
-                                        
+                    pnlLogin.Enabled = true;
+
                 }
                 catch (Exception ex)
                 {
@@ -69,12 +70,12 @@ namespace TechGenics
                 }
             }
 
-            //inputBox for email validate
+            inputBox for email validate
             string userCode = Interaction.InputBox("Enter Code", "Validation");
             if (userCode == validationCode)
             {
                 pnlLogin.Enabled = true;
-            }
+            }*/
 
           
             
@@ -280,6 +281,11 @@ namespace TechGenics
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Show();
+        }
+
+        private void pnlLogin_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
