@@ -21,3 +21,15 @@ C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGe
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CoreCompileInputs.cache
 C:\Users\Ness\Source\Repos\RuanL1995\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmMainAdmin.resources
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe.config
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmMainAdmin.resources
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.Properties.Resources.resources
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.loading.resources
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.GenerateResource.cache
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CoreCompileInputs.cache
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe
+C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
