@@ -12,7 +12,10 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 	SELECT 
 		U.UserId,
 		U.UserName,
-		U.UserPassword	
+		U.UserPassword,	
+		U.FirstName,
+		U.SurName,
+		U.Email
 	FROM 
 		tblUser U  
 	WHERE U.UserName = @UserName			

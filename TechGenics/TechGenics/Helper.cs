@@ -12,7 +12,7 @@ namespace TechGenics
     {
         public static string CnnVal(string name)
         {
-            //Gets local server instance and replaces PLACEHOLDEr in app.config with local server info
+            //Gets local server instance and replaces PLACEHOLDER in app.config with local server info
             string svrInstance = "";
 
             RegistryView registryView = Environment.Is64BitOperatingSystem ? RegistryView.Registry64 : RegistryView.Registry32;

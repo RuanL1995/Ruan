@@ -29,7 +29,7 @@ namespace TechGenics
         public string userFirstName;
 
         //User model
-        List<User> users = new List<User>();
+        List<User> _users = new List<User>();
         #endregion
 
         /// <summary>
@@ -128,33 +128,47 @@ namespace TechGenics
         /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Finds entries in list where username = txtUsername.Text
-            DataAccess db = new DataAccess();
-            users = db.GetUsers(txtUsername.Text);
-
-            //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a paint to work with
-            DataSet ds = new DataSet();
-            ds = ListToDataSet.ToDataSet(users);
-
-            //Checks if datatable is empty, if it's not empty it will contain one row because it only returns the username from the textbox
-            if (ds.Tables[0].Rows.Count == 0)
+            try
             {
-                MessageBox.Show("This user name does not exist.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //Finds entries in list where username = txtUsername.Text
+                DataAccess db = new DataAccess();
+                _users = db.GetUsers(txtUsername.Text);
+
+                //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a pain to work with
+                DataSet ds = new DataSet();
+                ds = ListToDataSet.ToDataSet(_users);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    //Checks if user name and password combination exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
+                    if (ds.Tables[0].Rows[0]["UserName"].ToString() != txtUsername.Text || ds.Tables[0].Rows[0]["UserPassword"].ToString() != txtPassword.Text)
+                    {
+                        MessageBox.Show("The username or password is incorrect.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtUsername.Text && ds.Tables[0].Rows[0]["UserPassword"].ToString() == txtPassword.Text)
+                    {
+                        MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("The username or password is incorrect.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+                //Can also use List<T> in this case "user" as a datasource for anything
+                //cmbTest.Refresh();
+                //cmbTest.DataSource = _users;
+                //cmbTest.DisplayMember = "FullInfo";
+                //cmbTest.ValueMember = "UserId";
+
+                this.Hide();
+                this.Enabled = false;
+                loadScreen.Show();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            //Can also use List<T> in this case "user" as a datasource for anything
-            //cmbTest.Refresh();
-            //cmbTest.DataSource = users;
-            //cmbTest.DisplayMember = "FullInfo";
-            //cmbTest.ValueMember = "UserId";
-
-            this.Hide();
-            this.Enabled = false;
-            loadScreen.Show();
+                MessageBox.Show("An erros has occurred while trying to login." + ex.Message);
+            }           
         }
 
         /// <summary>
@@ -164,50 +178,89 @@ namespace TechGenics
         /// <param name="e"></param>
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            userFirstName = txtFirst.Text;
-
-            pnlLogin.Visible = true;
-            pnlLogin.Enabled = false;
-
-            timer3.Start();
-
-
-            //send email
-            Random random = new Random();
-            validationCode = random.Next(0, 1000).ToString();
-
-            /*using (MailMessage mail = new MailMessage())
+            try
             {
-                try
+                DataAccess db = new DataAccess();
+                _users = db.GetUsers(txtSUser.Text);
+
+                //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a pain to work with
+                DataSet ds = new DataSet();
+                ds = ListToDataSet.ToDataSet(_users);
+
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    //MailMessage mail = new MailMessage();
-                    SmtpClient smpt = new SmtpClient("smtp.gmail.com", 587);
-                    mail.From = new MailAddress(emailAddress);
-                    mail.To.Add(new MailAddress(txtEmail.Text));
-                    mail.Subject = emailSubject;
-                    mail.Body = "Hello " + userFirstName + ", \n\n" + "Please enter the following code before proceeding to Login." + "\n" + validationCode;
+                    //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
+                    if (ds.Tables[0].Rows[0]["UserName"].ToString() != txtSUser.Text)
+                    {
+                        //Inserts a new user when register is clicked
+                        db.InsertUser(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
+                        txtUsername.Text = "";
+                        txtPassword.Text = "";
+                        txtFirst.Text = "";
+                        txtLast.Text = "";
+                        txtEmail.Text = "";
+                    }
+                    else if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
+                    {
+                        MessageBox.Show("The username already exists", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                
 
-                    
 
-                    smpt.Port = 587;
-                    smpt.Credentials = new System.Net.NetworkCredential(emailAddress, emailPassword);
-                    smpt.EnableSsl = true;
-                    smpt.Send(mail);
+
+
+
+
+                //userFirstName = txtFirst.Text;
+
+                pnlLogin.Visible = true;
+                pnlLogin.Enabled = false;
+
+                timer3.Start();
+
+
+                ////send email
+                //Random random = new Random();
+                //validationCode = random.Next(0, 1000).ToString();
+
+                /*using (MailMessage mail = new MailMessage())
+                {
+                    try
+                    {
+                        //MailMessage mail = new MailMessage();
+                        SmtpClient smpt = new SmtpClient("smtp.gmail.com", 587);
+                        mail.From = new MailAddress(emailAddress);
+                        mail.To.Add(new MailAddress(txtEmail.Text));
+                        mail.Subject = emailSubject;
+                        mail.Body = "Hello " + userFirstName + ", \n\n" + "Please enter the following code before proceeding to Login." + "\n" + validationCode;
+
+
+
+                        smpt.Port = 587;
+                        smpt.Credentials = new System.Net.NetworkCredential(emailAddress, emailPassword);
+                        smpt.EnableSsl = true;
+                        smpt.Send(mail);
+                        pnlLogin.Enabled = true;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+                inputBox for email validate
+                string userCode = Interaction.InputBox("Enter Code", "Validation");
+                if (userCode == validationCode)
+                {
                     pnlLogin.Enabled = true;
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                }*/
             }
-
-            inputBox for email validate
-            string userCode = Interaction.InputBox("Enter Code", "Validation");
-            if (userCode == validationCode)
+            catch (Exception ex)
             {
-                pnlLogin.Enabled = true;
-            }*/
+                MessageBox.Show("An erros has occurred while trying to register." + ex.Message);
+            }           
         }
 
         /// <summary>

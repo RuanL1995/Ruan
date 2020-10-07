@@ -11,6 +11,9 @@ namespace TechGenics.Models
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string UserPassword { get; set; }
+        public string FirstName { get; set; }
+        public string SurName { get; set; }
+        public string Email { get; set; }
 
         //Combines User properties into one combo property
         public string FullInfo
@@ -18,6 +21,14 @@ namespace TechGenics.Models
             get 
             {
                 return $"{UserName} {UserPassword}";
+            }
+        }
+
+        public string FullInfoIdentity
+        {
+            get
+            {
+                return $"{FirstName} {SurName} {Email}";
             }
         }
     }
