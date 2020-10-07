@@ -125,9 +125,10 @@
             this.txtUsername.Location = new System.Drawing.Point(121, 226);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(115, 19);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 15;
             this.txtUsername.Text = "Username";
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave_1);
             // 
             // lblSignUp
             // 
@@ -153,7 +154,7 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(329, 82);
+            this.pnlLogin.Location = new System.Drawing.Point(328, 81);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
@@ -201,6 +202,8 @@
             this.txtPassword.TabIndex = 11;
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // btnRegister
             // 
@@ -239,6 +242,7 @@
             this.txtFirst.TabIndex = 12;
             this.txtFirst.Text = "First Name";
             this.txtFirst.Click += new System.EventHandler(this.txtFirst_Click);
+            this.txtFirst.Leave += new System.EventHandler(this.txtFirst_Leave);
             // 
             // label6
             // 
@@ -262,6 +266,7 @@
             this.txtLast.TabIndex = 14;
             this.txtLast.Text = "Surname";
             this.txtLast.Click += new System.EventHandler(this.txtLast_Click);
+            this.txtLast.Leave += new System.EventHandler(this.txtLast_Leave);
             // 
             // label7
             // 
@@ -285,6 +290,7 @@
             this.txtEmail.TabIndex = 16;
             this.txtEmail.Text = "Email";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // label8
             // 
@@ -308,6 +314,7 @@
             this.txtSUser.TabIndex = 18;
             this.txtSUser.Text = "Username";
             this.txtSUser.Click += new System.EventHandler(this.txtSUser_Click);
+            this.txtSUser.Leave += new System.EventHandler(this.txtSUser_Leave);
             // 
             // label10
             // 
@@ -331,6 +338,8 @@
             this.txtSCPass.TabIndex = 20;
             this.txtSCPass.Text = "Confirm Password";
             this.txtSCPass.Click += new System.EventHandler(this.txtSCPass_Click);
+            this.txtSCPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSCPass_KeyPress);
+            this.txtSCPass.Leave += new System.EventHandler(this.txtSCPass_Leave);
             // 
             // label9
             // 
@@ -388,6 +397,8 @@
             this.txtSPass.TabIndex = 23;
             this.txtSPass.Text = "Password";
             this.txtSPass.Click += new System.EventHandler(this.txtSPass_Click);
+            this.txtSPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSPass_KeyPress);
+            this.txtSPass.Leave += new System.EventHandler(this.txtSPass_Leave);
             // 
             // pboLogoSignUp
             // 

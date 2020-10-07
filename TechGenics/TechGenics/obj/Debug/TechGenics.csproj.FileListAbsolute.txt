@@ -36,3 +36,18 @@ C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenic
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\Dapper.xml
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CopyComplete
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe.config
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\Dapper.dll
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\Dapper.xml
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmMainAdmin.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.Properties.Resources.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.loading.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.GenerateResource.cache
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CoreCompileInputs.cache
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CopyComplete
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb

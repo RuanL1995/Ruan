@@ -47,10 +47,10 @@ namespace TechGenics
         /// </summary>
         #region General Methods
 
-        
+
 
         public void darkMode()
-        {           
+        {
             this.BackColor = Color.Black;
 
             btnMode.BackColor = Color.Black;
@@ -109,6 +109,70 @@ namespace TechGenics
             txtSPass.ForeColor = Color.Black;
             txtSCPass.BackColor = Color.DarkGray;
             txtSCPass.ForeColor = Color.Black;
+        }
+
+        //enter default text if textbox empty
+        public void defaultText()
+        {
+            if (txtUsername.Text == "")
+            {
+                txtUsername.Text = "Username";
+            }
+
+            if (txtPassword.Text == "")
+            {
+                txtPassword.Text = "Password";
+
+            }
+
+            if (txtFirst.Text == "")
+            {
+                txtFirst.Text = "First Name";
+            }
+
+            if (txtLast.Text == "")
+            {
+                txtLast.Text = "Surname";
+            }
+
+            if (txtSUser.Text == "")
+            {
+                txtSUser.Text = "Username";
+            }
+
+            if (txtEmail.Text == "")
+            {
+                txtEmail.Text = "Email";
+            }
+
+            if (txtSPass.Text == "")
+            {
+                txtSPass.Text = "Password";
+
+            }
+
+            if (txtSCPass.Text == "")
+            {
+                txtSCPass.Text = "Confirm Password";
+            }
+        }
+
+        public void passwordChar()
+        {
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+
+            if (txtSPass.Text == "Password")
+            {
+                txtSPass.UseSystemPasswordChar = false;
+            }
+
+            if (txtSCPass.Text == "Confirm Password")
+            {
+                txtSCPass.UseSystemPasswordChar = false;
+            }
         }
         #endregion
 
@@ -207,12 +271,6 @@ namespace TechGenics
                     }
                 }
                 
-
-
-
-
-
-
                 //userFirstName = txtFirst.Text;
 
                 pnlLogin.Visible = true;
@@ -260,7 +318,7 @@ namespace TechGenics
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An erros has occurred while trying to register." + ex.Message);
+                MessageBox.Show("An erro has occurred while trying to register." + ex.Message);
             }           
         }
 
@@ -283,17 +341,25 @@ namespace TechGenics
             }
         }
 
+        /// <summary>
+        /// login form
+        /// </summary>
+        #region login
+
+        //click functions
         private void txtUsername_Click(object sender, EventArgs e)
         {
+            passwordChar();
             txtUsername.Clear();
+            
         }
 
         private void txtPassword_Click(object sender, EventArgs e)
         {
+            passwordChar();
             txtPassword.Clear();
-            txtPassword.UseSystemPasswordChar = true;
+                        
         }
-
 
         private void lblSignUp_Click(object sender, EventArgs e)
         {
@@ -302,42 +368,119 @@ namespace TechGenics
             timer1.Start();
         }
 
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            //To be added later
+        }
+
+        //leave
+        private void txtUsername_Leave_1(object sender, EventArgs e)
+        {
+            defaultText();
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            defaultText();
+        }
+
+        //keypress
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+
+        }
+        #endregion
+
+        /// <summary>
+        /// register form
+        /// </summary>
+        #region register
+
+        //click functions
         private void txtFirst_Click(object sender, EventArgs e)
         {
+            passwordChar();
             txtFirst.Clear();
         }
 
         private void txtLast_Click(object sender, EventArgs e)
         {
+            passwordChar();
             txtLast.Clear();
         }
 
         private void txtSUser_Click(object sender, EventArgs e)
         {
+            passwordChar();
             txtSUser.Clear();
         }
 
         private void txtEmail_Click(object sender, EventArgs e)
         {
+            passwordChar();
             txtEmail.Clear();
         }
 
         private void txtSPass_Click(object sender, EventArgs e)
         {
-            txtPassword.Clear();
-            txtPassword.UseSystemPasswordChar = true;
+            passwordChar();
+            txtSPass.Clear();
+            
         }
 
         private void txtSCPass_Click(object sender, EventArgs e)
         {
-            txtPassword.Clear();
-            txtPassword.UseSystemPasswordChar = true;
+            passwordChar();
+            txtSCPass.Clear();
+           
         }
 
-        private void lblForgotPassword_Click(object sender, EventArgs e)
+        //leave
+        private void txtFirst_Leave(object sender, EventArgs e)
         {
-            //To be added later
+            defaultText();
         }
+
+        private void txtLast_Leave(object sender, EventArgs e)
+        {
+            defaultText();
+        }
+
+        private void txtSUser_Leave(object sender, EventArgs e)
+        {
+            defaultText();
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            defaultText();
+        }
+
+        private void txtSPass_Leave(object sender, EventArgs e)
+        {
+            defaultText();
+
+        }
+
+        private void txtSCPass_Leave(object sender, EventArgs e)
+        {
+            defaultText();
+
+        }
+        //keypress
+        private void txtSPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            txtSPass.UseSystemPasswordChar = true;
+        }
+
+        private void txtSCPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtSCPass.UseSystemPasswordChar = true;
+        }
+
+        #endregion
 
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -410,8 +553,11 @@ namespace TechGenics
         {
 
         }
+
         #endregion
 
         #endregion
+        
+              
     }
 }
