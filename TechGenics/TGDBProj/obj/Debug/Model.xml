@@ -94,7 +94,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 		U.UserPassword	
 	FROM 
 		tblUser U  
-	WHERE U.UserName = @User			
+	WHERE U.UserName = @UserName			
 END]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -112,12 +112,12 @@ END]]></Value>
 					<References Name="[dbo].[tblUser].[UserPassword]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[spUserR1].[@User]" />
+					<References Name="[dbo].[spUserR1].[@UserName]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserR1].[@User]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserR1].[@UserName]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -139,10 +139,10 @@ END]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="338" />
+				<Property Name="Length" Value="346" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all Users and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;10 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@User VARCHAR(50)&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all Users and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;10 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@UserName VARCHAR(50)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[tblTest]">
