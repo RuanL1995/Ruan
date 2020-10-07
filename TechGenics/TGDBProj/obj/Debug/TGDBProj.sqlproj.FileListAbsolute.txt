@@ -15,3 +15,4 @@ C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\bin\Debug\TGDBProj.pdb
 C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
 C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
 C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache

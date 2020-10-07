@@ -187,22 +187,23 @@ namespace TechGenics
                 DataSet ds = new DataSet();
                 ds = ListToDataSet.ToDataSet(_users);
 
-                if (ds.Tables[0].Rows.Count > 0)
+                //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
+                if (ds.Tables[0].Rows.Count == 0)
                 {
-                    //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
-                    if (ds.Tables[0].Rows[0]["UserName"].ToString() != txtSUser.Text)
+                    //Inserts a new user when register is clicked
+                    db.InsertUser(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtFirst.Text = "";
+                    txtLast.Text = "";
+                    txtEmail.Text = "";
+                    MessageBox.Show("Your account has been registered successfully.", "Registration Success.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (ds.Tables[0].Rows.Count > 0)
+                {                   
+                    if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
                     {
-                        //Inserts a new user when register is clicked
-                        db.InsertUser(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
-                        txtUsername.Text = "";
-                        txtPassword.Text = "";
-                        txtFirst.Text = "";
-                        txtLast.Text = "";
-                        txtEmail.Text = "";
-                    }
-                    else if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
-                    {
-                        MessageBox.Show("The username already exists", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("The username already exists.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 
