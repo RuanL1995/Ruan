@@ -126,6 +126,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(115, 19);
             this.txtUsername.TabIndex = 15;
+            this.txtUsername.Tag = "10";
             this.txtUsername.Text = "Username";
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave_1);
@@ -189,9 +190,12 @@
             this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboLogo.TabIndex = 12;
             this.pboLogo.TabStop = false;
+            this.pboLogo.Tag = "2";
             // 
             // txtPassword
             // 
+            this.txtPassword.AutoCompleteCustomSource.AddRange(new string[] {
+            "None"});
             this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,6 +204,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(115, 19);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.Tag = "11";
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -459,6 +464,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.login_signup_Load);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).EndInit();

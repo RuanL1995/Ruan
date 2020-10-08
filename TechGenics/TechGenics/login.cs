@@ -47,8 +47,6 @@ namespace TechGenics
         /// </summary>
         #region General Methods
 
-
-
         public void darkMode()
         {
             this.BackColor = Color.Black;
@@ -155,6 +153,8 @@ namespace TechGenics
             {
                 txtSCPass.Text = "Confirm Password";
             }
+
+            
         }
 
         public void passwordChar()
@@ -163,6 +163,11 @@ namespace TechGenics
             {
                 txtPassword.UseSystemPasswordChar = false;
             }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+            
 
             if (txtSPass.Text == "Password")
             {
@@ -173,6 +178,61 @@ namespace TechGenics
             {
                 txtSCPass.UseSystemPasswordChar = false;
             }
+        }
+
+        public bool validatePassword(string password)
+        {
+            //Length = 8, number, uppercase, lowercase, special character
+            bool hasNumber = false;
+            bool hasUpper = false;
+            bool hasLower = false;
+            bool hasSpecial = false;
+            bool validate = false;
+
+            char cCharacter;
+
+            int minLength = 8;
+
+            if (!(password.Length >= minLength))
+            {
+                validate = false;
+                
+            }
+
+            for (int i = 0; i < password.Length; i++)
+            {
+                cCharacter = password[i];
+                if (char.IsDigit(cCharacter))
+                {
+                    hasNumber = true;
+                }
+                else if (char.IsUpper(cCharacter))
+                {
+                    hasUpper = true;
+                }
+                else if (char.IsLower(cCharacter))
+                {
+                    hasLower = true;
+                }
+                else if (!char.IsLetterOrDigit(cCharacter))
+                {
+                    hasSpecial = true;
+                }
+
+                if (hasNumber && hasUpper && hasLower && hasSpecial)
+                {
+                    
+                    validate = true;
+                }
+                else
+                {
+                    
+                    validate = false;
+                }
+                    
+            }
+
+            return validate;
         }
         #endregion
 
@@ -231,7 +291,7 @@ namespace TechGenics
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An erros has occurred while trying to login." + ex.Message);
+                MessageBox.Show("An errors has occurred while trying to login." + ex.Message);
             }           
         }
 
@@ -356,16 +416,25 @@ namespace TechGenics
 
         private void txtPassword_Click(object sender, EventArgs e)
         {
-            passwordChar();
             txtPassword.Clear();
-                        
+            passwordChar();
+           
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void lblSignUp_Click(object sender, EventArgs e)
         {
-            pnlSignUp.Visible = true;
-
-            timer1.Start();
+                       
+            if(validatePassword(txtPassword.Text))
+            {
+                pnlSignUp.Visible = true;
+                timer1.Start();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Password");
+            }
+            
         }
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
@@ -377,18 +446,21 @@ namespace TechGenics
         private void txtUsername_Leave_1(object sender, EventArgs e)
         {
             defaultText();
+                        
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
             defaultText();
+            
         }
 
         //keypress
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = true;
-
+                        
+           txtPassword.UseSystemPasswordChar = true;
+            
         }
         #endregion
 
@@ -471,7 +543,7 @@ namespace TechGenics
         //keypress
         private void txtSPass_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            
             txtSPass.UseSystemPasswordChar = true;
         }
 
@@ -554,10 +626,16 @@ namespace TechGenics
 
         }
 
+
+
+
+
+
+
         #endregion
 
         #endregion
+
         
-              
     }
 }
