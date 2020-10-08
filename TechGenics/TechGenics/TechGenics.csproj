@@ -163,7 +163,7 @@
     <None Include="Resources\VID-20201002-WA0011.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\fireworks.js" />
+    <None Include="Resources\fireworks.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

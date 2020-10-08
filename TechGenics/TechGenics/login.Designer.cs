@@ -62,12 +62,14 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.pnlSignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -146,6 +148,7 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
             this.pnlLogin.Controls.Add(this.pboPassIcon);
             this.pnlLogin.Controls.Add(this.pboUserIcon);
             this.pnlLogin.Controls.Add(this.pboLogo);
@@ -156,7 +159,7 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(325, 81);
+            this.pnlLogin.Location = new System.Drawing.Point(328, 78);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
@@ -362,6 +365,7 @@
             // 
             // pnlSignUp
             // 
+            this.pnlSignUp.BackColor = System.Drawing.Color.Transparent;
             this.pnlSignUp.Controls.Add(this.lblTitle);
             this.pnlSignUp.Controls.Add(this.txtSPass);
             this.pnlSignUp.Controls.Add(this.pboLogoSignUp);
@@ -434,6 +438,7 @@
             this.btnMode.TabIndex = 15;
             this.btnMode.Text = "Dark Mode";
             this.btnMode.UseVisualStyleBackColor = false;
+            this.btnMode.Visible = false;
             this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
             // 
             // timer1
@@ -467,6 +472,16 @@
             this.label3.Text = "go to admin";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TechGenics.Properties.Resources.fireworks;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1111, 712);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // login_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,6 +492,7 @@
             this.Controls.Add(this.btnMode);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.pnlSignUp);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login_signup";
             this.ShowIcon = false;
@@ -490,6 +506,7 @@
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,6 +546,7 @@
         private System.Windows.Forms.PictureBox pboPassIcon;
         private System.Windows.Forms.PictureBox pboUserIcon;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

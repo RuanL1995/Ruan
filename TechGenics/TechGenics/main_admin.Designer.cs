@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.pnlHelpSub = new System.Windows.Forms.Panel();
+            this.btnManualA = new System.Windows.Forms.Button();
+            this.btnGoogle = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.pnlMembersSub = new System.Windows.Forms.Panel();
             this.btnNewMem = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
@@ -48,18 +52,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.pnlHelpSub = new System.Windows.Forms.Panel();
-            this.btnGoogle = new System.Windows.Forms.Button();
-            this.btnManualA = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
+            this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
             this.pnlProjectsSub.SuspendLayout();
             this.pnlDiagramsSub.SuspendLayout();
             this.pnlPhasesSub.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlHelpSub.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -84,6 +84,61 @@
             this.pnlSideMenu.Name = "pnlSideMenu";
             this.pnlSideMenu.Size = new System.Drawing.Size(226, 687);
             this.pnlSideMenu.TabIndex = 0;
+            // 
+            // pnlHelpSub
+            // 
+            this.pnlHelpSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlHelpSub.Controls.Add(this.btnManualA);
+            this.pnlHelpSub.Controls.Add(this.btnGoogle);
+            this.pnlHelpSub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHelpSub.Location = new System.Drawing.Point(0, 496);
+            this.pnlHelpSub.Name = "pnlHelpSub";
+            this.pnlHelpSub.Size = new System.Drawing.Size(222, 77);
+            this.pnlHelpSub.TabIndex = 9;
+            // 
+            // btnManualA
+            // 
+            this.btnManualA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnManualA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnManualA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManualA.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnManualA.Location = new System.Drawing.Point(4, 38);
+            this.btnManualA.Name = "btnManualA";
+            this.btnManualA.Size = new System.Drawing.Size(186, 24);
+            this.btnManualA.TabIndex = 1;
+            this.btnManualA.Text = "Manual";
+            this.btnManualA.UseVisualStyleBackColor = false;
+            // 
+            // btnGoogle
+            // 
+            this.btnGoogle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnGoogle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGoogle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoogle.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnGoogle.Location = new System.Drawing.Point(4, 8);
+            this.btnGoogle.Name = "btnGoogle";
+            this.btnGoogle.Size = new System.Drawing.Size(186, 24);
+            this.btnGoogle.TabIndex = 0;
+            this.btnGoogle.Text = "Google";
+            this.btnGoogle.UseVisualStyleBackColor = false;
+            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHelp.BackColor = System.Drawing.Color.Black;
+            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.Color.MintCream;
+            this.btnHelp.Location = new System.Drawing.Point(0, 462);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(222, 34);
+            this.btnHelp.TabIndex = 8;
+            this.btnHelp.Text = "Help";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // pnlMembersSub
             // 
@@ -338,61 +393,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnHelp
-            // 
-            this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnHelp.BackColor = System.Drawing.Color.Black;
-            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelp.ForeColor = System.Drawing.Color.MintCream;
-            this.btnHelp.Location = new System.Drawing.Point(0, 462);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(222, 34);
-            this.btnHelp.TabIndex = 8;
-            this.btnHelp.Text = "Help";
-            this.btnHelp.UseVisualStyleBackColor = false;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
-            // 
-            // pnlHelpSub
-            // 
-            this.pnlHelpSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlHelpSub.Controls.Add(this.btnManualA);
-            this.pnlHelpSub.Controls.Add(this.btnGoogle);
-            this.pnlHelpSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHelpSub.Location = new System.Drawing.Point(0, 496);
-            this.pnlHelpSub.Name = "pnlHelpSub";
-            this.pnlHelpSub.Size = new System.Drawing.Size(222, 77);
-            this.pnlHelpSub.TabIndex = 9;
-            // 
-            // btnGoogle
-            // 
-            this.btnGoogle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnGoogle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnGoogle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoogle.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnGoogle.Location = new System.Drawing.Point(4, 8);
-            this.btnGoogle.Name = "btnGoogle";
-            this.btnGoogle.Size = new System.Drawing.Size(186, 24);
-            this.btnGoogle.TabIndex = 0;
-            this.btnGoogle.Text = "Google";
-            this.btnGoogle.UseVisualStyleBackColor = false;
-            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click);
-            // 
-            // btnManualA
-            // 
-            this.btnManualA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnManualA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnManualA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManualA.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnManualA.Location = new System.Drawing.Point(4, 38);
-            this.btnManualA.Name = "btnManualA";
-            this.btnManualA.Size = new System.Drawing.Size(186, 24);
-            this.btnManualA.TabIndex = 1;
-            this.btnManualA.Text = "Manual";
-            this.btnManualA.UseVisualStyleBackColor = false;
-            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,13 +408,13 @@
             this.Text = "main";
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
+            this.pnlHelpSub.ResumeLayout(false);
             this.pnlMembersSub.ResumeLayout(false);
             this.pnlProjectsSub.ResumeLayout(false);
             this.pnlDiagramsSub.ResumeLayout(false);
             this.pnlPhasesSub.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlHelpSub.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
