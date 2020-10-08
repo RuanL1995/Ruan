@@ -193,7 +193,7 @@
             this.lblLoaded.TabIndex = 5;
             this.lblLoaded.Text = "0 %";
             this.lblLoaded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLoaded.Click += new System.EventHandler(this.label1_Click);
+//            this.lblLoaded.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
             // 

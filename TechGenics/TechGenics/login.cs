@@ -268,7 +268,10 @@ namespace TechGenics
                     }
                     else if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtUsername.Text && ds.Tables[0].Rows[0]["UserPassword"].ToString() == txtPassword.Text)
                     {
-                        MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        this.Enabled = false;
+                        loadScreen.Show();
                     }
                 }
                 else 
@@ -282,9 +285,7 @@ namespace TechGenics
                 //cmbTest.DisplayMember = "FullInfo";
                 //cmbTest.ValueMember = "UserId";
 
-                this.Hide();
-                this.Enabled = false;
-                loadScreen.Show();
+                
             }
             catch (Exception ex)
             {
@@ -328,10 +329,6 @@ namespace TechGenics
                     }
                 }
                 
-                
-                
-
-
                 ////send email
                 //Random random = new Random();
                 //validationCode = random.Next(0, 1000).ToString();
@@ -368,8 +365,6 @@ namespace TechGenics
                 {
                     pnlLogin.Enabled = true;
                 }*/
-
-
 
                 //Validate password 
                 if (validatePassword(txtSPass.Text) && validatePassword(txtSCPass.Text))
@@ -682,11 +677,18 @@ namespace TechGenics
                 pnlSignUp.Visible = false;
             }
         }
+
+
+
         #endregion
 
-             
         #endregion
-
-      
+        frmMainAdmin admin = new frmMainAdmin();
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Enabled = false;
+            admin.Show();
+        }
     }
 }

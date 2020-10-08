@@ -61,6 +61,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboUserIcon)).BeginInit();
@@ -159,7 +160,6 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
-//          this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
             // pboPassIcon
             // 
@@ -456,12 +456,24 @@
             this.timer4.Interval = 30;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick_1);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(879, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "go to admin";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // login_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1123, 726);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnMode);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.pnlSignUp);
@@ -479,6 +491,7 @@
             this.pnlSignUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -515,6 +528,7 @@
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.PictureBox pboPassIcon;
         private System.Windows.Forms.PictureBox pboUserIcon;
+        private System.Windows.Forms.Label label3;
     }
 }
 
