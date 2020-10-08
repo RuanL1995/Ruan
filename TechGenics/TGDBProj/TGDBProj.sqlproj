@@ -68,6 +68,10 @@
     <Build Include="dbo\Tables\tblUser.sql" />
     <Build Include="dbo\Stored Procedures\spUserR1.sql" />
     <Build Include="dbo\Stored Procedures\spUserC1.sql" />
+    <Build Include="tblPhase.sql" />
+    <Build Include="tblProject.sql" />
+    <Build Include="tblUserProject.sql" />
+    <Build Include="tblProjectPhase.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />
