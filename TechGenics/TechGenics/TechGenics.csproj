@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="frmInitiation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInitiation.Designer.cs">
+      <DependentUpon>frmInitiation.cs</DependentUpon>
+    </Compile>
     <Compile Include="google.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmInitiation.resx">
+      <DependentUpon>frmInitiation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="google.resx">
       <DependentUpon>google.cs</DependentUpon>
     </EmbeddedResource>

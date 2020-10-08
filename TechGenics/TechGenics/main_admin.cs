@@ -100,6 +100,7 @@ namespace TechGenics
         private void btnInitiation_Click(object sender, EventArgs e)
         {
             //openChildForm(new formName());
+            openChildForm(new frmInitiation());
 
             hideSubs();
         }           
@@ -123,14 +124,15 @@ namespace TechGenics
         private void btnDiagrams_Click(object sender, EventArgs e)
         {
             showSubs(pnlDiagramsSub);
-            pnlChildForm.BringToFront();
+            //pnlChildForm.BringToFront();
+            
         }
 
         //projects menu
         private void btnProjects_Click(object sender, EventArgs e)
         {
             showSubs(pnlProjectsSub);
-            pnlChildForm.BringToFront();
+            //pnlChildForm.BringToFront();
             
         }
 
@@ -144,7 +146,7 @@ namespace TechGenics
         private void btnHelp_Click(object sender, EventArgs e)
         {
             showSubs(pnlHelpSub);
-            pnlChildForm.BringToFront();
+            //pnlChildForm.BringToFront();
         }
 
         private void btnGoogle_Click(object sender, EventArgs e)
