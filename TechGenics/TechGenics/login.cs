@@ -372,29 +372,30 @@ namespace TechGenics
 
 
                 //Validate password 
-                if (validatePassword(txtSPass.Text))
+                if (validatePassword(txtSPass.Text) && validatePassword(txtSCPass.Text))
                 {
                     pnlLogin.Visible = true;
                     pnlLogin.Enabled = false;
 
                     timer3.Start();
                 }
-                else
+                else if (!(validatePassword(txtSPass.Text)) || !(validatePassword(txtSCPass.Text)))
                 {
                     MessageBox.Show("Invalid Password");
                 }
-
-                if (validatePassword(txtSCPass.Text))
+                else if (txtSPass.Text == txtSCPass.Text)
                 {
                     pnlLogin.Visible = true;
                     pnlLogin.Enabled = false;
 
                     timer3.Start();
                 }
-                else
+                else if (txtSPass.Text != txtSCPass.Text)
                 {
-                    MessageBox.Show("Invalid Password");
+                    MessageBox.Show("Passwords don't match");
+
                 }
+                                
             }
             catch (Exception ex)
             {
