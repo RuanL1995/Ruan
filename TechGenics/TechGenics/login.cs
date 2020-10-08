@@ -162,12 +162,9 @@ namespace TechGenics
             if (txtPassword.Text == "Password")
             {
                 txtPassword.UseSystemPasswordChar = false;
+                
             }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = true;
-            }
-            
+           
 
             if (txtSPass.Text == "Password")
             {
@@ -331,12 +328,8 @@ namespace TechGenics
                     }
                 }
                 
-                //userFirstName = txtFirst.Text;
-
-                pnlLogin.Visible = true;
-                pnlLogin.Enabled = false;
-
-                timer3.Start();
+                
+                
 
 
                 ////send email
@@ -375,6 +368,33 @@ namespace TechGenics
                 {
                     pnlLogin.Enabled = true;
                 }*/
+
+
+
+                //Validate password 
+                if (validatePassword(txtSPass.Text))
+                {
+                    pnlLogin.Visible = true;
+                    pnlLogin.Enabled = false;
+
+                    timer3.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Password");
+                }
+
+                if (validatePassword(txtSCPass.Text))
+                {
+                    pnlLogin.Visible = true;
+                    pnlLogin.Enabled = false;
+
+                    timer3.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Password");
+                }
             }
             catch (Exception ex)
             {
@@ -411,6 +431,7 @@ namespace TechGenics
         {
             passwordChar();
             txtUsername.Clear();
+
             
         }
 
@@ -419,21 +440,15 @@ namespace TechGenics
             txtPassword.Clear();
             passwordChar();
            
-            txtPassword.UseSystemPasswordChar = true;
+           
+            //txtPassword.UseSystemPasswordChar = true;
         }
 
         private void lblSignUp_Click(object sender, EventArgs e)
         {
-                       
-            if(validatePassword(txtPassword.Text))
-            {
-                pnlSignUp.Visible = true;
-                timer1.Start();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Password");
-            }
+            pnlSignUp.Visible = true;
+            timer1.Start();
+           
             
         }
 
@@ -453,14 +468,31 @@ namespace TechGenics
         {
             defaultText();
             
+
         }
 
         //keypress
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-                        
-           txtPassword.UseSystemPasswordChar = true;
+
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void txtPassword_MouseHover(object sender, EventArgs e)
+        {
+            if (!(txtPassword.Text == "Password"))
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
             
+        }
+
+        private void txtPassword_MouseLeave(object sender, EventArgs e)
+        {
+            if (!(txtPassword.Text == "Password"))
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
         #endregion
 
@@ -543,13 +575,47 @@ namespace TechGenics
         //keypress
         private void txtSPass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             txtSPass.UseSystemPasswordChar = true;
+
         }
 
         private void txtSCPass_KeyPress(object sender, KeyPressEventArgs e)
         {
             txtSCPass.UseSystemPasswordChar = true;
+        }
+
+        private void txtSPass_MouseHover(object sender, EventArgs e)
+        {
+            if (!(txtSPass.Text == "Password"))
+            {
+                txtSPass.UseSystemPasswordChar = false;
+            }
+
+        }
+
+        private void txtSPass_MouseLeave(object sender, EventArgs e)
+        {
+            if (!(txtSPass.Text == "Password"))
+            {
+                txtSPass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtSCPass_MouseHover(object sender, EventArgs e)
+        {
+            if (!(txtSCPass.Text == "Confirm Password"))
+            {
+                txtSCPass.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txtSCPass_MouseLeave(object sender, EventArgs e)
+        {
+            if (!(txtSCPass.Text == "Confirm Password"))
+            {
+                txtSCPass.UseSystemPasswordChar = true;
+            }
         }
 
         #endregion
@@ -617,25 +683,9 @@ namespace TechGenics
         }
         #endregion
 
-        /// <summary>
-        /// All timer tick event handlers
-        /// </summary>
-        #region Paint
-        private void pnlLogin_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
-
-
-
-
+             
         #endregion
 
-        #endregion
-
-        
+      
     }
 }

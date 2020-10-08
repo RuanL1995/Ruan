@@ -155,11 +155,11 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(328, 81);
+            this.pnlLogin.Location = new System.Drawing.Point(325, 81);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
-            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
+//          this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
             // pboPassIcon
             // 
@@ -209,6 +209,8 @@
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            this.txtPassword.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
+            this.txtPassword.MouseHover += new System.EventHandler(this.txtPassword_MouseHover);
             // 
             // btnRegister
             // 
@@ -345,6 +347,8 @@
             this.txtSCPass.Click += new System.EventHandler(this.txtSCPass_Click);
             this.txtSCPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSCPass_KeyPress);
             this.txtSCPass.Leave += new System.EventHandler(this.txtSCPass_Leave);
+            this.txtSCPass.MouseLeave += new System.EventHandler(this.txtSCPass_MouseLeave);
+            this.txtSCPass.MouseHover += new System.EventHandler(this.txtSCPass_MouseHover);
             // 
             // label9
             // 
@@ -404,6 +408,8 @@
             this.txtSPass.Click += new System.EventHandler(this.txtSPass_Click);
             this.txtSPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSPass_KeyPress);
             this.txtSPass.Leave += new System.EventHandler(this.txtSPass_Leave);
+            this.txtSPass.MouseLeave += new System.EventHandler(this.txtSPass_MouseLeave);
+            this.txtSPass.MouseHover += new System.EventHandler(this.txtSPass_MouseHover);
             // 
             // pboLogoSignUp
             // 
@@ -464,7 +470,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.login_signup_Load);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).EndInit();
