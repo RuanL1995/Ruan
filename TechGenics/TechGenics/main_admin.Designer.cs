@@ -33,15 +33,10 @@
             this.btnNewMem = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
             this.pnlProjectsSub = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnNewProj = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
             this.pnlDiagramsSub = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnDiagrams = new System.Windows.Forms.Button();
             this.pnlPhasesSub = new System.Windows.Forms.Panel();
@@ -51,10 +46,12 @@
             this.btnInitiation = new System.Windows.Forms.Button();
             this.btnPhases = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.pnlHelpSub = new System.Windows.Forms.Panel();
+            this.btnGoogle = new System.Windows.Forms.Button();
+            this.btnManualA = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
             this.pnlProjectsSub.SuspendLayout();
@@ -62,6 +59,7 @@
             this.pnlPhasesSub.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlHelpSub.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -70,6 +68,8 @@
             this.pnlSideMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlSideMenu.BackColor = System.Drawing.Color.Black;
             this.pnlSideMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlSideMenu.Controls.Add(this.pnlHelpSub);
+            this.pnlSideMenu.Controls.Add(this.btnHelp);
             this.pnlSideMenu.Controls.Add(this.pnlMembersSub);
             this.pnlSideMenu.Controls.Add(this.btnMembers);
             this.pnlSideMenu.Controls.Add(this.pnlProjectsSub);
@@ -90,7 +90,7 @@
             this.pnlMembersSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.pnlMembersSub.Controls.Add(this.btnNewMem);
             this.pnlMembersSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMembersSub.Location = new System.Drawing.Point(0, 574);
+            this.pnlMembersSub.Location = new System.Drawing.Point(0, 421);
             this.pnlMembersSub.Name = "pnlMembersSub";
             this.pnlMembersSub.Size = new System.Drawing.Size(222, 41);
             this.pnlMembersSub.TabIndex = 7;
@@ -117,7 +117,7 @@
             this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.Color.MintCream;
-            this.btnMembers.Location = new System.Drawing.Point(0, 540);
+            this.btnMembers.Location = new System.Drawing.Point(0, 387);
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(222, 34);
             this.btnMembers.TabIndex = 6;
@@ -128,41 +128,13 @@
             // pnlProjectsSub
             // 
             this.pnlProjectsSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlProjectsSub.Controls.Add(this.button6);
-            this.pnlProjectsSub.Controls.Add(this.button7);
             this.pnlProjectsSub.Controls.Add(this.button8);
             this.pnlProjectsSub.Controls.Add(this.btnNewProj);
             this.pnlProjectsSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProjectsSub.Location = new System.Drawing.Point(0, 407);
+            this.pnlProjectsSub.Location = new System.Drawing.Point(0, 318);
             this.pnlProjectsSub.Name = "pnlProjectsSub";
-            this.pnlProjectsSub.Size = new System.Drawing.Size(222, 133);
+            this.pnlProjectsSub.Size = new System.Drawing.Size(222, 69);
             this.pnlProjectsSub.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button6.Location = new System.Drawing.Point(4, 98);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(186, 24);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "P4";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button7.Location = new System.Drawing.Point(4, 68);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(186, 24);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "P3";
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -199,7 +171,7 @@
             this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProjects.ForeColor = System.Drawing.Color.MintCream;
-            this.btnProjects.Location = new System.Drawing.Point(0, 373);
+            this.btnProjects.Location = new System.Drawing.Point(0, 284);
             this.btnProjects.Name = "btnProjects";
             this.btnProjects.Size = new System.Drawing.Size(222, 34);
             this.btnProjects.TabIndex = 4;
@@ -210,54 +182,12 @@
             // pnlDiagramsSub
             // 
             this.pnlDiagramsSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlDiagramsSub.Controls.Add(this.button1);
-            this.pnlDiagramsSub.Controls.Add(this.button2);
-            this.pnlDiagramsSub.Controls.Add(this.button3);
             this.pnlDiagramsSub.Controls.Add(this.button4);
             this.pnlDiagramsSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDiagramsSub.Location = new System.Drawing.Point(0, 240);
             this.pnlDiagramsSub.Name = "pnlDiagramsSub";
-            this.pnlDiagramsSub.Size = new System.Drawing.Size(222, 133);
+            this.pnlDiagramsSub.Size = new System.Drawing.Size(222, 44);
             this.pnlDiagramsSub.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(4, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 24);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "D4";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button2.Location = new System.Drawing.Point(4, 68);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 24);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "D3";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button3.Location = new System.Drawing.Point(4, 38);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(186, 24);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "D2";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -389,45 +319,13 @@
             this.label1.Text = "MPMM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnExit
-            // 
-            this.btnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnExit.BackColor = System.Drawing.Color.Black;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.MintCream;
-            this.btnExit.Location = new System.Drawing.Point(553, 542);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(222, 34);
-            this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "Close";
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button11.BackColor = System.Drawing.Color.Black;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.MintCream;
-            this.button11.Location = new System.Drawing.Point(182, 598);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(222, 34);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Help";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm.Controls.Add(this.btnExit);
             this.pnlChildForm.Controls.Add(this.pictureBox1);
-            this.pnlChildForm.Controls.Add(this.button11);
             this.pnlChildForm.Location = new System.Drawing.Point(230, 0);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(895, 687);
+            this.pnlChildForm.Size = new System.Drawing.Size(879, 687);
             this.pnlChildForm.TabIndex = 1;
             // 
             // pictureBox1
@@ -439,6 +337,61 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHelp.BackColor = System.Drawing.Color.Black;
+            this.btnHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.Color.MintCream;
+            this.btnHelp.Location = new System.Drawing.Point(0, 462);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(222, 34);
+            this.btnHelp.TabIndex = 8;
+            this.btnHelp.Text = "Help";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
+            // pnlHelpSub
+            // 
+            this.pnlHelpSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlHelpSub.Controls.Add(this.btnManualA);
+            this.pnlHelpSub.Controls.Add(this.btnGoogle);
+            this.pnlHelpSub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHelpSub.Location = new System.Drawing.Point(0, 496);
+            this.pnlHelpSub.Name = "pnlHelpSub";
+            this.pnlHelpSub.Size = new System.Drawing.Size(222, 77);
+            this.pnlHelpSub.TabIndex = 9;
+            // 
+            // btnGoogle
+            // 
+            this.btnGoogle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnGoogle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGoogle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoogle.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnGoogle.Location = new System.Drawing.Point(4, 8);
+            this.btnGoogle.Name = "btnGoogle";
+            this.btnGoogle.Size = new System.Drawing.Size(186, 24);
+            this.btnGoogle.TabIndex = 0;
+            this.btnGoogle.Text = "Google";
+            this.btnGoogle.UseVisualStyleBackColor = false;
+            this.btnGoogle.Click += new System.EventHandler(this.btnGoogle_Click);
+            // 
+            // btnManualA
+            // 
+            this.btnManualA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnManualA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnManualA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManualA.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnManualA.Location = new System.Drawing.Point(4, 38);
+            this.btnManualA.Name = "btnManualA";
+            this.btnManualA.Size = new System.Drawing.Size(186, 24);
+            this.btnManualA.TabIndex = 1;
+            this.btnManualA.Text = "Manual";
+            this.btnManualA.UseVisualStyleBackColor = false;
             // 
             // frmMainAdmin
             // 
@@ -461,6 +414,7 @@
             this.pnlPhasesSub.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlHelpSub.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -476,23 +430,20 @@
         private System.Windows.Forms.Button btnInitiation;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.Panel pnlDiagramsSub;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnDiagrams;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.Panel pnlProjectsSub;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnNewProj;
         private System.Windows.Forms.Button btnProjects;
         private System.Windows.Forms.Panel pnlMembersSub;
         private System.Windows.Forms.Button btnNewMem;
+        private System.Windows.Forms.Panel pnlHelpSub;
+        private System.Windows.Forms.Button btnManualA;
+        private System.Windows.Forms.Button btnGoogle;
+        private System.Windows.Forms.Button btnHelp;
     }
 }

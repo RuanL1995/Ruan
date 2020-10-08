@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="google.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="google.Designer.cs">
+      <DependentUpon>google.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="ListToDataSet.cs" />
     <Compile Include="login.cs">
@@ -80,6 +86,9 @@
     <Compile Include="loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="google.resx">
+      <DependentUpon>google.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\VID-20201002-WA0011.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\fireworks.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

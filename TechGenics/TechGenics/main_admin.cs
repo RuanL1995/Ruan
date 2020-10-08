@@ -25,6 +25,7 @@ namespace TechGenics
             pnlDiagramsSub.Visible = false;
             pnlProjectsSub.Visible = false;
             pnlMembersSub.Visible = false;
+            pnlHelpSub.Visible = false;
         }
 
         //hide SubMenus
@@ -48,6 +49,10 @@ namespace TechGenics
             if (pnlMembersSub.Visible == true)
             {
                 pnlMembersSub.Visible = false;
+            }
+            if (pnlHelpSub.Visible == true)
+            {
+                pnlHelpSub.Visible = false;
             }
         }
 
@@ -130,6 +135,16 @@ namespace TechGenics
         private void btnMembers_Click(object sender, EventArgs e)
         {
             showSubs(pnlMembersSub);
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            showSubs(pnlHelpSub);
+        }
+
+        private void btnGoogle_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmGoogle());
         }
     }
 }

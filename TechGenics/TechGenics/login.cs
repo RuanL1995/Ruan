@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using Microsoft.VisualBasic;
 using TechGenics.Models;
+using System.Net;
 
 namespace TechGenics
 {
@@ -689,6 +690,10 @@ namespace TechGenics
             this.Hide();
             this.Enabled = false;
             admin.Show();
+
+            //System.Diagnostics.Process.Start("https://www.google.com");
         }
+
+        
     }
 }
