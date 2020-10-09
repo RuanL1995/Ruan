@@ -26,5 +26,10 @@ namespace TechGenics
         {
             this.Text = e.Url.ToString() + "Is Loading ...";
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }

@@ -436,9 +436,8 @@ namespace TechGenics
         {
             txtPassword.Clear();
             passwordChar();
-           
-           
-            //txtPassword.UseSystemPasswordChar = true;
+            Cursor.Position = new Point(Cursor.Position.X + 10, Cursor.Position.Y + 18);
+            
         }
 
         private void lblSignUp_Click(object sender, EventArgs e)
@@ -467,14 +466,7 @@ namespace TechGenics
             
 
         }
-
-        //keypress
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            txtPassword.UseSystemPasswordChar = true;
-        }
-
+               
         private void txtPassword_MouseHover(object sender, EventArgs e)
         {
             if (!(txtPassword.Text == "Password"))
@@ -525,16 +517,18 @@ namespace TechGenics
 
         private void txtSPass_Click(object sender, EventArgs e)
         {
-            passwordChar();
             txtSPass.Clear();
-            
+            passwordChar();
+            Cursor.Position = new Point(Cursor.Position.X + 10, Cursor.Position.Y + 18);
+
         }
 
         private void txtSCPass_Click(object sender, EventArgs e)
         {
-            passwordChar();
             txtSCPass.Clear();
-           
+            passwordChar();
+            Cursor.Position = new Point(Cursor.Position.X + 10, Cursor.Position.Y + 18);
+
         }
 
         //leave
@@ -569,18 +563,7 @@ namespace TechGenics
             defaultText();
 
         }
-        //keypress
-        private void txtSPass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            txtSPass.UseSystemPasswordChar = true;
-
-        }
-
-        private void txtSCPass_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            txtSCPass.UseSystemPasswordChar = true;
-        }
+       
 
         private void txtSPass_MouseHover(object sender, EventArgs e)
         {
@@ -694,6 +677,6 @@ namespace TechGenics
             //System.Diagnostics.Process.Start("https://www.google.com");
         }
 
-        
+       
     }
 }
