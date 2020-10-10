@@ -667,6 +667,8 @@ namespace TechGenics
         #endregion
 
         #endregion
+
+        //remove after testing & make visible for demo
         frmMainAdmin admin = new frmMainAdmin();
         private void label3_Click(object sender, EventArgs e)
         {

@@ -18,6 +18,10 @@ namespace TechGenics
             customDesign();
         }
 
+        /// <summary>
+        /// Mehtods used for general purpose
+        /// </summary>
+        #region General Methods
         //set SubMenus to invisible
         private void customDesign()
         {
@@ -70,6 +74,12 @@ namespace TechGenics
             }
         }
 
+        #endregion
+
+        /// <summary>
+        /// CHild forms needed to display info
+        /// </summary>
+        #region child forms
         //child forms
         private Form frmActive = null;
         private void openChildForm(Form frmChild)
@@ -88,23 +98,32 @@ namespace TechGenics
             frmChild.BringToFront();
             frmChild.Show();
         }
+        #endregion
 
-        //buttons
-        //phases menu
+        /// <summary>
+        /// Phases submenu
+        /// </summary>
+        #region Phases menu
+      
         private void btnPhases_Click(object sender, EventArgs e)
         {
             showSubs(pnlPhasesSub);
             pnlChildForm.BringToFront();
         }
 
-        private void btnInitiation_Click(object sender, EventArgs e)
+        //dual view 
+        private void btnInitiation_MouseUp(object sender, MouseEventArgs e)
         {
-            //openChildForm(new formName());
-            openChildForm(new frmInitiation());
+            if (e.Button == MouseButtons.Right)
+            {
+               MessageBox.Show("Right");
 
-            hideSubs();
-        }           
-
+            }
+            else//left or middle click
+            {
+                MessageBox.Show("left");
+            }
+        }
         private void btnPlanning_Click(object sender, EventArgs e)
         {
             hideSubs();
@@ -120,6 +139,12 @@ namespace TechGenics
             hideSubs();
         }
 
+        #endregion
+
+        /// <summary>
+        /// Diagrams submenu 
+        /// </summary>
+        #region Diagrams menu
         //diagrams menu
         private void btnDiagrams_Click(object sender, EventArgs e)
         {
@@ -128,6 +153,12 @@ namespace TechGenics
             
         }
 
+        #endregion
+
+        /// <summary>
+        /// Projects submenu
+        /// </summary>
+        #region Projects menu
         //projects menu
         private void btnProjects_Click(object sender, EventArgs e)
         {
@@ -136,12 +167,23 @@ namespace TechGenics
             
         }
 
-        
+        #endregion
 
+        /// <summary>
+        /// Members submenu
+        /// </summary>
+        #region Members section
         private void btnMembers_Click(object sender, EventArgs e)
         {
             showSubs(pnlMembersSub);
         }
+
+        #endregion
+
+        /// <summary>
+        /// Google and manual access
+        /// </summary>
+        #region Help section
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
@@ -153,5 +195,10 @@ namespace TechGenics
         {
             openChildForm(new frmGoogle());
         }
+
+
+        #endregion
+
+        
     }
 }

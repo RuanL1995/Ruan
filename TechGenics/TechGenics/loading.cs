@@ -35,14 +35,24 @@ namespace TechGenics
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 7, 7));
         }
-             
-     
+
+        /// <summary>
+        /// Mehtods used for general purpose
+        /// </summary>
+        #region Loading
+
         private void loading_Load_1(object sender, EventArgs e)
         {
             timer1.Start();
             timer2.Start();
         }
 
+        #endregion
+
+        /// <summary>
+        /// Mehtods used for general purpose
+        /// </summary>
+        #region Timers
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             for (int i = 0; i < 8; i++)
@@ -140,6 +150,7 @@ namespace TechGenics
             }
         }
 
-       
+        #endregion
+
     }
 }
