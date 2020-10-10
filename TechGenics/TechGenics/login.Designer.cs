@@ -210,8 +210,6 @@
             this.txtPassword.Tag = "11";
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
-//            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
-//            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             this.txtPassword.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
             this.txtPassword.MouseHover += new System.EventHandler(this.txtPassword_MouseHover);
@@ -349,7 +347,6 @@
             this.txtSCPass.TabIndex = 20;
             this.txtSCPass.Text = "Confirm Password";
             this.txtSCPass.Click += new System.EventHandler(this.txtSCPass_Click);
-//            this.txtSCPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSCPass_KeyPress);
             this.txtSCPass.Leave += new System.EventHandler(this.txtSCPass_Leave);
             this.txtSCPass.MouseLeave += new System.EventHandler(this.txtSCPass_MouseLeave);
             this.txtSCPass.MouseHover += new System.EventHandler(this.txtSCPass_MouseHover);
@@ -411,7 +408,6 @@
             this.txtSPass.TabIndex = 23;
             this.txtSPass.Text = "Password";
             this.txtSPass.Click += new System.EventHandler(this.txtSPass_Click);
-           // this.txtSPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSPass_KeyPress);
             this.txtSPass.Leave += new System.EventHandler(this.txtSPass_Leave);
             this.txtSPass.MouseLeave += new System.EventHandler(this.txtSPass_MouseLeave);
             this.txtSPass.MouseHover += new System.EventHandler(this.txtSPass_MouseHover);
@@ -482,6 +478,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // login_signup
             // 

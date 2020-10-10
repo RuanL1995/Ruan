@@ -679,6 +679,9 @@ namespace TechGenics
             //System.Diagnostics.Process.Start("https://www.google.com");
         }
 
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

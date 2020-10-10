@@ -121,7 +121,7 @@ namespace TechGenics
             }
             else//left or middle click
             {
-                MessageBox.Show("left");
+                openChildForm(new frmInitiation());
             }
         }
         private void btnPlanning_Click(object sender, EventArgs e)
@@ -195,6 +195,7 @@ namespace TechGenics
         {
             openChildForm(new frmGoogle());
         }
+
 
 
         #endregion
