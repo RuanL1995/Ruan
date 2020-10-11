@@ -68,15 +68,15 @@
     <Build Include="dbo\Tables\tblUser.sql" />
     <Build Include="dbo\Stored Procedures\spUserR1.sql" />
     <Build Include="dbo\Stored Procedures\spUserC1.sql" />
-    <Build Include="tblPhase.sql" />
-    <Build Include="tblProject.sql" />
-    <Build Include="tblUserProject.sql" />
-    <Build Include="tblProjectPhase.sql" />
+    <Build Include="dbo\Tables\tblPhase.sql" />
+    <Build Include="dbo\Tables\tblProject.sql" />
+    <Build Include="dbo\Tables\tblProjectPhase.sql" />
+    <Build Include="dbo\Tables\tblUserProject.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <RefactorLog Include="TGDBProj.refactorlog" />
+    <RefactorLog Include="dbo\Tables\TGDBProj.refactorlog" />
   </ItemGroup>
 </Project>
