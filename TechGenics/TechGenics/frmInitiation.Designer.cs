@@ -36,7 +36,8 @@
             this.btnEstPCharter = new System.Windows.Forms.Button();
             this.btnUndertakeFStudy = new System.Windows.Forms.Button();
             this.btnDevBCase = new System.Windows.Forms.Button();
-            this.pnlInstr_Init = new System.Windows.Forms.Panel();
+            this.pnlInstr = new System.Windows.Forms.Panel();
+            this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnFifth = new System.Windows.Forms.Button();
             this.btnFourth = new System.Windows.Forms.Button();
@@ -50,9 +51,8 @@
             this.lblProjCharter = new System.Windows.Forms.Label();
             this.lblFeasStudy = new System.Windows.Forms.Label();
             this.lblBusCase = new System.Windows.Forms.Label();
-            this.btnPrev = new System.Windows.Forms.Button();
             this.pnlInitiation.SuspendLayout();
-            this.pnlInstr_Init.SuspendLayout();
+            this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInitiation
@@ -64,17 +64,18 @@
             this.pnlInitiation.Controls.Add(this.btnEstPCharter);
             this.pnlInitiation.Controls.Add(this.btnUndertakeFStudy);
             this.pnlInitiation.Controls.Add(this.btnDevBCase);
-            this.pnlInitiation.Location = new System.Drawing.Point(12, 12);
+            this.pnlInitiation.Location = new System.Drawing.Point(32, 20);
             this.pnlInitiation.Name = "pnlInitiation";
             this.pnlInitiation.Size = new System.Drawing.Size(829, 614);
             this.pnlInitiation.TabIndex = 0;
+            this.pnlInitiation.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInitiation_Paint);
             // 
             // lstInfo
             // 
             this.lstInfo.BackColor = System.Drawing.Color.Black;
             this.lstInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstInfo.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lstInfo.ForeColor = System.Drawing.Color.MintCream;
             this.lstInfo.FormattingEnabled = true;
             this.lstInfo.ItemHeight = 18;
             this.lstInfo.Items.AddRange(new object[] {
@@ -189,27 +190,41 @@
             this.btnDevBCase.MouseLeave += new System.EventHandler(this.btnDevBCase_MouseLeave);
             this.btnDevBCase.MouseHover += new System.EventHandler(this.btnDevBCase_MouseHover);
             // 
-            // pnlInstr_Init
+            // pnlInstr
             // 
-            this.pnlInstr_Init.Controls.Add(this.btnPrev);
-            this.pnlInstr_Init.Controls.Add(this.btnNext);
-            this.pnlInstr_Init.Controls.Add(this.btnFifth);
-            this.pnlInstr_Init.Controls.Add(this.btnFourth);
-            this.pnlInstr_Init.Controls.Add(this.lstInstr);
-            this.pnlInstr_Init.Controls.Add(this.btnThird);
-            this.pnlInstr_Init.Controls.Add(this.btnSec);
-            this.pnlInstr_Init.Controls.Add(this.btnFirst);
-            this.pnlInstr_Init.Controls.Add(this.lblPhaseRev);
-            this.pnlInstr_Init.Controls.Add(this.lblProjOffice);
-            this.pnlInstr_Init.Controls.Add(this.lblProjTeam);
-            this.pnlInstr_Init.Controls.Add(this.lblProjCharter);
-            this.pnlInstr_Init.Controls.Add(this.lblFeasStudy);
-            this.pnlInstr_Init.Controls.Add(this.lblBusCase);
-            this.pnlInstr_Init.Location = new System.Drawing.Point(12, 12);
-            this.pnlInstr_Init.Name = "pnlInstr_Init";
-            this.pnlInstr_Init.Size = new System.Drawing.Size(829, 614);
-            this.pnlInstr_Init.TabIndex = 1;
-            this.pnlInstr_Init.Visible = false;
+            this.pnlInstr.Controls.Add(this.btnPrev);
+            this.pnlInstr.Controls.Add(this.btnNext);
+            this.pnlInstr.Controls.Add(this.btnFifth);
+            this.pnlInstr.Controls.Add(this.btnFourth);
+            this.pnlInstr.Controls.Add(this.lstInstr);
+            this.pnlInstr.Controls.Add(this.btnThird);
+            this.pnlInstr.Controls.Add(this.btnSec);
+            this.pnlInstr.Controls.Add(this.btnFirst);
+            this.pnlInstr.Controls.Add(this.lblPhaseRev);
+            this.pnlInstr.Controls.Add(this.lblProjOffice);
+            this.pnlInstr.Controls.Add(this.lblProjTeam);
+            this.pnlInstr.Controls.Add(this.lblProjCharter);
+            this.pnlInstr.Controls.Add(this.lblFeasStudy);
+            this.pnlInstr.Controls.Add(this.lblBusCase);
+            this.pnlInstr.Location = new System.Drawing.Point(32, 20);
+            this.pnlInstr.Name = "pnlInstr";
+            this.pnlInstr.Size = new System.Drawing.Size(829, 614);
+            this.pnlInstr.TabIndex = 1;
+            this.pnlInstr.Visible = false;
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnPrev.Location = new System.Drawing.Point(244, 490);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(75, 23);
+            this.btnPrev.TabIndex = 13;
+            this.btnPrev.Text = "Prev";
+            this.btnPrev.UseVisualStyleBackColor = false;
+            this.btnPrev.Visible = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // btnNext
             // 
@@ -239,7 +254,6 @@
             this.btnFifth.TabIndex = 11;
             this.btnFifth.Text = " ";
             this.btnFifth.UseVisualStyleBackColor = false;
-            this.btnFifth.Visible = false;
             this.btnFifth.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnFifth_MouseUp);
             // 
             // btnFourth
@@ -256,14 +270,13 @@
             this.btnFourth.TabIndex = 10;
             this.btnFourth.Text = " ";
             this.btnFourth.UseVisualStyleBackColor = false;
-            this.btnFourth.Visible = false;
             this.btnFourth.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnFourth_MouseUp);
             // 
             // lstInstr
             // 
             this.lstInstr.BackColor = System.Drawing.SystemColors.Desktop;
             this.lstInstr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstInstr.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lstInstr.ForeColor = System.Drawing.Color.MintCream;
             this.lstInstr.FormattingEnabled = true;
             this.lstInstr.Items.AddRange(new object[] {
             " "});
@@ -286,7 +299,6 @@
             this.btnThird.TabIndex = 8;
             this.btnThird.Text = " ";
             this.btnThird.UseVisualStyleBackColor = false;
-            this.btnThird.Visible = false;
             this.btnThird.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnThird_MouseUp);
             // 
             // btnSec
@@ -303,7 +315,6 @@
             this.btnSec.TabIndex = 7;
             this.btnSec.Text = " ";
             this.btnSec.UseVisualStyleBackColor = false;
-            this.btnSec.Visible = false;
             this.btnSec.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSec_MouseUp);
             // 
             // btnFirst
@@ -320,13 +331,12 @@
             this.btnFirst.TabIndex = 6;
             this.btnFirst.Text = " ";
             this.btnFirst.UseVisualStyleBackColor = false;
-            this.btnFirst.Visible = false;
             this.btnFirst.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnFirst_MouseUp);
             // 
             // lblPhaseRev
             // 
             this.lblPhaseRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhaseRev.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblPhaseRev.ForeColor = System.Drawing.Color.MintCream;
             this.lblPhaseRev.Location = new System.Drawing.Point(723, 46);
             this.lblPhaseRev.Name = "lblPhaseRev";
             this.lblPhaseRev.Size = new System.Drawing.Size(94, 55);
@@ -337,29 +347,31 @@
             // lblProjOffice
             // 
             this.lblProjOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjOffice.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblProjOffice.ForeColor = System.Drawing.Color.MintCream;
             this.lblProjOffice.Location = new System.Drawing.Point(585, 46);
             this.lblProjOffice.Name = "lblProjOffice";
             this.lblProjOffice.Size = new System.Drawing.Size(94, 55);
             this.lblProjOffice.TabIndex = 4;
             this.lblProjOffice.Text = "Set up the Project Office";
+            this.lblProjOffice.Click += new System.EventHandler(this.lblProjOffice_Click);
             this.lblProjOffice.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblProjOffice_MouseUp);
             // 
             // lblProjTeam
             // 
             this.lblProjTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjTeam.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblProjTeam.ForeColor = System.Drawing.Color.MintCream;
             this.lblProjTeam.Location = new System.Drawing.Point(439, 46);
             this.lblProjTeam.Name = "lblProjTeam";
             this.lblProjTeam.Size = new System.Drawing.Size(94, 55);
             this.lblProjTeam.TabIndex = 3;
             this.lblProjTeam.Text = "Appoint the Project Team";
+            this.lblProjTeam.Click += new System.EventHandler(this.lblProjTeam_Click);
             this.lblProjTeam.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblProjTeam_MouseUp);
             // 
             // lblProjCharter
             // 
             this.lblProjCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjCharter.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblProjCharter.ForeColor = System.Drawing.Color.MintCream;
             this.lblProjCharter.Location = new System.Drawing.Point(314, 46);
             this.lblProjCharter.Name = "lblProjCharter";
             this.lblProjCharter.Size = new System.Drawing.Size(94, 55);
@@ -370,7 +382,7 @@
             // lblFeasStudy
             // 
             this.lblFeasStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFeasStudy.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblFeasStudy.ForeColor = System.Drawing.Color.MintCream;
             this.lblFeasStudy.Location = new System.Drawing.Point(178, 46);
             this.lblFeasStudy.Name = "lblFeasStudy";
             this.lblFeasStudy.Size = new System.Drawing.Size(94, 55);
@@ -381,7 +393,7 @@
             // lblBusCase
             // 
             this.lblBusCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusCase.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblBusCase.ForeColor = System.Drawing.Color.MintCream;
             this.lblBusCase.Location = new System.Drawing.Point(47, 46);
             this.lblBusCase.Name = "lblBusCase";
             this.lblBusCase.Size = new System.Drawing.Size(94, 55);
@@ -389,33 +401,19 @@
             this.lblBusCase.Text = "Develop a Business Case";
             this.lblBusCase.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblBusCase_MouseUp);
             // 
-            // btnPrev
-            // 
-            this.btnPrev.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnPrev.Location = new System.Drawing.Point(244, 490);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(75, 23);
-            this.btnPrev.TabIndex = 13;
-            this.btnPrev.Text = "Prev";
-            this.btnPrev.UseVisualStyleBackColor = false;
-            this.btnPrev.Visible = false;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
-            // 
             // frmInitiation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(853, 638);
-            this.Controls.Add(this.pnlInstr_Init);
+            this.Controls.Add(this.pnlInstr);
             this.Controls.Add(this.pnlInitiation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInitiation";
             this.Text = "frmInitiation";
             this.pnlInitiation.ResumeLayout(false);
-            this.pnlInstr_Init.ResumeLayout(false);
+            this.pnlInstr.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -430,7 +428,7 @@
         private System.Windows.Forms.Button btnEstPCharter;
         private System.Windows.Forms.Button btnUndertakeFStudy;
         private System.Windows.Forms.ListBox lstInfo;
-        private System.Windows.Forms.Panel pnlInstr_Init;
+        private System.Windows.Forms.Panel pnlInstr;
         private System.Windows.Forms.ListBox lstInstr;
         private System.Windows.Forms.Button btnThird;
         private System.Windows.Forms.Button btnSec;

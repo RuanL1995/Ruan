@@ -299,7 +299,7 @@
             this.btnCloseOut.TabIndex = 3;
             this.btnCloseOut.Text = "Close Out";
             this.btnCloseOut.UseVisualStyleBackColor = false;
-            this.btnCloseOut.Click += new System.EventHandler(this.btnCloseOut_Click);
+            this.btnCloseOut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnCloseOut_MouseUp);
             // 
             // btnExecution
             // 
@@ -313,7 +313,7 @@
             this.btnExecution.TabIndex = 2;
             this.btnExecution.Text = "Execution";
             this.btnExecution.UseVisualStyleBackColor = false;
-            this.btnExecution.Click += new System.EventHandler(this.btnExecution_Click);
+            this.btnExecution.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnExecution_MouseUp);
             // 
             // btnPlanning
             // 
@@ -327,7 +327,7 @@
             this.btnPlanning.TabIndex = 1;
             this.btnPlanning.Text = "Planning";
             this.btnPlanning.UseVisualStyleBackColor = false;
-            this.btnPlanning.Click += new System.EventHandler(this.btnPlanning_Click);
+            this.btnPlanning.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnPlanning_MouseUp);
             // 
             // btnInitiation
             // 

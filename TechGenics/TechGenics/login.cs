@@ -309,32 +309,13 @@ namespace TechGenics
                 //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a pain to work with
                 DataSet ds = new DataSet();
                 ds = ListToDataSet.ToDataSet(_users);
-
-                //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
-                if (ds.Tables[0].Rows.Count == 0)
-                {
-                    //Inserts a new user when register is clicked
-                    db.InsertUser(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
-                    txtUsername.Text = "";
-                    txtPassword.Text = "";
-                    txtFirst.Text = "";
-                    txtLast.Text = "";
-                    txtEmail.Text = "";
-                    MessageBox.Show("Your account has been registered successfully.", "Registration Success.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else if (ds.Tables[0].Rows.Count > 0)
-                {                   
-                    if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
-                    {
-                        MessageBox.Show("The username already exists.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
+                               
                 
                 ////send email
-                //Random random = new Random();
-                //validationCode = random.Next(0, 1000).ToString();
+               /* Random random = new Random();
+                validationCode = random.Next(0, 1000).ToString();
 
-                /*using (MailMessage mail = new MailMessage())
+                using (MailMessage mail = new MailMessage())
                 {
                     try
                     {
@@ -358,20 +339,43 @@ namespace TechGenics
                     {
                         MessageBox.Show(ex.Message);
                     }
+
+                    //inputBox for email validate
+                    string userCode = Interaction.InputBox("Enter Code", "Validation");
+                    if (userCode == validationCode)
+                    {
+                        pnlLogin.Enabled = true;
+                    }
+                }*/
+
+                //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    //Inserts a new user when register is clicked
+                    db.InsertUser(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtFirst.Text = "";
+                    txtLast.Text = "";
+                    txtEmail.Text = "";
+                    pnlLogin.Enabled = true;
+                    //MessageBox.Show("Your account has been registered successfully.", "Registration Success.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (ds.Tables[0].Rows.Count > 0)
+                {
+                    if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
+                    {
+                        MessageBox.Show("The username already exists.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
 
-                inputBox for email validate
-                string userCode = Interaction.InputBox("Enter Code", "Validation");
-                if (userCode == validationCode)
-                {
-                    pnlLogin.Enabled = true;
-                }*/
+               
 
                 //Validate password 
                 if (validatePassword(txtSPass.Text) && validatePassword(txtSCPass.Text))
                 {
                     pnlLogin.Visible = true;
-                    pnlLogin.Enabled = false;
+                    //pnlLogin.Enabled = false;
 
                     timer3.Start();
                 }
@@ -382,7 +386,8 @@ namespace TechGenics
                 else if (txtSPass.Text == txtSCPass.Text)
                 {
                     pnlLogin.Visible = true;
-                    pnlLogin.Enabled = false;
+                    //pnlLogin.Enabled = false;
+                    pnlLogin.Enabled = true;
 
                     timer3.Start();
                 }

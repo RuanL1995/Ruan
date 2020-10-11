@@ -52,11 +52,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="frmCloseOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCloseOut.Designer.cs">
+      <DependentUpon>frmCloseOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExecution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExecution.Designer.cs">
+      <DependentUpon>frmExecution.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInitiation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInitiation.Designer.cs">
       <DependentUpon>frmInitiation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanning.Designer.cs">
+      <DependentUpon>frmPlanning.cs</DependentUpon>
     </Compile>
     <Compile Include="google.cs">
       <SubType>Form</SubType>
@@ -94,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="frmInitiation.resx">
       <DependentUpon>frmInitiation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanning.resx">
+      <DependentUpon>frmPlanning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="google.resx">
       <DependentUpon>google.cs</DependentUpon>

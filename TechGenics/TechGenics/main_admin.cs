@@ -19,7 +19,7 @@ namespace TechGenics
         }
 
         /// <summary>
-        /// Mehtods used for general purpose
+        /// Methods used for general purpose
         /// </summary>
         #region General Methods
         //set SubMenus to invisible
@@ -121,22 +121,51 @@ namespace TechGenics
             }
             else//left or middle click
             {
+                hideSubs();
                 openChildForm(new frmInitiation());
             }
         }
-        private void btnPlanning_Click(object sender, EventArgs e)
+
+        private void btnPlanning_MouseUp(object sender, MouseEventArgs e)
         {
-            hideSubs();
+            if (e.Button == MouseButtons.Right)
+            {
+                MessageBox.Show("Right");
+
+            }
+            else//left or middle click
+            {
+                hideSubs();
+                openChildForm(new frmPlanning());
+            }
         }
 
-        private void btnExecution_Click(object sender, EventArgs e)
+        private void btnExecution_MouseUp(object sender, MouseEventArgs e)
         {
-            hideSubs();
+            if (e.Button == MouseButtons.Right)
+            {
+                MessageBox.Show("Right");
+
+            }
+            else//left or middle click
+            {
+                hideSubs();
+                openChildForm(new frmExecution());
+            }
         }
 
-        private void btnCloseOut_Click(object sender, EventArgs e)
+        private void btnCloseOut_MouseUp(object sender, MouseEventArgs e)
         {
-            hideSubs();
+            if (e.Button == MouseButtons.Right)
+            {
+                MessageBox.Show("Right");
+
+            }
+            else//left or middle click
+            {
+                hideSubs();
+                openChildForm(new frmCloseOut());
+            }
         }
 
         #endregion
@@ -198,8 +227,8 @@ namespace TechGenics
 
 
 
-        #endregion
 
-        
+        #endregion
+                
     }
 }

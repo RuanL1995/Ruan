@@ -156,49 +156,127 @@ namespace TechGenics
         private void btnPhaseReview_Click(object sender, EventArgs e)
         {
             pnlInitiation.Visible = false;
-            pnlInstr_Init.Visible = true;
+            pnlInstr.Visible = true;
+            pnlInstr.BringToFront();
 
             lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = false;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "Identify Phase Review Criteria";
+            btnSec.Text = "Undertake Phase Review";
         }
 
         private void btnSetupPOffice_Click(object sender, EventArgs e)
         {
             pnlInitiation.Visible = false;
-            pnlInstr_Init.Visible = true;
+            pnlInstr.Visible = true;
+            pnlInstr.BringToFront();
 
             lstInstr.Items.Clear();
+
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "Define the role of the Project Office";
+            btnSec.Text = "Resource & Locate the Project Office";
+            btnThird.Text = "Create the tools to run the Project Office";
         }
 
         private void btnAppointPTeam_Click(object sender, EventArgs e)
         {
             pnlInitiation.Visible = false;
-            pnlInstr_Init.Visible = true;
+            pnlInstr.Visible = true;
+            pnlInstr.BringToFront();
 
             lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "List the Project Roles";
+            btnSec.Text = "Define Roles and Responsibilities";
+            btnThird.Text = "Identify the Recruitment Process";
         }
 
         private void btnEstPCharter_Click(object sender, EventArgs e)
         {
             pnlInitiation.Visible = false;
-            pnlInstr_Init.Visible = true;
+            pnlInstr.Visible = true;
+            pnlInstr.BringToFront();
 
             lstInstr.Items.Clear();
+
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "Identify the project vision";
+            btnSec.Text = "Describe the Project Organization";
+            btnThird.Text = "{Plan the approach to implementation";
         }
 
         private void btnUndertakeFStudy_Click(object sender, EventArgs e)
         {
             pnlInitiation.Visible = false;
-            pnlInstr_Init.Visible = true;
+            pnlInstr.Visible = true;
+            pnlInstr.BringToFront();
 
             lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+            btnFourth.Visible = true;
+            btnFifth.Visible = true;
+
+            //button text
+            btnFirst.Text = "Research the business problem";
+            btnSec.Text = "Identify requirements";
+            btnThird.Text = "Feasibility of alternative solutions";
+            btnFourth.Text = "Rank feasibility results";
+            btnFifth.Text = "Identify best alternative";
         }
 
         private void btnDevBCase_Click(object sender, EventArgs e)
         {
             pnlInitiation.Visible = false;
-            pnlInstr_Init.Visible = true;
+            pnlInstr.Visible = true;
+            pnlInstr.BringToFront();
 
             lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "Identify the business problem";
+            btnSec.Text = "Solution development";
+            btnThird.Text = "Implementation approach";
+
         }
 
 
@@ -522,7 +600,7 @@ namespace TechGenics
                 case 1:
                     lstInstr.Items.Clear();
                     lstInstr.Items.Add("Identify The Root Cause for the need for the project as changes to:");
-                    lstInstr.Items.Add("\n *Business Vision, Strategy, Objetives");
+                    lstInstr.Items.Add(" *Business Vision, Strategy, Objetives");
                     lstInstr.Items.Add(" *Newly identified competing products or processes");
                     lstInstr.Items.Add(" *Opportunities resulting from newly introduced technologies");
                     lstInstr.Items.Add(" *Commercial and operational trends that are driving business changes");
@@ -784,7 +862,7 @@ namespace TechGenics
         }
 
         #endregion
-                
+
         //end instructions panel
         #endregion
 
@@ -813,7 +891,19 @@ namespace TechGenics
         */
         #endregion
 
+        private void pnlInitiation_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
 
+        private void lblProjOffice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProjTeam_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
