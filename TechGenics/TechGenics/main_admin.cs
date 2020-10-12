@@ -12,11 +12,19 @@ namespace TechGenics
 {
     public partial class frmMainAdmin : Form
     {
+        int slider;
+        bool hide;
+
         public frmMainAdmin()
         {
             InitializeComponent();
             customDesign();
+
+            //sliding panel
+            slider = pnlSideMenu.Width;
+            hide = false;
         }
+              
 
         /// <summary>
         /// Methods used for general purpose
@@ -116,7 +124,7 @@ namespace TechGenics
         {
             if (e.Button == MouseButtons.Right)
             {
-               MessageBox.Show("Right");
+               //MessageBox.Show("Right");
 
             }
             else//left or middle click
@@ -130,7 +138,7 @@ namespace TechGenics
         {
             if (e.Button == MouseButtons.Right)
             {
-                MessageBox.Show("Right");
+                //MessageBox.Show("Right");
 
             }
             else//left or middle click
@@ -229,6 +237,81 @@ namespace TechGenics
 
 
         #endregion
-                
+
+        /// <summary>
+        /// Logout section
+        /// </summary>
+        #region Logout
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            //go to login 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
+        private void btnExpand_Click(object sender, EventArgs e)
+        {
+            tmrSliding.Start();
+        }
+
+        private void tmrSliding_Tick(object sender, EventArgs e)
+        {
+            if(hide)
+            {
+                pnlSideMenu.Width = pnlSideMenu.Width + 12;
+                if(pnlSideMenu.Width >= slider)
+                {
+                    tmrSliding.Stop();
+                    hide = false;
+                    btnExpand.Text = "<<";
+                    this.Refresh();
+                    
+                }
+            }
+            else
+            {
+                pnlSideMenu.Width = pnlSideMenu.Width - 20;
+                if (pnlSideMenu.Width <= 0)
+                {
+                    tmrSliding.Stop();
+                    hide = true;
+                    btnExpand.Text = ">>";
+                    hideSubs();
+                    this.Refresh();
+                    
+                }
+            }
+        }
+
+        /// <summary>
+        /// New tab and dual view
+        /// </summary>
+        #region Right click
+        private void openInNewTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openInDualViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmInitiation());
+            //dock = true;
+        }
+
+        #endregion
+
+        private void frmMainAdmin_Load(object sender, EventArgs e)
+        {
+                       
+            tmrSliding.Start();
+            pnlSideMenu.Width = 0;
+            btnExpand.Text = ">>";
+            
+        }
     }
 }

@@ -57,3 +57,10 @@ C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmPl
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmInitiation.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmPlanning.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmGoogle.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.dll
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.UI.Dialogs.dll
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.UI.dll
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.MediaFramework.dll
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Shared.dll
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Tools.dll
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Types.dll

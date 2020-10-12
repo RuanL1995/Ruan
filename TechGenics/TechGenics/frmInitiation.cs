@@ -905,5 +905,25 @@ namespace TechGenics
         {
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            pnlInstr.Hide();
+            pnlInitiation.Visible = true;
+            
+
+/*options is defined.A feasibility study is then conducted to investigate the likelihood of each solution option
+addressing the business problem and a final recommended solution is put forward. 
+
+Once the recommended solution is approved, a project is initiated to deliver the approved solution. 
+A ‘Project Charter’ is completed, which outlines the objectives, scope and structure of the new project,
+and a Project Manager is appointed.The Project Manager begins recruiting a project team and establishes
+a Project Office environment. Approval is then sought to move into the detailed planning phase.*/
+            lstInfo.Items.Add("The Initiation Phase is the first phase in the project.");
+            lstInfo.Items.Add("In this phase a business problem(or opportunity) is identified and a business case which provides various solution");
+
+        }
+
+      
     }
 }

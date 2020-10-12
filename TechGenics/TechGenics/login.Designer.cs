@@ -29,126 +29,112 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblForgotPassword = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblSignUp = new System.Windows.Forms.Label();
-            this.pnlLogin = new System.Windows.Forms.Panel();
-            this.pboPassIcon = new System.Windows.Forms.PictureBox();
-            this.pboUserIcon = new System.Windows.Forms.PictureBox();
-            this.pboLogo = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtFirst = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtLast = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtSUser = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtSCPass = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pnlSignUp = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.txtSPass = new System.Windows.Forms.TextBox();
-            this.pboLogoSignUp = new System.Windows.Forms.PictureBox();
             this.btnMode = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gradient1 = new TechGenics.gradient();
+            this.pnlLogin = new System.Windows.Forms.Panel();
+            this.pboPassIcon = new System.Windows.Forms.PictureBox();
+            this.pboUserIcon = new System.Windows.Forms.PictureBox();
+            this.pboLogo = new System.Windows.Forms.PictureBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblSignUp = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.lblForgotPassword = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlSignUp = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.txtSPass = new System.Windows.Forms.TextBox();
+            this.pboLogoSignUp = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtSCPass = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtSUser = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtLast = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtFirst = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.gradient1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.pnlSignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // btnMode
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label2.Location = new System.Drawing.Point(115, 281);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "_________________________";
+            this.btnMode.BackColor = System.Drawing.Color.Black;
+            this.btnMode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMode.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnMode.Location = new System.Drawing.Point(835, 24);
+            this.btnMode.Name = "btnMode";
+            this.btnMode.Size = new System.Drawing.Size(160, 31);
+            this.btnMode.TabIndex = 15;
+            this.btnMode.Text = "Dark Mode";
+            this.btnMode.UseVisualStyleBackColor = false;
+            this.btnMode.Visible = false;
+            this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
             // 
-            // label1
+            // timer1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label1.Location = new System.Drawing.Point(115, 235);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "_________________________";
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblForgotPassword
+            // timer2
             // 
-            this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPassword.ForeColor = System.Drawing.Color.Aquamarine;
-            this.lblForgotPassword.Location = new System.Drawing.Point(124, 342);
-            this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(138, 18);
-            this.lblForgotPassword.TabIndex = 9;
-            this.lblForgotPassword.Text = "Forgot Password";
-            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
+            this.timer2.Interval = 30;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // btnLogin
+            // timer3
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(112, 383);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(160, 31);
-            this.btnLogin.TabIndex = 8;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.timer3.Interval = 30;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
             // 
-            // txtUsername
+            // timer4
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.Black;
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(121, 226);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(115, 19);
-            this.txtUsername.TabIndex = 15;
-            this.txtUsername.Tag = "10";
-            this.txtUsername.Text = "Username";
-            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
-            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave_1);
+            this.timer4.Interval = 30;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick_1);
             // 
-            // lblSignUp
+            // label3
             // 
-            this.lblSignUp.AutoSize = true;
-            this.lblSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignUp.ForeColor = System.Drawing.Color.Aquamarine;
-            this.lblSignUp.Location = new System.Drawing.Point(155, 435);
-            this.lblSignUp.Name = "lblSignUp";
-            this.lblSignUp.Size = new System.Drawing.Size(67, 18);
-            this.lblSignUp.TabIndex = 10;
-            this.lblSignUp.Text = "Sign Up";
-            this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(879, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "go to admin";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // gradient1
+            // 
+            this.gradient1.angle = 120F;
+            this.gradient1.BackColor = System.Drawing.Color.Black;
+            this.gradient1.colourBot = System.Drawing.Color.Aquamarine;
+            this.gradient1.colourTop = System.Drawing.Color.DarkSlateGray;
+            this.gradient1.Controls.Add(this.pnlLogin);
+            this.gradient1.Controls.Add(this.pnlSignUp);
+            this.gradient1.Location = new System.Drawing.Point(-6, -7);
+            this.gradient1.Name = "gradient1";
+            this.gradient1.Size = new System.Drawing.Size(1156, 730);
+            this.gradient1.TabIndex = 17;
             // 
             // pnlLogin
             // 
-            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.BackColor = System.Drawing.Color.Black;
             this.pnlLogin.Controls.Add(this.pboPassIcon);
             this.pnlLogin.Controls.Add(this.pboUserIcon);
             this.pnlLogin.Controls.Add(this.pboLogo);
@@ -159,7 +145,7 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(328, 78);
+            this.pnlLogin.Location = new System.Drawing.Point(376, 98);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
@@ -214,156 +200,83 @@
             this.txtPassword.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
             this.txtPassword.MouseHover += new System.EventHandler(this.txtPassword_MouseHover);
             // 
-            // btnRegister
+            // lblSignUp
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.ForeColor = System.Drawing.Color.Black;
-            this.btnRegister.Location = new System.Drawing.Point(99, 431);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(160, 31);
-            this.btnRegister.TabIndex = 8;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.lblSignUp.AutoSize = true;
+            this.lblSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUp.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblSignUp.Location = new System.Drawing.Point(155, 435);
+            this.lblSignUp.Name = "lblSignUp";
+            this.lblSignUp.Size = new System.Drawing.Size(67, 18);
+            this.lblSignUp.TabIndex = 10;
+            this.lblSignUp.Text = "Sign Up";
+            this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
             // 
-            // label5
+            // txtUsername
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label5.Location = new System.Drawing.Point(22, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "_________________";
+            this.txtUsername.BackColor = System.Drawing.Color.Black;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.White;
+            this.txtUsername.Location = new System.Drawing.Point(121, 226);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(115, 19);
+            this.txtUsername.TabIndex = 15;
+            this.txtUsername.Tag = "10";
+            this.txtUsername.Text = "Username";
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave_1);
             // 
-            // txtFirst
+            // btnLogin
             // 
-            this.txtFirst.BackColor = System.Drawing.Color.Black;
-            this.txtFirst.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirst.ForeColor = System.Drawing.Color.White;
-            this.txtFirst.Location = new System.Drawing.Point(28, 179);
-            this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(115, 19);
-            this.txtFirst.TabIndex = 12;
-            this.txtFirst.Text = "First Name";
-            this.txtFirst.Click += new System.EventHandler(this.txtFirst_Click);
-            this.txtFirst.Leave += new System.EventHandler(this.txtFirst_Leave);
+            this.btnLogin.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.Location = new System.Drawing.Point(112, 383);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(160, 31);
+            this.btnLogin.TabIndex = 8;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // label6
+            // lblForgotPassword
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label6.Location = new System.Drawing.Point(193, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "_________________";
+            this.lblForgotPassword.AutoSize = true;
+            this.lblForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPassword.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblForgotPassword.Location = new System.Drawing.Point(124, 342);
+            this.lblForgotPassword.Name = "lblForgotPassword";
+            this.lblForgotPassword.Size = new System.Drawing.Size(138, 18);
+            this.lblForgotPassword.TabIndex = 9;
+            this.lblForgotPassword.Text = "Forgot Password";
+            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
             // 
-            // txtLast
+            // label1
             // 
-            this.txtLast.BackColor = System.Drawing.Color.Black;
-            this.txtLast.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLast.ForeColor = System.Drawing.Color.White;
-            this.txtLast.Location = new System.Drawing.Point(199, 179);
-            this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(115, 19);
-            this.txtLast.TabIndex = 14;
-            this.txtLast.Text = "Surname";
-            this.txtLast.Click += new System.EventHandler(this.txtLast_Click);
-            this.txtLast.Leave += new System.EventHandler(this.txtLast_Leave);
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label1.Location = new System.Drawing.Point(115, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "_________________________";
             // 
-            // label7
+            // label2
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label7.Location = new System.Drawing.Point(190, 258);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "__________________";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.Black;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(196, 249);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(115, 19);
-            this.txtEmail.TabIndex = 16;
-            this.txtEmail.Text = "Email";
-            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
-            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label8.Location = new System.Drawing.Point(19, 258);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "_________________";
-            // 
-            // txtSUser
-            // 
-            this.txtSUser.BackColor = System.Drawing.Color.Black;
-            this.txtSUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSUser.ForeColor = System.Drawing.Color.White;
-            this.txtSUser.Location = new System.Drawing.Point(25, 249);
-            this.txtSUser.Name = "txtSUser";
-            this.txtSUser.Size = new System.Drawing.Size(115, 19);
-            this.txtSUser.TabIndex = 18;
-            this.txtSUser.Text = "Username";
-            this.txtSUser.Click += new System.EventHandler(this.txtSUser_Click);
-            this.txtSUser.Leave += new System.EventHandler(this.txtSUser_Leave);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label10.Location = new System.Drawing.Point(16, 377);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(169, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "___________________________";
-            // 
-            // txtSCPass
-            // 
-            this.txtSCPass.BackColor = System.Drawing.Color.Black;
-            this.txtSCPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSCPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSCPass.ForeColor = System.Drawing.Color.White;
-            this.txtSCPass.Location = new System.Drawing.Point(22, 368);
-            this.txtSCPass.Name = "txtSCPass";
-            this.txtSCPass.Size = new System.Drawing.Size(139, 19);
-            this.txtSCPass.TabIndex = 20;
-            this.txtSCPass.Text = "Confirm Password";
-            this.txtSCPass.Click += new System.EventHandler(this.txtSCPass_Click);
-            this.txtSCPass.Leave += new System.EventHandler(this.txtSCPass_Leave);
-            this.txtSCPass.MouseLeave += new System.EventHandler(this.txtSCPass_MouseLeave);
-            this.txtSCPass.MouseHover += new System.EventHandler(this.txtSCPass_MouseHover);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label9.Location = new System.Drawing.Point(19, 318);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(169, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "___________________________";
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label2.Location = new System.Drawing.Point(115, 281);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "_________________________";
             // 
             // pnlSignUp
             // 
-            this.pnlSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSignUp.BackColor = System.Drawing.Color.Black;
             this.pnlSignUp.Controls.Add(this.lblTitle);
             this.pnlSignUp.Controls.Add(this.txtSPass);
             this.pnlSignUp.Controls.Add(this.pboLogoSignUp);
@@ -379,7 +292,7 @@
             this.pnlSignUp.Controls.Add(this.txtFirst);
             this.pnlSignUp.Controls.Add(this.label5);
             this.pnlSignUp.Controls.Add(this.btnRegister);
-            this.pnlSignUp.Location = new System.Drawing.Point(328, 81);
+            this.pnlSignUp.Location = new System.Drawing.Point(376, 98);
             this.pnlSignUp.Name = "pnlSignUp";
             this.pnlSignUp.Size = new System.Drawing.Size(379, 549);
             this.pnlSignUp.TabIndex = 12;
@@ -422,80 +335,169 @@
             this.pboLogoSignUp.TabIndex = 22;
             this.pboLogoSignUp.TabStop = false;
             // 
-            // btnMode
+            // label9
             // 
-            this.btnMode.BackColor = System.Drawing.Color.Black;
-            this.btnMode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMode.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnMode.Location = new System.Drawing.Point(835, 24);
-            this.btnMode.Name = "btnMode";
-            this.btnMode.Size = new System.Drawing.Size(160, 31);
-            this.btnMode.TabIndex = 15;
-            this.btnMode.Text = "Dark Mode";
-            this.btnMode.UseVisualStyleBackColor = false;
-            this.btnMode.Visible = false;
-            this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label9.Location = new System.Drawing.Point(19, 318);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(169, 13);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "___________________________";
             // 
-            // timer1
+            // txtSCPass
             // 
-            this.timer1.Interval = 30;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.txtSCPass.BackColor = System.Drawing.Color.Black;
+            this.txtSCPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSCPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSCPass.ForeColor = System.Drawing.Color.White;
+            this.txtSCPass.Location = new System.Drawing.Point(22, 368);
+            this.txtSCPass.Name = "txtSCPass";
+            this.txtSCPass.Size = new System.Drawing.Size(139, 19);
+            this.txtSCPass.TabIndex = 20;
+            this.txtSCPass.Text = "Confirm Password";
+            this.txtSCPass.Click += new System.EventHandler(this.txtSCPass_Click);
+            this.txtSCPass.Leave += new System.EventHandler(this.txtSCPass_Leave);
+            this.txtSCPass.MouseLeave += new System.EventHandler(this.txtSCPass_MouseLeave);
+            this.txtSCPass.MouseHover += new System.EventHandler(this.txtSCPass_MouseHover);
             // 
-            // timer2
+            // label10
             // 
-            this.timer2.Interval = 30;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label10.Location = new System.Drawing.Point(16, 377);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(169, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "___________________________";
             // 
-            // timer3
+            // txtSUser
             // 
-            this.timer3.Interval = 30;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
+            this.txtSUser.BackColor = System.Drawing.Color.Black;
+            this.txtSUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSUser.ForeColor = System.Drawing.Color.White;
+            this.txtSUser.Location = new System.Drawing.Point(25, 249);
+            this.txtSUser.Name = "txtSUser";
+            this.txtSUser.Size = new System.Drawing.Size(115, 19);
+            this.txtSUser.TabIndex = 18;
+            this.txtSUser.Text = "Username";
+            this.txtSUser.Click += new System.EventHandler(this.txtSUser_Click);
+            this.txtSUser.Leave += new System.EventHandler(this.txtSUser_Leave);
             // 
-            // timer4
+            // label8
             // 
-            this.timer4.Interval = 30;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick_1);
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label8.Location = new System.Drawing.Point(19, 258);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(109, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "_________________";
             // 
-            // label3
+            // txtEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(879, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "go to admin";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.txtEmail.BackColor = System.Drawing.Color.Black;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(196, 249);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(115, 19);
+            this.txtEmail.TabIndex = 16;
+            this.txtEmail.Text = "Email";
+            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
-            // pictureBox1
+            // label7
             // 
-            this.pictureBox1.Image = global::TechGenics.Properties.Resources.fireworks;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1111, 712);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label7.Location = new System.Drawing.Point(190, 258);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "__________________";
+            // 
+            // txtLast
+            // 
+            this.txtLast.BackColor = System.Drawing.Color.Black;
+            this.txtLast.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLast.ForeColor = System.Drawing.Color.White;
+            this.txtLast.Location = new System.Drawing.Point(199, 179);
+            this.txtLast.Name = "txtLast";
+            this.txtLast.Size = new System.Drawing.Size(115, 19);
+            this.txtLast.TabIndex = 14;
+            this.txtLast.Text = "Surname";
+            this.txtLast.Click += new System.EventHandler(this.txtLast_Click);
+            this.txtLast.Leave += new System.EventHandler(this.txtLast_Leave);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label6.Location = new System.Drawing.Point(193, 188);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "_________________";
+            // 
+            // txtFirst
+            // 
+            this.txtFirst.BackColor = System.Drawing.Color.Black;
+            this.txtFirst.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirst.ForeColor = System.Drawing.Color.White;
+            this.txtFirst.Location = new System.Drawing.Point(28, 179);
+            this.txtFirst.Name = "txtFirst";
+            this.txtFirst.Size = new System.Drawing.Size(115, 19);
+            this.txtFirst.TabIndex = 12;
+            this.txtFirst.Text = "First Name";
+            this.txtFirst.Click += new System.EventHandler(this.txtFirst_Click);
+            this.txtFirst.Leave += new System.EventHandler(this.txtFirst_Leave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label5.Location = new System.Drawing.Point(22, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "_________________";
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.Black;
+            this.btnRegister.Location = new System.Drawing.Point(99, 431);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(160, 31);
+            this.btnRegister.TabIndex = 8;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // login_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1123, 726);
+            this.ClientSize = new System.Drawing.Size(1151, 725);
+            this.Controls.Add(this.gradient1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnMode);
-            this.Controls.Add(this.pnlLogin);
-            this.Controls.Add(this.pnlSignUp);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login_signup";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.login_signup_Load);
+            this.gradient1.ResumeLayout(false);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).EndInit();
@@ -504,47 +506,46 @@
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblForgotPassword;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label lblSignUp;
-        private System.Windows.Forms.Panel pnlLogin;
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtFirst;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtLast;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSUser;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtSCPass;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel pnlSignUp;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.PictureBox pboLogo;
-        private System.Windows.Forms.PictureBox pboLogoSignUp;
-        private System.Windows.Forms.TextBox txtSPass;
         private System.Windows.Forms.Button btnMode;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Panel pnlSignUp;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TextBox txtSPass;
+        private System.Windows.Forms.PictureBox pboLogoSignUp;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtSCPass;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtSUser;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtLast;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtFirst;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.PictureBox pboPassIcon;
         private System.Windows.Forms.PictureBox pboUserIcon;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboLogo;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblSignUp;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblForgotPassword;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private gradient gradient1;
     }
 }
 

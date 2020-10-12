@@ -29,14 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlInitiation = new System.Windows.Forms.Panel();
-            this.lstInfo = new System.Windows.Forms.ListBox();
-            this.btnPhaseReview = new System.Windows.Forms.Button();
-            this.btnSetupPOffice = new System.Windows.Forms.Button();
-            this.btnAppointPTeam = new System.Windows.Forms.Button();
-            this.btnEstPCharter = new System.Windows.Forms.Button();
-            this.btnUndertakeFStudy = new System.Windows.Forms.Button();
-            this.btnDevBCase = new System.Windows.Forms.Button();
             this.pnlInstr = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnFifth = new System.Windows.Forms.Button();
@@ -51,12 +45,21 @@
             this.lblProjCharter = new System.Windows.Forms.Label();
             this.lblFeasStudy = new System.Windows.Forms.Label();
             this.lblBusCase = new System.Windows.Forms.Label();
+            this.lstInfo = new System.Windows.Forms.ListBox();
+            this.btnPhaseReview = new System.Windows.Forms.Button();
+            this.btnSetupPOffice = new System.Windows.Forms.Button();
+            this.btnAppointPTeam = new System.Windows.Forms.Button();
+            this.btnEstPCharter = new System.Windows.Forms.Button();
+            this.btnUndertakeFStudy = new System.Windows.Forms.Button();
+            this.btnDevBCase = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlInitiation.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInitiation
             // 
+            this.pnlInitiation.Controls.Add(this.pnlInstr);
             this.pnlInitiation.Controls.Add(this.lstInfo);
             this.pnlInitiation.Controls.Add(this.btnPhaseReview);
             this.pnlInitiation.Controls.Add(this.btnSetupPOffice);
@@ -64,134 +67,16 @@
             this.pnlInitiation.Controls.Add(this.btnEstPCharter);
             this.pnlInitiation.Controls.Add(this.btnUndertakeFStudy);
             this.pnlInitiation.Controls.Add(this.btnDevBCase);
-            this.pnlInitiation.Location = new System.Drawing.Point(32, 20);
+            this.pnlInitiation.Location = new System.Drawing.Point(30, 15);
             this.pnlInitiation.Name = "pnlInitiation";
             this.pnlInitiation.Size = new System.Drawing.Size(829, 614);
             this.pnlInitiation.TabIndex = 0;
             this.pnlInitiation.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInitiation_Paint);
             // 
-            // lstInfo
-            // 
-            this.lstInfo.BackColor = System.Drawing.Color.Black;
-            this.lstInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstInfo.ForeColor = System.Drawing.Color.MintCream;
-            this.lstInfo.FormattingEnabled = true;
-            this.lstInfo.ItemHeight = 18;
-            this.lstInfo.Items.AddRange(new object[] {
-            "The Initiation Phase is the first phase in the project. ",
-            "In this phase a business problem (or opportunity) is identified and a business ca" +
-                "se which provides various solution ",
-            "options is defined. A feasibility study is then conducted to investigate the like" +
-                "lihood of each solution option ",
-            "addressing the business problem and a final recommended solution is put forward. " +
-                "",
-            "",
-            "Once the recommended solution is approved, a project is initiated to deliver the " +
-                "approved solution. ",
-            "A ‘Project Charter’ is completed, which outlines the objectives, scope and struct" +
-                "ure of the new project,",
-            "and a Project Manager is appointed. The Project Manager begins recruiting a proje" +
-                "ct team and establishes",
-            "a Project Office environment. Approval is then sought to move into the detailed p" +
-                "lanning phase."});
-            this.lstInfo.Location = new System.Drawing.Point(14, 65);
-            this.lstInfo.Name = "lstInfo";
-            this.lstInfo.Size = new System.Drawing.Size(803, 198);
-            this.lstInfo.TabIndex = 7;
-            // 
-            // btnPhaseReview
-            // 
-            this.btnPhaseReview.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnPhaseReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPhaseReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhaseReview.Location = new System.Drawing.Point(269, 294);
-            this.btnPhaseReview.Name = "btnPhaseReview";
-            this.btnPhaseReview.Size = new System.Drawing.Size(280, 33);
-            this.btnPhaseReview.TabIndex = 5;
-            this.btnPhaseReview.Text = "Perform Phase Review";
-            this.btnPhaseReview.UseVisualStyleBackColor = false;
-            this.btnPhaseReview.Click += new System.EventHandler(this.btnPhaseReview_Click);
-            this.btnPhaseReview.MouseLeave += new System.EventHandler(this.btnPhaseReview_MouseLeave);
-            this.btnPhaseReview.MouseHover += new System.EventHandler(this.btnPhaseReview_MouseHover);
-            // 
-            // btnSetupPOffice
-            // 
-            this.btnSetupPOffice.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnSetupPOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetupPOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetupPOffice.Location = new System.Drawing.Point(244, 343);
-            this.btnSetupPOffice.Name = "btnSetupPOffice";
-            this.btnSetupPOffice.Size = new System.Drawing.Size(330, 33);
-            this.btnSetupPOffice.TabIndex = 4;
-            this.btnSetupPOffice.Text = "Set up the Project Office";
-            this.btnSetupPOffice.UseVisualStyleBackColor = false;
-            this.btnSetupPOffice.Click += new System.EventHandler(this.btnSetupPOffice_Click);
-            this.btnSetupPOffice.MouseLeave += new System.EventHandler(this.btnSetupPOffice_MouseLeave);
-            this.btnSetupPOffice.MouseHover += new System.EventHandler(this.btnSetupPOffice_MouseHover);
-            // 
-            // btnAppointPTeam
-            // 
-            this.btnAppointPTeam.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnAppointPTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointPTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppointPTeam.Location = new System.Drawing.Point(216, 392);
-            this.btnAppointPTeam.Name = "btnAppointPTeam";
-            this.btnAppointPTeam.Size = new System.Drawing.Size(380, 33);
-            this.btnAppointPTeam.TabIndex = 3;
-            this.btnAppointPTeam.Text = "Appoint the Project Team";
-            this.btnAppointPTeam.UseVisualStyleBackColor = false;
-            this.btnAppointPTeam.Click += new System.EventHandler(this.btnAppointPTeam_Click);
-            this.btnAppointPTeam.MouseLeave += new System.EventHandler(this.btnAppointPTeam_MouseLeave);
-            this.btnAppointPTeam.MouseHover += new System.EventHandler(this.btnAppointPTeam_MouseHover);
-            // 
-            // btnEstPCharter
-            // 
-            this.btnEstPCharter.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnEstPCharter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstPCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstPCharter.Location = new System.Drawing.Point(181, 440);
-            this.btnEstPCharter.Name = "btnEstPCharter";
-            this.btnEstPCharter.Size = new System.Drawing.Size(440, 33);
-            this.btnEstPCharter.TabIndex = 2;
-            this.btnEstPCharter.Text = "Establish a Project Charter";
-            this.btnEstPCharter.UseVisualStyleBackColor = false;
-            this.btnEstPCharter.Click += new System.EventHandler(this.btnEstPCharter_Click);
-            this.btnEstPCharter.MouseLeave += new System.EventHandler(this.btnEstPCharter_MouseLeave);
-            this.btnEstPCharter.MouseHover += new System.EventHandler(this.btnEstPCharter_MouseHover);
-            // 
-            // btnUndertakeFStudy
-            // 
-            this.btnUndertakeFStudy.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnUndertakeFStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUndertakeFStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUndertakeFStudy.Location = new System.Drawing.Point(160, 490);
-            this.btnUndertakeFStudy.Name = "btnUndertakeFStudy";
-            this.btnUndertakeFStudy.Size = new System.Drawing.Size(485, 33);
-            this.btnUndertakeFStudy.TabIndex = 1;
-            this.btnUndertakeFStudy.Text = "Undertake a Feasibility Study";
-            this.btnUndertakeFStudy.UseVisualStyleBackColor = false;
-            this.btnUndertakeFStudy.Click += new System.EventHandler(this.btnUndertakeFStudy_Click);
-            this.btnUndertakeFStudy.MouseLeave += new System.EventHandler(this.btnUndertakeFStudy_MouseLeave);
-            this.btnUndertakeFStudy.MouseHover += new System.EventHandler(this.btnUndertakeFStudy_MouseHover);
-            // 
-            // btnDevBCase
-            // 
-            this.btnDevBCase.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnDevBCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDevBCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevBCase.Location = new System.Drawing.Point(117, 541);
-            this.btnDevBCase.Name = "btnDevBCase";
-            this.btnDevBCase.Size = new System.Drawing.Size(552, 33);
-            this.btnDevBCase.TabIndex = 0;
-            this.btnDevBCase.Text = "Develop a Business Case ";
-            this.btnDevBCase.UseVisualStyleBackColor = false;
-            this.btnDevBCase.Click += new System.EventHandler(this.btnDevBCase_Click);
-            this.btnDevBCase.MouseLeave += new System.EventHandler(this.btnDevBCase_MouseLeave);
-            this.btnDevBCase.MouseHover += new System.EventHandler(this.btnDevBCase_MouseHover);
-            // 
             // pnlInstr
             // 
+            this.pnlInstr.Controls.Add(this.flowLayoutPanel1);
+            this.pnlInstr.Controls.Add(this.btnClose);
             this.pnlInstr.Controls.Add(this.btnPrev);
             this.pnlInstr.Controls.Add(this.btnNext);
             this.pnlInstr.Controls.Add(this.btnFifth);
@@ -206,11 +91,25 @@
             this.pnlInstr.Controls.Add(this.lblProjCharter);
             this.pnlInstr.Controls.Add(this.lblFeasStudy);
             this.pnlInstr.Controls.Add(this.lblBusCase);
-            this.pnlInstr.Location = new System.Drawing.Point(32, 20);
+            this.pnlInstr.Location = new System.Drawing.Point(0, 3);
             this.pnlInstr.Name = "pnlInstr";
             this.pnlInstr.Size = new System.Drawing.Size(829, 614);
             this.pnlInstr.TabIndex = 1;
             this.pnlInstr.Visible = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnClose.Location = new System.Drawing.Point(786, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(34, 21);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnPrev
             // 
@@ -401,13 +300,139 @@
             this.lblBusCase.Text = "Develop a Business Case";
             this.lblBusCase.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblBusCase_MouseUp);
             // 
+            // lstInfo
+            // 
+            this.lstInfo.BackColor = System.Drawing.Color.Black;
+            this.lstInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstInfo.ForeColor = System.Drawing.Color.MintCream;
+            this.lstInfo.FormattingEnabled = true;
+            this.lstInfo.ItemHeight = 18;
+            this.lstInfo.Items.AddRange(new object[] {
+            "The Initiation Phase is the first phase in the project. ",
+            "In this phase a business problem (or opportunity) is identified and a business ca" +
+                "se which provides various solution ",
+            "options is defined. A feasibility study is then conducted to investigate the like" +
+                "lihood of each solution option ",
+            "addressing the business problem and a final recommended solution is put forward. " +
+                "",
+            "",
+            "Once the recommended solution is approved, a project is initiated to deliver the " +
+                "approved solution. ",
+            "A ‘Project Charter’ is completed, which outlines the objectives, scope and struct" +
+                "ure of the new project,",
+            "and a Project Manager is appointed. The Project Manager begins recruiting a proje" +
+                "ct team and establishes",
+            "a Project Office environment. Approval is then sought to move into the detailed p" +
+                "lanning phase."});
+            this.lstInfo.Location = new System.Drawing.Point(14, 65);
+            this.lstInfo.Name = "lstInfo";
+            this.lstInfo.Size = new System.Drawing.Size(803, 198);
+            this.lstInfo.TabIndex = 7;
+            // 
+            // btnPhaseReview
+            // 
+            this.btnPhaseReview.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnPhaseReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPhaseReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhaseReview.Location = new System.Drawing.Point(269, 294);
+            this.btnPhaseReview.Name = "btnPhaseReview";
+            this.btnPhaseReview.Size = new System.Drawing.Size(280, 33);
+            this.btnPhaseReview.TabIndex = 5;
+            this.btnPhaseReview.Text = "Perform Phase Review";
+            this.btnPhaseReview.UseVisualStyleBackColor = false;
+            this.btnPhaseReview.Click += new System.EventHandler(this.btnPhaseReview_Click);
+            this.btnPhaseReview.MouseLeave += new System.EventHandler(this.btnPhaseReview_MouseLeave);
+            this.btnPhaseReview.MouseHover += new System.EventHandler(this.btnPhaseReview_MouseHover);
+            // 
+            // btnSetupPOffice
+            // 
+            this.btnSetupPOffice.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnSetupPOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetupPOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetupPOffice.Location = new System.Drawing.Point(244, 343);
+            this.btnSetupPOffice.Name = "btnSetupPOffice";
+            this.btnSetupPOffice.Size = new System.Drawing.Size(330, 33);
+            this.btnSetupPOffice.TabIndex = 4;
+            this.btnSetupPOffice.Text = "Set up the Project Office";
+            this.btnSetupPOffice.UseVisualStyleBackColor = false;
+            this.btnSetupPOffice.Click += new System.EventHandler(this.btnSetupPOffice_Click);
+            this.btnSetupPOffice.MouseLeave += new System.EventHandler(this.btnSetupPOffice_MouseLeave);
+            this.btnSetupPOffice.MouseHover += new System.EventHandler(this.btnSetupPOffice_MouseHover);
+            // 
+            // btnAppointPTeam
+            // 
+            this.btnAppointPTeam.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnAppointPTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointPTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppointPTeam.Location = new System.Drawing.Point(216, 392);
+            this.btnAppointPTeam.Name = "btnAppointPTeam";
+            this.btnAppointPTeam.Size = new System.Drawing.Size(380, 33);
+            this.btnAppointPTeam.TabIndex = 3;
+            this.btnAppointPTeam.Text = "Appoint the Project Team";
+            this.btnAppointPTeam.UseVisualStyleBackColor = false;
+            this.btnAppointPTeam.Click += new System.EventHandler(this.btnAppointPTeam_Click);
+            this.btnAppointPTeam.MouseLeave += new System.EventHandler(this.btnAppointPTeam_MouseLeave);
+            this.btnAppointPTeam.MouseHover += new System.EventHandler(this.btnAppointPTeam_MouseHover);
+            // 
+            // btnEstPCharter
+            // 
+            this.btnEstPCharter.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnEstPCharter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstPCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstPCharter.Location = new System.Drawing.Point(181, 440);
+            this.btnEstPCharter.Name = "btnEstPCharter";
+            this.btnEstPCharter.Size = new System.Drawing.Size(440, 33);
+            this.btnEstPCharter.TabIndex = 2;
+            this.btnEstPCharter.Text = "Establish a Project Charter";
+            this.btnEstPCharter.UseVisualStyleBackColor = false;
+            this.btnEstPCharter.Click += new System.EventHandler(this.btnEstPCharter_Click);
+            this.btnEstPCharter.MouseLeave += new System.EventHandler(this.btnEstPCharter_MouseLeave);
+            this.btnEstPCharter.MouseHover += new System.EventHandler(this.btnEstPCharter_MouseHover);
+            // 
+            // btnUndertakeFStudy
+            // 
+            this.btnUndertakeFStudy.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnUndertakeFStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUndertakeFStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUndertakeFStudy.Location = new System.Drawing.Point(160, 490);
+            this.btnUndertakeFStudy.Name = "btnUndertakeFStudy";
+            this.btnUndertakeFStudy.Size = new System.Drawing.Size(485, 33);
+            this.btnUndertakeFStudy.TabIndex = 1;
+            this.btnUndertakeFStudy.Text = "Undertake a Feasibility Study";
+            this.btnUndertakeFStudy.UseVisualStyleBackColor = false;
+            this.btnUndertakeFStudy.Click += new System.EventHandler(this.btnUndertakeFStudy_Click);
+            this.btnUndertakeFStudy.MouseLeave += new System.EventHandler(this.btnUndertakeFStudy_MouseLeave);
+            this.btnUndertakeFStudy.MouseHover += new System.EventHandler(this.btnUndertakeFStudy_MouseHover);
+            // 
+            // btnDevBCase
+            // 
+            this.btnDevBCase.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnDevBCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDevBCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevBCase.Location = new System.Drawing.Point(117, 541);
+            this.btnDevBCase.Name = "btnDevBCase";
+            this.btnDevBCase.Size = new System.Drawing.Size(552, 33);
+            this.btnDevBCase.TabIndex = 0;
+            this.btnDevBCase.Text = "Develop a Business Case ";
+            this.btnDevBCase.UseVisualStyleBackColor = false;
+            this.btnDevBCase.Click += new System.EventHandler(this.btnDevBCase_Click);
+            this.btnDevBCase.MouseLeave += new System.EventHandler(this.btnDevBCase_MouseLeave);
+            this.btnDevBCase.MouseHover += new System.EventHandler(this.btnDevBCase_MouseHover);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(298, 209);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(472, 200);
+            this.flowLayoutPanel1.TabIndex = 15;
+            // 
             // frmInitiation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(853, 638);
-            this.Controls.Add(this.pnlInstr);
             this.Controls.Add(this.pnlInitiation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInitiation";
@@ -443,5 +468,7 @@
         private System.Windows.Forms.Button btnFourth;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

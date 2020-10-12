@@ -688,5 +688,10 @@ namespace TechGenics
         {
 
         }
+
+        private void login_signup_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
