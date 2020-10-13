@@ -64,3 +64,10 @@ C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Media
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Shared.dll
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Tools.dll
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Types.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.UI.Dialogs.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.UI.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.MediaFramework.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Shared.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Tools.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\VisioForge.Types.dll
