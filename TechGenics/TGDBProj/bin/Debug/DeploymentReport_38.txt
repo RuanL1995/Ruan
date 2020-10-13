@@ -1,0 +1,26 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[tblPhase] (Table)
+       [dbo].[tblProject] (Table)
+       [dbo].[tblProjectPhase] (Table)
+       [dbo].[tblTest] (Table)
+       [dbo].[tblUser] (Table)
+       [dbo].[tblUserProject] (Table)
+       [dbo].[FK_tblProject_ToPhase] (Foreign Key)
+       [dbo].[FK_tblPhase_ToPhase] (Foreign Key)
+       [dbo].[FK_tblUser_ToProject] (Foreign Key)
+       [dbo].[FK_tblProject_ToProject] (Foreign Key)
+       [dbo].[spUserC1] (Procedure)
+       [dbo].[spUserR1] (Procedure)
+
+** Supporting actions

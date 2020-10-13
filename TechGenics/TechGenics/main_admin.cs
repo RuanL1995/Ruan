@@ -19,6 +19,7 @@ namespace TechGenics
         {
             InitializeComponent();
             customDesign();
+            controls.SetInitial(this);
 
             //sliding panel
             slider = pnlSideMenu.Width;
@@ -312,6 +313,23 @@ namespace TechGenics
             pnlSideMenu.Width = 0;
             btnExpand.Text = ">>";
             
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            controls.minimize(this);
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            controls.doMax(this, btn);
+        }
+
+        private void btnFull_Click(object sender, EventArgs e)
+        {
+            controls.doFullscreen(this);
+                
         }
     }
 }

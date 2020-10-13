@@ -52,14 +52,12 @@
             this.btnEstPCharter = new System.Windows.Forms.Button();
             this.btnUndertakeFStudy = new System.Windows.Forms.Button();
             this.btnDevBCase = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlInitiation.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInitiation
             // 
-            this.pnlInitiation.Controls.Add(this.pnlInstr);
             this.pnlInitiation.Controls.Add(this.lstInfo);
             this.pnlInitiation.Controls.Add(this.btnPhaseReview);
             this.pnlInitiation.Controls.Add(this.btnSetupPOffice);
@@ -67,15 +65,14 @@
             this.pnlInitiation.Controls.Add(this.btnEstPCharter);
             this.pnlInitiation.Controls.Add(this.btnUndertakeFStudy);
             this.pnlInitiation.Controls.Add(this.btnDevBCase);
-            this.pnlInitiation.Location = new System.Drawing.Point(30, 15);
+            this.pnlInitiation.Location = new System.Drawing.Point(12, 12);
             this.pnlInitiation.Name = "pnlInitiation";
-            this.pnlInitiation.Size = new System.Drawing.Size(829, 614);
+            this.pnlInitiation.Size = new System.Drawing.Size(835, 635);
             this.pnlInitiation.TabIndex = 0;
             this.pnlInitiation.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInitiation_Paint);
             // 
             // pnlInstr
             // 
-            this.pnlInstr.Controls.Add(this.flowLayoutPanel1);
             this.pnlInstr.Controls.Add(this.btnClose);
             this.pnlInstr.Controls.Add(this.btnPrev);
             this.pnlInstr.Controls.Add(this.btnNext);
@@ -91,11 +88,10 @@
             this.pnlInstr.Controls.Add(this.lblProjCharter);
             this.pnlInstr.Controls.Add(this.lblFeasStudy);
             this.pnlInstr.Controls.Add(this.lblBusCase);
-            this.pnlInstr.Location = new System.Drawing.Point(0, 3);
+            this.pnlInstr.Location = new System.Drawing.Point(12, 12);
             this.pnlInstr.Name = "pnlInstr";
             this.pnlInstr.Size = new System.Drawing.Size(829, 614);
             this.pnlInstr.TabIndex = 1;
-            this.pnlInstr.Visible = false;
             // 
             // btnClose
             // 
@@ -175,13 +171,15 @@
             // 
             this.lstInstr.BackColor = System.Drawing.SystemColors.Desktop;
             this.lstInstr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstInstr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstInstr.ForeColor = System.Drawing.Color.MintCream;
             this.lstInstr.FormattingEnabled = true;
+            this.lstInstr.ItemHeight = 16;
             this.lstInstr.Items.AddRange(new object[] {
             " "});
             this.lstInstr.Location = new System.Drawing.Point(227, 168);
             this.lstInstr.Name = "lstInstr";
-            this.lstInstr.Size = new System.Drawing.Size(543, 364);
+            this.lstInstr.Size = new System.Drawing.Size(543, 352);
             this.lstInstr.TabIndex = 9;
             // 
             // btnThird
@@ -420,23 +418,18 @@
             this.btnDevBCase.MouseLeave += new System.EventHandler(this.btnDevBCase_MouseLeave);
             this.btnDevBCase.MouseHover += new System.EventHandler(this.btnDevBCase_MouseHover);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(298, 209);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(472, 200);
-            this.flowLayoutPanel1.TabIndex = 15;
-            // 
             // frmInitiation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(853, 638);
+            this.Controls.Add(this.pnlInstr);
             this.Controls.Add(this.pnlInitiation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInitiation";
             this.Text = "frmInitiation";
+            this.Load += new System.EventHandler(this.frmInitiation_Load);
             this.pnlInitiation.ResumeLayout(false);
             this.pnlInstr.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -469,6 +462,5 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

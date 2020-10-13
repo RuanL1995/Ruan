@@ -158,6 +158,7 @@ namespace TechGenics
             pnlInitiation.Visible = false;
             pnlInstr.Visible = true;
             pnlInstr.BringToFront();
+            pnlInitiation.SendToBack();
 
             lstInstr.Items.Clear();
 
@@ -231,7 +232,7 @@ namespace TechGenics
             //button text
             btnFirst.Text = "Identify the project vision";
             btnSec.Text = "Describe the Project Organization";
-            btnThird.Text = "{Plan the approach to implementation";
+            btnThird.Text = "Plan the approach to implementation";
         }
 
         private void btnUndertakeFStudy_Click(object sender, EventArgs e)
@@ -924,6 +925,9 @@ a Project Office environment. Approval is then sought to move into the detailed 
 
         }
 
-      
+        private void frmInitiation_Load(object sender, EventArgs e)
+        {
+            pnlInitiation.BringToFront();
+        }
     }
 }

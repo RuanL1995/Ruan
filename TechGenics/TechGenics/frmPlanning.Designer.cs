@@ -62,6 +62,7 @@
             // lstInfo
             // 
             this.lstInfo.BackColor = System.Drawing.SystemColors.InfoText;
+            this.lstInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstInfo.ForeColor = System.Drawing.Color.MintCream;
             this.lstInfo.FormattingEnabled = true;
@@ -80,7 +81,7 @@
             " *Procurement Plan (identifying products to be sourced from external suppliers)"});
             this.lstInfo.Location = new System.Drawing.Point(38, 3);
             this.lstInfo.Name = "lstInfo";
-            this.lstInfo.Size = new System.Drawing.Size(737, 202);
+            this.lstInfo.Size = new System.Drawing.Size(737, 198);
             this.lstInfo.TabIndex = 9;
             // 
             // btnPRev

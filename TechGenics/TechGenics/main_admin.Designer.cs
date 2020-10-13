@@ -61,6 +61,9 @@
             this.pnlHide = new System.Windows.Forms.Panel();
             this.btnExpand = new System.Windows.Forms.Button();
             this.tmrSliding = new System.Windows.Forms.Timer(this.components);
+            this.btnMin = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnFull = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -459,9 +462,9 @@
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.pnlChildForm.ContextMenuStrip = this.contextMenuStrip1;
             this.pnlChildForm.Controls.Add(this.pictureBox1);
-            this.pnlChildForm.Location = new System.Drawing.Point(243, 0);
+            this.pnlChildForm.Location = new System.Drawing.Point(243, 39);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(869, 687);
+            this.pnlChildForm.Size = new System.Drawing.Size(869, 648);
             this.pnlChildForm.TabIndex = 1;
             // 
             // pictureBox1
@@ -502,12 +505,58 @@
             // 
             this.tmrSliding.Tick += new System.EventHandler(this.tmrSliding_Tick);
             // 
+            // btnMin
+            // 
+            this.btnMin.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnMin.Location = new System.Drawing.Point(1004, -5);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(32, 27);
+            this.btnMin.TabIndex = 4;
+            this.btnMin.Text = "_";
+            this.btnMin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMin.UseVisualStyleBackColor = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMax.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnMax.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnMax.Location = new System.Drawing.Point(1036, -1);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(32, 29);
+            this.btnMax.TabIndex = 5;
+            this.btnMax.Text = "1";
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnFull
+            // 
+            this.btnFull.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFull.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFull.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFull.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnFull.Location = new System.Drawing.Point(1071, -2);
+            this.btnFull.Name = "btnFull";
+            this.btnFull.Size = new System.Drawing.Size(29, 35);
+            this.btnFull.TabIndex = 6;
+            this.btnFull.Text = "⛶ ";
+            this.btnFull.UseVisualStyleBackColor = false;
+            this.btnFull.Click += new System.EventHandler(this.btnFull_Click);
+            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1107, 687);
+            this.Controls.Add(this.btnFull);
+            this.Controls.Add(this.btnMax);
+            this.Controls.Add(this.btnMin);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlHide);
             this.Controls.Add(this.pnlSideMenu);
@@ -566,5 +615,8 @@
         private System.Windows.Forms.Panel pnlHide;
         private System.Windows.Forms.Button btnExpand;
         private System.Windows.Forms.Timer tmrSliding;
+        private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Button btnFull;
     }
 }
