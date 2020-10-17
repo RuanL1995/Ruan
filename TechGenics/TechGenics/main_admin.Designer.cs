@@ -456,13 +456,14 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "     PMAS";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.pnlChildForm.ContextMenuStrip = this.contextMenuStrip1;
             this.pnlChildForm.Controls.Add(this.pictureBox1);
-            this.pnlChildForm.Location = new System.Drawing.Point(243, 39);
+            this.pnlChildForm.Location = new System.Drawing.Point(239, 39);
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(869, 648);
             this.pnlChildForm.TabIndex = 1;
@@ -484,7 +485,7 @@
             this.pnlHide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlHide.Location = new System.Drawing.Point(201, 0);
             this.pnlHide.Name = "pnlHide";
-            this.pnlHide.Size = new System.Drawing.Size(44, 687);
+            this.pnlHide.Size = new System.Drawing.Size(37, 687);
             this.pnlHide.TabIndex = 3;
             // 
             // btnExpand
@@ -496,7 +497,7 @@
             this.btnExpand.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnExpand.Location = new System.Drawing.Point(6, 279);
             this.btnExpand.Name = "btnExpand";
-            this.btnExpand.Size = new System.Drawing.Size(30, 82);
+            this.btnExpand.Size = new System.Drawing.Size(27, 82);
             this.btnExpand.TabIndex = 0;
             this.btnExpand.UseVisualStyleBackColor = false;
             this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);

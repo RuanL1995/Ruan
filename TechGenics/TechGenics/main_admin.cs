@@ -331,5 +331,10 @@ namespace TechGenics
             controls.doFullscreen(this);
                 
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            pnlChildForm.BringToFront();
+        }
     }
 }

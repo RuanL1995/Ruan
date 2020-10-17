@@ -17,191 +17,18 @@ namespace TechGenics
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Variables for instructions panel
-        /// </summary>
-        #region Variables
-        int first = 0;      //btnFirst
-        int second = 0;     //btnSec
-        int third = 0;      //btnThird
-        #endregion
+         private void frmInitiation_Load(object sender, EventArgs e)
+        {
+            pnlInitiation.BringToFront();
+        }
 
         /// <summary>
-        /// Initiation panel - all phases showcased
+        /// Functions to display info
         /// </summary>
-        #region Initiation panel
+        #region Functions
 
-        /// <summary>
-        /// Hover functionality
-        /// </summary>
-        #region Mouse hover
-
-        private void btnPhaseReview_MouseHover(object sender, EventArgs e)
+        public void businessCase()
         {
-            lstInfo.Items.Clear();
-            lstInfo.Items.Add("At the end of the Initiation Phase, a Phase review is performed.");
-            lstInfo.Items.Add("This is basically a checkpoint to ensure that the project has achieved its stated objectives as planned.");
-            lstInfo.Visible = true;
-        }
-
-        private void btnSetupPOffice_MouseHover(object sender, EventArgs e)
-        {
-            lstInfo.Items.Clear();
-            lstInfo.Items.Add("The Project Office is the physical environment within which the team will be based.");
-            lstInfo.Items.Add("Although it is usual to have one central project office, it is possible to have a");
-            lstInfo.Items.Add("‘virtual project office’ environment, with project team members in various locations around the world.");
-            lstInfo.Visible = true;
-        }
-
-        private void btnAppointPTeam_MouseHover(object sender, EventArgs e)
-        {
-            lstInfo.Items.Clear();
-            lstInfo.Items.Add("At this point the scope of the project has been defined in detail and the project team are ready to be appointed.");
-            lstInfo.Items.Add("Although a Project Manager can be appointed at any stage of the project, s/he will need to be appointed prior to the");
-            lstInfo.Items.Add("establishment of the project team. The Project Manager documents a detailed Job Description for each project role and");
-            lstInfo.Items.Add("appoints a human resource to each role based on his/her relevant skills and experience. Once the team are ‘fully");
-            lstInfo.Items.Add("resourced’, the Project Office is ready to be set-up.");
-            lstInfo.Visible = true;
-        }
-
-        private void btnEstPCharter_MouseHover(object sender, EventArgs e)
-        {
-            lstInfo.Items.Clear();
-            lstInfo.Items.Add("After the solution has been agreed and funding allocated, a project is formed.");
-            lstInfo.Items.Add("The Project Charter defines the vision, objectives, scope and deliverables for the project.");
-            lstInfo.Items.Add(". It also provides the organization structure (roles and responsibilities) and a summarized plan of the activities,");
-            lstInfo.Items.Add("resources and funding required to undertake the project.");
-            lstInfo.Items.Add("Finally, any risks, issues, planning assumptions and constraints are listed.");
-            lstInfo.Visible = true;
-            
-        }
-
-        private void btnUndertakeFStudy_MouseHover(object sender, EventArgs e)
-        {
-            lstInfo.Items.Clear();
-            lstInfo.Items.Add("At any stage during (or after) the development of a Business Case, a formal Feasibility");
-            lstInfo.Items.Add("Study may be commissioned. The purpose is to assess the likelihood of a particular");
-            lstInfo.Items.Add("solution option’s achieving the benefits outlined in the Business Case.");
-            lstInfo.Items.Add("The Feasibility Study will also investigate whether the forecast costs.");
-            lstInfo.Items.Add("are reasonable, the solution is achievable, the risks are acceptable");
-            lstInfo.Items.Add("and/or any likely issues are avoidable.");
-            lstInfo.Visible = true;
-        }
-
-        private void btnDevBCase_MouseHover(object sender, EventArgs e)
-        {
-            lstInfo.Items.Clear();
-            lstInfo.Items.Add("Once a business problem or opportunity has been identified, a Business Case is prepared.");
-            lstInfo.Items.Add("This includes: A detailed definition of the problem or opportunity");
-            lstInfo.Items.Add("An analysis of the potential solution options available.");
-            lstInfo.Items.Add("For each option, the potential benefits, costs, risks & issues");
-            lstInfo.Items.Add("are documented.");
-            lstInfo.Items.Add("A formal feasibility study may be commissioned if the feasibility of any particular solution option is not clear");
-            lstInfo.Items.Add("The Business Case is approved by the Project Sponsor & the required funding is allocated to proceed with the project.");
-            lstInfo.Visible = true;
-        }
-
-        #endregion
-
-        /// <summary>
-        /// Functionality when mouse no longer hovering
-        /// </summary>
-        #region Mouse leave
-
-        private void btnPhaseReview_MouseLeave(object sender, EventArgs e)
-        {
-            lstInfo.Visible = false;
-            lstInfo.Items.Clear();
-        }
-
-        private void btnSetupPOffice_MouseLeave(object sender, EventArgs e)
-        {
-            lstInfo.Visible = false;
-            lstInfo.Items.Clear();
-        }
-
-        private void btnAppointPTeam_MouseLeave(object sender, EventArgs e)
-        {
-            lstInfo.Visible = false;
-            lstInfo.Items.Clear();
-        }
-
-        private void btnEstPCharter_MouseLeave(object sender, EventArgs e)
-        {
-            lstInfo.Visible = false;
-            lstInfo.Items.Clear();
-        }
-
-        private void btnUndertakeFStudy_MouseLeave(object sender, EventArgs e)
-        {
-            lstInfo.Visible = false;
-            lstInfo.Items.Clear();
-        }
-
-        private void btnDevBCase_MouseLeave(object sender, EventArgs e)
-        {
-            lstInfo.Visible = false;
-            lstInfo.Items.Clear();
-        }
-
-
-
-        #endregion
-
-        /// <summary>
-        /// Show instructions panel 
-        /// </summary>
-        #region Click events
-
-        private void btnPhaseReview_Click(object sender, EventArgs e)
-        {
-            pnlInitiation.Visible = false;
-            pnlInstr.Visible = true;
-            pnlInstr.BringToFront();
-            pnlInitiation.SendToBack();
-
-            lstInstr.Items.Clear();
-
-            //button visibility
-            btnFirst.Visible = true;
-            btnSec.Visible = true;
-            btnThird.Visible = false;
-            btnFourth.Visible = false;
-            btnFifth.Visible = false;
-
-            //button text
-            btnFirst.Text = "Identify Phase Review Criteria";
-            btnSec.Text = "Undertake Phase Review";
-        }
-
-        private void btnSetupPOffice_Click(object sender, EventArgs e)
-        {
-            pnlInitiation.Visible = false;
-            pnlInstr.Visible = true;
-            pnlInstr.BringToFront();
-
-            lstInstr.Items.Clear();
-
-            btnFirst.Visible = true;
-            btnSec.Visible = true;
-            btnThird.Visible = true;
-            btnFourth.Visible = false;
-            btnFifth.Visible = false;
-
-            //button text
-            btnFirst.Text = "Define the role of the Project Office";
-            btnSec.Text = "Resource & Locate the Project Office";
-            btnThird.Text = "Create the tools to run the Project Office";
-        }
-
-        private void btnAppointPTeam_Click(object sender, EventArgs e)
-        {
-            pnlInitiation.Visible = false;
-            pnlInstr.Visible = true;
-            pnlInstr.BringToFront();
-
-            lstInstr.Items.Clear();
-
             //button visibility
             btnFirst.Visible = true;
             btnSec.Visible = true;
@@ -210,39 +37,19 @@ namespace TechGenics
             btnFifth.Visible = false;
 
             //button text
-            btnFirst.Text = "List the Project Roles";
-            btnSec.Text = "Define Roles and Responsibilities";
-            btnThird.Text = "Identify the Recruitment Process";
-        }
+            btnFirst.Text = "Identify the business problem";
+            btnSec.Text = "Solution development";
+            btnThird.Text = "Implementation approach";
 
-        private void btnEstPCharter_Click(object sender, EventArgs e)
-        {
-            pnlInitiation.Visible = false;
-            pnlInstr.Visible = true;
-            pnlInstr.BringToFront();
+            first = 1;
+            second = 1;
+            third = 1;
 
             lstInstr.Items.Clear();
-
-            btnFirst.Visible = true;
-            btnSec.Visible = true;
-            btnThird.Visible = true;
-            btnFourth.Visible = false;
-            btnFifth.Visible = false;
-
-            //button text
-            btnFirst.Text = "Identify the project vision";
-            btnSec.Text = "Describe the Project Organization";
-            btnThird.Text = "Plan the approach to implementation";
         }
 
-        private void btnUndertakeFStudy_Click(object sender, EventArgs e)
+        public void feasibilityStudy()
         {
-            pnlInitiation.Visible = false;
-            pnlInstr.Visible = true;
-            pnlInstr.BringToFront();
-
-            lstInstr.Items.Clear();
-
             //button visibility
             btnFirst.Visible = true;
             btnSec.Visible = true;
@@ -256,16 +63,19 @@ namespace TechGenics
             btnThird.Text = "Feasibility of alternative solutions";
             btnFourth.Text = "Rank feasibility results";
             btnFifth.Text = "Identify best alternative";
-        }
 
-        private void btnDevBCase_Click(object sender, EventArgs e)
-        {
-            pnlInitiation.Visible = false;
-            pnlInstr.Visible = true;
-            pnlInstr.BringToFront();
+            first = 2;
+            second = 2;
+            third = 2;
 
             lstInstr.Items.Clear();
 
+            btnPrev.Visible = false;
+            btnNext.Visible = false;
+        }
+
+        public void projectCharter()
+        {
             //button visibility
             btnFirst.Visible = true;
             btnSec.Visible = true;
@@ -274,317 +84,103 @@ namespace TechGenics
             btnFifth.Visible = false;
 
             //button text
-            btnFirst.Text = "Identify the business problem";
-            btnSec.Text = "Solution development";
-            btnThird.Text = "Implementation approach";
+            btnFirst.Text = "Identify the project vision";
+            btnSec.Text = "Describe the Project Organization";
+            btnThird.Text = "{Plan the approach to implementation";
 
+            first = 3;
+            second = 3;
+            third = 3;
+
+            lstInstr.Items.Clear();
+
+            btnPrev.Visible = false;
+            btnNext.Visible = false;
         }
 
+        public void projectTeam()
+        {
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "List the Project Roles";
+            btnSec.Text = "Define Roles and Responsibilities";
+            btnThird.Text = "Identify the Recruitment Process";
+
+            first = 4;
+            second = 4;
+            third = 4;
+
+            lstInstr.Items.Clear();
+
+            btnPrev.Visible = false;
+            btnNext.Visible = false;
+        }
+
+        public void projectOffice()
+        {
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "Define the role of the Project Office";
+            btnSec.Text = "Resource & Locate the Project Office";
+            btnThird.Text = "Create the tools to run the Project Office";
+
+            first = 5;
+            second = 5;
+            third = 5;
+
+            lstInstr.Items.Clear();
+
+            btnPrev.Visible = false;
+            btnNext.Visible = false;
+        }
+
+        public void phaseReview()
+        {
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = false;
+            btnFourth.Visible = false;
+            btnFifth.Visible = false;
+
+            //button text
+            btnFirst.Text = "Identify Phase Review Criteria";
+            btnSec.Text = "Undertake Phase Review";
+
+            first = 6;
+            second = 6;
+
+            lstInstr.Items.Clear();
+        }
+
+        public void showInstructions()
+        {
+            pnlInitiation.Visible = false;
+            pnlInstr.Visible = true;
+            pnlInstr.BringToFront();
+        }
 
         #endregion
 
         /// <summary>
-        /// All instructions for Initiation phase 
+        /// Variables for switch
         /// </summary>
-        #region Instructions panel
-        
-        /// <summary>
-        /// Info displayed based on main button selection
-        /// </summary>
-        #region Buttons
-
-        //Heading buttons
-        private void lblBusCase_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                //button visibility
-                btnFirst.Visible = true;
-                btnSec.Visible = true;
-                btnThird.Visible = true;
-                btnFourth.Visible = false;
-                btnFifth.Visible = false;
-
-                //button text
-                btnFirst.Text = "Identify the business problem";
-                btnSec.Text = "Solution development";
-                btnThird.Text = "Implementation approach";
-
-                first = 1;
-                second = 1;
-                third = 1;
-
-                lstInstr.Items.Clear();
-            }
-        }
-
-        private void lblFeasStudy_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                //button visibility
-                btnFirst.Visible = true;
-                btnSec.Visible = true;
-                btnThird.Visible = true;
-                btnFourth.Visible = true;
-                btnFifth.Visible = true;
-
-                //button text
-                btnFirst.Text = "Research the business problem";
-                btnSec.Text = "Identify requirements";
-                btnThird.Text = "Feasibility of alternative solutions";
-                btnFourth.Text = "Rank feasibility results";
-                btnFifth.Text = "Identify best alternative";
-
-                first = 2;
-                second = 2;
-                third = 2;
-
-                lstInstr.Items.Clear();
-
-                btnPrev.Visible = false;
-                btnNext.Visible = false;
-            }
-        }
-
-        private void lblProjCharter_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                //button visibility
-                btnFirst.Visible = true;
-                btnSec.Visible = true;
-                btnThird.Visible = true;
-                btnFourth.Visible = false;
-                btnFifth.Visible = false;
-
-                //button text
-                btnFirst.Text = "Identify the project vision";
-                btnSec.Text = "Describe the Project Organization";
-                btnThird.Text = "{Plan the approach to implementation";
-
-                first = 3;
-                second = 3;
-                third = 3;
-
-                lstInstr.Items.Clear();
-
-                btnPrev.Visible = false;
-                btnNext.Visible = false;
-            }
-        }
-
-        private void lblProjTeam_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                //button visibility
-                btnFirst.Visible = true;
-                btnSec.Visible = true;
-                btnThird.Visible = true;
-                btnFourth.Visible = false;
-                btnFifth.Visible = false;
-
-                //button text
-                btnFirst.Text = "List the Project Roles";
-                btnSec.Text = "Define Roles and Responsibilities";
-                btnThird.Text = "Identify the Recruitment Process";
-
-                first = 4;
-                second = 4;
-                third = 4;
-
-                lstInstr.Items.Clear();
-
-                btnPrev.Visible = false;
-                btnNext.Visible = false;
-            }
-        }
-
-        private void lblProjOffice_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                //button visibility
-                btnFirst.Visible = true;
-                btnSec.Visible = true;
-                btnThird.Visible = true;
-                btnFourth.Visible = false;
-                btnFifth.Visible = false;
-
-                //button text
-                btnFirst.Text = "Define the role of the Project Office";
-                btnSec.Text = "Resource & Locate the Project Office";
-                btnThird.Text = "Create the tools to run the Project Office";
-
-                first = 5;
-                second = 5;
-                third = 5;
-
-                lstInstr.Items.Clear();
-
-                btnPrev.Visible = false;
-                btnNext.Visible = false;
-            }
-        }
-
-        private void lblPhaseRev_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                //button visibility
-                btnFirst.Visible = true;
-                btnSec.Visible = true;
-                btnThird.Visible = false;
-                btnFourth.Visible = false;
-                btnFifth.Visible = false;
-
-                //button text
-                btnFirst.Text = "Identify Phase Review Criteria";
-                btnSec.Text = "Undertake Phase Review";
-
-                first = 6;
-                second = 6;
-
-                lstInstr.Items.Clear();
-
-            }
-        }
-
-        //Info buttons
-        private void btnFirst_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                firstButton(first);
-                btnPrev.Visible = false;
-                btnNext.Visible = false;
-            }
-        }
-
-        private void btnSec_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                secButton(second);
-
-            }
-
-        }
-
-        private void btnThird_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                thirdButton(third);
-
-            }
-        }
-
-        private void btnFourth_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-
-
-            }
-            else//left or middle click
-            {
-                lstInstr.Items.Clear();
-                lstInstr.Items.Add("Rank the Feasibility Options");
-                lstInstr.Items.Add(" *Matrix Decision Making tool");
-            }
-        }
-
-        private void btnFifth_MouseUp(object sender, MouseEventArgs e)
-        {
-            lstInstr.Items.Clear();
-            lstInstr.Items.Add("Identify the most feasible outcome");
-            lstInstr.Items.Add(" *Matrix Decision Making tool");
-        }
-
-        //Next/Prev buttons
-        private void btnPrev_Click(object sender, EventArgs e)
-        {
-
-            lstInstr.Items.Clear();
-            lstInstr.Items.Add("Project Manager");
-            lstInstr.Items.Add(" *Present Phase Review Form");
-            lstInstr.Items.Add(" *Discuss current status");
-            lstInstr.Items.Add(" *Present Vision, Objectives, Scope and deliverables");
-            lstInstr.Items.Add(" *Deliverables completed to date");
-            lstInstr.Items.Add(" *Schedule Progress");
-            lstInstr.Items.Add("");
-            lstInstr.Items.Add("Deviations form:");
-            lstInstr.Items.Add(" *Time      *Scope");
-            lstInstr.Items.Add(" *Cost      *Quality");
-            lstInstr.Items.Add("");
-            lstInstr.Items.Add("Key Issues");
-            lstInstr.Items.Add("Key risks");
-            btnPrev.Visible = false;
-            btnNext.Visible = true;
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            lstInstr.Items.Clear();
-            lstInstr.Items.Add("Project board");
-            lstInstr.Items.Add(" *Approves Project to proceed");
-            lstInstr.Items.Add(" *Request additional information or activities undertaken");
-            lstInstr.Items.Add(" *Delay, Transfer or cancel the Project");
-            lstInstr.Items.Add("");
-            lstInstr.Items.Add("Complete Phase Review Form");
-            lstInstr.Items.Add(" *Initiation Phase Review Form");
-            btnPrev.Visible = true;
-            btnNext.Visible = false;
-
-        }
-
+        #region Variables
+        int first = 0;      //btnFirst
+        int second = 0;     //btnSec
+        int third = 0;      //btnThird
         #endregion
 
         /// <summary>
@@ -594,7 +190,6 @@ namespace TechGenics
         public void firstButton(int button)
         {
             //switch for first button
-
 
             switch (button)
             {
@@ -864,10 +459,309 @@ namespace TechGenics
 
         #endregion
 
-        //end instructions panel
+        /// <summary>
+        /// Initiation panel - all phases showcased
+        /// </summary>
+        #region Initiation panel
+
+        /// <summary>
+        /// Hover functionality
+        /// </summary>
+        #region Mouse hover
+
+        private void btnPhaseReview_MouseHover(object sender, EventArgs e)
+        {
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("At the end of the Initiation Phase, a Phase review is performed.");
+            lstInfo.Items.Add("This is basically a checkpoint to ensure that the project has achieved its stated objectives as planned.");
+            lstInfo.Visible = true;
+        }
+
+        private void btnSetupPOffice_MouseHover(object sender, EventArgs e)
+        {
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("The Project Office is the physical environment within which the team will be based.");
+            lstInfo.Items.Add("Although it is usual to have one central project office, it is possible to have a");
+            lstInfo.Items.Add("‘virtual project office’ environment, with project team members in various locations around the world.");
+            lstInfo.Visible = true;
+        }
+
+        private void btnAppointPTeam_MouseHover(object sender, EventArgs e)
+        {
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("At this point the scope of the project has been defined in detail and the project team are ready to be appointed.");
+            lstInfo.Items.Add("Although a Project Manager can be appointed at any stage of the project, s/he will need to be appointed prior to the");
+            lstInfo.Items.Add("establishment of the project team. The Project Manager documents a detailed Job Description for each project role and");
+            lstInfo.Items.Add("appoints a human resource to each role based on his/her relevant skills and experience. Once the team are ‘fully");
+            lstInfo.Items.Add("resourced’, the Project Office is ready to be set-up.");
+            lstInfo.Visible = true;
+        }
+
+        private void btnEstPCharter_MouseHover(object sender, EventArgs e)
+        {
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("After the solution has been agreed and funding allocated, a project is formed.");
+            lstInfo.Items.Add("The Project Charter defines the vision, objectives, scope and deliverables for the project.");
+            lstInfo.Items.Add(". It also provides the organization structure (roles and responsibilities) and a summarized plan of the activities,");
+            lstInfo.Items.Add("resources and funding required to undertake the project.");
+            lstInfo.Items.Add("Finally, any risks, issues, planning assumptions and constraints are listed.");
+            lstInfo.Visible = true;
+            
+        }
+
+        private void btnUndertakeFStudy_MouseHover(object sender, EventArgs e)
+        {
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("At any stage during (or after) the development of a Business Case, a formal Feasibility");
+            lstInfo.Items.Add("Study may be commissioned. The purpose is to assess the likelihood of a particular");
+            lstInfo.Items.Add("solution option’s achieving the benefits outlined in the Business Case.");
+            lstInfo.Items.Add("The Feasibility Study will also investigate whether the forecast costs.");
+            lstInfo.Items.Add("are reasonable, the solution is achievable, the risks are acceptable");
+            lstInfo.Items.Add("and/or any likely issues are avoidable.");
+            lstInfo.Visible = true;
+        }
+
+        private void btnDevBCase_MouseHover(object sender, EventArgs e)
+        {
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("Once a business problem or opportunity has been identified, a Business Case is prepared.");
+            lstInfo.Items.Add("This includes: A detailed definition of the problem or opportunity");
+            lstInfo.Items.Add("An analysis of the potential solution options available.");
+            lstInfo.Items.Add("For each option, the potential benefits, costs, risks & issues");
+            lstInfo.Items.Add("are documented.");
+            lstInfo.Items.Add("A formal feasibility study may be commissioned if the feasibility of any particular solution option is not clear");
+            lstInfo.Items.Add("The Business Case is approved by the Project Sponsor & the required funding is allocated to proceed with the project.");
+            lstInfo.Visible = true;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Functionality when mouse no longer hovering
+        /// </summary>
+        #region Mouse leave
+
+        private void btnPhaseReview_MouseLeave(object sender, EventArgs e)
+        {
+            lstInfo.Visible = false;
+            lstInfo.Items.Clear();
+        }
+
+        private void btnSetupPOffice_MouseLeave(object sender, EventArgs e)
+        {
+            lstInfo.Visible = false;
+            lstInfo.Items.Clear();
+        }
+
+        private void btnAppointPTeam_MouseLeave(object sender, EventArgs e)
+        {
+            lstInfo.Visible = false;
+            lstInfo.Items.Clear();
+        }
+
+        private void btnEstPCharter_MouseLeave(object sender, EventArgs e)
+        {
+            lstInfo.Visible = false;
+            lstInfo.Items.Clear();
+        }
+
+        private void btnUndertakeFStudy_MouseLeave(object sender, EventArgs e)
+        {
+            lstInfo.Visible = false;
+            lstInfo.Items.Clear();
+        }
+
+        private void btnDevBCase_MouseLeave(object sender, EventArgs e)
+        {
+            lstInfo.Visible = false;
+            lstInfo.Items.Clear();
+        }
+
+
+
+        #endregion
+
+        /// <summary>
+        /// Show instructions panel 
+        /// </summary>
+        #region Click events
+
+        private void btnPhaseReview_Click(object sender, EventArgs e)
+        {
+            phaseReview();
+            showInstructions();
+        }
+
+        private void btnSetupPOffice_Click(object sender, EventArgs e)
+        {
+            projectOffice();
+            showInstructions();
+        }
+
+        private void btnAppointPTeam_Click(object sender, EventArgs e)
+        {
+            projectTeam();
+            showInstructions();
+        }
+
+        private void btnEstPCharter_Click(object sender, EventArgs e)
+        {
+            projectCharter();
+            showInstructions();
+        }
+
+        private void btnUndertakeFStudy_Click(object sender, EventArgs e)
+        {
+            feasibilityStudy();
+            showInstructions();
+        }
+
+        private void btnDevBCase_Click(object sender, EventArgs e)
+        {
+            businessCase();
+            showInstructions();
+        }
+
         #endregion
 
         //end initiation phase
+        #endregion
+
+        /// <summary>
+        /// All instructions for Initiation phase 
+        /// </summary>
+        #region Instructions panel
+
+        /// <summary>
+        /// Info displayed based on main button selection
+        /// </summary>
+        #region Heading buttons
+
+        private void lblBusCase_Click(object sender, EventArgs e)
+        {
+            businessCase();
+        }
+
+        private void lblFeasStudy_Click(object sender, EventArgs e)
+        {
+            feasibilityStudy();
+        }
+
+        private void lblProjCharter_Click(object sender, EventArgs e)
+        {
+            projectCharter();
+        }
+
+        private void lblProjTeam_Click(object sender, EventArgs e)
+        {
+            projectTeam();
+        }
+
+        private void lblProjOffice_Click(object sender, EventArgs e)
+        {
+            projectOffice();
+        }
+
+        private void lblPhaseRev_Click(object sender, EventArgs e)
+        {
+            phaseReview();
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Info displayed based on side button selection
+        /// </summary>
+        #region Sidemenu buttons
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            firstButton(first);
+            btnPrev.Visible = false;
+            btnNext.Visible = false;
+        }
+
+        private void btnSec_Click(object sender, EventArgs e)
+        {
+            secButton(second);
+        }
+
+        private void btnThird_Click(object sender, EventArgs e)
+        {
+            thirdButton(third);
+        }
+
+        private void btnFourth_Click(object sender, EventArgs e)
+        {
+            lstInstr.Items.Clear();
+            lstInstr.Items.Add("Rank the Feasibility Options");
+            lstInstr.Items.Add(" *Matrix Decision Making tool");
+        }
+
+        private void btnFifth_Click(object sender, EventArgs e)
+        {
+            lstInstr.Items.Clear();
+            lstInstr.Items.Add("Identify the most feasible outcome");
+            lstInstr.Items.Add(" *Matrix Decision Making tool");
+
+        }
+
+        //Next/Prev/Close buttons
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+
+            lstInstr.Items.Clear();
+            lstInstr.Items.Add("Project Manager");
+            lstInstr.Items.Add(" *Present Phase Review Form");
+            lstInstr.Items.Add(" *Discuss current status");
+            lstInstr.Items.Add(" *Present Vision, Objectives, Scope and deliverables");
+            lstInstr.Items.Add(" *Deliverables completed to date");
+            lstInstr.Items.Add(" *Schedule Progress");
+            lstInstr.Items.Add("");
+            lstInstr.Items.Add("Deviations form:");
+            lstInstr.Items.Add(" *Time      *Scope");
+            lstInstr.Items.Add(" *Cost      *Quality");
+            lstInstr.Items.Add("");
+            lstInstr.Items.Add("Key Issues");
+            lstInstr.Items.Add("Key risks");
+            btnPrev.Visible = false;
+            btnNext.Visible = true;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            lstInstr.Items.Clear();
+            lstInstr.Items.Add("Project board");
+            lstInstr.Items.Add(" *Approves Project to proceed");
+            lstInstr.Items.Add(" *Request additional information or activities undertaken");
+            lstInstr.Items.Add(" *Delay, Transfer or cancel the Project");
+            lstInstr.Items.Add("");
+            lstInstr.Items.Add("Complete Phase Review Form");
+            lstInstr.Items.Add(" *Initiation Phase Review Form");
+            btnPrev.Visible = true;
+            btnNext.Visible = false;
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            pnlInstr.Hide();
+            pnlInitiation.Visible = true;
+
+            lstInfo.Items.Add("The Initiation Phase is the first phase in the project.");
+            lstInfo.Items.Add("In this phase a business problem(or opportunity) is identified and a business case which provides various solution");
+            lstInfo.Items.Add("options is defined.A feasibility study is then conducted to investigate the likelihood of each solution option");
+            lstInfo.Items.Add("addressing the business problem and a final recommended solution is put forward.");
+            lstInfo.Items.Add("");
+            lstInfo.Items.Add("Once the recommended solution is approved, a project is initiated to deliver the approved solution.");
+            lstInfo.Items.Add("A ‘Project Charter’ is completed, which outlines the objectives, scope and structure of the new project,");
+            lstInfo.Items.Add("and a Project Manager is appointed.The Project Manager begins recruiting a project team and establishes");
+            lstInfo.Items.Add("a Project Office environment. Approval is then sought to move into the detailed planning phase.");
+
+        }
+
+        #endregion
+
         #endregion
 
         /// <summary>
@@ -892,42 +786,6 @@ namespace TechGenics
         */
         #endregion
 
-        private void pnlInitiation_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void lblProjOffice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblProjTeam_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            pnlInstr.Hide();
-            pnlInitiation.Visible = true;
-            
-
-/*options is defined.A feasibility study is then conducted to investigate the likelihood of each solution option
-addressing the business problem and a final recommended solution is put forward. 
-
-Once the recommended solution is approved, a project is initiated to deliver the approved solution. 
-A ‘Project Charter’ is completed, which outlines the objectives, scope and structure of the new project,
-and a Project Manager is appointed.The Project Manager begins recruiting a project team and establishes
-a Project Office environment. Approval is then sought to move into the detailed planning phase.*/
-            lstInfo.Items.Add("The Initiation Phase is the first phase in the project.");
-            lstInfo.Items.Add("In this phase a business problem(or opportunity) is identified and a business case which provides various solution");
-
-        }
-
-        private void frmInitiation_Load(object sender, EventArgs e)
-        {
-            pnlInitiation.BringToFront();
-        }
     }
 }
