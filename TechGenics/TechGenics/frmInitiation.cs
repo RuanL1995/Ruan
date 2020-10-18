@@ -748,6 +748,7 @@ namespace TechGenics
             pnlInstr.Hide();
             pnlInitiation.Visible = true;
 
+            lstInfo.Items.Clear();
             lstInfo.Items.Add("The Initiation Phase is the first phase in the project.");
             lstInfo.Items.Add("In this phase a business problem(or opportunity) is identified and a business case which provides various solution");
             lstInfo.Items.Add("options is defined.A feasibility study is then conducted to investigate the likelihood of each solution option");
@@ -757,6 +758,7 @@ namespace TechGenics
             lstInfo.Items.Add("A ‘Project Charter’ is completed, which outlines the objectives, scope and structure of the new project,");
             lstInfo.Items.Add("and a Project Manager is appointed.The Project Manager begins recruiting a project team and establishes");
             lstInfo.Items.Add("a Project Office environment. Approval is then sought to move into the detailed planning phase.");
+            lstInfo.Visible = true;
 
         }
 

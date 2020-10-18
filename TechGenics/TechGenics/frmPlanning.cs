@@ -24,6 +24,18 @@ namespace TechGenics
         }
 
         /// <summary>
+        /// Variables for switch
+        /// </summary>
+        #region Variables
+        int first = 0;      //btnFirst
+        int second = 0;     //btnSec
+        int third = 0;      //btnThird
+        int fourth = 0;     //btnFourth
+        int fifth = 0;      //btnFifth
+        int sixth = 0;      //btnSixth
+        #endregion
+
+        /// <summary>
         /// General Functions
         /// </summary>
         #region Functions
@@ -48,6 +60,13 @@ namespace TechGenics
             btnFirst.Text = "Define the Work Breakdown Structure";
             btnSec.Text = "Identify Required Resources";
             btnThird.Text = "Construct a Project Schedule";
+
+            first = 1;      
+            second = 1;     
+            third = 1;      
+            fourth = 1;     
+            fifth = 1;      
+            sixth = 1;
         }
 
         public void resourcePlan()
@@ -70,6 +89,13 @@ namespace TechGenics
             btnFirst.Text = "List the Required Resources";
             btnSec.Text = "Quantify the Required Resources";
             btnThird.Text = "Create a Resource Schedule";
+
+            first = 2;
+            second = 2;
+            third = 2;
+            fourth = 2;
+            fifth = 2;
+            sixth = 2;
         }
 
         public void financialPlan()
@@ -92,6 +118,13 @@ namespace TechGenics
             btnFirst.Text = "List Financial Expenses";
             btnSec.Text = "Quantify the Financial Expenses";
             btnThird.Text = "Construct a Cashflow Schedule";
+
+            first = 3;
+            second = 3;
+            third = 3;
+            fourth = 3;
+            fifth = 3;
+            sixth = 3;
         }
 
         public void qualityPlan()
@@ -115,6 +148,13 @@ namespace TechGenics
             btnSec.Text = "Define Quality Targets";
             btnThird.Text = "Create a Quality assurance Plan";
             btnFourth.Text = "Create a Quality Control Plan";
+
+            first = 4;
+            second = 4;
+            third = 4;
+            fourth = 4;
+            fifth = 4;
+            sixth = 4;
         }
 
         public void communicationsPlan()
@@ -137,6 +177,13 @@ namespace TechGenics
             btnFirst.Text = "Identify the Communications Stakeholders";
             btnSec.Text = "Identify the Communications Requirements";
             btnThird.Text = "Construct a Communications Schedule";
+
+            first = 5;
+            second = 5;
+            third = 5;
+            fourth = 5;
+            fifth = 5;
+            sixth = 5;
         }
 
         public void acceptancePlan()
@@ -158,6 +205,13 @@ namespace TechGenics
             //button text
             btnFirst.Text = "List the Acceptance Criteria";
             btnSec.Text = "Create an Acceptance Schedule";
+
+            first = 6;
+            second = 6;
+            third = 6;
+            fourth = 6;
+            fifth = 6;
+            sixth = 6;
         }
 
         public void riskPlan()
@@ -180,6 +234,13 @@ namespace TechGenics
             btnFirst.Text = "Identify the Risks";
             btnSec.Text = "Quantify the Risks";
             btnThird.Text = "Construct a Risk Schedule";
+
+            first = 7;
+            second = 7;
+            third = 7;
+            fourth = 7;
+            fifth = 7;
+            sixth = 7;
         }
 
         public void procurementPlan()
@@ -205,6 +266,13 @@ namespace TechGenics
             btnFourth.Text = "Define Procurement Roles";
             btnFifth.Text = "Define the Tendering Process";
             btnSixth.Text = "Contract with the Supplier";
+
+            first = 8;
+            second = 8;
+            third = 8;
+            fourth = 8;
+            fifth = 8;
+            sixth = 8;
         }
 
         public void phaseReview()
@@ -227,6 +295,13 @@ namespace TechGenics
             btnFirst.Text = "Identify Phase Review Criteria";
             btnSec.Text = "Undertake Phase Review";
             btnThird.Text = "Seek Approval to Proceed";
+
+            first = 9;
+            second = 9;
+            third = 9;
+            fourth = 9;
+            fifth = 9;
+            sixth = 9;
         }
 
         public void showInstructions()
@@ -238,18 +313,7 @@ namespace TechGenics
 
         #endregion
 
-        /// <summary>
-        /// Variables for switch
-        /// </summary>
-        #region Variables
-        int first = 0;      //btnFirst
-        int second = 0;     //btnSec
-        int third = 0;      //btnThird
-        int fourth = 0;     //btnFourth
-        int fifth = 0;      //btnFifth
-        int sixth = 0;      //btnSixth
-        #endregion
-
+   
         /// <summary>
         /// Switch statements
         /// </summary>
@@ -773,19 +837,14 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Terms & Conditions of Procurement");
                     lstInstr.Items.Add("Sign the Supplier Contract");
                     lstInstr.Items.Add(" *The contract gets signed as a sign of mutual agreement between the parties");
+                    lstInstr.Items.Add("");
+                    lstInstr.Items.Add("Administer & Follow up on Supplier Contracts");
+                    lstInstr.Items.Add(" *Performs contract administration in accordance with type of control selected as well as milestones, deliverable and performance criteria");
                     break;
             }
         }
 
-
-
-
-
-
-
-
-
-
+        #endregion
 
         /// <summary>
         /// Planning panel - all phases showcased
@@ -1008,7 +1067,7 @@ namespace TechGenics
         /// <summary>
         /// On click for pnlInstr
         /// </summary>
-        #region onClick2
+        #region Instructions planning
 
         private void btnPPLan_Click(object sender, EventArgs e)
         {
@@ -1060,7 +1119,7 @@ namespace TechGenics
         {
             pnlInstr.Hide();
             pnlPlanning.Visible = true;
-                       
+
             lstInfo.Items.Clear();
             lstInfo.Items.Add("Once the scope of the project has been defined in the Project Charter, the project enters the detailed");
             lstInfo.Items.Add("planning phase.This involves the creation of a:");
@@ -1073,10 +1132,42 @@ namespace TechGenics
             lstInfo.Items.Add("* Acceptance Plan(listing the criteria to be met to gain customer acceptance)");
             lstInfo.Items.Add("* Communications Plan(listing the information needed to inform stakeholders)");
             lstInfo.Items.Add("* Procurement Plan(identifying products to be sourced from external suppliers)");
+            lstInfo.Visible = true;
         }
-        #endregion
+
+        //Side menu
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            firstButton(first);
+        }
+
+        private void btnSec_Click(object sender, EventArgs e)
+        {
+            secButton(second);
+        }
+
+        private void btnThird_Click(object sender, EventArgs e)
+        {
+            thirdButton(third);
+        }
+
+        private void btnFourth_Click(object sender, EventArgs e)
+        {
+            fourthButton(fourth);
+        }
+
+        private void btnFifth_Click(object sender, EventArgs e)
+        {
+            fifthButton(fifth);
+        }
+
+        private void btnSixth_Click(object sender, EventArgs e)
+        {
+            sixthButton(sixth);
+        }
 
         #endregion
+
 
     }
 }
