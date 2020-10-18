@@ -95,7 +95,7 @@
                 "ct team and establishes",
             "a Project Office environment. Approval is then sought to move into the detailed p" +
                 "lanning phase."});
-            this.lstInfo.Location = new System.Drawing.Point(14, 65);
+            this.lstInfo.Location = new System.Drawing.Point(32, 48);
             this.lstInfo.Name = "lstInfo";
             this.lstInfo.Size = new System.Drawing.Size(803, 198);
             this.lstInfo.TabIndex = 7;
