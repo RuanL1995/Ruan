@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.pnlInitiation = new System.Windows.Forms.Panel();
+            this.lstInfo = new System.Windows.Forms.ListBox();
+            this.btnPhaseReview = new System.Windows.Forms.Button();
+            this.btnSetupPOffice = new System.Windows.Forms.Button();
+            this.btnAppointPTeam = new System.Windows.Forms.Button();
+            this.btnEstPCharter = new System.Windows.Forms.Button();
+            this.btnUndertakeFStudy = new System.Windows.Forms.Button();
+            this.btnDevBCase = new System.Windows.Forms.Button();
             this.pnlInstr = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
@@ -45,13 +52,6 @@
             this.lblProjCharter = new System.Windows.Forms.Label();
             this.lblFeasStudy = new System.Windows.Forms.Label();
             this.lblBusCase = new System.Windows.Forms.Label();
-            this.lstInfo = new System.Windows.Forms.ListBox();
-            this.btnPhaseReview = new System.Windows.Forms.Button();
-            this.btnSetupPOffice = new System.Windows.Forms.Button();
-            this.btnAppointPTeam = new System.Windows.Forms.Button();
-            this.btnEstPCharter = new System.Windows.Forms.Button();
-            this.btnUndertakeFStudy = new System.Windows.Forms.Button();
-            this.btnDevBCase = new System.Windows.Forms.Button();
             this.pnlInitiation.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
@@ -67,236 +67,8 @@
             this.pnlInitiation.Controls.Add(this.btnDevBCase);
             this.pnlInitiation.Location = new System.Drawing.Point(12, 12);
             this.pnlInitiation.Name = "pnlInitiation";
-            this.pnlInitiation.Size = new System.Drawing.Size(835, 635);
+            this.pnlInitiation.Size = new System.Drawing.Size(835, 620);
             this.pnlInitiation.TabIndex = 0;
-            this.pnlInitiation.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInitiation_Paint);
-            // 
-            // pnlInstr
-            // 
-            this.pnlInstr.Controls.Add(this.btnClose);
-            this.pnlInstr.Controls.Add(this.btnPrev);
-            this.pnlInstr.Controls.Add(this.btnNext);
-            this.pnlInstr.Controls.Add(this.btnFifth);
-            this.pnlInstr.Controls.Add(this.btnFourth);
-            this.pnlInstr.Controls.Add(this.lstInstr);
-            this.pnlInstr.Controls.Add(this.btnThird);
-            this.pnlInstr.Controls.Add(this.btnSec);
-            this.pnlInstr.Controls.Add(this.btnFirst);
-            this.pnlInstr.Controls.Add(this.lblPhaseRev);
-            this.pnlInstr.Controls.Add(this.lblProjOffice);
-            this.pnlInstr.Controls.Add(this.lblProjTeam);
-            this.pnlInstr.Controls.Add(this.lblProjCharter);
-            this.pnlInstr.Controls.Add(this.lblFeasStudy);
-            this.pnlInstr.Controls.Add(this.lblBusCase);
-            this.pnlInstr.Location = new System.Drawing.Point(12, 12);
-            this.pnlInstr.Name = "pnlInstr";
-            this.pnlInstr.Size = new System.Drawing.Size(829, 614);
-            this.pnlInstr.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnClose.Location = new System.Drawing.Point(786, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(34, 21);
-            this.btnClose.TabIndex = 14;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnPrev
-            // 
-            this.btnPrev.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnPrev.Location = new System.Drawing.Point(244, 490);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(75, 23);
-            this.btnPrev.TabIndex = 13;
-            this.btnPrev.Text = "Prev";
-            this.btnPrev.UseVisualStyleBackColor = false;
-            this.btnPrev.Visible = false;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnNext.Location = new System.Drawing.Point(684, 490);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 12;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Visible = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnFifth
-            // 
-            this.btnFifth.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnFifth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnFifth.CausesValidation = false;
-            this.btnFifth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFifth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFifth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFifth.Location = new System.Drawing.Point(36, 472);
-            this.btnFifth.Name = "btnFifth";
-            this.btnFifth.Size = new System.Drawing.Size(124, 64);
-            this.btnFifth.TabIndex = 11;
-            this.btnFifth.Text = " ";
-            this.btnFifth.UseVisualStyleBackColor = false;
-            this.btnFifth.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnFifth_MouseUp);
-            // 
-            // btnFourth
-            // 
-            this.btnFourth.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnFourth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnFourth.CausesValidation = false;
-            this.btnFourth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFourth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFourth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFourth.Location = new System.Drawing.Point(36, 389);
-            this.btnFourth.Name = "btnFourth";
-            this.btnFourth.Size = new System.Drawing.Size(124, 64);
-            this.btnFourth.TabIndex = 10;
-            this.btnFourth.Text = " ";
-            this.btnFourth.UseVisualStyleBackColor = false;
-            this.btnFourth.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnFourth_MouseUp);
-            // 
-            // lstInstr
-            // 
-            this.lstInstr.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lstInstr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstInstr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstInstr.ForeColor = System.Drawing.Color.MintCream;
-            this.lstInstr.FormattingEnabled = true;
-            this.lstInstr.ItemHeight = 16;
-            this.lstInstr.Items.AddRange(new object[] {
-            " "});
-            this.lstInstr.Location = new System.Drawing.Point(227, 168);
-            this.lstInstr.Name = "lstInstr";
-            this.lstInstr.Size = new System.Drawing.Size(543, 352);
-            this.lstInstr.TabIndex = 9;
-            // 
-            // btnThird
-            // 
-            this.btnThird.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnThird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnThird.CausesValidation = false;
-            this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThird.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnThird.Location = new System.Drawing.Point(36, 306);
-            this.btnThird.Name = "btnThird";
-            this.btnThird.Size = new System.Drawing.Size(124, 64);
-            this.btnThird.TabIndex = 8;
-            this.btnThird.Text = " ";
-            this.btnThird.UseVisualStyleBackColor = false;
-            this.btnThird.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnThird_MouseUp);
-            // 
-            // btnSec
-            // 
-            this.btnSec.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnSec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSec.CausesValidation = false;
-            this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSec.Location = new System.Drawing.Point(36, 223);
-            this.btnSec.Name = "btnSec";
-            this.btnSec.Size = new System.Drawing.Size(124, 64);
-            this.btnSec.TabIndex = 7;
-            this.btnSec.Text = " ";
-            this.btnSec.UseVisualStyleBackColor = false;
-            this.btnSec.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSec_MouseUp);
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnFirst.CausesValidation = false;
-            this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFirst.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFirst.Location = new System.Drawing.Point(36, 141);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(124, 64);
-            this.btnFirst.TabIndex = 6;
-            this.btnFirst.Text = " ";
-            this.btnFirst.UseVisualStyleBackColor = false;
-            this.btnFirst.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnFirst_MouseUp);
-            // 
-            // lblPhaseRev
-            // 
-            this.lblPhaseRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhaseRev.ForeColor = System.Drawing.Color.MintCream;
-            this.lblPhaseRev.Location = new System.Drawing.Point(723, 46);
-            this.lblPhaseRev.Name = "lblPhaseRev";
-            this.lblPhaseRev.Size = new System.Drawing.Size(94, 55);
-            this.lblPhaseRev.TabIndex = 5;
-            this.lblPhaseRev.Text = "Perform Phase Review";
-            this.lblPhaseRev.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblPhaseRev_MouseUp);
-            // 
-            // lblProjOffice
-            // 
-            this.lblProjOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjOffice.ForeColor = System.Drawing.Color.MintCream;
-            this.lblProjOffice.Location = new System.Drawing.Point(585, 46);
-            this.lblProjOffice.Name = "lblProjOffice";
-            this.lblProjOffice.Size = new System.Drawing.Size(94, 55);
-            this.lblProjOffice.TabIndex = 4;
-            this.lblProjOffice.Text = "Set up the Project Office";
-            this.lblProjOffice.Click += new System.EventHandler(this.lblProjOffice_Click);
-            this.lblProjOffice.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblProjOffice_MouseUp);
-            // 
-            // lblProjTeam
-            // 
-            this.lblProjTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjTeam.ForeColor = System.Drawing.Color.MintCream;
-            this.lblProjTeam.Location = new System.Drawing.Point(439, 46);
-            this.lblProjTeam.Name = "lblProjTeam";
-            this.lblProjTeam.Size = new System.Drawing.Size(94, 55);
-            this.lblProjTeam.TabIndex = 3;
-            this.lblProjTeam.Text = "Appoint the Project Team";
-            this.lblProjTeam.Click += new System.EventHandler(this.lblProjTeam_Click);
-            this.lblProjTeam.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblProjTeam_MouseUp);
-            // 
-            // lblProjCharter
-            // 
-            this.lblProjCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProjCharter.ForeColor = System.Drawing.Color.MintCream;
-            this.lblProjCharter.Location = new System.Drawing.Point(314, 46);
-            this.lblProjCharter.Name = "lblProjCharter";
-            this.lblProjCharter.Size = new System.Drawing.Size(94, 55);
-            this.lblProjCharter.TabIndex = 2;
-            this.lblProjCharter.Text = "Establish Project Charter";
-            this.lblProjCharter.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblProjCharter_MouseUp);
-            // 
-            // lblFeasStudy
-            // 
-            this.lblFeasStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFeasStudy.ForeColor = System.Drawing.Color.MintCream;
-            this.lblFeasStudy.Location = new System.Drawing.Point(178, 46);
-            this.lblFeasStudy.Name = "lblFeasStudy";
-            this.lblFeasStudy.Size = new System.Drawing.Size(94, 55);
-            this.lblFeasStudy.TabIndex = 1;
-            this.lblFeasStudy.Text = "Undertake a Feasibility Study";
-            this.lblFeasStudy.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblFeasStudy_MouseUp);
-            // 
-            // lblBusCase
-            // 
-            this.lblBusCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusCase.ForeColor = System.Drawing.Color.MintCream;
-            this.lblBusCase.Location = new System.Drawing.Point(47, 46);
-            this.lblBusCase.Name = "lblBusCase";
-            this.lblBusCase.Size = new System.Drawing.Size(94, 55);
-            this.lblBusCase.TabIndex = 0;
-            this.lblBusCase.Text = "Develop a Business Case";
-            this.lblBusCase.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblBusCase_MouseUp);
             // 
             // lstInfo
             // 
@@ -417,6 +189,231 @@
             this.btnDevBCase.Click += new System.EventHandler(this.btnDevBCase_Click);
             this.btnDevBCase.MouseLeave += new System.EventHandler(this.btnDevBCase_MouseLeave);
             this.btnDevBCase.MouseHover += new System.EventHandler(this.btnDevBCase_MouseHover);
+            // 
+            // pnlInstr
+            // 
+            this.pnlInstr.Controls.Add(this.btnClose);
+            this.pnlInstr.Controls.Add(this.btnPrev);
+            this.pnlInstr.Controls.Add(this.btnNext);
+            this.pnlInstr.Controls.Add(this.btnFifth);
+            this.pnlInstr.Controls.Add(this.btnFourth);
+            this.pnlInstr.Controls.Add(this.lstInstr);
+            this.pnlInstr.Controls.Add(this.btnThird);
+            this.pnlInstr.Controls.Add(this.btnSec);
+            this.pnlInstr.Controls.Add(this.btnFirst);
+            this.pnlInstr.Controls.Add(this.lblPhaseRev);
+            this.pnlInstr.Controls.Add(this.lblProjOffice);
+            this.pnlInstr.Controls.Add(this.lblProjTeam);
+            this.pnlInstr.Controls.Add(this.lblProjCharter);
+            this.pnlInstr.Controls.Add(this.lblFeasStudy);
+            this.pnlInstr.Controls.Add(this.lblBusCase);
+            this.pnlInstr.Location = new System.Drawing.Point(9, 12);
+            this.pnlInstr.Name = "pnlInstr";
+            this.pnlInstr.Size = new System.Drawing.Size(835, 614);
+            this.pnlInstr.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnClose.Location = new System.Drawing.Point(786, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(34, 21);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnPrev.Location = new System.Drawing.Point(244, 490);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(75, 23);
+            this.btnPrev.TabIndex = 13;
+            this.btnPrev.Text = "Prev";
+            this.btnPrev.UseVisualStyleBackColor = false;
+            this.btnPrev.Visible = false;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnNext.Location = new System.Drawing.Point(684, 490);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 12;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Visible = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnFifth
+            // 
+            this.btnFifth.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnFifth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFifth.CausesValidation = false;
+            this.btnFifth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFifth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFifth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFifth.Location = new System.Drawing.Point(36, 472);
+            this.btnFifth.Name = "btnFifth";
+            this.btnFifth.Size = new System.Drawing.Size(124, 64);
+            this.btnFifth.TabIndex = 11;
+            this.btnFifth.Text = " ";
+            this.btnFifth.UseVisualStyleBackColor = false;
+            this.btnFifth.Click += new System.EventHandler(this.btnFifth_Click);
+            // 
+            // btnFourth
+            // 
+            this.btnFourth.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnFourth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFourth.CausesValidation = false;
+            this.btnFourth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFourth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFourth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFourth.Location = new System.Drawing.Point(36, 389);
+            this.btnFourth.Name = "btnFourth";
+            this.btnFourth.Size = new System.Drawing.Size(124, 64);
+            this.btnFourth.TabIndex = 10;
+            this.btnFourth.Text = " ";
+            this.btnFourth.UseVisualStyleBackColor = false;
+            this.btnFourth.Click += new System.EventHandler(this.btnFourth_Click);
+            // 
+            // lstInstr
+            // 
+            this.lstInstr.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lstInstr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstInstr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstInstr.ForeColor = System.Drawing.Color.MintCream;
+            this.lstInstr.FormattingEnabled = true;
+            this.lstInstr.ItemHeight = 16;
+            this.lstInstr.Items.AddRange(new object[] {
+            " "});
+            this.lstInstr.Location = new System.Drawing.Point(227, 168);
+            this.lstInstr.Name = "lstInstr";
+            this.lstInstr.Size = new System.Drawing.Size(543, 352);
+            this.lstInstr.TabIndex = 9;
+            // 
+            // btnThird
+            // 
+            this.btnThird.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnThird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnThird.CausesValidation = false;
+            this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThird.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnThird.Location = new System.Drawing.Point(36, 306);
+            this.btnThird.Name = "btnThird";
+            this.btnThird.Size = new System.Drawing.Size(124, 64);
+            this.btnThird.TabIndex = 8;
+            this.btnThird.Text = " ";
+            this.btnThird.UseVisualStyleBackColor = false;
+            this.btnThird.Click += new System.EventHandler(this.btnThird_Click);
+            // 
+            // btnSec
+            // 
+            this.btnSec.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnSec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSec.CausesValidation = false;
+            this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSec.Location = new System.Drawing.Point(36, 223);
+            this.btnSec.Name = "btnSec";
+            this.btnSec.Size = new System.Drawing.Size(124, 64);
+            this.btnSec.TabIndex = 7;
+            this.btnSec.Text = " ";
+            this.btnSec.UseVisualStyleBackColor = false;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFirst.CausesValidation = false;
+            this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFirst.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFirst.Location = new System.Drawing.Point(36, 141);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(124, 64);
+            this.btnFirst.TabIndex = 6;
+            this.btnFirst.Text = " ";
+            this.btnFirst.UseVisualStyleBackColor = false;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
+            // 
+            // lblPhaseRev
+            // 
+            this.lblPhaseRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhaseRev.ForeColor = System.Drawing.Color.MintCream;
+            this.lblPhaseRev.Location = new System.Drawing.Point(723, 46);
+            this.lblPhaseRev.Name = "lblPhaseRev";
+            this.lblPhaseRev.Size = new System.Drawing.Size(94, 55);
+            this.lblPhaseRev.TabIndex = 5;
+            this.lblPhaseRev.Text = "Perform Phase Review";
+            this.lblPhaseRev.Click += new System.EventHandler(this.lblPhaseRev_Click);
+            // 
+            // lblProjOffice
+            // 
+            this.lblProjOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjOffice.ForeColor = System.Drawing.Color.MintCream;
+            this.lblProjOffice.Location = new System.Drawing.Point(585, 46);
+            this.lblProjOffice.Name = "lblProjOffice";
+            this.lblProjOffice.Size = new System.Drawing.Size(94, 55);
+            this.lblProjOffice.TabIndex = 4;
+            this.lblProjOffice.Text = "Set up the Project Office";
+            this.lblProjOffice.Click += new System.EventHandler(this.lblProjOffice_Click);
+            // 
+            // lblProjTeam
+            // 
+            this.lblProjTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjTeam.ForeColor = System.Drawing.Color.MintCream;
+            this.lblProjTeam.Location = new System.Drawing.Point(439, 46);
+            this.lblProjTeam.Name = "lblProjTeam";
+            this.lblProjTeam.Size = new System.Drawing.Size(94, 55);
+            this.lblProjTeam.TabIndex = 3;
+            this.lblProjTeam.Text = "Appoint the Project Team";
+            this.lblProjTeam.Click += new System.EventHandler(this.lblProjTeam_Click);
+            // 
+            // lblProjCharter
+            // 
+            this.lblProjCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjCharter.ForeColor = System.Drawing.Color.MintCream;
+            this.lblProjCharter.Location = new System.Drawing.Point(314, 46);
+            this.lblProjCharter.Name = "lblProjCharter";
+            this.lblProjCharter.Size = new System.Drawing.Size(94, 55);
+            this.lblProjCharter.TabIndex = 2;
+            this.lblProjCharter.Text = "Establish Project Charter";
+            this.lblProjCharter.Click += new System.EventHandler(this.lblProjCharter_Click);
+            // 
+            // lblFeasStudy
+            // 
+            this.lblFeasStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeasStudy.ForeColor = System.Drawing.Color.MintCream;
+            this.lblFeasStudy.Location = new System.Drawing.Point(178, 46);
+            this.lblFeasStudy.Name = "lblFeasStudy";
+            this.lblFeasStudy.Size = new System.Drawing.Size(94, 55);
+            this.lblFeasStudy.TabIndex = 1;
+            this.lblFeasStudy.Text = "Undertake a Feasibility Study";
+            this.lblFeasStudy.Click += new System.EventHandler(this.lblFeasStudy_Click);
+            // 
+            // lblBusCase
+            // 
+            this.lblBusCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusCase.ForeColor = System.Drawing.Color.MintCream;
+            this.lblBusCase.Location = new System.Drawing.Point(47, 46);
+            this.lblBusCase.Name = "lblBusCase";
+            this.lblBusCase.Size = new System.Drawing.Size(94, 55);
+            this.lblBusCase.TabIndex = 0;
+            this.lblBusCase.Text = "Develop a Business Case";
+            this.lblBusCase.Click += new System.EventHandler(this.lblBusCase_Click);
             // 
             // frmInitiation
             // 
