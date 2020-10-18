@@ -1,5 +1,0 @@
-﻿CREATE TABLE [dbo].[tblTest]
-(
-	[Id] INT NOT NULL PRIMARY KEY, 
-    [Test] NVARCHAR(50) NOT NULL
-)

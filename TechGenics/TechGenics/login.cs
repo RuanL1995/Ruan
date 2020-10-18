@@ -254,7 +254,7 @@ namespace TechGenics
             {
                 //Finds entries in list where username = txtUsername.Text
                 DataAccess db = new DataAccess();
-                _users = db.GetUsers(txtUsername.Text);
+                _users = db.GetUser(txtUsername.Text);
 
                 //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a pain to work with
                 DataSet ds = new DataSet();
@@ -304,7 +304,7 @@ namespace TechGenics
             try
             {
                 DataAccess db = new DataAccess();
-                _users = db.GetUsers(txtSUser.Text);
+                _users = db.GetUser(txtSUser.Text);
 
                 //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a pain to work with
                 DataSet ds = new DataSet();

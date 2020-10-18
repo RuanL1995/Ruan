@@ -16,7 +16,7 @@ namespace TechGenics.Models
         public string Email { get; set; }
 
         //Combines User properties into one combo property
-        public string FullInfo
+        public string FullInfoUser
         {
             get 
             {

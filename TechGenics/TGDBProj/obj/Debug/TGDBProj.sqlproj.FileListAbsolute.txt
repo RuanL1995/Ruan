@@ -32,3 +32,7 @@ C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TGDBProj\obj\Debug\Model.xml
 C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TGDBProj\obj\Debug\refactor.xml
 C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TGDBProj\obj\Debug\postdeploy.sql
 C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TGDBProj\obj\Debug\predeploy.sql
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\Model.xml
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\refactor.xml
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\postdeploy.sql
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\predeploy.sql
