@@ -82,6 +82,12 @@
     <Build Include="dbo\Stored Procedures\User\spUserC1.sql" />
     <Build Include="dbo\Stored Procedures\UserProject\spUserProjectR1.sql" />
     <Build Include="dbo\Stored Procedures\User\spUserR1.sql" />
+    <Build Include="dbo\Stored Procedures\User\spUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Phase\spUpdatePhaseRecord.sql" />
+    <Build Include="dbo\Stored Procedures\Project\spUpdateProjectRecord.sql" />
+    <Build Include="dbo\Stored Procedures\Project\spDeleteProjectRecord.sql" />
+    <Build Include="dbo\Stored Procedures\Phase\spDeletePhaseRecord.sql" />
+    <Build Include="dbo\Stored Procedures\User\spDeleteUserRecord.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />
