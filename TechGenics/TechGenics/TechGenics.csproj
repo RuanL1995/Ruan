@@ -139,6 +139,9 @@
     <Compile Include="loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCloseOut.resx">
+      <DependentUpon>frmCloseOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmExecution.resx">
       <DependentUpon>frmExecution.cs</DependentUpon>
     </EmbeddedResource>

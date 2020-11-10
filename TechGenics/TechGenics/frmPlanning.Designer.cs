@@ -79,7 +79,7 @@
             this.pnlPlanning.Controls.Add(this.btnFinPlan);
             this.pnlPlanning.Controls.Add(this.btnResPlan);
             this.pnlPlanning.Controls.Add(this.btnProjectPlan);
-            this.pnlPlanning.Location = new System.Drawing.Point(13, 125);
+            this.pnlPlanning.Location = new System.Drawing.Point(12, 16);
             this.pnlPlanning.Name = "pnlPlanning";
             this.pnlPlanning.Size = new System.Drawing.Size(823, 610);
             this.pnlPlanning.TabIndex = 0;
@@ -247,7 +247,6 @@
             // 
             // pnlInstr
             // 
-            this.pnlInstr.Controls.Add(this.pnlPlanning);
             this.pnlInstr.Controls.Add(this.pnlSideMenu);
             this.pnlInstr.Controls.Add(this.pboTender);
             this.pnlInstr.Controls.Add(this.pnlHeading);
@@ -278,7 +277,7 @@
             this.btnFirst.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFirst.Location = new System.Drawing.Point(14, 298);
+            this.btnFirst.Location = new System.Drawing.Point(14, 439);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(124, 64);
             this.btnFirst.TabIndex = 9;
@@ -291,7 +290,7 @@
             this.btnSec.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSec.Location = new System.Drawing.Point(14, 385);
+            this.btnSec.Location = new System.Drawing.Point(14, 526);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(124, 64);
             this.btnSec.TabIndex = 10;
@@ -304,7 +303,7 @@
             this.btnThird.BackColor = System.Drawing.Color.Aquamarine;
             this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThird.Location = new System.Drawing.Point(14, 470);
+            this.btnThird.Location = new System.Drawing.Point(14, 611);
             this.btnThird.Name = "btnThird";
             this.btnThird.Size = new System.Drawing.Size(124, 64);
             this.btnThird.TabIndex = 11;
@@ -317,7 +316,7 @@
             this.btnFourth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFourth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFourth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFourth.Location = new System.Drawing.Point(14, 560);
+            this.btnFourth.Location = new System.Drawing.Point(14, 701);
             this.btnFourth.Name = "btnFourth";
             this.btnFourth.Size = new System.Drawing.Size(124, 64);
             this.btnFourth.TabIndex = 12;
@@ -330,7 +329,7 @@
             this.btnSixth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSixth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSixth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSixth.Location = new System.Drawing.Point(14, 738);
+            this.btnSixth.Location = new System.Drawing.Point(14, 879);
             this.btnSixth.Name = "btnSixth";
             this.btnSixth.Size = new System.Drawing.Size(124, 64);
             this.btnSixth.TabIndex = 14;
@@ -343,7 +342,7 @@
             this.btnFifth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFifth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFifth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFifth.Location = new System.Drawing.Point(14, 648);
+            this.btnFifth.Location = new System.Drawing.Point(14, 789);
             this.btnFifth.Name = "btnFifth";
             this.btnFifth.Size = new System.Drawing.Size(124, 64);
             this.btnFifth.TabIndex = 13;
@@ -527,6 +526,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(871, 628);
+            this.Controls.Add(this.pnlPlanning);
             this.Controls.Add(this.pnlInstr);
             this.Name = "frmPlanning";
             this.Text = "frmPlanning";

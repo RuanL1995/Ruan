@@ -280,9 +280,9 @@
             this.pnlInstr.Controls.Add(this.pnlHeading);
             this.pnlInstr.Controls.Add(this.btnHide);
             this.pnlInstr.Controls.Add(this.lstInstr);
-            this.pnlInstr.Location = new System.Drawing.Point(36, 49);
+            this.pnlInstr.Location = new System.Drawing.Point(31, 26);
             this.pnlInstr.Name = "pnlInstr";
-            this.pnlInstr.Size = new System.Drawing.Size(839, 600);
+            this.pnlInstr.Size = new System.Drawing.Size(862, 626);
             this.pnlInstr.TabIndex = 13;
             this.pnlInstr.Visible = false;
             // 
