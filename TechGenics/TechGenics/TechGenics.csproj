@@ -139,6 +139,9 @@
     <Compile Include="loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmExecution.resx">
+      <DependentUpon>frmExecution.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInitiation.resx">
       <DependentUpon>frmInitiation.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fireworks.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\TenderProcess.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

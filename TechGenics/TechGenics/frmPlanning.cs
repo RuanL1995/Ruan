@@ -21,6 +21,7 @@ namespace TechGenics
         private void frmPlanning_Load(object sender, EventArgs e)
         {
             pnlPlanning.BringToFront();
+            pboTender.SendToBack();
         }
 
         /// <summary>
@@ -809,6 +810,7 @@ namespace TechGenics
                 case 8:
                     lstInstr.Items.Clear();
                     //check ppt
+                    pboTender.Visible = true;
                     break;
             }
         }

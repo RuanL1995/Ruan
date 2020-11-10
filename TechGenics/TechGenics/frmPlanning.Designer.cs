@@ -59,10 +59,12 @@
             this.btnAPlan = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
             this.lstInstr = new System.Windows.Forms.ListBox();
+            this.pboTender = new System.Windows.Forms.PictureBox();
             this.pnlPlanning.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHeading.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboTender)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPlanning
@@ -77,9 +79,9 @@
             this.pnlPlanning.Controls.Add(this.btnFinPlan);
             this.pnlPlanning.Controls.Add(this.btnResPlan);
             this.pnlPlanning.Controls.Add(this.btnProjectPlan);
-            this.pnlPlanning.Location = new System.Drawing.Point(23, 12);
+            this.pnlPlanning.Location = new System.Drawing.Point(13, 125);
             this.pnlPlanning.Name = "pnlPlanning";
-            this.pnlPlanning.Size = new System.Drawing.Size(823, 591);
+            this.pnlPlanning.Size = new System.Drawing.Size(823, 610);
             this.pnlPlanning.TabIndex = 0;
             // 
             // lstInfo
@@ -245,11 +247,13 @@
             // 
             // pnlInstr
             // 
+            this.pnlInstr.Controls.Add(this.pnlPlanning);
             this.pnlInstr.Controls.Add(this.pnlSideMenu);
+            this.pnlInstr.Controls.Add(this.pboTender);
             this.pnlInstr.Controls.Add(this.pnlHeading);
             this.pnlInstr.Controls.Add(this.btnHide);
             this.pnlInstr.Controls.Add(this.lstInstr);
-            this.pnlInstr.Location = new System.Drawing.Point(20, 12);
+            this.pnlInstr.Location = new System.Drawing.Point(20, 16);
             this.pnlInstr.Name = "pnlInstr";
             this.pnlInstr.Size = new System.Drawing.Size(839, 600);
             this.pnlInstr.TabIndex = 1;
@@ -274,7 +278,7 @@
             this.btnFirst.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFirst.Location = new System.Drawing.Point(14, 16);
+            this.btnFirst.Location = new System.Drawing.Point(14, 298);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(124, 64);
             this.btnFirst.TabIndex = 9;
@@ -287,7 +291,7 @@
             this.btnSec.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSec.Location = new System.Drawing.Point(14, 103);
+            this.btnSec.Location = new System.Drawing.Point(14, 385);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(124, 64);
             this.btnSec.TabIndex = 10;
@@ -300,7 +304,7 @@
             this.btnThird.BackColor = System.Drawing.Color.Aquamarine;
             this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThird.Location = new System.Drawing.Point(14, 188);
+            this.btnThird.Location = new System.Drawing.Point(14, 470);
             this.btnThird.Name = "btnThird";
             this.btnThird.Size = new System.Drawing.Size(124, 64);
             this.btnThird.TabIndex = 11;
@@ -313,7 +317,7 @@
             this.btnFourth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFourth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFourth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFourth.Location = new System.Drawing.Point(14, 278);
+            this.btnFourth.Location = new System.Drawing.Point(14, 560);
             this.btnFourth.Name = "btnFourth";
             this.btnFourth.Size = new System.Drawing.Size(124, 64);
             this.btnFourth.TabIndex = 12;
@@ -326,7 +330,7 @@
             this.btnSixth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSixth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSixth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSixth.Location = new System.Drawing.Point(14, 456);
+            this.btnSixth.Location = new System.Drawing.Point(14, 738);
             this.btnSixth.Name = "btnSixth";
             this.btnSixth.Size = new System.Drawing.Size(124, 64);
             this.btnSixth.TabIndex = 14;
@@ -339,7 +343,7 @@
             this.btnFifth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFifth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFifth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFifth.Location = new System.Drawing.Point(14, 366);
+            this.btnFifth.Location = new System.Drawing.Point(14, 648);
             this.btnFifth.Name = "btnFifth";
             this.btnFifth.Size = new System.Drawing.Size(124, 64);
             this.btnFifth.TabIndex = 13;
@@ -506,13 +510,23 @@
             this.lstInstr.Size = new System.Drawing.Size(549, 390);
             this.lstInstr.TabIndex = 15;
             // 
+            // pboTender
+            // 
+            this.pboTender.Image = global::TechGenics.Properties.Resources.TenderProcess;
+            this.pboTender.Location = new System.Drawing.Point(173, 144);
+            this.pboTender.Name = "pboTender";
+            this.pboTender.Size = new System.Drawing.Size(613, 421);
+            this.pboTender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboTender.TabIndex = 19;
+            this.pboTender.TabStop = false;
+            this.pboTender.Visible = false;
+            // 
             // frmPlanning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(871, 628);
-            this.Controls.Add(this.pnlPlanning);
             this.Controls.Add(this.pnlInstr);
             this.Name = "frmPlanning";
             this.Text = "frmPlanning";
@@ -521,6 +535,7 @@
             this.pnlInstr.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlHeading.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboTender)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,5 +573,6 @@
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.Panel pnlSideMenu;
         private System.Windows.Forms.Panel pnlHeading;
+        private System.Windows.Forms.PictureBox pboTender;
     }
 }
