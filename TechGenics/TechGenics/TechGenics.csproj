@@ -36,6 +36,10 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -74,6 +78,12 @@
   <ItemGroup>
     <Compile Include="controls.cs" />
     <Compile Include="DataAccess.cs" />
+    <Compile Include="Docs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docs.Designer.cs">
+      <DependentUpon>Docs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCloseOut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +149,9 @@
     <Compile Include="loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Docs.resx">
+      <DependentUpon>Docs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCloseOut.resx">
       <DependentUpon>frmCloseOut.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +191,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Templates\Business Case.doc" />
+    <None Include="Templates\Feasibility Study.doc" />
+    <None Include="Templates\Request for Proposal.doc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -232,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\TenderProcess.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Docs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

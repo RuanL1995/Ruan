@@ -336,5 +336,27 @@ namespace TechGenics
         {
             pnlChildForm.BringToFront();
         }
+
+        private void btnInitiation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Docs docs = new Docs();
+            openDocsFrom(docs);
+        }
+
+        private void openDocsFrom(Docs docs)
+        {
+            docs.TopLevel = false;
+            docs.FormBorderStyle = FormBorderStyle.None;
+            docs.Dock = DockStyle.Fill;
+            pnlChildForm.Controls.Add(docs);
+            pnlChildForm.Tag = docs;
+            docs.BringToFront();
+            docs.Show();
+        }
     }
 }
