@@ -14,6 +14,10 @@ namespace TechGenics
     {
         int slider;
         bool hide;
+        bool initiation = false;
+        bool execution = false;
+        bool closeOut = false;
+        bool planning = false; 
 
         int tab = 1;
 
@@ -195,14 +199,15 @@ namespace TechGenics
         {
             if (e.Button == MouseButtons.Right)
             {
-                pnlTCInit.Visible = true;
+                
+                initiation = true;
 
             }
             else//left or middle click
             {
-                hideSubs();
+                
                 openChildForm(new frmInitiation());
-                pnlTCInit.Visible = false;
+                
 
                 if(tab == 0)
                 {
@@ -215,15 +220,14 @@ namespace TechGenics
         {
             if (e.Button == MouseButtons.Right)
             {
-                pnlTCPlan.Visible = true;
-                pnlTCPlan.BringToFront();
+                planning = true;
 
             }
             else//left or middle click
             {
-                hideSubs();
+               
                 openChildForm(new frmPlanning());
-                pnlTCPlan.Visible = false;
+                
 
                 if (tab == 0)
                 {
@@ -236,14 +240,14 @@ namespace TechGenics
         {
             if (e.Button == MouseButtons.Right)
             {
-                pnlTCExe.Visible = true;
+                execution = true;
 
             }
             else//left or middle click
             {
-                hideSubs();
+                
                 openChildForm(new frmExecution());
-                pnlTCExe.Visible = false;
+                
 
                 if (tab == 0)
                 {
@@ -256,14 +260,14 @@ namespace TechGenics
         {
             if (e.Button == MouseButtons.Right)
             {
-                pnlTCClo.Visible = true;
+                closeOut = true;
 
             }
             else//left or middle click
             {
-                hideSubs();
+                
                 openChildForm(new frmCloseOut());
-                pnlTCClo.Visible = false;
+                
 
                 if (tab == 0)
                 {
@@ -383,19 +387,7 @@ namespace TechGenics
                 }
             }
         }
-
-        /// <summary>
-        /// New tab and dual view
-        /// </summary>
-        #region Right click
-        private void openInNewTabToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
-       #endregion
-
+                
         private void frmMainAdmin_Load(object sender, EventArgs e)
         {
                        
@@ -427,11 +419,7 @@ namespace TechGenics
             pnlChildForm.BringToFront();
         }
 
-        private void btnInitiation_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button4_Click(object sender, EventArgs e)
         {
             Docs docs = new Docs();
@@ -448,12 +436,7 @@ namespace TechGenics
             docs.BringToFront();
             docs.Show();
         }
-
-        private void btnPlanning_Click(object sender, EventArgs e)
-        {
-
-        }
-
+                
         public void showTabs()
         {
             if (tab == 3)
@@ -476,14 +459,7 @@ namespace TechGenics
                 MessageBox.Show("Tab bar full!");
             }
         }
-
-        public void hideTabs()
-        {
-            pnlTCExe.Visible = false;
-            pnlTCClo.Visible = false;
-            pnlTCInit.Visible = false;
-            pnlTCPlan.Visible = false;
-        }
+              
 
         private void btnPnewTab_Click(object sender, EventArgs e)
         {
@@ -493,180 +469,8 @@ namespace TechGenics
             showTabs();
             
         }
-              
+             
        
-        private void pnlTCInit_Click(object sender, EventArgs e)
-        {
-            pnlTCInit.Visible = false;
-        }
-
-        private void pnlTCPlan_Click(object sender, EventArgs e)
-        {
-            pnlTCPlan.Visible = false;
-        }
-
-        private void pnlTCClo_Click(object sender, EventArgs e)
-        {
-            pnlTCClo.Visible = true;
-        }
-
-        private void pnlTCExe_Click(object sender, EventArgs e)
-        {
-            pnlTCExe.Visible = true;
-        }
-
-        private void btnInewTab_Click(object sender, EventArgs e)
-        {
-            btnTab1.Visible = true;
-            btnTab2.Visible = true;
-            tab++;
-            showTabs();
-            hideTabs();
-
-           if (tab == 2)
-            {
-                openChildForm2(new frmInitiation());
-                pnlChildForm2.BringToFront();
-                pnlChildForm2.Visible = true;
-                MessageBox.Show("2");
-            }
-            else if (tab == 3)
-            {
-                openChildForm3(new frmInitiation());
-                pnlChildForm3.BringToFront();
-                pnlChildForm3.Visible = true;
-                MessageBox.Show("3");
-            }
-            else if (tab == 4)
-            {
-                openChildForm4(new frmInitiation());
-                pnlChildForm4.BringToFront();
-                pnlChildForm4.Visible = true;
-                MessageBox.Show("4");
-            }
-            else if (tab == 5)
-            {
-                openChildForm5(new frmInitiation());
-                pnlChildForm5.BringToFront();
-                pnlChildForm5.Visible = true;
-                MessageBox.Show("5");
-            }
-        }
-
-        private void btnPnewTab_Click_1(object sender, EventArgs e)
-        {
-            btnTab1.Visible = true;
-            btnTab2.Visible = true;
-            tab++;
-            showTabs();
-            hideTabs();
-
-            if (tab == 2)
-            {
-                openChildForm2(new frmPlanning());
-                pnlChildForm2.BringToFront();
-                pnlChildForm2.Visible = true;
-                MessageBox.Show("2");
-            }
-            else if (tab == 3)
-            {
-                openChildForm3(new frmPlanning());
-                pnlChildForm3.BringToFront();
-                pnlChildForm3.Visible = true;
-                MessageBox.Show("3");
-            }
-            else if (tab == 4)
-            {
-                openChildForm4(new frmPlanning());
-                pnlChildForm4.BringToFront();
-                pnlChildForm4.Visible = true;
-                MessageBox.Show("4");
-            }
-            else if (tab == 5)
-            {
-                openChildForm5(new frmPlanning());
-                pnlChildForm5.BringToFront();
-                pnlChildForm5.Visible = true;
-                MessageBox.Show("5");
-            }
-        }
-
-        private void btnCnewTab_Click(object sender, EventArgs e)
-        {
-            btnTab1.Visible = true;
-            btnTab2.Visible = true;
-            tab++;
-            showTabs();
-            hideTabs();
-
-            if (tab == 2)
-            {
-                openChildForm2(new frmCloseOut());
-                pnlChildForm2.BringToFront();
-                pnlChildForm2.Visible = true;
-                MessageBox.Show("2");
-            }
-            else if (tab == 3)
-            {
-                openChildForm3(new frmCloseOut());
-                pnlChildForm3.BringToFront();
-                pnlChildForm3.Visible = true;
-                MessageBox.Show("3");
-            }
-            else if (tab == 4)
-            {
-                openChildForm4(new frmCloseOut());
-                pnlChildForm4.BringToFront();
-                pnlChildForm4.Visible = true;
-                MessageBox.Show("4");
-            }
-            else if (tab == 5)
-            {
-                openChildForm5(new frmCloseOut());
-                pnlChildForm5.BringToFront();
-                pnlChildForm5.Visible = true;
-                MessageBox.Show("5");
-            }
-        }
-
-        private void btnEnewTab_Click(object sender, EventArgs e)
-        {
-            btnTab1.Visible = true;
-            btnTab2.Visible = true;
-            tab++;
-            showTabs();
-            hideTabs();
-
-           if (tab == 2)
-            {
-                openChildForm2(new frmExecution());
-                pnlChildForm2.BringToFront();
-                pnlChildForm2.Visible = true;
-                MessageBox.Show("2");
-            }
-            else if (tab == 3)
-            {
-                openChildForm3(new frmExecution());
-                pnlChildForm3.BringToFront();
-                pnlChildForm3.Visible = true;
-                MessageBox.Show("3");
-            }
-            else if (tab == 4)
-            {
-                openChildForm4(new frmExecution());
-                pnlChildForm4.BringToFront();
-                pnlChildForm4.Visible = true;
-                MessageBox.Show("4");
-            }
-            else if (tab == 5)
-            {
-                openChildForm5(new frmExecution());
-                pnlChildForm5.BringToFront();
-                pnlChildForm5.Visible = true;
-                MessageBox.Show("5");
-            }
-        }
-
         private void btnTab1_Click(object sender, EventArgs e)
         {
             pnlChildForm.Visible = true;
@@ -740,6 +544,161 @@ namespace TechGenics
             pnlChildForm4.SendToBack();
             pnlChildForm.Visible = false;
             pnlChildForm.SendToBack();
+        }
+
+        private void openInNewTabToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            
+                btnTab1.Visible = true;
+                btnTab2.Visible = true;
+                tab++;
+                showTabs();
+                
+
+                if (tab == 2)
+                {
+                    openChildForm2(new frmInitiation());
+                    pnlChildForm2.BringToFront();
+                    pnlChildForm2.Visible = true;
+                   
+                }
+                else if (tab == 3)
+                {
+                    openChildForm3(new frmInitiation());
+                    pnlChildForm3.BringToFront();
+                    pnlChildForm3.Visible = true;
+                    
+                }
+                else if (tab == 4)
+                {
+                    openChildForm4(new frmInitiation());
+                    pnlChildForm4.BringToFront();
+                    pnlChildForm4.Visible = true;
+                    
+                }
+                else if (tab == 5)
+                {
+                    openChildForm5(new frmInitiation());
+                    pnlChildForm5.BringToFront();
+                    pnlChildForm5.Visible = true;
+                    
+                }
+                       
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            btnTab1.Visible = true;
+            btnTab2.Visible = true;
+            tab++;
+            showTabs();
+           
+
+            if (tab == 2)
+            {
+                openChildForm2(new frmPlanning());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+                
+            }
+            else if (tab == 3)
+            {
+                openChildForm3(new frmPlanning());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+                
+            }
+            else if (tab == 4)
+            {
+                openChildForm4(new frmPlanning());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+                
+            }
+            else if (tab == 5)
+            {
+                openChildForm5(new frmPlanning());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+                
+            }
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+            btnTab1.Visible = true;
+            btnTab2.Visible = true;
+            tab++;
+            showTabs();
+           
+
+            if (tab == 2)
+            {
+                openChildForm2(new frmExecution());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+                
+            }
+            else if (tab == 3)
+            {
+                openChildForm3(new frmExecution());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+                
+            }
+            else if (tab == 4)
+            {
+                openChildForm4(new frmExecution());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+                
+            }
+            else if (tab == 5)
+            {
+                openChildForm5(new frmExecution());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+                
+            }
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            btnTab1.Visible = true;
+            btnTab2.Visible = true;
+            tab++;
+            showTabs();
+           
+
+            if (tab == 2)
+            {
+                openChildForm2(new frmCloseOut());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+                
+            }
+            else if (tab == 3)
+            {
+                openChildForm3(new frmCloseOut());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+                
+            }
+            else if (tab == 4)
+            {
+                openChildForm4(new frmCloseOut());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+               
+            }
+            else if (tab == 5)
+            {
+                openChildForm5(new frmCloseOut());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+                
+            }
         }
     }
 }
