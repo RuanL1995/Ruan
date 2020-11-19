@@ -47,6 +47,7 @@
             this.btnFourth = new System.Windows.Forms.Button();
             this.btnSixth = new System.Windows.Forms.Button();
             this.btnFifth = new System.Windows.Forms.Button();
+            this.pboTender = new System.Windows.Forms.PictureBox();
             this.pnlHeading = new System.Windows.Forms.Panel();
             this.btnFPlan = new System.Windows.Forms.Button();
             this.btnQPlan = new System.Windows.Forms.Button();
@@ -59,16 +60,16 @@
             this.btnAPlan = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
             this.lstInstr = new System.Windows.Forms.ListBox();
-            this.pboTender = new System.Windows.Forms.PictureBox();
             this.pnlPlanning.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
-            this.pnlHeading.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboTender)).BeginInit();
+            this.pnlHeading.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPlanning
             // 
+            this.pnlPlanning.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlPlanning.Controls.Add(this.lstInfo);
             this.pnlPlanning.Controls.Add(this.btnPRev);
             this.pnlPlanning.Controls.Add(this.btnProcPlan);
@@ -350,6 +351,17 @@
             this.btnFifth.Visible = false;
             this.btnFifth.Click += new System.EventHandler(this.btnFifth_Click);
             // 
+            // pboTender
+            // 
+            this.pboTender.Image = global::TechGenics.Properties.Resources.TenderProcess;
+            this.pboTender.Location = new System.Drawing.Point(173, 144);
+            this.pboTender.Name = "pboTender";
+            this.pboTender.Size = new System.Drawing.Size(613, 421);
+            this.pboTender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboTender.TabIndex = 19;
+            this.pboTender.TabStop = false;
+            this.pboTender.Visible = false;
+            // 
             // pnlHeading
             // 
             this.pnlHeading.AutoScroll = true;
@@ -509,17 +521,6 @@
             this.lstInstr.Size = new System.Drawing.Size(549, 390);
             this.lstInstr.TabIndex = 15;
             // 
-            // pboTender
-            // 
-            this.pboTender.Image = global::TechGenics.Properties.Resources.TenderProcess;
-            this.pboTender.Location = new System.Drawing.Point(173, 144);
-            this.pboTender.Name = "pboTender";
-            this.pboTender.Size = new System.Drawing.Size(613, 421);
-            this.pboTender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboTender.TabIndex = 19;
-            this.pboTender.TabStop = false;
-            this.pboTender.Visible = false;
-            // 
             // frmPlanning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,8 +535,8 @@
             this.pnlPlanning.ResumeLayout(false);
             this.pnlInstr.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
-            this.pnlHeading.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboTender)).EndInit();
+            this.pnlHeading.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

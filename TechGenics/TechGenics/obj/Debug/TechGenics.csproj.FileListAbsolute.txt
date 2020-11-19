@@ -100,3 +100,4 @@ C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TechGenics\obj\Debug\TechGe
 C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CopyComplete
 C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TechGenics\obj\Debug\TechGenics.exe
 C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.Docs.resources
