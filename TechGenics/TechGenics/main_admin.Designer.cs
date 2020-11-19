@@ -82,6 +82,7 @@
             this.pnlTCInit = new System.Windows.Forms.Panel();
             this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.pnlChildForm5 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -96,6 +97,7 @@
             this.pnlTCClo.SuspendLayout();
             this.pnlTCPlan.SuspendLayout();
             this.pnlTCInit.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -103,6 +105,7 @@
             this.pnlSideMenu.AutoScroll = true;
             this.pnlSideMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlSideMenu.BackColor = System.Drawing.Color.Black;
+            this.pnlSideMenu.Controls.Add(this.panel1);
             this.pnlSideMenu.Controls.Add(this.btnExit);
             this.pnlSideMenu.Controls.Add(this.btnLogout);
             this.pnlSideMenu.Controls.Add(this.pnlHelpSub);
@@ -133,7 +136,7 @@
             this.btnExit.ForeColor = System.Drawing.Color.MintCream;
             this.btnExit.Location = new System.Drawing.Point(0, 607);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(201, 34);
+            this.btnExit.Size = new System.Drawing.Size(265, 34);
             this.btnExit.TabIndex = 11;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -150,7 +153,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.MintCream;
             this.btnLogout.Location = new System.Drawing.Point(0, 573);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(201, 34);
+            this.btnLogout.Size = new System.Drawing.Size(265, 34);
             this.btnLogout.TabIndex = 10;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -164,7 +167,7 @@
             this.pnlHelpSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHelpSub.Location = new System.Drawing.Point(0, 496);
             this.pnlHelpSub.Name = "pnlHelpSub";
-            this.pnlHelpSub.Size = new System.Drawing.Size(201, 77);
+            this.pnlHelpSub.Size = new System.Drawing.Size(265, 77);
             this.pnlHelpSub.TabIndex = 9;
             // 
             // btnManualA
@@ -205,7 +208,7 @@
             this.btnHelp.ForeColor = System.Drawing.Color.MintCream;
             this.btnHelp.Location = new System.Drawing.Point(0, 462);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(201, 34);
+            this.btnHelp.Size = new System.Drawing.Size(265, 34);
             this.btnHelp.TabIndex = 8;
             this.btnHelp.Text = "Help";
             this.btnHelp.UseVisualStyleBackColor = false;
@@ -218,7 +221,7 @@
             this.pnlMembersSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMembersSub.Location = new System.Drawing.Point(0, 421);
             this.pnlMembersSub.Name = "pnlMembersSub";
-            this.pnlMembersSub.Size = new System.Drawing.Size(201, 41);
+            this.pnlMembersSub.Size = new System.Drawing.Size(265, 41);
             this.pnlMembersSub.TabIndex = 7;
             // 
             // btnNewMem
@@ -245,7 +248,7 @@
             this.btnMembers.ForeColor = System.Drawing.Color.MintCream;
             this.btnMembers.Location = new System.Drawing.Point(0, 387);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(201, 34);
+            this.btnMembers.Size = new System.Drawing.Size(265, 34);
             this.btnMembers.TabIndex = 6;
             this.btnMembers.Text = "Members";
             this.btnMembers.UseVisualStyleBackColor = false;
@@ -259,7 +262,7 @@
             this.pnlProjectsSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProjectsSub.Location = new System.Drawing.Point(0, 318);
             this.pnlProjectsSub.Name = "pnlProjectsSub";
-            this.pnlProjectsSub.Size = new System.Drawing.Size(201, 69);
+            this.pnlProjectsSub.Size = new System.Drawing.Size(265, 69);
             this.pnlProjectsSub.TabIndex = 5;
             // 
             // button8
@@ -299,7 +302,7 @@
             this.btnProjects.ForeColor = System.Drawing.Color.MintCream;
             this.btnProjects.Location = new System.Drawing.Point(0, 284);
             this.btnProjects.Name = "btnProjects";
-            this.btnProjects.Size = new System.Drawing.Size(201, 34);
+            this.btnProjects.Size = new System.Drawing.Size(265, 34);
             this.btnProjects.TabIndex = 4;
             this.btnProjects.Text = "Current Projects";
             this.btnProjects.UseVisualStyleBackColor = false;
@@ -312,7 +315,7 @@
             this.pnlDiagramsSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDiagramsSub.Location = new System.Drawing.Point(0, 240);
             this.pnlDiagramsSub.Name = "pnlDiagramsSub";
-            this.pnlDiagramsSub.Size = new System.Drawing.Size(201, 44);
+            this.pnlDiagramsSub.Size = new System.Drawing.Size(265, 44);
             this.pnlDiagramsSub.TabIndex = 3;
             // 
             // button4
@@ -340,7 +343,7 @@
             this.btnDiagrams.ForeColor = System.Drawing.Color.MintCream;
             this.btnDiagrams.Location = new System.Drawing.Point(0, 206);
             this.btnDiagrams.Name = "btnDiagrams";
-            this.btnDiagrams.Size = new System.Drawing.Size(201, 34);
+            this.btnDiagrams.Size = new System.Drawing.Size(265, 34);
             this.btnDiagrams.TabIndex = 2;
             this.btnDiagrams.Text = "Documents and Templates";
             this.btnDiagrams.UseVisualStyleBackColor = false;
@@ -349,16 +352,14 @@
             // pnlPhasesSub
             // 
             this.pnlPhasesSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlPhasesSub.Controls.Add(this.pnlTCClo);
             this.pnlPhasesSub.Controls.Add(this.btnCloseOut);
             this.pnlPhasesSub.Controls.Add(this.btnExecution);
-            this.pnlPhasesSub.Controls.Add(this.pnlTCInit);
             this.pnlPhasesSub.Controls.Add(this.btnPlanning);
             this.pnlPhasesSub.Controls.Add(this.btnInitiation);
             this.pnlPhasesSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPhasesSub.Location = new System.Drawing.Point(0, 73);
             this.pnlPhasesSub.Name = "pnlPhasesSub";
-            this.pnlPhasesSub.Size = new System.Drawing.Size(201, 133);
+            this.pnlPhasesSub.Size = new System.Drawing.Size(265, 133);
             this.pnlPhasesSub.TabIndex = 1;
             // 
             // pnlTCExe
@@ -366,7 +367,7 @@
             this.pnlTCExe.BackColor = System.Drawing.Color.Transparent;
             this.pnlTCExe.Controls.Add(this.button6);
             this.pnlTCExe.Controls.Add(this.btnEnewTab);
-            this.pnlTCExe.Location = new System.Drawing.Point(3, 30);
+            this.pnlTCExe.Location = new System.Drawing.Point(27, 156);
             this.pnlTCExe.Name = "pnlTCExe";
             this.pnlTCExe.Size = new System.Drawing.Size(109, 73);
             this.pnlTCExe.TabIndex = 2;
@@ -471,7 +472,7 @@
             this.btnPhases.ForeColor = System.Drawing.Color.MintCream;
             this.btnPhases.Location = new System.Drawing.Point(0, 39);
             this.btnPhases.Name = "btnPhases";
-            this.btnPhases.Size = new System.Drawing.Size(201, 34);
+            this.btnPhases.Size = new System.Drawing.Size(265, 34);
             this.btnPhases.TabIndex = 0;
             this.btnPhases.Text = "Project Phases";
             this.btnPhases.UseVisualStyleBackColor = false;
@@ -711,7 +712,7 @@
             this.pnlTCClo.BackColor = System.Drawing.Color.Transparent;
             this.pnlTCClo.Controls.Add(this.button9);
             this.pnlTCClo.Controls.Add(this.btnCnewTab);
-            this.pnlTCClo.Location = new System.Drawing.Point(81, 65);
+            this.pnlTCClo.Location = new System.Drawing.Point(27, 234);
             this.pnlTCClo.Name = "pnlTCClo";
             this.pnlTCClo.Size = new System.Drawing.Size(109, 73);
             this.pnlTCClo.TabIndex = 2;
@@ -749,9 +750,8 @@
             // 
             this.pnlTCPlan.BackColor = System.Drawing.Color.Transparent;
             this.pnlTCPlan.Controls.Add(this.button2);
-            this.pnlTCPlan.Controls.Add(this.pnlTCExe);
             this.pnlTCPlan.Controls.Add(this.btnPnewTab);
-            this.pnlTCPlan.Location = new System.Drawing.Point(3, 39);
+            this.pnlTCPlan.Location = new System.Drawing.Point(30, 77);
             this.pnlTCPlan.Name = "pnlTCPlan";
             this.pnlTCPlan.Size = new System.Drawing.Size(109, 73);
             this.pnlTCPlan.TabIndex = 1;
@@ -790,8 +790,7 @@
             this.pnlTCInit.BackColor = System.Drawing.Color.Transparent;
             this.pnlTCInit.Controls.Add(this.button3);
             this.pnlTCInit.Controls.Add(this.btnInewTab);
-            this.pnlTCInit.Controls.Add(this.pnlTCPlan);
-            this.pnlTCInit.Location = new System.Drawing.Point(92, 6);
+            this.pnlTCInit.Location = new System.Drawing.Point(27, 3);
             this.pnlTCInit.Name = "pnlTCInit";
             this.pnlTCInit.Size = new System.Drawing.Size(109, 73);
             this.pnlTCInit.TabIndex = 2;
@@ -810,11 +809,22 @@
             // pnlChildForm5
             // 
             this.pnlChildForm5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm5.Location = new System.Drawing.Point(8, 8);
+            this.pnlChildForm5.Location = new System.Drawing.Point(4, 8);
             this.pnlChildForm5.Name = "pnlChildForm5";
-            this.pnlChildForm5.Size = new System.Drawing.Size(861, 648);
+            this.pnlChildForm5.Size = new System.Drawing.Size(865, 648);
             this.pnlChildForm5.TabIndex = 4;
             this.pnlChildForm5.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pnlTCClo);
+            this.panel1.Controls.Add(this.pnlTCInit);
+            this.panel1.Controls.Add(this.pnlTCExe);
+            this.panel1.Controls.Add(this.pnlTCPlan);
+            this.panel1.Location = new System.Drawing.Point(129, 73);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(136, 469);
+            this.panel1.TabIndex = 3;
             // 
             // frmMainAdmin
             // 
@@ -854,6 +864,7 @@
             this.pnlTCClo.ResumeLayout(false);
             this.pnlTCPlan.ResumeLayout(false);
             this.pnlTCInit.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -913,5 +924,6 @@
         private System.Windows.Forms.Panel pnlChildForm3;
         private System.Windows.Forms.Panel pnlChildForm5;
         private System.Windows.Forms.Panel pnlChildForm4;
+        private System.Windows.Forms.Panel panel1;
     }
 }
