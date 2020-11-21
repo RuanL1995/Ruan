@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Microsoft.VisualBasic;
+
 
 namespace TechGenics
 {
@@ -301,6 +304,24 @@ namespace TechGenics
         {
             showSubs(pnlProjectsSub);
             //pnlChildForm.BringToFront();
+
+            //DB connection here
+            string dbConnection = "";
+
+            SqlConnection sqlConnection;
+
+            dbConnection = @"Data Source=WIN-50GP30FGO75;Initial Catalog=Demodb;User ID=sa;Password=demol23";
+            sqlConnection = new SqlConnection(dbConnection);
+            //sqlConnection.Open();
+            //MessageBox.Show("Connection Open!");
+            //sqlConnection.Close();
+
+
+
+            List<string> projNames = new List<string>();
+
+
+
             
         }
 
@@ -484,6 +505,8 @@ namespace TechGenics
             pnlChildForm4.SendToBack();
             pnlChildForm5.Visible = false;
             pnlChildForm5.SendToBack();
+            //pnlTasks.Visible = false;
+            //pnlTasks.SendToBack();
         }
 
         private void btnTab2_Click(object sender, EventArgs e)
@@ -499,6 +522,7 @@ namespace TechGenics
             pnlChildForm4.SendToBack();
             pnlChildForm5.Visible = false;
             pnlChildForm5.SendToBack();
+
         }
 
         private void btnTab3_Click(object sender, EventArgs e)
@@ -699,6 +723,62 @@ namespace TechGenics
                 pnlChildForm5.Visible = true;
                 
             }
+        }
+
+        private void btnInitiation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPlanning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlTasks_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNewProj_Click(object sender, EventArgs e)
+        {
+
+            int XPos = -1;
+            int YPos = -1;
+            object inputB = "";
+
+            inputB = Interaction.InputBox("New Project Creation", "Enter the name of the new project","new project 1..", XPos, YPos);
+
+            if(inputB != null)
+            {
+                pnlTasks.Visible = true;
+                pnlTasks.BringToFront();
+
+            }
+
+            string actualHeading = Convert.ToString(inputB);
+            lblTasksHeading.Text = actualHeading;
+            
+        }
+
+        private void btnExecution_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCloseOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManualA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainAdmin));
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -63,13 +64,37 @@
             this.btnPhases = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlChildForm = new System.Windows.Forms.Panel();
-            this.pnlChildForm3 = new System.Windows.Forms.Panel();
-            this.pnlChildForm5 = new System.Windows.Forms.Panel();
             this.pnlChildForm2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlChildForm3 = new System.Windows.Forms.Panel();
+            this.pnlChildForm5 = new System.Windows.Forms.Panel();
+            this.pnlTasks = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.pnlRemoved = new System.Windows.Forms.Panel();
+            this.pnlCompleted = new System.Windows.Forms.Panel();
+            this.pnlProgress = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btnForward = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlBacklog = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblTasksHeading = new System.Windows.Forms.Label();
             this.pnlHide = new System.Windows.Forms.Panel();
-            this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.btnExpand = new System.Windows.Forms.Button();
+            this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.tmrSliding = new System.Windows.Forms.Timer(this.components);
             this.btnMin = new System.Windows.Forms.Button();
             this.btnMax = new System.Windows.Forms.Button();
@@ -92,8 +117,11 @@
             this.ctmsExecution.SuspendLayout();
             this.ctmsInittiation.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
-            this.pnlChildForm3.SuspendLayout();
+            this.pnlChildForm2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlChildForm3.SuspendLayout();
+            this.pnlTasks.SuspendLayout();
+            this.pnlBacklog.SuspendLayout();
             this.pnlHide.SuspendLayout();
             this.ctmsCloseOut.SuspendLayout();
             this.SuspendLayout();
@@ -179,6 +207,7 @@
             this.btnManualA.TabIndex = 1;
             this.btnManualA.Text = "Manual";
             this.btnManualA.UseVisualStyleBackColor = false;
+            this.btnManualA.Click += new System.EventHandler(this.btnManualA_Click);
             // 
             // btnGoogle
             // 
@@ -287,6 +316,7 @@
             this.btnNewProj.TabIndex = 0;
             this.btnNewProj.Text = "New Project";
             this.btnNewProj.UseVisualStyleBackColor = false;
+            this.btnNewProj.Click += new System.EventHandler(this.btnNewProj_Click);
             // 
             // btnProjects
             // 
@@ -372,6 +402,7 @@
             this.btnCloseOut.TabIndex = 3;
             this.btnCloseOut.Text = "Close Out";
             this.btnCloseOut.UseVisualStyleBackColor = false;
+            this.btnCloseOut.Click += new System.EventHandler(this.btnCloseOut_Click);
             this.btnCloseOut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnCloseOut_MouseUp);
             // 
             // ctmsPlanning
@@ -408,6 +439,7 @@
             this.btnExecution.TabIndex = 2;
             this.btnExecution.Text = "Execution";
             this.btnExecution.UseVisualStyleBackColor = false;
+            this.btnExecution.Click += new System.EventHandler(this.btnExecution_Click);
             this.btnExecution.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnExecution_MouseUp);
             // 
             // ctmsExecution
@@ -444,6 +476,7 @@
             this.btnPlanning.TabIndex = 1;
             this.btnPlanning.Text = "Planning";
             this.btnPlanning.UseVisualStyleBackColor = false;
+            this.btnPlanning.Click += new System.EventHandler(this.btnPlanning_Click);
             this.btnPlanning.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnPlanning_MouseUp);
             // 
             // btnInitiation
@@ -459,6 +492,7 @@
             this.btnInitiation.TabIndex = 0;
             this.btnInitiation.Text = "Initiation";
             this.btnInitiation.UseVisualStyleBackColor = false;
+            this.btnInitiation.Click += new System.EventHandler(this.btnInitiation_Click);
             this.btnInitiation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnInitiation_MouseUp);
             // 
             // ctmsInittiation
@@ -517,36 +551,18 @@
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm.Controls.Add(this.pnlChildForm3);
+            this.pnlChildForm.Controls.Add(this.pnlTasks);
             this.pnlChildForm.Controls.Add(this.pnlChildForm2);
             this.pnlChildForm.Controls.Add(this.pictureBox1);
-            this.pnlChildForm.Location = new System.Drawing.Point(239, 39);
+            this.pnlChildForm.Location = new System.Drawing.Point(241, 41);
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(869, 648);
             this.pnlChildForm.TabIndex = 1;
             // 
-            // pnlChildForm3
-            // 
-            this.pnlChildForm3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm3.Controls.Add(this.pnlChildForm5);
-            this.pnlChildForm3.Location = new System.Drawing.Point(1, 3);
-            this.pnlChildForm3.Name = "pnlChildForm3";
-            this.pnlChildForm3.Size = new System.Drawing.Size(861, 648);
-            this.pnlChildForm3.TabIndex = 3;
-            this.pnlChildForm3.Visible = false;
-            // 
-            // pnlChildForm5
-            // 
-            this.pnlChildForm5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm5.Location = new System.Drawing.Point(4, 8);
-            this.pnlChildForm5.Name = "pnlChildForm5";
-            this.pnlChildForm5.Size = new System.Drawing.Size(865, 648);
-            this.pnlChildForm5.TabIndex = 4;
-            this.pnlChildForm5.Visible = false;
-            // 
             // pnlChildForm2
             // 
             this.pnlChildForm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm2.Controls.Add(this.pnlChildForm3);
             this.pnlChildForm2.Location = new System.Drawing.Point(83, 62);
             this.pnlChildForm2.Name = "pnlChildForm2";
             this.pnlChildForm2.Size = new System.Drawing.Size(814, 628);
@@ -563,25 +579,305 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlChildForm3
+            // 
+            this.pnlChildForm3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm3.Controls.Add(this.pnlChildForm5);
+            this.pnlChildForm3.Location = new System.Drawing.Point(90, 84);
+            this.pnlChildForm3.Name = "pnlChildForm3";
+            this.pnlChildForm3.Size = new System.Drawing.Size(861, 648);
+            this.pnlChildForm3.TabIndex = 3;
+            this.pnlChildForm3.Visible = false;
+            // 
+            // pnlChildForm5
+            // 
+            this.pnlChildForm5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm5.Location = new System.Drawing.Point(133, 79);
+            this.pnlChildForm5.Name = "pnlChildForm5";
+            this.pnlChildForm5.Size = new System.Drawing.Size(865, 648);
+            this.pnlChildForm5.TabIndex = 4;
+            this.pnlChildForm5.Visible = false;
+            // 
+            // pnlTasks
+            // 
+            this.pnlTasks.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTasks.Controls.Add(this.pnlChildForm4);
+            this.pnlTasks.Controls.Add(this.button14);
+            this.pnlTasks.Controls.Add(this.pnlRemoved);
+            this.pnlTasks.Controls.Add(this.pnlCompleted);
+            this.pnlTasks.Controls.Add(this.pnlProgress);
+            this.pnlTasks.Controls.Add(this.button13);
+            this.pnlTasks.Controls.Add(this.button12);
+            this.pnlTasks.Controls.Add(this.button11);
+            this.pnlTasks.Controls.Add(this.button10);
+            this.pnlTasks.Controls.Add(this.button9);
+            this.pnlTasks.Controls.Add(this.btnForward);
+            this.pnlTasks.Controls.Add(this.button7);
+            this.pnlTasks.Controls.Add(this.button3);
+            this.pnlTasks.Controls.Add(this.button2);
+            this.pnlTasks.Controls.Add(this.button6);
+            this.pnlTasks.Controls.Add(this.button5);
+            this.pnlTasks.Controls.Add(this.label4);
+            this.pnlTasks.Controls.Add(this.label3);
+            this.pnlTasks.Controls.Add(this.label2);
+            this.pnlTasks.Controls.Add(this.label1);
+            this.pnlTasks.Controls.Add(this.pnlBacklog);
+            this.pnlTasks.Controls.Add(this.button1);
+            this.pnlTasks.Controls.Add(this.lblTasksHeading);
+            this.pnlTasks.Location = new System.Drawing.Point(29, 32);
+            this.pnlTasks.Name = "pnlTasks";
+            this.pnlTasks.Size = new System.Drawing.Size(825, 668);
+            this.pnlTasks.TabIndex = 0;
+            this.pnlTasks.Visible = false;
+            this.pnlTasks.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTasks_Paint);
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button14.Location = new System.Drawing.Point(620, 570);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(186, 24);
+            this.button14.TabIndex = 1;
+            this.button14.Text = "ADD NEW TASK";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // pnlRemoved
+            // 
+            this.pnlRemoved.Location = new System.Drawing.Point(672, 79);
+            this.pnlRemoved.Name = "pnlRemoved";
+            this.pnlRemoved.Size = new System.Drawing.Size(134, 468);
+            this.pnlRemoved.TabIndex = 5;
+            // 
+            // pnlCompleted
+            // 
+            this.pnlCompleted.Location = new System.Drawing.Point(446, 79);
+            this.pnlCompleted.Name = "pnlCompleted";
+            this.pnlCompleted.Size = new System.Drawing.Size(134, 468);
+            this.pnlCompleted.TabIndex = 4;
+            // 
+            // pnlProgress
+            // 
+            this.pnlProgress.Location = new System.Drawing.Point(226, 79);
+            this.pnlProgress.Name = "pnlProgress";
+            this.pnlProgress.Size = new System.Drawing.Size(134, 468);
+            this.pnlProgress.TabIndex = 3;
+            // 
+            // button13
+            // 
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button13.Location = new System.Drawing.Point(600, 329);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(45, 45);
+            this.button13.TabIndex = 19;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button12.Location = new System.Drawing.Point(379, 331);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(45, 45);
+            this.button12.TabIndex = 18;
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button11.Location = new System.Drawing.Point(600, 254);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(45, 45);
+            this.button11.TabIndex = 17;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button10.Location = new System.Drawing.Point(380, 254);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(45, 45);
+            this.button10.TabIndex = 16;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button9.Location = new System.Drawing.Point(160, 333);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(45, 45);
+            this.button9.TabIndex = 15;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // btnForward
+            // 
+            this.btnForward.Image = ((System.Drawing.Image)(resources.GetObject("btnForward.Image")));
+            this.btnForward.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnForward.Location = new System.Drawing.Point(159, 254);
+            this.btnForward.Name = "btnForward";
+            this.btnForward.Size = new System.Drawing.Size(45, 45);
+            this.btnForward.TabIndex = 14;
+            this.btnForward.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button7.Location = new System.Drawing.Point(643, 76);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(13, 466);
+            this.button7.TabIndex = 13;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button3.Location = new System.Drawing.Point(587, 76);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(13, 469);
+            this.button3.TabIndex = 12;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button2.Location = new System.Drawing.Point(426, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(13, 466);
+            this.button2.TabIndex = 11;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button6.Location = new System.Drawing.Point(365, 79);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(13, 466);
+            this.button6.TabIndex = 10;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button5.Location = new System.Drawing.Point(206, 78);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(12, 469);
+            this.button5.TabIndex = 9;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(687, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 24);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "REMOVED";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(454, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "COMPLETED";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Silver;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(224, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "IN PROGRESS";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 24);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "BACKLOG";
+            // 
+            // pnlBacklog
+            // 
+            this.pnlBacklog.Controls.Add(this.button15);
+            this.pnlBacklog.Location = new System.Drawing.Point(5, 79);
+            this.pnlBacklog.Name = "pnlBacklog";
+            this.pnlBacklog.Size = new System.Drawing.Size(134, 468);
+            this.pnlBacklog.TabIndex = 2;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button15.ContextMenuStrip = this.ctmsExecution;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button15.Location = new System.Drawing.Point(4, 16);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(127, 69);
+            this.button15.TabIndex = 4;
+            this.button15.Text = "Execution";
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button1.Location = new System.Drawing.Point(145, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(11, 469);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lblTasksHeading
+            // 
+            this.lblTasksHeading.AutoSize = true;
+            this.lblTasksHeading.BackColor = System.Drawing.Color.Silver;
+            this.lblTasksHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTasksHeading.Location = new System.Drawing.Point(262, 14);
+            this.lblTasksHeading.Name = "lblTasksHeading";
+            this.lblTasksHeading.Size = new System.Drawing.Size(318, 24);
+            this.lblTasksHeading.TabIndex = 0;
+            this.lblTasksHeading.Text = "TASKS FOR \"INSERT PROJ NAME\"";
+            // 
             // pnlHide
             // 
             this.pnlHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlHide.Controls.Add(this.pnlChildForm4);
             this.pnlHide.Controls.Add(this.btnExpand);
             this.pnlHide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlHide.Location = new System.Drawing.Point(201, 0);
             this.pnlHide.Name = "pnlHide";
             this.pnlHide.Size = new System.Drawing.Size(37, 687);
             this.pnlHide.TabIndex = 3;
-            // 
-            // pnlChildForm4
-            // 
-            this.pnlChildForm4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm4.Location = new System.Drawing.Point(33, 53);
-            this.pnlChildForm4.Name = "pnlChildForm4";
-            this.pnlChildForm4.Size = new System.Drawing.Size(861, 648);
-            this.pnlChildForm4.TabIndex = 4;
-            this.pnlChildForm4.Visible = false;
             // 
             // btnExpand
             // 
@@ -590,12 +886,21 @@
             this.btnExpand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpand.Font = new System.Drawing.Font("Monotype Corsiva", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpand.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnExpand.Location = new System.Drawing.Point(6, 279);
+            this.btnExpand.Location = new System.Drawing.Point(5, 268);
             this.btnExpand.Name = "btnExpand";
             this.btnExpand.Size = new System.Drawing.Size(27, 82);
             this.btnExpand.TabIndex = 0;
             this.btnExpand.UseVisualStyleBackColor = false;
             this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
+            // 
+            // pnlChildForm4
+            // 
+            this.pnlChildForm4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm4.Location = new System.Drawing.Point(187, 78);
+            this.pnlChildForm4.Name = "pnlChildForm4";
+            this.pnlChildForm4.Size = new System.Drawing.Size(861, 648);
+            this.pnlChildForm4.TabIndex = 4;
+            this.pnlChildForm4.Visible = false;
             // 
             // tmrSliding
             // 
@@ -746,6 +1051,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1107, 687);
+            this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.btnTab5);
             this.Controls.Add(this.btnTab4);
             this.Controls.Add(this.btnTab3);
@@ -754,7 +1060,6 @@
             this.Controls.Add(this.btnFull);
             this.Controls.Add(this.btnMax);
             this.Controls.Add(this.btnMin);
-            this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlHide);
             this.Controls.Add(this.pnlSideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -774,8 +1079,12 @@
             this.ctmsExecution.ResumeLayout(false);
             this.ctmsInittiation.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
-            this.pnlChildForm3.ResumeLayout(false);
+            this.pnlChildForm2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlChildForm3.ResumeLayout(false);
+            this.pnlTasks.ResumeLayout(false);
+            this.pnlTasks.PerformLayout();
+            this.pnlBacklog.ResumeLayout(false);
             this.pnlHide.ResumeLayout(false);
             this.ctmsCloseOut.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -837,5 +1146,29 @@
         private System.Windows.Forms.ContextMenuStrip ctmsCloseOut;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.Panel pnlTasks;
+        private System.Windows.Forms.Label lblTasksHeading;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Panel pnlRemoved;
+        private System.Windows.Forms.Panel pnlCompleted;
+        private System.Windows.Forms.Panel pnlProgress;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnForward;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlBacklog;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button15;
     }
 }
