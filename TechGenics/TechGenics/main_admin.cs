@@ -762,7 +762,7 @@ namespace TechGenics
             }
 
             string actualHeading = Convert.ToString(inputB);
-            lblTasksHeading.Text = actualHeading;
+            lblTasksHeading.Text = ("Tasks for " +actualHeading).ToUpper();
             
         }
 
@@ -779,6 +779,16 @@ namespace TechGenics
         private void btnManualA_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnForward_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlChildForm_Paint(object sender, PaintEventArgs e)
+        {
+            ControlExtension.Draggable(btnTask1, true);
         }
     }
 }
