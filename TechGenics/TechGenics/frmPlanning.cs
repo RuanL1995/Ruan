@@ -68,6 +68,16 @@ namespace TechGenics
             fourth = 1;     
             fifth = 1;      
             sixth = 1;
+
+            btnViewProjectPlan.Visible = true;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void resourcePlan()
@@ -97,6 +107,16 @@ namespace TechGenics
             fourth = 2;
             fifth = 2;
             sixth = 2;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = true;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void financialPlan()
@@ -126,6 +146,16 @@ namespace TechGenics
             fourth = 3;
             fifth = 3;
             sixth = 3;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = true;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void qualityPlan()
@@ -156,6 +186,16 @@ namespace TechGenics
             fourth = 4;
             fifth = 4;
             sixth = 4;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = true;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void communicationsPlan()
@@ -185,6 +225,16 @@ namespace TechGenics
             fourth = 5;
             fifth = 5;
             sixth = 5;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = true;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void acceptancePlan()
@@ -213,6 +263,16 @@ namespace TechGenics
             fourth = 6;
             fifth = 6;
             sixth = 6;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = true;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void riskPlan()
@@ -242,6 +302,16 @@ namespace TechGenics
             fourth = 7;
             fifth = 7;
             sixth = 7;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = true;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void procurementPlan()
@@ -274,6 +344,16 @@ namespace TechGenics
             fourth = 8;
             fifth = 8;
             sixth = 8;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = true;
+            btnViewPhaseRev.Visible = false;
         }
 
         public void phaseReview()
@@ -303,6 +383,16 @@ namespace TechGenics
             fourth = 9;
             fifth = 9;
             sixth = 9;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = true;
         }
 
         public void showInstructions()
@@ -1119,135 +1209,50 @@ namespace TechGenics
         {
             projectPlan();
 
-            btnViewProjectPlan.Visible = true;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = false;
         }
 
         private void btnRPlan_Click(object sender, EventArgs e)
         {
             resourcePlan();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = true;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = false;
         }
 
         private void btnFPlan_Click(object sender, EventArgs e)
         {
-            financialPlan();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = true;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = false;
+            financialPlan();        
         }
 
         private void btnQPlan_Click(object sender, EventArgs e)
         {
-            qualityPlan();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = true;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = false;
+            qualityPlan();  
         }
 
         private void btnCPlan_Click(object sender, EventArgs e)
         {
-            communicationsPlan();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = true;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = false;
+            communicationsPlan();                   
         }
 
         private void btnAPlan_Click(object sender, EventArgs e)
         {
             acceptancePlan();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = true;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = false;
+                       
         }
 
         private void btnRisk_Click(object sender, EventArgs e)
         {
             riskPlan();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = true;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = false;
+                       
         }
 
         private void btnProc_Click(object sender, EventArgs e)
         {
             procurementPlan();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = true;
-            btnViewPhaseRev.Visible = false;
+                        
         }
 
         private void btnPhase_Click(object sender, EventArgs e)
         {
             phaseReview();
-
-            btnViewProjectPlan.Visible = false;
-            btnViewResPlan.Visible = false;
-            btnViewFinPlan.Visible = false;
-            btnViewQPlan.Visible = false;
-            btnViewComPlan.Visible = false;
-            btnViewAPlan.Visible = false;
-            btnViewRiskPlan.Visible = false;
-            btnViewProcPlan.Visible = false;
-            btnViewPhaseRev.Visible = true;
+                     
         }
 
         //back button
