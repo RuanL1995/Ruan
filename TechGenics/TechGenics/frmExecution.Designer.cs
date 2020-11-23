@@ -42,17 +42,6 @@
             this.btnComMan = new System.Windows.Forms.Button();
             this.pnlExecution = new System.Windows.Forms.Panel();
             this.pnlInstr = new System.Windows.Forms.Panel();
-            this.pnlPlanning = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.btnPRev = new System.Windows.Forms.Button();
-            this.btnProcPlan = new System.Windows.Forms.Button();
-            this.btnRiskPlan = new System.Windows.Forms.Button();
-            this.btnAccPlan = new System.Windows.Forms.Button();
-            this.btnComPlan = new System.Windows.Forms.Button();
-            this.btnQualPlan = new System.Windows.Forms.Button();
-            this.btnFinPlan = new System.Windows.Forms.Button();
-            this.btnResPlan = new System.Windows.Forms.Button();
-            this.btnProjectPlan = new System.Windows.Forms.Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.btnFirst = new System.Windows.Forms.Button();
             this.btnSec = new System.Windows.Forms.Button();
@@ -72,11 +61,22 @@
             this.btnAPlan = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
             this.lstInstr = new System.Windows.Forms.ListBox();
+            this.pnlPlanning = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnPRev = new System.Windows.Forms.Button();
+            this.btnProcPlan = new System.Windows.Forms.Button();
+            this.btnRiskPlan = new System.Windows.Forms.Button();
+            this.btnAccPlan = new System.Windows.Forms.Button();
+            this.btnComPlan = new System.Windows.Forms.Button();
+            this.btnQualPlan = new System.Windows.Forms.Button();
+            this.btnFinPlan = new System.Windows.Forms.Button();
+            this.btnResPlan = new System.Windows.Forms.Button();
+            this.btnProjectPlan = new System.Windows.Forms.Button();
             this.pnlExecution.SuspendLayout();
             this.pnlInstr.SuspendLayout();
-            this.pnlPlanning.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHeading.SuspendLayout();
+            this.pnlPlanning.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCPhaseRev
@@ -280,162 +280,11 @@
             this.pnlInstr.Controls.Add(this.pnlHeading);
             this.pnlInstr.Controls.Add(this.btnHide);
             this.pnlInstr.Controls.Add(this.lstInstr);
-            this.pnlInstr.Location = new System.Drawing.Point(31, 26);
+            this.pnlInstr.Location = new System.Drawing.Point(12, 12);
             this.pnlInstr.Name = "pnlInstr";
             this.pnlInstr.Size = new System.Drawing.Size(862, 626);
             this.pnlInstr.TabIndex = 13;
             this.pnlInstr.Visible = false;
-            // 
-            // pnlPlanning
-            // 
-            this.pnlPlanning.Controls.Add(this.listBox1);
-            this.pnlPlanning.Controls.Add(this.btnPRev);
-            this.pnlPlanning.Controls.Add(this.btnProcPlan);
-            this.pnlPlanning.Controls.Add(this.btnRiskPlan);
-            this.pnlPlanning.Controls.Add(this.btnAccPlan);
-            this.pnlPlanning.Controls.Add(this.btnComPlan);
-            this.pnlPlanning.Controls.Add(this.btnQualPlan);
-            this.pnlPlanning.Controls.Add(this.btnFinPlan);
-            this.pnlPlanning.Controls.Add(this.btnResPlan);
-            this.pnlPlanning.Controls.Add(this.btnProjectPlan);
-            this.pnlPlanning.Location = new System.Drawing.Point(861, 248);
-            this.pnlPlanning.Name = "pnlPlanning";
-            this.pnlPlanning.Size = new System.Drawing.Size(823, 591);
-            this.pnlPlanning.TabIndex = 0;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.InfoText;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.MintCream;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Items.AddRange(new object[] {
-            "Once the scope of the project has been defined in the Project Charter, the projec" +
-                "t enters the detailed ",
-            "planning phase. This involves the creation of a:",
-            "",
-            " * Project Plan (outlining the activities, tasks, dependencies and timeframes)",
-            " * Resource Plan (listing the labour, equipment and materials required)",
-            " * Financial Plan (identifying the labour, equipment and materials costs)",
-            " * Quality Plan (providing quality targets, assurance and control measures)",
-            " * Risk Plan (highlighting potential risks and actions taken to mitigate them) ",
-            " * Acceptance Plan (listing the criteria to be met to gain customer acceptance)",
-            " * Communications Plan (listing the information needed to inform stakeholders)",
-            " * Procurement Plan (identifying products to be sourced from external suppliers)"});
-            this.listBox1.Location = new System.Drawing.Point(38, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(737, 198);
-            this.listBox1.TabIndex = 9;
-            // 
-            // btnPRev
-            // 
-            this.btnPRev.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnPRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPRev.Location = new System.Drawing.Point(269, 233);
-            this.btnPRev.Name = "btnPRev";
-            this.btnPRev.Size = new System.Drawing.Size(330, 31);
-            this.btnPRev.TabIndex = 8;
-            this.btnPRev.Text = "Phase Review";
-            this.btnPRev.UseVisualStyleBackColor = false;
-            // 
-            // btnProcPlan
-            // 
-            this.btnProcPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnProcPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcPlan.Location = new System.Drawing.Point(252, 269);
-            this.btnProcPlan.Name = "btnProcPlan";
-            this.btnProcPlan.Size = new System.Drawing.Size(360, 31);
-            this.btnProcPlan.TabIndex = 7;
-            this.btnProcPlan.Text = "Create a Procurement Plan";
-            this.btnProcPlan.UseVisualStyleBackColor = false;
-            // 
-            // btnRiskPlan
-            // 
-            this.btnRiskPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnRiskPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiskPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRiskPlan.Location = new System.Drawing.Point(231, 306);
-            this.btnRiskPlan.Name = "btnRiskPlan";
-            this.btnRiskPlan.Size = new System.Drawing.Size(408, 31);
-            this.btnRiskPlan.TabIndex = 6;
-            this.btnRiskPlan.Text = "Create a Risk Plan";
-            this.btnRiskPlan.UseVisualStyleBackColor = false;
-            // 
-            // btnAccPlan
-            // 
-            this.btnAccPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnAccPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccPlan.Location = new System.Drawing.Point(206, 344);
-            this.btnAccPlan.Name = "btnAccPlan";
-            this.btnAccPlan.Size = new System.Drawing.Size(454, 31);
-            this.btnAccPlan.TabIndex = 5;
-            this.btnAccPlan.Text = "Create an Acceptance Plan";
-            this.btnAccPlan.UseVisualStyleBackColor = false;
-            // 
-            // btnComPlan
-            // 
-            this.btnComPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnComPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComPlan.Location = new System.Drawing.Point(175, 383);
-            this.btnComPlan.Name = "btnComPlan";
-            this.btnComPlan.Size = new System.Drawing.Size(506, 31);
-            this.btnComPlan.TabIndex = 4;
-            this.btnComPlan.Text = "Create a Communications Plan";
-            this.btnComPlan.UseVisualStyleBackColor = false;
-            // 
-            // btnQualPlan
-            // 
-            this.btnQualPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnQualPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQualPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQualPlan.Location = new System.Drawing.Point(143, 420);
-            this.btnQualPlan.Name = "btnQualPlan";
-            this.btnQualPlan.Size = new System.Drawing.Size(552, 31);
-            this.btnQualPlan.TabIndex = 3;
-            this.btnQualPlan.Text = "Create a Quality Plan";
-            this.btnQualPlan.UseVisualStyleBackColor = false;
-            // 
-            // btnFinPlan
-            // 
-            this.btnFinPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnFinPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinPlan.Location = new System.Drawing.Point(116, 459);
-            this.btnFinPlan.Name = "btnFinPlan";
-            this.btnFinPlan.Size = new System.Drawing.Size(606, 31);
-            this.btnFinPlan.TabIndex = 2;
-            this.btnFinPlan.Text = "Create a Financial Plan";
-            this.btnFinPlan.UseVisualStyleBackColor = false;
-            // 
-            // btnResPlan
-            // 
-            this.btnResPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnResPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResPlan.Location = new System.Drawing.Point(81, 497);
-            this.btnResPlan.Name = "btnResPlan";
-            this.btnResPlan.Size = new System.Drawing.Size(664, 31);
-            this.btnResPlan.TabIndex = 1;
-            this.btnResPlan.Text = "Create a Resource Plan";
-            this.btnResPlan.UseVisualStyleBackColor = false;
-            // 
-            // btnProjectPlan
-            // 
-            this.btnProjectPlan.BackColor = System.Drawing.Color.Aquamarine;
-            this.btnProjectPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjectPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProjectPlan.Location = new System.Drawing.Point(52, 537);
-            this.btnProjectPlan.Name = "btnProjectPlan";
-            this.btnProjectPlan.Size = new System.Drawing.Size(713, 31);
-            this.btnProjectPlan.TabIndex = 0;
-            this.btnProjectPlan.Text = "Create a Project Plan";
-            this.btnProjectPlan.UseVisualStyleBackColor = false;
             // 
             // pnlSideMenu
             // 
@@ -446,17 +295,17 @@
             this.pnlSideMenu.Controls.Add(this.btnFourth);
             this.pnlSideMenu.Controls.Add(this.btnSixth);
             this.pnlSideMenu.Controls.Add(this.btnFifth);
-            this.pnlSideMenu.Location = new System.Drawing.Point(14, 164);
+            this.pnlSideMenu.Location = new System.Drawing.Point(14, 125);
             this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(165, 379);
+            this.pnlSideMenu.Size = new System.Drawing.Size(165, 486);
             this.pnlSideMenu.TabIndex = 18;
             // 
             // btnFirst
             // 
-            this.btnFirst.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnFirst.BackColor = System.Drawing.Color.Wheat;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFirst.Location = new System.Drawing.Point(14, 157);
+            this.btnFirst.Location = new System.Drawing.Point(14, 15);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(124, 64);
             this.btnFirst.TabIndex = 9;
@@ -468,7 +317,7 @@
             this.btnSec.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSec.Location = new System.Drawing.Point(14, 244);
+            this.btnSec.Location = new System.Drawing.Point(14, 89);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(124, 64);
             this.btnSec.TabIndex = 10;
@@ -480,7 +329,7 @@
             this.btnThird.BackColor = System.Drawing.Color.Aquamarine;
             this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThird.Location = new System.Drawing.Point(14, 329);
+            this.btnThird.Location = new System.Drawing.Point(14, 162);
             this.btnThird.Name = "btnThird";
             this.btnThird.Size = new System.Drawing.Size(124, 64);
             this.btnThird.TabIndex = 11;
@@ -492,7 +341,7 @@
             this.btnFourth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFourth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFourth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFourth.Location = new System.Drawing.Point(14, 419);
+            this.btnFourth.Location = new System.Drawing.Point(14, 236);
             this.btnFourth.Name = "btnFourth";
             this.btnFourth.Size = new System.Drawing.Size(124, 64);
             this.btnFourth.TabIndex = 12;
@@ -504,7 +353,7 @@
             this.btnSixth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSixth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSixth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSixth.Location = new System.Drawing.Point(14, 597);
+            this.btnSixth.Location = new System.Drawing.Point(14, 382);
             this.btnSixth.Name = "btnSixth";
             this.btnSixth.Size = new System.Drawing.Size(124, 64);
             this.btnSixth.TabIndex = 14;
@@ -516,12 +365,13 @@
             this.btnFifth.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFifth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFifth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFifth.Location = new System.Drawing.Point(14, 507);
+            this.btnFifth.Location = new System.Drawing.Point(14, 309);
             this.btnFifth.Name = "btnFifth";
             this.btnFifth.Size = new System.Drawing.Size(124, 64);
             this.btnFifth.TabIndex = 13;
             this.btnFifth.UseVisualStyleBackColor = false;
             this.btnFifth.Visible = false;
+            this.btnFifth.Click += new System.EventHandler(this.btnFifth_Click);
             // 
             // pnlHeading
             // 
@@ -672,6 +522,157 @@
             this.lstInstr.Size = new System.Drawing.Size(549, 390);
             this.lstInstr.TabIndex = 15;
             // 
+            // pnlPlanning
+            // 
+            this.pnlPlanning.Controls.Add(this.listBox1);
+            this.pnlPlanning.Controls.Add(this.btnPRev);
+            this.pnlPlanning.Controls.Add(this.btnProcPlan);
+            this.pnlPlanning.Controls.Add(this.btnRiskPlan);
+            this.pnlPlanning.Controls.Add(this.btnAccPlan);
+            this.pnlPlanning.Controls.Add(this.btnComPlan);
+            this.pnlPlanning.Controls.Add(this.btnQualPlan);
+            this.pnlPlanning.Controls.Add(this.btnFinPlan);
+            this.pnlPlanning.Controls.Add(this.btnResPlan);
+            this.pnlPlanning.Controls.Add(this.btnProjectPlan);
+            this.pnlPlanning.Location = new System.Drawing.Point(12, 15);
+            this.pnlPlanning.Name = "pnlPlanning";
+            this.pnlPlanning.Size = new System.Drawing.Size(823, 591);
+            this.pnlPlanning.TabIndex = 0;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.InfoText;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.MintCream;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Items.AddRange(new object[] {
+            "Once the scope of the project has been defined in the Project Charter, the projec" +
+                "t enters the detailed ",
+            "planning phase. This involves the creation of a:",
+            "",
+            " * Project Plan (outlining the activities, tasks, dependencies and timeframes)",
+            " * Resource Plan (listing the labour, equipment and materials required)",
+            " * Financial Plan (identifying the labour, equipment and materials costs)",
+            " * Quality Plan (providing quality targets, assurance and control measures)",
+            " * Risk Plan (highlighting potential risks and actions taken to mitigate them) ",
+            " * Acceptance Plan (listing the criteria to be met to gain customer acceptance)",
+            " * Communications Plan (listing the information needed to inform stakeholders)",
+            " * Procurement Plan (identifying products to be sourced from external suppliers)"});
+            this.listBox1.Location = new System.Drawing.Point(38, 3);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(737, 198);
+            this.listBox1.TabIndex = 9;
+            // 
+            // btnPRev
+            // 
+            this.btnPRev.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnPRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPRev.Location = new System.Drawing.Point(269, 233);
+            this.btnPRev.Name = "btnPRev";
+            this.btnPRev.Size = new System.Drawing.Size(330, 31);
+            this.btnPRev.TabIndex = 8;
+            this.btnPRev.Text = "Phase Review";
+            this.btnPRev.UseVisualStyleBackColor = false;
+            // 
+            // btnProcPlan
+            // 
+            this.btnProcPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnProcPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcPlan.Location = new System.Drawing.Point(252, 269);
+            this.btnProcPlan.Name = "btnProcPlan";
+            this.btnProcPlan.Size = new System.Drawing.Size(360, 31);
+            this.btnProcPlan.TabIndex = 7;
+            this.btnProcPlan.Text = "Create a Procurement Plan";
+            this.btnProcPlan.UseVisualStyleBackColor = false;
+            // 
+            // btnRiskPlan
+            // 
+            this.btnRiskPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnRiskPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRiskPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRiskPlan.Location = new System.Drawing.Point(231, 306);
+            this.btnRiskPlan.Name = "btnRiskPlan";
+            this.btnRiskPlan.Size = new System.Drawing.Size(408, 31);
+            this.btnRiskPlan.TabIndex = 6;
+            this.btnRiskPlan.Text = "Create a Risk Plan";
+            this.btnRiskPlan.UseVisualStyleBackColor = false;
+            // 
+            // btnAccPlan
+            // 
+            this.btnAccPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnAccPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccPlan.Location = new System.Drawing.Point(206, 344);
+            this.btnAccPlan.Name = "btnAccPlan";
+            this.btnAccPlan.Size = new System.Drawing.Size(454, 31);
+            this.btnAccPlan.TabIndex = 5;
+            this.btnAccPlan.Text = "Create an Acceptance Plan";
+            this.btnAccPlan.UseVisualStyleBackColor = false;
+            // 
+            // btnComPlan
+            // 
+            this.btnComPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnComPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComPlan.Location = new System.Drawing.Point(175, 383);
+            this.btnComPlan.Name = "btnComPlan";
+            this.btnComPlan.Size = new System.Drawing.Size(506, 31);
+            this.btnComPlan.TabIndex = 4;
+            this.btnComPlan.Text = "Create a Communications Plan";
+            this.btnComPlan.UseVisualStyleBackColor = false;
+            // 
+            // btnQualPlan
+            // 
+            this.btnQualPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnQualPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQualPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQualPlan.Location = new System.Drawing.Point(143, 420);
+            this.btnQualPlan.Name = "btnQualPlan";
+            this.btnQualPlan.Size = new System.Drawing.Size(552, 31);
+            this.btnQualPlan.TabIndex = 3;
+            this.btnQualPlan.Text = "Create a Quality Plan";
+            this.btnQualPlan.UseVisualStyleBackColor = false;
+            // 
+            // btnFinPlan
+            // 
+            this.btnFinPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnFinPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinPlan.Location = new System.Drawing.Point(116, 459);
+            this.btnFinPlan.Name = "btnFinPlan";
+            this.btnFinPlan.Size = new System.Drawing.Size(606, 31);
+            this.btnFinPlan.TabIndex = 2;
+            this.btnFinPlan.Text = "Create a Financial Plan";
+            this.btnFinPlan.UseVisualStyleBackColor = false;
+            // 
+            // btnResPlan
+            // 
+            this.btnResPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnResPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResPlan.Location = new System.Drawing.Point(81, 497);
+            this.btnResPlan.Name = "btnResPlan";
+            this.btnResPlan.Size = new System.Drawing.Size(664, 31);
+            this.btnResPlan.TabIndex = 1;
+            this.btnResPlan.Text = "Create a Resource Plan";
+            this.btnResPlan.UseVisualStyleBackColor = false;
+            // 
+            // btnProjectPlan
+            // 
+            this.btnProjectPlan.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnProjectPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProjectPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProjectPlan.Location = new System.Drawing.Point(52, 537);
+            this.btnProjectPlan.Name = "btnProjectPlan";
+            this.btnProjectPlan.Size = new System.Drawing.Size(713, 31);
+            this.btnProjectPlan.TabIndex = 0;
+            this.btnProjectPlan.Text = "Create a Project Plan";
+            this.btnProjectPlan.UseVisualStyleBackColor = false;
+            // 
             // frmExecution
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,9 +687,9 @@
             this.Load += new System.EventHandler(this.frmExecution_Load);
             this.pnlExecution.ResumeLayout(false);
             this.pnlInstr.ResumeLayout(false);
-            this.pnlPlanning.ResumeLayout(false);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlHeading.ResumeLayout(false);
+            this.pnlPlanning.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

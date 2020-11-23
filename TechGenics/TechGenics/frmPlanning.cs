@@ -328,38 +328,48 @@ namespace TechGenics
                 //Develop the Work Breakdown Structure
                 case 1:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("           Define the following");
-                    lstInstr.Items.Add(" *Work packages        *Product packages");
-                    lstInstr.Items.Add(" *Activities           *Tasks");
+                    lstInstr.Items.Add("Define the following");
+                    lstInstr.Items.Add(" *Work packages");
+                    lstInstr.Items.Add(" *Activities");
+                    lstInstr.Items.Add(" *Product packages");
+                    lstInstr.Items.Add(" *Tasks");
                     lstInstr.Items.Add(" *WBS Numbering code & Structure");
+                    pboTender.Visible = false;
                     break;
                 //List the resources required
                 case 2:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("           List Required Resources");
-                    lstInstr.Items.Add(" *Labour               *Equipment");
+                    lstInstr.Items.Add("List Required Resources");
+                    lstInstr.Items.Add(" *Labour");
+                    lstInstr.Items.Add(" *Equipment");
                     lstInstr.Items.Add(" *Materials List the Phases");
                     lstInstr.Items.Add(" *List the Activities (WBS)");            
                     lstInstr.Items.Add(" *List the Tasks (WBS)");
                     lstInstr.Items.Add(" *Use a Scheduling Programme i.e. MS Projects, Primavera etc.");
+                    pboTender.Visible = false;
                     break;
                 //List financial expenses
                 case 3:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("           Categories Expenses as:");
-                    lstInstr.Items.Add(" *Purchases            *Leasing");
-                    lstInstr.Items.Add(" *Rent                 *Contracts");
+                    lstInstr.Items.Add("Categories Expenses as:");
+                    lstInstr.Items.Add(" *Purchases");
+                    lstInstr.Items.Add(" *Rent");
                     lstInstr.Items.Add(" *Labour");
+                    lstInstr.Items.Add(" *Leasing");
+                    lstInstr.Items.Add(" *Contracts");
                     lstInstr.Items.Add(" *Procurements from External Sources");
                     lstInstr.Items.Add(" *Office Environment Establishment");
                     lstInstr.Items.Add(" *Project Administation");
+                    pboTender.Visible = false;
                     break;
                 //ID appropriate quality standards to employ
                 case 4:
                     lstInstr.Items.Clear();
                     lstInstr.Items.Add("Identify Quality Standards and frameworks to Employ i.e.:");
-                    lstInstr.Items.Add(" *ISO                  *BOK Standards");
+                    lstInstr.Items.Add(" *ISO");
+                    lstInstr.Items.Add(" *BOK Standards");
                     lstInstr.Items.Add(" *Audit Standards");
+                    pboTender.Visible = false;
                     break;
                 //Identify the communications stakeholders
                 case 5:
@@ -373,8 +383,10 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Procurement Manager           *Communications Manager");
                     lstInstr.Items.Add(" *Project Office Manager        *Business Representatives");
                     lstInstr.Items.Add(" *External Organisations");
+                    lstInstr.Items.Add("");
                     lstInstr.Items.Add("Stakeholders according to:");
                     lstInstr.Items.Add(" *PESTEL Analysis");
+                    pboTender.Visible = false;
                     break;
                 //List the acceptance criteria
                 case 6:
@@ -390,16 +402,17 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Cost");
                     lstInstr.Items.Add(" *Quality");
                     lstInstr.Items.Add("as acceptance criteria");
+                    pboTender.Visible = false;
                     break;
                 //Identify the risks
                 case 7:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("            Run risk workshop with:");
+                    lstInstr.Items.Add("Run risk workshop with:");
                     lstInstr.Items.Add(" *Project Sponsor               *Project Manager");
                     lstInstr.Items.Add(" *Team Members                  *Suppliers");
                     lstInstr.Items.Add(" *Customers");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            List the risk categories:");
+                    lstInstr.Items.Add("List the risk categories:");
                     lstInstr.Items.Add(" *Requirements                  *Benefits");
                     lstInstr.Items.Add(" *Schedule                      *Budget");
                     lstInstr.Items.Add(" *Deliverables                  *Scope");
@@ -407,9 +420,10 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Acceptance                    *Communication");
                     lstInstr.Items.Add(" *Resources");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            List the risks");
+                    lstInstr.Items.Add("List the risks");
                     lstInstr.Items.Add(" *Risk Category                 *Risk Description");
                     lstInstr.Items.Add(" *Risk ID                       *Relation to WBS elements if possible");
+                    pboTender.Visible = false;
                     break;
                 //Identify procurement requirements
                 case 8:
@@ -419,6 +433,7 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Create an Outsourcing/Procurement List i.e.:");
                     lstInstr.Items.Add("   -Products                    -Services");
                     lstInstr.Items.Add("   -Results");
+                    lstInstr.Items.Add("");
                     lstInstr.Items.Add("Research market offerings");
                     lstInstr.Items.Add("Create a procurement schedule to manage the following");
                     lstInstr.Items.Add(" *Selection of suppliers");
@@ -430,6 +445,7 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Item                          *Description");
                     lstInstr.Items.Add(" *Justification?                *Quantities?");
                     lstInstr.Items.Add(" *Budgeted for?");
+                    pboTender.Visible = false;
                     break;
                 //Identify phase review criteria
                 case 9:
@@ -466,6 +482,7 @@ namespace TechGenics
                     lstInstr.Items.Add("Market Research into Offerings Conducted? (Buy VS Make Decision)");
                     lstInstr.Items.Add("Procurement Schedule Produced?");
                     lstInstr.Items.Add("Procurement Management Process Defined?");
+                    pboTender.Visible = false;
                     break;
                 default:
                     lstInstr.Items.Clear();
@@ -486,19 +503,21 @@ namespace TechGenics
                     lstInstr.Items.Add(" *resources required for the execution of the task");
                     lstInstr.Items.Add(" *Requirements of the resource identified to execute the task");
                     lstInstr.Items.Add(" *Level of effort required from the resource");
+                    pboTender.Visible = false;
                     break;
                 //Quantify the resources required
                 case 2:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("           Labour");
+                    lstInstr.Items.Add("Labour");
                     lstInstr.Items.Add(" *Role                 *Number");
                     lstInstr.Items.Add(" *Responsibilities     *Skills");
                     lstInstr.Items.Add(" *Start Date           *End Date");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("           Equipment");
+                    lstInstr.Items.Add("Equipment");
                     lstInstr.Items.Add(" *Item                 *Amount");
                     lstInstr.Items.Add(" *Purpose              *Specification");
                     lstInstr.Items.Add(" *Start Date           *End Date");
+                    pboTender.Visible = false;
                     break;
                 //Quantify the financial expenses
                 case 3:
@@ -510,6 +529,7 @@ namespace TechGenics
                     lstInstr.Items.Add("");
                     lstInstr.Items.Add("Note:");
                     lstInstr.Items.Add("This can also be called Estimating or in more technical projects Cost Engineering");
+                    pboTender.Visible = false;
                     break;
                 //Define quality targets
                 case 4:
@@ -517,43 +537,47 @@ namespace TechGenics
                     lstInstr.Items.Add("Set Clear Quality Targets to be Achieved in the Project:");
                     lstInstr.Items.Add(" *Requirements         *Deliverables");
                     lstInstr.Items.Add(" *Quality Criteria     *Quality Standards");
-
+                    pboTender.Visible = false;
                     break;
                 //Identify the communications requirements
                 case 5:
                     lstInstr.Items.Clear();
                     lstInstr.Items.Add("Identify Communications Requirements according to:");
-                    lstInstr.Items.Add(" *Stakeholder Name          *Stakeholder Role");
-                    lstInstr.Items.Add(" *Stakeholder Organisation  *Information Requirement");
-                    lstInstr.Items.Add(" *Message Content           *Medium of Communication");
+                    lstInstr.Items.Add(" *Stakeholder Name           *Stakeholder Role");
+                    lstInstr.Items.Add(" *Stakeholder Organisation   *Information Requirement");
+                    lstInstr.Items.Add(" *Message Content            *Medium of Communication");
+                    pboTender.Visible = false;
                     break;
                 //Create an acceptance schedule
                 case 6:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("            Schedule Acceptance Tests");
-                    lstInstr.Items.Add(" *Deliverable               *Completion Date");
+                    lstInstr.Items.Add("Schedule Acceptance Tests");
+                    lstInstr.Items.Add(" *Deliverable");
+                    lstInstr.Items.Add(" *Completion Date");
                     lstInstr.Items.Add("");
                     lstInstr.Items.Add("Acceptance Test");
                     lstInstr.Items.Add("Acceptance Test Method");
                     lstInstr.Items.Add("Testers");
                     lstInstr.Items.Add("Test Date");
+                    pboTender.Visible = false;
                     break;
                 //Quantify the risks
                 case 7:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("            Quantify Likelihood");
+                    lstInstr.Items.Add("Quantify Likelihood");
                     lstInstr.Items.Add(" *Title                     *Score");
                     lstInstr.Items.Add(" *Description               *Assess cross impacts");
                     lstInstr.Items.Add(" *Rate the likelihood of occurrence");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            Assign a priority");
+                    lstInstr.Items.Add("Assign a priority");
                     lstInstr.Items.Add(" *Risk ID                   *Likelihood Score");
                     lstInstr.Items.Add(" *Impact Score              *Priority Score");
                     lstInstr.Items.Add(" *Priority Rating");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            Quantify Impact");
+                    lstInstr.Items.Add("Quantify Impact");
                     lstInstr.Items.Add(" *Title                     *Score");
                     lstInstr.Items.Add(" *Description");
+                    pboTender.Visible = false;
                     break;
                 //Research market offerings 
                 case 8:
@@ -566,6 +590,7 @@ namespace TechGenics
                     lstInstr.Items.Add("How many suppliers offer the required items?");
                     lstInstr.Items.Add("Timeliness & availability within the project schedule?");
                     lstInstr.Items.Add("Risk Associated with a particular supplier?");
+                    pboTender.Visible = false;
                     break;
                 //Undertake phase review
                 case 9:
@@ -589,6 +614,7 @@ namespace TechGenics
                     lstInstr.Items.Add("Any Critical Project Risks");
                     lstInstr.Items.Add("Any High Priority Issues");
                     lstInstr.Items.Add("Substantial Changes?");
+                    pboTender.Visible = false;
                     break;
                 default:
                     lstInstr.Items.Clear();
@@ -609,34 +635,36 @@ namespace TechGenics
                     lstInstr.Items.Add("-List the Activities");
                     lstInstr.Items.Add("Use a Scheduling Programme i.e. MS Projects, Primavera etc.");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            Determinedependencies of Tasks");
+                    lstInstr.Items.Add("Determinedependencies of Tasks");
                     lstInstr.Items.Add(" *Finish to Start               *Finish to Finish");
                     lstInstr.Items.Add(" *Start to Start                *Start to Finish");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            List Assumptions Made During Planning i.e.:");
+                    lstInstr.Items.Add("List Assumptions Made During Planning i.e.:");
                     lstInstr.Items.Add(" *Resources are available       *Changes in Scope");
                     lstInstr.Items.Add(" *Funding is available          *Etc.");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            List Constraints During Planning i.e.:");
+                    lstInstr.Items.Add("List Constraints During Planning i.e.:");
                     lstInstr.Items.Add(" *Time                          *Costs/Budget");
                     lstInstr.Items.Add(" *Resource Availability         *Etc. ");
+                    pboTender.Visible = false;
                     break;
                 //Construct a resource schedule
                 case 2:
                     lstInstr.Items.Clear();
                     lstInstr.Items.Add("Schedule the resources according to when they are needed");
-                    lstInstr.Items.Add("            List Assumptions Made During Planning i.e.:");
+                    lstInstr.Items.Add("List Assumptions Made During Planning i.e.:");
                     lstInstr.Items.Add(" *Resources are available       *Changes in Scope");
                     lstInstr.Items.Add(" *Funding is available          *Etc.");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            Materials");
+                    lstInstr.Items.Add("Materials");
                     lstInstr.Items.Add(" *Item                          *Amount");
                     lstInstr.Items.Add(" *Purpose                       *Specification");
                     lstInstr.Items.Add(" *Start Date                    *End Date");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            List Constraints During Planning i.e.:");
+                    lstInstr.Items.Add("List Constraints During Planning i.e.:");
                     lstInstr.Items.Add(" *Time                          *Costs/Budget");
                     lstInstr.Items.Add(" *Resource Availability         *Etc.");
+                    pboTender.Visible = false;
                     break;
                 //Construct a cashflow schedule
                 case 3:
@@ -656,23 +684,28 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Roles & Responsibilities involved  in Undertaking the Process");
                     lstInstr.Items.Add(" *Templates used to support the process");
                     lstInstr.Items.Add(" *Tools Used in Executing the Process");
+                    pboTender.Visible = false;
                     break;
                 //Create a quality assurance plan
                 case 4:
                     lstInstr.Items.Clear();
                     lstInstr.Items.Add("Identify Quality Assurance Techniques i.e.:");
-                    lstInstr.Items.Add(" *Quality Reviews               *Review by External Resources");
+                    lstInstr.Items.Add(" *Quality Reviews");
+                    lstInstr.Items.Add("*Review by External Resources");
+                    lstInstr.Items.Add("");
                     lstInstr.Items.Add("Determine Overall Project Performance");
                     lstInstr.Items.Add("Determine Overall Project Conformance");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("            Identify Methodologies");
-                    lstInstr.Items.Add(" *Techniques                    *Descriptions");
+                    lstInstr.Items.Add("Identify Methodologies");
+                    lstInstr.Items.Add(" *Techniques");
                     lstInstr.Items.Add(" *Frequencies");
+                    lstInstr.Items.Add(" *Descriptions");
+                    pboTender.Visible = false;
                     break;
                 //Construct a communications schedule
                 case 5:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("                Construct the Communication Schedule according to:");
+                    lstInstr.Items.Add("Construct the Communication Schedule according to:");
                     lstInstr.Items.Add(" *Stakeholder Name              *Stakeholder Role");
                     lstInstr.Items.Add(" *Stakeholder Organisation      *Information Requirement");
                     lstInstr.Items.Add(" *Message Content               *Medium of Communication");
@@ -684,6 +717,7 @@ namespace TechGenics
                     lstInstr.Items.Add("Roles & Responsibility Involved in Undertaking the Process");
                     lstInstr.Items.Add("Templates used to support the process");
                     lstInstr.Items.Add("Tools used in executing the process");
+                    pboTender.Visible = false;
                     break;
                 //Create a risk schedule
                 case 7:
@@ -700,6 +734,7 @@ namespace TechGenics
                     lstInstr.Items.Add("Roles & responsibilities involved in undertaking the process");
                     lstInstr.Items.Add("Templates used to support the process");
                     lstInstr.Items.Add("Tools used in executing the process");
+                    pboTender.Visible = false;
                     break;
                 //Create a procurement schedule
                 case 8:
@@ -720,13 +755,16 @@ namespace TechGenics
                     lstInstr.Items.Add("Select Preferred Tenderer");
                     lstInstr.Items.Add("Notify All Participants in Tendering Process");
                     lstInstr.Items.Add("Issue Contract in Accordance with Selected Contracting Strategy & Types");
+                    pboTender.Visible = false;
                     break;
                 //Seek approval to proceed
                 case 9:
                     lstInstr.Items.Clear();
-                    lstInstr.Items.Add("          Complete Phase Review Form");
-                    lstInstr.Items.Add(" *Initiation              *Planning");
-                    lstInstr.Items.Add(" *Execution               *Closure");
+                    lstInstr.Items.Add("Complete Phase Review Form");
+                    lstInstr.Items.Add(" *Initiation");
+                    lstInstr.Items.Add(" *Planning");
+                    lstInstr.Items.Add(" *Execution");
+                    lstInstr.Items.Add(" *Closure");
                     lstInstr.Items.Add("");
                     lstInstr.Items.Add("Project Board");
                     lstInstr.Items.Add(" *Approve Project to Proceed");
@@ -743,6 +781,7 @@ namespace TechGenics
                     lstInstr.Items.Add("   -Time         -Scope");
                     lstInstr.Items.Add("   -Cost         -Quality");
                     lstInstr.Items.Add("   -Key Issues   -Key Risks");
+                    pboTender.Visible = false;
                     break;
                 default:
                     lstInstr.Items.Clear();
@@ -772,6 +811,7 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Roles & Responsibilities Involved in Undertaking the Process");
                     lstInstr.Items.Add(" *Templates Used to Support the Process");
                     lstInstr.Items.Add(" *Tools Used in Executing the Process");
+                    pboTender.Visible = false;
                     break;
                 //Define procurement roles
                 case 8:
@@ -792,6 +832,7 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Documenting Supplier Contracts");
                     lstInstr.Items.Add(" *Leading Supplier Negotiations");
                     lstInstr.Items.Add(" *Maintaining the Tender Register");
+                    pboTender.Visible = false;
                     break;
                 default:
                     lstInstr.Items.Clear();
@@ -809,7 +850,7 @@ namespace TechGenics
                 //Define the tendering process
                 case 8:
                     lstInstr.Items.Clear();
-                    //check ppt
+                    
                     pboTender.Visible = true;
                     break;
             }
@@ -834,14 +875,17 @@ namespace TechGenics
                     lstInstr.Items.Add(" *Performance Measurement");
                     lstInstr.Items.Add(" *Dispute Resolution");
                     lstInstr.Items.Add("");
-                    lstInstr.Items.Add("                Specifies:");
-                    lstInstr.Items.Add(" *Deliverables              *Responsibilities");
+                    lstInstr.Items.Add("Specifies:");
+                    lstInstr.Items.Add(" *Deliverables");
+                    lstInstr.Items.Add(" *Responsibilities");
                     lstInstr.Items.Add(" *Terms & Conditions of Procurement");
+                    lstInstr.Items.Add("");
                     lstInstr.Items.Add("Sign the Supplier Contract");
                     lstInstr.Items.Add(" *The contract gets signed as a sign of mutual agreement between the parties");
                     lstInstr.Items.Add("");
                     lstInstr.Items.Add("Administer & Follow up on Supplier Contracts");
                     lstInstr.Items.Add(" *Performs contract administration in accordance with type of control selected as well as milestones, deliverable and performance criteria");
+                    pboTender.Visible = false;
                     break;
             }
         }
@@ -1074,46 +1118,136 @@ namespace TechGenics
         private void btnPPLan_Click(object sender, EventArgs e)
         {
             projectPlan();
+
+            btnViewProjectPlan.Visible = true;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnRPlan_Click(object sender, EventArgs e)
         {
             resourcePlan();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = true;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnFPlan_Click(object sender, EventArgs e)
         {
             financialPlan();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = true;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnQPlan_Click(object sender, EventArgs e)
         {
             qualityPlan();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = true;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnCPlan_Click(object sender, EventArgs e)
         {
             communicationsPlan();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = true;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnAPlan_Click(object sender, EventArgs e)
         {
             acceptancePlan();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = true;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnRisk_Click(object sender, EventArgs e)
         {
             riskPlan();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = true;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnProc_Click(object sender, EventArgs e)
         {
             procurementPlan();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = true;
+            btnViewPhaseRev.Visible = false;
         }
 
         private void btnPhase_Click(object sender, EventArgs e)
         {
             phaseReview();
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = true;
         }
 
         //back button
@@ -1135,12 +1269,25 @@ namespace TechGenics
             lstInfo.Items.Add("* Communications Plan(listing the information needed to inform stakeholders)");
             lstInfo.Items.Add("* Procurement Plan(identifying products to be sourced from external suppliers)");
             lstInfo.Visible = true;
+            pboTender.Visible = false;
+
+            btnViewProjectPlan.Visible = false;
+            btnViewResPlan.Visible = false;
+            btnViewFinPlan.Visible = false;
+            btnViewQPlan.Visible = false;
+            btnViewComPlan.Visible = false;
+            btnViewAPlan.Visible = false;
+            btnViewRiskPlan.Visible = false;
+            btnViewProcPlan.Visible = false;
+            btnViewPhaseRev.Visible = false;
         }
 
         //Side menu
         private void btnFirst_Click(object sender, EventArgs e)
         {
             firstButton(first);
+
+            
         }
 
         private void btnSec_Click(object sender, EventArgs e)
@@ -1168,8 +1315,61 @@ namespace TechGenics
             sixthButton(sixth);
         }
 
+
         #endregion
 
+        private void btnViewProjectPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Project_Plan.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
 
+        private void btnViewResPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Resource_Plan.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void btnViewFinPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Financial_Plan.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void btnViewQPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Quality_Plan.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void btnViewComPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Communications_Plan.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void btnViewAPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Acceptance_Plan.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void btnViewRiskPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Risk_Form.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void btnViewPhaseRev_Click(object sender, EventArgs e)
+        {
+            string filename = "Phase_Review_Form_Planning.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
+
+        private void btnViewProcPlan_Click(object sender, EventArgs e)
+        {
+            string filename = "Procurement_Plan.pdf";
+            System.Diagnostics.Process.Start(filename);
+        }
     }
 }
