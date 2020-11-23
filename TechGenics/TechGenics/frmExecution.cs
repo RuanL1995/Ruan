@@ -17,6 +17,14 @@ namespace TechGenics
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Variables for switch
+        /// </summary>
+        #region Variables
+        int first = 0;      //btnFirst
+        int second = 0;     //btnSec
+        int third = 0;      //btnThird
+        #endregion
         private void btnTMan_MouseHover(object sender, EventArgs e)
         {
             lstInfo.Items.Clear();
@@ -170,14 +178,343 @@ namespace TechGenics
             lstInfo.Items.Clear();
         }
 
-        private void frmExecution_Load(object sender, EventArgs e)
+        public void communicationsManagement()
         {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+           
+
+            //button text
+            btnFirst.Text = "Perform Communications Management";
+            btnSec.Text = "Communications Management Activities";
+            btnThird.Text = "Communications Management Roles";
+
+            first = 1;
+            second = 1;
+            third = 1;
+
+           
+        }
+
+        public void issueManagement()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Issue Management";
+            btnSec.Text = "Issue Management Activities";
+            btnThird.Text = "Issue Management Roles";
+
+            first = 2;
+            second = 2;
+            third = 2;
+
 
         }
 
-        private void btnFifth_Click(object sender, EventArgs e)
+        public void riskManagement()
         {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
 
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Risk Management";
+            btnSec.Text = "Risk Management Activities";
+            btnThird.Text = "Risk Management Roles";
+
+            first = 3;
+            second = 3;
+            third = 3;
+
+
+        }
+
+        public void qualityManagement()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Quality Management";
+            btnSec.Text = "Quality Management Activities";
+            btnThird.Text = "Quality Management Roles";
+
+            first = 4;
+            second = 4;
+            third = 4;
+
+
+        }
+
+        public void acceptanceManagement()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Acceptance Management";
+            btnSec.Text = "Quality Acceptance Activities";
+            btnThird.Text = "Quality Acceptance Roles";
+
+            first = 5;
+            second = 5;
+            third = 5;
+
+
+        }
+
+        public void procurementManagement()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Procurement Management";
+            btnSec.Text = "Quality Procurement Activities";
+            btnThird.Text = "Quality Procurement Roles";
+
+            first = 6;
+            second = 6;
+            third = 6;
+
+
+        }
+
+        public void changeManagement()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Change Management";
+            btnSec.Text = "Quality Change Activities";
+            btnThird.Text = "Quality Change Roles";
+
+            first = 7;
+            second = 7;
+            third = 7;
+
+        }
+
+        public void timeManagement()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Time Management";
+            btnSec.Text = "Time Change Activities";
+            btnThird.Text = "Time Change Roles";
+
+            first = 8;
+            second = 8;
+            third = 8;
+
+        }
+
+        public void costManagement()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Perform Cost Management";
+            btnSec.Text = "Cost Change Activities";
+            btnThird.Text = "Cost Change Roles";
+
+            first = 9;
+            second = 9;
+            third = 9;
+
+        }
+
+        public void phaseReview()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+
+            lstInstr.Items.Clear();
+
+            //button visibility
+            btnFirst.Visible = true;
+            btnSec.Visible = true;
+            btnThird.Visible = true;
+
+
+            //button text
+            btnFirst.Text = "Identify Phase Review Criteria";
+            btnSec.Text = "Undertake Phase Review";
+            btnThird.Text = "Seek Approval to Proceed";
+
+            first = 10;
+            second = 10;
+            third = 10;
+           
+
+        }
+
+        private void btnCommunications_Click(object sender, EventArgs e)
+        {
+            communicationsManagement();
+        }
+
+        private void btnIssue_Click(object sender, EventArgs e)
+        {
+            issueManagement();
+        }
+
+        private void btnRisk_Click(object sender, EventArgs e)
+        {
+            riskManagement();
+        }
+
+        private void btnQuality_Click(object sender, EventArgs e)
+        {
+            qualityManagement();
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            acceptanceManagement();
+        }
+
+        private void btnProcurement_Click(object sender, EventArgs e)
+        {
+            procurementManagement();
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            changeManagement();
+        }
+
+        private void btnTime_Click(object sender, EventArgs e)
+        {
+            timeManagement();
+        }
+
+        private void btnCost_Click(object sender, EventArgs e)
+        {
+            costManagement();
+        }
+
+        private void btnReview_Click(object sender, EventArgs e)
+        {
+            phaseReview();
+        }
+
+        public void firstButton(int button)
+        {
+            //switch for first button
+
+            switch (button)
+            {
+                //Perform communications management
+                case 1:
+                    lstInstr.Items.Clear();
+                    
+                    break;
+                //Perform issue management
+                case 2:
+                    lstInstr.Items.Clear();
+                   
+                    break;
+                //...
+                case 3:
+                    lstInstr.Items.Clear();
+                    
+                    break;               
+                default:
+                    lstInstr.Items.Clear();
+                    break;
+            }
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            firstButton(first);
         }
     }
 }
