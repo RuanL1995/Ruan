@@ -83,21 +83,21 @@ namespace TechGenics
         /// <summary>
         /// Inserts a new admin when btnRegister is clicked
         /// </summary>
-        internal void InsertAdmin(string userName, string userPassword, string firstName, string surName, string email)
+        internal void InsertAdmin(string adminName, string adminPassword, string adminFirstName, string adminSurName, string adminEmail)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
             {
-                User newUser = new User();
-                newUser.UserName = userName;
-                newUser.UserPassword = userPassword;
-                newUser.FirstName = firstName;
-                newUser.SurName = surName;
-                newUser.Email = email;
+                Admin newAdmin = new Admin();
+                newAdmin.AdminName = adminName;
+                newAdmin.AdminPassword = adminPassword;
+                newAdmin.AdminFirstName = adminFirstName;
+                newAdmin.AdminSurName = adminSurName;
+                newAdmin.AdminEmail = adminEmail;
 
-                List<User> user = new List<User>();
-                user.Add(newUser);
+                List<Admin> admin = new List<Admin>();
+                admin.Add(newAdmin);
 
-                connection.Execute("dbo.spUserC1 @UserName, @UserPassword, @FirstName, @SurName, @Email", user);
+                connection.Execute("dbo.spAdminC1 @ADminName, @AdminPassword, @AdminFirstName, @AdminSurName, @AdminEmail", admin);
             }
         }
         #endregion

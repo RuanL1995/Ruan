@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlSignUp = new System.Windows.Forms.Panel();
+            this.chckBoxAdmin = new System.Windows.Forms.CheckBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtSPass = new System.Windows.Forms.TextBox();
             this.pboLogoSignUp = new System.Windows.Forms.PictureBox();
@@ -162,7 +163,7 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(376, 98);
+            this.pnlLogin.Location = new System.Drawing.Point(761, 54);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
@@ -294,6 +295,7 @@
             // pnlSignUp
             // 
             this.pnlSignUp.BackColor = System.Drawing.Color.Black;
+            this.pnlSignUp.Controls.Add(this.chckBoxAdmin);
             this.pnlSignUp.Controls.Add(this.lblTitle);
             this.pnlSignUp.Controls.Add(this.txtSPass);
             this.pnlSignUp.Controls.Add(this.pboLogoSignUp);
@@ -314,6 +316,18 @@
             this.pnlSignUp.Size = new System.Drawing.Size(379, 549);
             this.pnlSignUp.TabIndex = 12;
             this.pnlSignUp.Visible = false;
+            // 
+            // chckBoxAdmin
+            // 
+            this.chckBoxAdmin.AutoSize = true;
+            this.chckBoxAdmin.ForeColor = System.Drawing.Color.White;
+            this.chckBoxAdmin.Location = new System.Drawing.Point(99, 468);
+            this.chckBoxAdmin.Name = "chckBoxAdmin";
+            this.chckBoxAdmin.Size = new System.Drawing.Size(110, 17);
+            this.chckBoxAdmin.TabIndex = 25;
+            this.chckBoxAdmin.Text = "Register as admin";
+            this.chckBoxAdmin.UseVisualStyleBackColor = true;
+            this.chckBoxAdmin.CheckedChanged += new System.EventHandler(this.chckBoxAdmin_CheckedChanged);
             // 
             // lblTitle
             // 
@@ -564,6 +578,7 @@
         private System.Windows.Forms.Label label2;
         private gradient gradient1;
         private System.Windows.Forms.Button btnSettingsLogin;
+        private System.Windows.Forms.CheckBox chckBoxAdmin;
     }
 }
 
