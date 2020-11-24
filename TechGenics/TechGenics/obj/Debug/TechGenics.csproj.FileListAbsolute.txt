@@ -220,3 +220,4 @@ C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenic
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmCloseOut.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmExecution.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmSettings.resources
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
