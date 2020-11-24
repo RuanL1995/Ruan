@@ -365,7 +365,9 @@ namespace TechGenics
         #region Logout
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            //go to login 
+            login_signup login = new login_signup();
+            login.Show();
+            this.Dispose();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -415,6 +417,8 @@ namespace TechGenics
             tmrSliding.Start();
             pnlSideMenu.Width = 0;
             btnExpand.Text = ">>";
+            SettingsConstructor settings = new SettingsConstructor();
+            lblCurrentUser.Text = "Welcome " + settings.CurrentUser;
             
         }
 

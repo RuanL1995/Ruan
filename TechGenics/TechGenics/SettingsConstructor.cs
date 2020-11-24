@@ -12,24 +12,35 @@ namespace TechGenics
         /// Setup Values
         /// </summary>
         #region Setup Values
-        //PublicPlaces
+        //ManualConString
         public static string manualConString = String.Empty;
-        //QuarantineZones
+        //UseManualConString
         public static bool useManualConString = false;
+        //CurrentUser
+        public static string currentUser = String.Empty;
+
+
         #endregion
 
-        //PublicPlaces
+        //ManualConString
         public string ManualConString   // property
         {
             get { return manualConString; }   // get method
             set { manualConString = value; }  // set method
         }
 
-        //QuarantineZones
+        //UseManualConString
         public bool UseManualConString  // property
         {
             get { return useManualConString; }   // get method
             set { useManualConString = value; }  // set method
+        }
+
+        //CurrentUser
+        public string CurrentUser // property
+        {
+            get { return currentUser; }   // get method
+            set { currentUser = value; }  // set method
         }
     }
 }

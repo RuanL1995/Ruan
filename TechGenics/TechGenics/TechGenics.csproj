@@ -254,9 +254,6 @@
     <None Include="images\rain_L.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VID-20201002-WA0011.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\fireworks.gif" />
   </ItemGroup>
   <ItemGroup>

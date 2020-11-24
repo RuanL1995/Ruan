@@ -169,15 +169,5 @@ namespace TechGenics.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap VID_20201002_WA0011 {
-            get {
-                object obj = ResourceManager.GetObject("VID-20201002-WA0011", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

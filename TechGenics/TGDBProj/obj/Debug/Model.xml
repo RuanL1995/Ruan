@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="TGDBProj.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\ROCKZ\DOCUMENTS\GITHUB\RUAN\TECHGENICS\TGDBPROJ\OBJ\DEBUG\TGDBPROJ.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\RUAN\DESKTOP\WORK\2020\2ND SEM\ITRI 624 - ISE\RUAN\TECHGENICS\TGDBPROJ\OBJ\DEBUG\TGDBPROJ.DLL" />
 			<Metadata Name="AssemblyName" Value="TGDBProj" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -107,7 +107,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[tblPhase].[PhaseId]" />
+								<References Name="[dbo].[tblProject].[ProjectId]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -115,7 +115,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[tblPhase]" />
+					<References Name="[dbo].[tblProject]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
@@ -126,7 +126,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[tblProject].[ProjectId]" />
+								<References Name="[dbo].[tblPhase].[PhaseId]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -134,7 +134,7 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[tblProject]" />
+					<References Name="[dbo].[tblPhase]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
@@ -629,10 +629,10 @@ END]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="270" />
+				<Property Name="Length" Value="271" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spPhaseC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new phase to the phase table&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;15 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@PhaseName VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spPhaseC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new phase to the phase table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;@PhaseName VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[spPhaseR1]">
@@ -936,10 +936,10 @@ END]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="265" />
+				<Property Name="Length" Value="266" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spTaskC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new phase to the phase table&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;15 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@TaskName VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spTaskC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new phase to the phase table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;@TaskName VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[spTaskR1]">
@@ -1776,7 +1776,7 @@ END]]></Value>
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="6" />
+						<AttachedAnnotation Disambiguator="7" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1837,7 +1837,7 @@ END]]></Value>
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="7" />
+						<AttachedAnnotation Disambiguator="6" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1995,6 +1995,22 @@ END]]></Value>
 				</Entry>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskDescription]">
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">

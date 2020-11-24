@@ -12,7 +12,6 @@ namespace TechGenics
     {
         public static bool useManualConString = false;
         public static string conString;
-        //public static string conStringManual;
         public static string CnnVal(string name)
         {
             SettingsConstructor settings = new SettingsConstructor();
@@ -39,6 +38,7 @@ namespace TechGenics
             }
             else if (settings.UseManualConString == true)
             {
+                //Sets connection string manually if option is chosen in settings menu
                 conString = settings.ManualConString;        
             }
             return conString;

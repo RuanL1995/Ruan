@@ -270,6 +270,8 @@ namespace TechGenics
                     else if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtUsername.Text && ds.Tables[0].Rows[0]["UserPassword"].ToString() == txtPassword.Text)
                     {
                         //MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SettingsConstructor settings = new SettingsConstructor();
+                        settings.CurrentUser = txtUsername.Text;
                         this.Hide();
                         this.Enabled = false;
                         loadScreen.Show();
