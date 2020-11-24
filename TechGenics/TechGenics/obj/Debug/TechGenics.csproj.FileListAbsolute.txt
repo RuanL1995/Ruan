@@ -35,6 +35,7 @@ C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenic
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\Dapper.dll
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\Dapper.xml
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CopyComplete
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe.config
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
@@ -220,4 +221,4 @@ C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenic
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmCloseOut.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmExecution.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmSettings.resources
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmSettings.resources

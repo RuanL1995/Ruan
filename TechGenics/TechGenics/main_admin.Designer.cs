@@ -95,8 +95,6 @@
             this.ctmsCloseOut = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCurrentUser = new System.Windows.Forms.Label();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -114,7 +112,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHide.SuspendLayout();
             this.ctmsCloseOut.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -560,7 +557,6 @@
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm.Controls.Add(this.panel1);
             this.pnlChildForm.Controls.Add(this.pnlTasks);
             this.pnlChildForm.Controls.Add(this.pnlChildForm4);
             this.pnlChildForm.Controls.Add(this.pnlChildForm2);
@@ -581,9 +577,9 @@
             this.pnlTasks.Controls.Add(this.label1);
             this.pnlTasks.Controls.Add(this.pnlBacklog);
             this.pnlTasks.Controls.Add(this.lblTasksHeading);
-            this.pnlTasks.Location = new System.Drawing.Point(17, 40);
+            this.pnlTasks.Location = new System.Drawing.Point(17, 19);
             this.pnlTasks.Name = "pnlTasks";
-            this.pnlTasks.Size = new System.Drawing.Size(825, 608);
+            this.pnlTasks.Size = new System.Drawing.Size(825, 668);
             this.pnlTasks.TabIndex = 0;
             this.pnlTasks.Visible = false;
             this.pnlTasks.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTasks_Paint);
@@ -755,6 +751,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::TechGenics.Properties.Resources.VID_20201002_WA0011;
             this.pictureBox1.Location = new System.Drawing.Point(173, 111);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(511, 378);
@@ -839,7 +836,7 @@
             this.btnTab1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab1.Location = new System.Drawing.Point(11, 11);
+            this.btnTab1.Location = new System.Drawing.Point(241, 12);
             this.btnTab1.Name = "btnTab1";
             this.btnTab1.Size = new System.Drawing.Size(75, 23);
             this.btnTab1.TabIndex = 7;
@@ -854,7 +851,7 @@
             this.btnTab2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab2.Location = new System.Drawing.Point(92, 11);
+            this.btnTab2.Location = new System.Drawing.Point(322, 12);
             this.btnTab2.Name = "btnTab2";
             this.btnTab2.Size = new System.Drawing.Size(75, 23);
             this.btnTab2.TabIndex = 8;
@@ -869,7 +866,7 @@
             this.btnTab3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab3.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab3.Location = new System.Drawing.Point(173, 11);
+            this.btnTab3.Location = new System.Drawing.Point(403, 12);
             this.btnTab3.Name = "btnTab3";
             this.btnTab3.Size = new System.Drawing.Size(75, 23);
             this.btnTab3.TabIndex = 8;
@@ -884,7 +881,7 @@
             this.btnTab4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab4.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab4.Location = new System.Drawing.Point(254, 11);
+            this.btnTab4.Location = new System.Drawing.Point(484, 12);
             this.btnTab4.Name = "btnTab4";
             this.btnTab4.Size = new System.Drawing.Size(75, 23);
             this.btnTab4.TabIndex = 9;
@@ -899,7 +896,7 @@
             this.btnTab5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab5.Location = new System.Drawing.Point(335, 11);
+            this.btnTab5.Location = new System.Drawing.Point(565, 12);
             this.btnTab5.Name = "btnTab5";
             this.btnTab5.Size = new System.Drawing.Size(75, 23);
             this.btnTab5.TabIndex = 10;
@@ -929,39 +926,18 @@
             this.toolStripMenuItem6.Size = new System.Drawing.Size(169, 22);
             this.toolStripMenuItem6.Text = "Open in dual view";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.btnTab4);
-            this.panel1.Controls.Add(this.btnTab1);
-            this.panel1.Controls.Add(this.btnTab2);
-            this.panel1.Controls.Add(this.btnTab3);
-            this.panel1.Controls.Add(this.btnTab5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(869, 44);
-            this.panel1.TabIndex = 5;
-            // 
-            // lblCurrentUser
-            // 
-            this.lblCurrentUser.AutoSize = true;
-            this.lblCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblCurrentUser.ForeColor = System.Drawing.Color.White;
-            this.lblCurrentUser.Location = new System.Drawing.Point(249, 10);
-            this.lblCurrentUser.Name = "lblCurrentUser";
-            this.lblCurrentUser.Size = new System.Drawing.Size(93, 18);
-            this.lblCurrentUser.TabIndex = 7;
-            this.lblCurrentUser.Text = "Current User";
-            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1107, 687);
-            this.Controls.Add(this.lblCurrentUser);
             this.Controls.Add(this.pnlChildForm);
+            this.Controls.Add(this.btnTab5);
+            this.Controls.Add(this.btnTab4);
+            this.Controls.Add(this.btnTab3);
+            this.Controls.Add(this.btnTab2);
+            this.Controls.Add(this.btnTab1);
             this.Controls.Add(this.btnFull);
             this.Controls.Add(this.btnMax);
             this.Controls.Add(this.btnMin);
@@ -992,9 +968,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHide.ResumeLayout(false);
             this.ctmsCloseOut.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1066,7 +1040,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblCurrentUser;
     }
 }
