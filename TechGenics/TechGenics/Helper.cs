@@ -10,26 +10,36 @@ namespace TechGenics
 {
     class Helper
     {
+        public static bool useManualConString = false;
+        public static string conString = String.Empty;
+        public static string conStringManual = String.Empty;
         public static string CnnVal(string name)
         {
-            //Gets local server instance and replaces PLACEHOLDER in app.config with local server info
-            string svrInstance = "";
-
-            RegistryView registryView = Environment.Is64BitOperatingSystem ? RegistryView.Registry64 : RegistryView.Registry32;
-            using (RegistryKey hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView))
+    
+            if (useManualConString == false)
             {
-                RegistryKey instanceKey = hklm.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL", false);
-                if (instanceKey != null)
+                //Gets local server instance and replaces PLACEHOLDER in app.config with local server info
+                string svrInstance = "";
+
+                RegistryView registryView = Environment.Is64BitOperatingSystem ? RegistryView.Registry64 : RegistryView.Registry32;
+                using (RegistryKey hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, registryView))
                 {
-                    foreach (var instanceName in instanceKey.GetValueNames())
+                    RegistryKey instanceKey = hklm.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL", false);
+                    if (instanceKey != null)
                     {
-                        svrInstance = Environment.MachineName + @"\" + instanceName;
+                        foreach (var instanceName in instanceKey.GetValueNames())
+                        {
+                            svrInstance = Environment.MachineName + @"\" + instanceName;
+                        }
                     }
                 }
+                conString = ConfigurationManager.ConnectionStrings[name].ConnectionString;
+                conString = conString.Replace("PLACEHOLDER", svrInstance);
             }
-
-            string conString = ConfigurationManager.ConnectionStrings[name].ConnectionString;
-            conString = conString.Replace("PLACEHOLDER", svrInstance);
+            else if (useManualConString == true)
+            {
+                conString = conStringManual;        
+            }
             return conString;
         }
     }
