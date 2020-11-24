@@ -94,6 +94,7 @@
     <Build Include="dbo\Stored Procedures\Task\spDeleteTaskRecord.sql" />
     <Build Include="dbo\Stored Procedures\Task\spTaskR1.sql" />
     <Build Include="dbo\Stored Procedures\Task\spTaskC1.sql" />
+    <Build Include="dbo\Tables\tblAdmin_1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />
