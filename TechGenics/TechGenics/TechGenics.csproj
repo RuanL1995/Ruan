@@ -158,6 +158,7 @@
     <Compile Include="loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsConstructor.cs" />
     <EmbeddedResource Include="Docs.resx">
       <DependentUpon>Docs.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Docs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

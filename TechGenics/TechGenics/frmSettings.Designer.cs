@@ -55,6 +55,7 @@
             // radBtnAutoConString
             // 
             this.radBtnAutoConString.AutoSize = true;
+            this.radBtnAutoConString.Checked = true;
             this.radBtnAutoConString.ForeColor = System.Drawing.Color.Aquamarine;
             this.radBtnAutoConString.Location = new System.Drawing.Point(12, 6);
             this.radBtnAutoConString.Name = "radBtnAutoConString";
@@ -63,6 +64,7 @@
             this.radBtnAutoConString.TabStop = true;
             this.radBtnAutoConString.Text = "Auto Connection String";
             this.radBtnAutoConString.UseVisualStyleBackColor = true;
+            this.radBtnAutoConString.CheckedChanged += new System.EventHandler(this.radBtnAutoConString_CheckedChanged);
             // 
             // radBtnManualConString
             // 
@@ -72,7 +74,6 @@
             this.radBtnManualConString.Name = "radBtnManualConString";
             this.radBtnManualConString.Size = new System.Drawing.Size(147, 17);
             this.radBtnManualConString.TabIndex = 4;
-            this.radBtnManualConString.TabStop = true;
             this.radBtnManualConString.Text = "Manual Connection String";
             this.radBtnManualConString.UseVisualStyleBackColor = true;
             this.radBtnManualConString.CheckedChanged += new System.EventHandler(this.radBtnManualConString_CheckedChanged);

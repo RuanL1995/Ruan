@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pnlHelpSub = new System.Windows.Forms.Panel();
@@ -65,18 +66,21 @@
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlTasks = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBacklog = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnTask1 = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
             this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.pnlChildForm2 = new System.Windows.Forms.Panel();
             this.pnlChildForm3 = new System.Windows.Forms.Panel();
             this.pnlChildForm5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHide = new System.Windows.Forms.Panel();
             this.btnExpand = new System.Windows.Forms.Button();
             this.tmrSliding = new System.Windows.Forms.Timer(this.components);
@@ -91,10 +95,6 @@
             this.ctmsCloseOut = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -109,9 +109,9 @@
             this.pnlBacklog.SuspendLayout();
             this.pnlChildForm2.SuspendLayout();
             this.pnlChildForm3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHide.SuspendLayout();
             this.ctmsCloseOut.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -138,6 +138,23 @@
             this.pnlSideMenu.Name = "pnlSideMenu";
             this.pnlSideMenu.Size = new System.Drawing.Size(201, 687);
             this.pnlSideMenu.TabIndex = 0;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSettings.BackColor = System.Drawing.Color.Black;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSettings.Location = new System.Drawing.Point(0, 641);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(201, 34);
+            this.btnSettings.TabIndex = 12;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnExit
             // 
@@ -581,17 +598,6 @@
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button7.Location = new System.Drawing.Point(628, 1);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(13, 466);
-            this.button7.TabIndex = 13;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -646,6 +652,39 @@
             this.pnlBacklog.Name = "pnlBacklog";
             this.pnlBacklog.Size = new System.Drawing.Size(788, 468);
             this.pnlBacklog.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button2.Location = new System.Drawing.Point(164, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(13, 466);
+            this.button2.TabIndex = 15;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button7.Location = new System.Drawing.Point(628, 1);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(13, 466);
+            this.button7.TabIndex = 13;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button1.Location = new System.Drawing.Point(392, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(13, 466);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnTask1
             // 
@@ -709,6 +748,16 @@
             this.pnlChildForm5.Size = new System.Drawing.Size(865, 648);
             this.pnlChildForm5.TabIndex = 4;
             this.pnlChildForm5.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TechGenics.Properties.Resources.VID_20201002_WA0011;
+            this.pictureBox1.Location = new System.Drawing.Point(173, 111);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(511, 378);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlHide
             // 
@@ -877,55 +926,6 @@
             this.toolStripMenuItem6.Size = new System.Drawing.Size(169, 22);
             this.toolStripMenuItem6.Text = "Open in dual view";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(392, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(13, 466);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button2.Location = new System.Drawing.Point(164, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(13, 466);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSettings.BackColor = System.Drawing.Color.Black;
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.MintCream;
-            this.btnSettings.Location = new System.Drawing.Point(0, 641);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(201, 34);
-            this.btnSettings.TabIndex = 12;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TechGenics.Properties.Resources.VID_20201002_WA0011;
-            this.pictureBox1.Location = new System.Drawing.Point(173, 111);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(511, 378);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -965,9 +965,9 @@
             this.pnlBacklog.ResumeLayout(false);
             this.pnlChildForm2.ResumeLayout(false);
             this.pnlChildForm3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHide.ResumeLayout(false);
             this.ctmsCloseOut.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

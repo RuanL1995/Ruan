@@ -11,12 +11,13 @@ namespace TechGenics
     class Helper
     {
         public static bool useManualConString = false;
-        public static string conString = String.Empty;
-        public static string conStringManual = String.Empty;
+        public static string conString;
+        //public static string conStringManual;
         public static string CnnVal(string name)
         {
-    
-            if (useManualConString == false)
+            SettingsConstructor settings = new SettingsConstructor();
+
+            if (settings.UseManualConString == false)
             {
                 //Gets local server instance and replaces PLACEHOLDER in app.config with local server info
                 string svrInstance = "";
@@ -36,9 +37,9 @@ namespace TechGenics
                 conString = ConfigurationManager.ConnectionStrings[name].ConnectionString;
                 conString = conString.Replace("PLACEHOLDER", svrInstance);
             }
-            else if (useManualConString == true)
+            else if (settings.UseManualConString == true)
             {
-                conString = conStringManual;        
+                conString = settings.ManualConString;        
             }
             return conString;
         }

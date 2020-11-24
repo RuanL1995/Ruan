@@ -693,5 +693,11 @@ namespace TechGenics
         {
             
         }
+
+        private void btnSettingsLogin_Click(object sender, EventArgs e)
+        {
+            frmSettings frmSettings = new frmSettings();
+            frmSettings.ShowDialog();
+        }
     }
 }

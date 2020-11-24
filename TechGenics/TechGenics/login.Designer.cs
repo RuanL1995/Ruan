@@ -35,6 +35,8 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.gradient1 = new TechGenics.gradient();
+            this.btnSettingsLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pboPassIcon = new System.Windows.Forms.PictureBox();
             this.pboUserIcon = new System.Windows.Forms.PictureBox();
@@ -46,7 +48,6 @@
             this.lblForgotPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.gradient1 = new TechGenics.gradient();
             this.pnlSignUp = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtSPass = new System.Windows.Forms.TextBox();
@@ -63,11 +64,11 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.gradient1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboUserIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
-            this.gradient1.SuspendLayout();
             this.pnlSignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +119,35 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "go to admin";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // gradient1
+            // 
+            this.gradient1.angle = 120F;
+            this.gradient1.BackColor = System.Drawing.Color.Black;
+            this.gradient1.colourBot = System.Drawing.Color.Aquamarine;
+            this.gradient1.colourTop = System.Drawing.Color.DarkSlateGray;
+            this.gradient1.Controls.Add(this.btnSettingsLogin);
+            this.gradient1.Controls.Add(this.pnlLogin);
+            this.gradient1.Controls.Add(this.pnlSignUp);
+            this.gradient1.Location = new System.Drawing.Point(-6, 24);
+            this.gradient1.Name = "gradient1";
+            this.gradient1.Size = new System.Drawing.Size(835, 699);
+            this.gradient1.TabIndex = 17;
+            // 
+            // btnSettingsLogin
+            // 
+            this.btnSettingsLogin.BackColor = System.Drawing.Color.Black;
+            this.btnSettingsLogin.BackgroundImage = global::TechGenics.Properties.Resources.Settings;
+            this.btnSettingsLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSettingsLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettingsLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettingsLogin.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnSettingsLogin.Location = new System.Drawing.Point(10, 4);
+            this.btnSettingsLogin.Name = "btnSettingsLogin";
+            this.btnSettingsLogin.Size = new System.Drawing.Size(39, 38);
+            this.btnSettingsLogin.TabIndex = 16;
+            this.btnSettingsLogin.UseVisualStyleBackColor = false;
+            this.btnSettingsLogin.Click += new System.EventHandler(this.btnSettingsLogin_Click);
             // 
             // pnlLogin
             // 
@@ -260,19 +290,6 @@
             this.label2.Size = new System.Drawing.Size(157, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "_________________________";
-            // 
-            // gradient1
-            // 
-            this.gradient1.angle = 120F;
-            this.gradient1.BackColor = System.Drawing.Color.Black;
-            this.gradient1.colourBot = System.Drawing.Color.Aquamarine;
-            this.gradient1.colourTop = System.Drawing.Color.DarkSlateGray;
-            this.gradient1.Controls.Add(this.pnlLogin);
-            this.gradient1.Controls.Add(this.pnlSignUp);
-            this.gradient1.Location = new System.Drawing.Point(-6, 24);
-            this.gradient1.Name = "gradient1";
-            this.gradient1.Size = new System.Drawing.Size(835, 699);
-            this.gradient1.TabIndex = 17;
             // 
             // pnlSignUp
             // 
@@ -497,12 +514,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.login_signup_Load);
+            this.gradient1.ResumeLayout(false);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboUserIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
-            this.gradient1.ResumeLayout(false);
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).EndInit();
@@ -546,6 +563,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private gradient gradient1;
+        private System.Windows.Forms.Button btnSettingsLogin;
     }
 }
 
