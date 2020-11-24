@@ -42,6 +42,16 @@
             this.btnComMan = new System.Windows.Forms.Button();
             this.pnlExecution = new System.Windows.Forms.Panel();
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.btnViewPRev = new System.Windows.Forms.Button();
+            this.btnViewComMan = new System.Windows.Forms.Button();
+            this.btnViewAccMan = new System.Windows.Forms.Button();
+            this.btnViewProcMan = new System.Windows.Forms.Button();
+            this.btnViewIssueMan = new System.Windows.Forms.Button();
+            this.btnViewRiskMan = new System.Windows.Forms.Button();
+            this.btnViewChangeMan = new System.Windows.Forms.Button();
+            this.btnViewQualityMan = new System.Windows.Forms.Button();
+            this.btnViewCostMan = new System.Windows.Forms.Button();
+            this.btnViewTimeMan1 = new System.Windows.Forms.Button();
             this.btnSec = new System.Windows.Forms.Button();
             this.btnThird = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
@@ -73,6 +83,7 @@
             this.btnCPhaseRev.TabIndex = 0;
             this.btnCPhaseRev.Text = "Conduct Phase Review";
             this.btnCPhaseRev.UseVisualStyleBackColor = false;
+            this.btnCPhaseRev.Click += new System.EventHandler(this.btnCPhaseRev_Click_1);
             this.btnCPhaseRev.MouseLeave += new System.EventHandler(this.btnCPhaseRev_MouseLeave);
             this.btnCPhaseRev.MouseHover += new System.EventHandler(this.btnCPhaseRev_MouseHover);
             // 
@@ -111,6 +122,7 @@
             this.btnOperate.TabIndex = 2;
             this.btnOperate.Text = "Operate the Project Office And Project Administration";
             this.btnOperate.UseVisualStyleBackColor = false;
+            this.btnOperate.Click += new System.EventHandler(this.btnOperate_Click_1);
             // 
             // btnCMan
             // 
@@ -123,6 +135,7 @@
             this.btnCMan.TabIndex = 3;
             this.btnCMan.Text = "Change Management";
             this.btnCMan.UseVisualStyleBackColor = false;
+            this.btnCMan.Click += new System.EventHandler(this.btnCMan_Click_1);
             this.btnCMan.MouseLeave += new System.EventHandler(this.btnCMan_MouseLeave);
             this.btnCMan.MouseHover += new System.EventHandler(this.btnCMan_MouseHover);
             // 
@@ -137,6 +150,7 @@
             this.btnTMan.TabIndex = 4;
             this.btnTMan.Text = "Time Management";
             this.btnTMan.UseVisualStyleBackColor = false;
+            this.btnTMan.Click += new System.EventHandler(this.btnTMan_Click_1);
             this.btnTMan.MouseLeave += new System.EventHandler(this.btnTMan_MouseLeave);
             this.btnTMan.MouseHover += new System.EventHandler(this.btnTMan_MouseHover);
             // 
@@ -151,6 +165,7 @@
             this.btnCostMan.TabIndex = 5;
             this.btnCostMan.Text = "Cost Management";
             this.btnCostMan.UseVisualStyleBackColor = false;
+            this.btnCostMan.Click += new System.EventHandler(this.btnCostMan_Click_1);
             this.btnCostMan.MouseLeave += new System.EventHandler(this.btnCostMan_MouseLeave);
             this.btnCostMan.MouseHover += new System.EventHandler(this.btnCostMan_MouseHover);
             // 
@@ -165,6 +180,7 @@
             this.btnAccMan.TabIndex = 6;
             this.btnAccMan.Text = "Acceptance Management";
             this.btnAccMan.UseVisualStyleBackColor = false;
+            this.btnAccMan.Click += new System.EventHandler(this.btnAccMan_Click_1);
             this.btnAccMan.MouseLeave += new System.EventHandler(this.btnAccMan_MouseLeave);
             this.btnAccMan.MouseHover += new System.EventHandler(this.btnAccMan_MouseHover);
             // 
@@ -179,6 +195,7 @@
             this.btnProcMan.TabIndex = 7;
             this.btnProcMan.Text = "Procurement Management";
             this.btnProcMan.UseVisualStyleBackColor = false;
+            this.btnProcMan.Click += new System.EventHandler(this.btnProcMan_Click_1);
             this.btnProcMan.MouseLeave += new System.EventHandler(this.btnProcMan_MouseLeave);
             this.btnProcMan.MouseHover += new System.EventHandler(this.btnProcMan_MouseHover);
             // 
@@ -193,6 +210,7 @@
             this.btnQualMan.TabIndex = 8;
             this.btnQualMan.Text = "Quality Management";
             this.btnQualMan.UseVisualStyleBackColor = false;
+            this.btnQualMan.Click += new System.EventHandler(this.btnQualMan_Click_1);
             this.btnQualMan.MouseLeave += new System.EventHandler(this.btnQualMan_MouseLeave);
             this.btnQualMan.MouseHover += new System.EventHandler(this.btnQualMan_MouseHover);
             // 
@@ -207,6 +225,7 @@
             this.btnIssMan.TabIndex = 9;
             this.btnIssMan.Text = "Issue Management";
             this.btnIssMan.UseVisualStyleBackColor = false;
+            this.btnIssMan.Click += new System.EventHandler(this.btnIssMan_Click_1);
             this.btnIssMan.MouseLeave += new System.EventHandler(this.btnIssMan_MouseLeave);
             this.btnIssMan.MouseHover += new System.EventHandler(this.btnIssMan_MouseHover);
             // 
@@ -221,6 +240,7 @@
             this.btnRiskMan.TabIndex = 10;
             this.btnRiskMan.Text = "Risk Management";
             this.btnRiskMan.UseVisualStyleBackColor = false;
+            this.btnRiskMan.Click += new System.EventHandler(this.btnRiskMan_Click_1);
             this.btnRiskMan.MouseLeave += new System.EventHandler(this.btnRiskMan_MouseLeave);
             this.btnRiskMan.MouseHover += new System.EventHandler(this.btnRiskMan_MouseHover);
             // 
@@ -235,6 +255,7 @@
             this.btnComMan.TabIndex = 11;
             this.btnComMan.Text = "Communications Management";
             this.btnComMan.UseVisualStyleBackColor = false;
+            this.btnComMan.Click += new System.EventHandler(this.btnComMan_Click_1);
             this.btnComMan.MouseLeave += new System.EventHandler(this.btnComMan_MouseLeave);
             this.btnComMan.MouseHover += new System.EventHandler(this.btnComMan_MouseHover);
             // 
@@ -252,22 +273,183 @@
             this.pnlExecution.Controls.Add(this.btnComMan);
             this.pnlExecution.Controls.Add(this.btnIssMan);
             this.pnlExecution.Controls.Add(this.lstInfo);
-            this.pnlExecution.Location = new System.Drawing.Point(31, 6);
+            this.pnlExecution.Location = new System.Drawing.Point(22, 12);
             this.pnlExecution.Name = "pnlExecution";
             this.pnlExecution.Size = new System.Drawing.Size(824, 597);
             this.pnlExecution.TabIndex = 12;
             // 
             // pnlInfo
             // 
+            this.pnlInfo.Controls.Add(this.btnViewPRev);
+            this.pnlInfo.Controls.Add(this.btnViewComMan);
+            this.pnlInfo.Controls.Add(this.btnViewAccMan);
+            this.pnlInfo.Controls.Add(this.btnViewProcMan);
+            this.pnlInfo.Controls.Add(this.btnViewIssueMan);
+            this.pnlInfo.Controls.Add(this.btnViewRiskMan);
+            this.pnlInfo.Controls.Add(this.btnViewChangeMan);
+            this.pnlInfo.Controls.Add(this.btnViewQualityMan);
+            this.pnlInfo.Controls.Add(this.btnViewCostMan);
+            this.pnlInfo.Controls.Add(this.btnViewTimeMan1);
             this.pnlInfo.Controls.Add(this.btnSec);
             this.pnlInfo.Controls.Add(this.btnThird);
             this.pnlInfo.Controls.Add(this.btnFirst);
             this.pnlInfo.Controls.Add(this.panel1);
             this.pnlInfo.Controls.Add(this.lstInstr);
-            this.pnlInfo.Location = new System.Drawing.Point(12, 9);
+            this.pnlInfo.Location = new System.Drawing.Point(12, 12);
             this.pnlInfo.Name = "pnlInfo";
             this.pnlInfo.Size = new System.Drawing.Size(847, 607);
             this.pnlInfo.TabIndex = 12;
+            this.pnlInfo.Visible = false;
+            // 
+            // btnViewPRev
+            // 
+            this.btnViewPRev.BackColor = System.Drawing.Color.Black;
+            this.btnViewPRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewPRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewPRev.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewPRev.Location = new System.Drawing.Point(394, 530);
+            this.btnViewPRev.Name = "btnViewPRev";
+            this.btnViewPRev.Size = new System.Drawing.Size(140, 34);
+            this.btnViewPRev.TabIndex = 38;
+            this.btnViewPRev.Text = "View Template";
+            this.btnViewPRev.UseVisualStyleBackColor = false;
+            this.btnViewPRev.Visible = false;
+            this.btnViewPRev.Click += new System.EventHandler(this.btnViewPRev_Click);
+            // 
+            // btnViewComMan
+            // 
+            this.btnViewComMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewComMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewComMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewComMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewComMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewComMan.Name = "btnViewComMan";
+            this.btnViewComMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewComMan.TabIndex = 37;
+            this.btnViewComMan.Text = "View Templates";
+            this.btnViewComMan.UseVisualStyleBackColor = false;
+            this.btnViewComMan.Visible = false;
+            this.btnViewComMan.Click += new System.EventHandler(this.btnViewComMan_Click);
+            // 
+            // btnViewAccMan
+            // 
+            this.btnViewAccMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewAccMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAccMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAccMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewAccMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewAccMan.Name = "btnViewAccMan";
+            this.btnViewAccMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewAccMan.TabIndex = 36;
+            this.btnViewAccMan.Text = "View Templates";
+            this.btnViewAccMan.UseVisualStyleBackColor = false;
+            this.btnViewAccMan.Visible = false;
+            this.btnViewAccMan.Click += new System.EventHandler(this.btnViewAccMan_Click);
+            // 
+            // btnViewProcMan
+            // 
+            this.btnViewProcMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewProcMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProcMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewProcMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewProcMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewProcMan.Name = "btnViewProcMan";
+            this.btnViewProcMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewProcMan.TabIndex = 35;
+            this.btnViewProcMan.Text = "View Templates";
+            this.btnViewProcMan.UseVisualStyleBackColor = false;
+            this.btnViewProcMan.Visible = false;
+            this.btnViewProcMan.Click += new System.EventHandler(this.btnViewProcMan_Click);
+            // 
+            // btnViewIssueMan
+            // 
+            this.btnViewIssueMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewIssueMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewIssueMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewIssueMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewIssueMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewIssueMan.Name = "btnViewIssueMan";
+            this.btnViewIssueMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewIssueMan.TabIndex = 34;
+            this.btnViewIssueMan.Text = "View Templates";
+            this.btnViewIssueMan.UseVisualStyleBackColor = false;
+            this.btnViewIssueMan.Visible = false;
+            this.btnViewIssueMan.Click += new System.EventHandler(this.btnViewIssueMan_Click);
+            // 
+            // btnViewRiskMan
+            // 
+            this.btnViewRiskMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewRiskMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRiskMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewRiskMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewRiskMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewRiskMan.Name = "btnViewRiskMan";
+            this.btnViewRiskMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewRiskMan.TabIndex = 33;
+            this.btnViewRiskMan.Text = "View Templates";
+            this.btnViewRiskMan.UseVisualStyleBackColor = false;
+            this.btnViewRiskMan.Visible = false;
+            this.btnViewRiskMan.Click += new System.EventHandler(this.btnViewRiskMan_Click);
+            // 
+            // btnViewChangeMan
+            // 
+            this.btnViewChangeMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewChangeMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewChangeMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewChangeMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewChangeMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewChangeMan.Name = "btnViewChangeMan";
+            this.btnViewChangeMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewChangeMan.TabIndex = 32;
+            this.btnViewChangeMan.Text = "View Templates";
+            this.btnViewChangeMan.UseVisualStyleBackColor = false;
+            this.btnViewChangeMan.Visible = false;
+            this.btnViewChangeMan.Click += new System.EventHandler(this.btnViewChangeMan_Click);
+            // 
+            // btnViewQualityMan
+            // 
+            this.btnViewQualityMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewQualityMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewQualityMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewQualityMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewQualityMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewQualityMan.Name = "btnViewQualityMan";
+            this.btnViewQualityMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewQualityMan.TabIndex = 31;
+            this.btnViewQualityMan.Text = "View Templates";
+            this.btnViewQualityMan.UseVisualStyleBackColor = false;
+            this.btnViewQualityMan.Visible = false;
+            this.btnViewQualityMan.Click += new System.EventHandler(this.btnViewQualityMan_Click);
+            // 
+            // btnViewCostMan
+            // 
+            this.btnViewCostMan.BackColor = System.Drawing.Color.Black;
+            this.btnViewCostMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewCostMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCostMan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewCostMan.Location = new System.Drawing.Point(394, 530);
+            this.btnViewCostMan.Name = "btnViewCostMan";
+            this.btnViewCostMan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewCostMan.TabIndex = 30;
+            this.btnViewCostMan.Text = "View Templates";
+            this.btnViewCostMan.UseVisualStyleBackColor = false;
+            this.btnViewCostMan.Visible = false;
+            this.btnViewCostMan.Click += new System.EventHandler(this.btnViewCostMan_Click);
+            // 
+            // btnViewTimeMan1
+            // 
+            this.btnViewTimeMan1.BackColor = System.Drawing.Color.Black;
+            this.btnViewTimeMan1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewTimeMan1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewTimeMan1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewTimeMan1.Location = new System.Drawing.Point(394, 530);
+            this.btnViewTimeMan1.Name = "btnViewTimeMan1";
+            this.btnViewTimeMan1.Size = new System.Drawing.Size(140, 34);
+            this.btnViewTimeMan1.TabIndex = 29;
+            this.btnViewTimeMan1.Text = "View Templates";
+            this.btnViewTimeMan1.UseVisualStyleBackColor = false;
+            this.btnViewTimeMan1.Visible = false;
+            this.btnViewTimeMan1.Click += new System.EventHandler(this.btnViewTimeMan_Click);
             // 
             // btnSec
             // 
@@ -280,6 +462,7 @@
             this.btnSec.TabIndex = 13;
             this.btnSec.UseVisualStyleBackColor = false;
             this.btnSec.Visible = false;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
             // btnThird
             // 
@@ -292,10 +475,12 @@
             this.btnThird.TabIndex = 14;
             this.btnThird.UseVisualStyleBackColor = false;
             this.btnThird.Visible = false;
+            this.btnThird.Click += new System.EventHandler(this.btnThird_Click);
             // 
             // btnFirst
             // 
             this.btnFirst.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.Location = new System.Drawing.Point(22, 189);
@@ -466,12 +651,17 @@
             // 
             // lstInstr
             // 
+            this.lstInstr.BackColor = System.Drawing.Color.Black;
+            this.lstInstr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstInstr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstInstr.ForeColor = System.Drawing.Color.White;
             this.lstInstr.FormattingEnabled = true;
+            this.lstInstr.ItemHeight = 18;
             this.lstInstr.Items.AddRange(new object[] {
             " "});
             this.lstInstr.Location = new System.Drawing.Point(217, 132);
             this.lstInstr.Name = "lstInstr";
-            this.lstInstr.Size = new System.Drawing.Size(518, 368);
+            this.lstInstr.Size = new System.Drawing.Size(586, 378);
             this.lstInstr.TabIndex = 0;
             // 
             // frmExecution
@@ -522,5 +712,15 @@
         private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.Button btnSec;
         private System.Windows.Forms.Button btnThird;
+        private System.Windows.Forms.Button btnViewTimeMan1;
+        private System.Windows.Forms.Button btnViewCostMan;
+        private System.Windows.Forms.Button btnViewQualityMan;
+        private System.Windows.Forms.Button btnViewChangeMan;
+        private System.Windows.Forms.Button btnViewRiskMan;
+        private System.Windows.Forms.Button btnViewIssueMan;
+        private System.Windows.Forms.Button btnViewProcMan;
+        private System.Windows.Forms.Button btnViewAccMan;
+        private System.Windows.Forms.Button btnViewComMan;
+        private System.Windows.Forms.Button btnViewPRev;
     }
 }
