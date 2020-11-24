@@ -17,6 +17,13 @@ namespace TechGenics
             InitializeComponent();
         }
 
+        public void showInstructions()
+        {
+            pnlExecution.Visible = false;
+            pnlInfo.Visible = true;
+            pnlInfo.BringToFront();
+        }
+
         /// <summary>
         /// Variables for switch
         /// </summary>
@@ -515,6 +522,73 @@ namespace TechGenics
         private void btnFirst_Click(object sender, EventArgs e)
         {
             firstButton(first);
+        }
+
+        private void frmExecution_Load(object sender, EventArgs e)
+        {
+            pnlExecution.Visible = true;
+            pnlExecution.BringToFront();
+
+            pnlInfo.Visible = false;
+            pnlInfo.SendToBack();
+        }
+
+        private void btnIssMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+            issueManagement();
+        }
+
+        private void btnComMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+            communicationsManagement();
+        }
+
+        private void btnRiskMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnQualMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnAccMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnProcMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnCMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnTMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnCostMan_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnOperate_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+        }
+
+        private void btnCPhaseRev_Click(object sender, EventArgs e)
+        {
+            showInstructions();
+            phaseReview();
         }
     }
 }
