@@ -216,3 +216,8 @@ C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.
 C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe
 C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\Control.Draggable.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\Control.Draggable.dll
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.Docs.resources
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmCloseOut.resources
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmExecution.resources
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmSettings.resources

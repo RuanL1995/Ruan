@@ -790,5 +790,11 @@ namespace TechGenics
         {
             ControlExtension.Draggable(btnTask1, true);
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            frmSettings frmSettings = new frmSettings();
+            frmSettings.ShowDialog();
+        }
     }
 }
