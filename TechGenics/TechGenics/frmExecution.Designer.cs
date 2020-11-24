@@ -73,7 +73,6 @@
             this.btnCPhaseRev.TabIndex = 0;
             this.btnCPhaseRev.Text = "Conduct Phase Review";
             this.btnCPhaseRev.UseVisualStyleBackColor = false;
-            this.btnCPhaseRev.Click += new System.EventHandler(this.btnCPhaseRev_Click);
             this.btnCPhaseRev.MouseLeave += new System.EventHandler(this.btnCPhaseRev_MouseLeave);
             this.btnCPhaseRev.MouseHover += new System.EventHandler(this.btnCPhaseRev_MouseHover);
             // 
@@ -112,7 +111,6 @@
             this.btnOperate.TabIndex = 2;
             this.btnOperate.Text = "Operate the Project Office And Project Administration";
             this.btnOperate.UseVisualStyleBackColor = false;
-            this.btnOperate.Click += new System.EventHandler(this.btnOperate_Click);
             // 
             // btnCMan
             // 
@@ -125,7 +123,6 @@
             this.btnCMan.TabIndex = 3;
             this.btnCMan.Text = "Change Management";
             this.btnCMan.UseVisualStyleBackColor = false;
-            this.btnCMan.Click += new System.EventHandler(this.btnCMan_Click);
             this.btnCMan.MouseLeave += new System.EventHandler(this.btnCMan_MouseLeave);
             this.btnCMan.MouseHover += new System.EventHandler(this.btnCMan_MouseHover);
             // 
@@ -140,7 +137,6 @@
             this.btnTMan.TabIndex = 4;
             this.btnTMan.Text = "Time Management";
             this.btnTMan.UseVisualStyleBackColor = false;
-            this.btnTMan.Click += new System.EventHandler(this.btnTMan_Click);
             this.btnTMan.MouseLeave += new System.EventHandler(this.btnTMan_MouseLeave);
             this.btnTMan.MouseHover += new System.EventHandler(this.btnTMan_MouseHover);
             // 
@@ -155,7 +151,6 @@
             this.btnCostMan.TabIndex = 5;
             this.btnCostMan.Text = "Cost Management";
             this.btnCostMan.UseVisualStyleBackColor = false;
-            this.btnCostMan.Click += new System.EventHandler(this.btnCostMan_Click);
             this.btnCostMan.MouseLeave += new System.EventHandler(this.btnCostMan_MouseLeave);
             this.btnCostMan.MouseHover += new System.EventHandler(this.btnCostMan_MouseHover);
             // 
@@ -170,7 +165,6 @@
             this.btnAccMan.TabIndex = 6;
             this.btnAccMan.Text = "Acceptance Management";
             this.btnAccMan.UseVisualStyleBackColor = false;
-            this.btnAccMan.Click += new System.EventHandler(this.btnAccMan_Click);
             this.btnAccMan.MouseLeave += new System.EventHandler(this.btnAccMan_MouseLeave);
             this.btnAccMan.MouseHover += new System.EventHandler(this.btnAccMan_MouseHover);
             // 
@@ -185,7 +179,6 @@
             this.btnProcMan.TabIndex = 7;
             this.btnProcMan.Text = "Procurement Management";
             this.btnProcMan.UseVisualStyleBackColor = false;
-            this.btnProcMan.Click += new System.EventHandler(this.btnProcMan_Click);
             this.btnProcMan.MouseLeave += new System.EventHandler(this.btnProcMan_MouseLeave);
             this.btnProcMan.MouseHover += new System.EventHandler(this.btnProcMan_MouseHover);
             // 
@@ -200,7 +193,6 @@
             this.btnQualMan.TabIndex = 8;
             this.btnQualMan.Text = "Quality Management";
             this.btnQualMan.UseVisualStyleBackColor = false;
-            this.btnQualMan.Click += new System.EventHandler(this.btnQualMan_Click);
             this.btnQualMan.MouseLeave += new System.EventHandler(this.btnQualMan_MouseLeave);
             this.btnQualMan.MouseHover += new System.EventHandler(this.btnQualMan_MouseHover);
             // 
@@ -215,7 +207,6 @@
             this.btnIssMan.TabIndex = 9;
             this.btnIssMan.Text = "Issue Management";
             this.btnIssMan.UseVisualStyleBackColor = false;
-            this.btnIssMan.Click += new System.EventHandler(this.btnIssMan_Click);
             this.btnIssMan.MouseLeave += new System.EventHandler(this.btnIssMan_MouseLeave);
             this.btnIssMan.MouseHover += new System.EventHandler(this.btnIssMan_MouseHover);
             // 
@@ -230,7 +221,6 @@
             this.btnRiskMan.TabIndex = 10;
             this.btnRiskMan.Text = "Risk Management";
             this.btnRiskMan.UseVisualStyleBackColor = false;
-            this.btnRiskMan.Click += new System.EventHandler(this.btnRiskMan_Click);
             this.btnRiskMan.MouseLeave += new System.EventHandler(this.btnRiskMan_MouseLeave);
             this.btnRiskMan.MouseHover += new System.EventHandler(this.btnRiskMan_MouseHover);
             // 
@@ -245,7 +235,6 @@
             this.btnComMan.TabIndex = 11;
             this.btnComMan.Text = "Communications Management";
             this.btnComMan.UseVisualStyleBackColor = false;
-            this.btnComMan.Click += new System.EventHandler(this.btnComMan_Click);
             this.btnComMan.MouseLeave += new System.EventHandler(this.btnComMan_MouseLeave);
             this.btnComMan.MouseHover += new System.EventHandler(this.btnComMan_MouseHover);
             // 
@@ -263,7 +252,7 @@
             this.pnlExecution.Controls.Add(this.btnComMan);
             this.pnlExecution.Controls.Add(this.btnIssMan);
             this.pnlExecution.Controls.Add(this.lstInfo);
-            this.pnlExecution.Location = new System.Drawing.Point(17, 12);
+            this.pnlExecution.Location = new System.Drawing.Point(31, 6);
             this.pnlExecution.Name = "pnlExecution";
             this.pnlExecution.Size = new System.Drawing.Size(824, 597);
             this.pnlExecution.TabIndex = 12;
@@ -275,9 +264,9 @@
             this.pnlInfo.Controls.Add(this.btnFirst);
             this.pnlInfo.Controls.Add(this.panel1);
             this.pnlInfo.Controls.Add(this.lstInstr);
-            this.pnlInfo.Location = new System.Drawing.Point(775, 261);
+            this.pnlInfo.Location = new System.Drawing.Point(12, 9);
             this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(84, 368);
+            this.pnlInfo.Size = new System.Drawing.Size(847, 607);
             this.pnlInfo.TabIndex = 12;
             // 
             // btnSec
@@ -495,7 +484,6 @@
             this.Controls.Add(this.pnlExecution);
             this.Name = "frmExecution";
             this.Text = "frmExecution";
-            this.Load += new System.EventHandler(this.frmExecution_Load);
             this.pnlExecution.ResumeLayout(false);
             this.pnlInfo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

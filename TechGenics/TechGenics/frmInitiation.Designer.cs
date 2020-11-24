@@ -37,12 +37,6 @@
             this.btnUndertakeFStudy = new System.Windows.Forms.Button();
             this.btnDevBCase = new System.Windows.Forms.Button();
             this.pnlInstr = new System.Windows.Forms.Panel();
-            this.btnViewPhase = new System.Windows.Forms.Button();
-            this.btnViewOffice = new System.Windows.Forms.Button();
-            this.btnViewTeam = new System.Windows.Forms.Button();
-            this.btnViewCharter = new System.Windows.Forms.Button();
-            this.btnViewFeasStudy = new System.Windows.Forms.Button();
-            this.btnViewBusCase = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -58,13 +52,18 @@
             this.lblProjCharter = new System.Windows.Forms.Label();
             this.lblFeasStudy = new System.Windows.Forms.Label();
             this.lblBusCase = new System.Windows.Forms.Label();
+            this.btnViewBusCase = new System.Windows.Forms.Button();
+            this.btnViewFeasStudy = new System.Windows.Forms.Button();
+            this.btnViewCharter = new System.Windows.Forms.Button();
+            this.btnViewTeam = new System.Windows.Forms.Button();
+            this.btnViewOffice = new System.Windows.Forms.Button();
+            this.btnViewPhase = new System.Windows.Forms.Button();
             this.pnlInitiation.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInitiation
             // 
-            this.pnlInitiation.Controls.Add(this.pnlInstr);
             this.pnlInitiation.Controls.Add(this.lstInfo);
             this.pnlInitiation.Controls.Add(this.btnPhaseReview);
             this.pnlInitiation.Controls.Add(this.btnSetupPOffice);
@@ -220,100 +219,10 @@
             this.pnlInstr.Controls.Add(this.lblProjCharter);
             this.pnlInstr.Controls.Add(this.lblFeasStudy);
             this.pnlInstr.Controls.Add(this.lblBusCase);
-            this.pnlInstr.Location = new System.Drawing.Point(256, 59);
+            this.pnlInstr.Location = new System.Drawing.Point(9, 12);
             this.pnlInstr.Name = "pnlInstr";
             this.pnlInstr.Size = new System.Drawing.Size(835, 614);
             this.pnlInstr.TabIndex = 1;
-            // 
-            // btnViewPhase
-            // 
-            this.btnViewPhase.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewPhase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewPhase.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewPhase.Location = new System.Drawing.Point(439, 490);
-            this.btnViewPhase.Name = "btnViewPhase";
-            this.btnViewPhase.Size = new System.Drawing.Size(115, 27);
-            this.btnViewPhase.TabIndex = 20;
-            this.btnViewPhase.Text = "View Template";
-            this.btnViewPhase.UseVisualStyleBackColor = false;
-            this.btnViewPhase.Visible = false;
-            this.btnViewPhase.Click += new System.EventHandler(this.btnViewPhase_Click);
-            // 
-            // btnViewOffice
-            // 
-            this.btnViewOffice.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewOffice.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewOffice.Location = new System.Drawing.Point(439, 490);
-            this.btnViewOffice.Name = "btnViewOffice";
-            this.btnViewOffice.Size = new System.Drawing.Size(115, 27);
-            this.btnViewOffice.TabIndex = 19;
-            this.btnViewOffice.Text = "View Template";
-            this.btnViewOffice.UseVisualStyleBackColor = false;
-            this.btnViewOffice.Visible = false;
-            this.btnViewOffice.Click += new System.EventHandler(this.btnViewOffice_Click);
-            // 
-            // btnViewTeam
-            // 
-            this.btnViewTeam.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewTeam.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewTeam.Location = new System.Drawing.Point(439, 491);
-            this.btnViewTeam.Name = "btnViewTeam";
-            this.btnViewTeam.Size = new System.Drawing.Size(115, 27);
-            this.btnViewTeam.TabIndex = 18;
-            this.btnViewTeam.Text = "View Template";
-            this.btnViewTeam.UseVisualStyleBackColor = false;
-            this.btnViewTeam.Visible = false;
-            this.btnViewTeam.Click += new System.EventHandler(this.btnViewTeam_Click);
-            // 
-            // btnViewCharter
-            // 
-            this.btnViewCharter.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewCharter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewCharter.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewCharter.Location = new System.Drawing.Point(439, 491);
-            this.btnViewCharter.Name = "btnViewCharter";
-            this.btnViewCharter.Size = new System.Drawing.Size(115, 27);
-            this.btnViewCharter.TabIndex = 17;
-            this.btnViewCharter.Text = "View Template";
-            this.btnViewCharter.UseVisualStyleBackColor = false;
-            this.btnViewCharter.Visible = false;
-            this.btnViewCharter.Click += new System.EventHandler(this.btnViewCharter_Click);
-            // 
-            // btnViewFeasStudy
-            // 
-            this.btnViewFeasStudy.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewFeasStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewFeasStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewFeasStudy.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewFeasStudy.Location = new System.Drawing.Point(438, 490);
-            this.btnViewFeasStudy.Name = "btnViewFeasStudy";
-            this.btnViewFeasStudy.Size = new System.Drawing.Size(115, 27);
-            this.btnViewFeasStudy.TabIndex = 16;
-            this.btnViewFeasStudy.Text = "View Template";
-            this.btnViewFeasStudy.UseVisualStyleBackColor = false;
-            this.btnViewFeasStudy.Visible = false;
-            this.btnViewFeasStudy.Click += new System.EventHandler(this.btnViewFeasStudy_Click);
-            // 
-            // btnViewBusCase
-            // 
-            this.btnViewBusCase.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewBusCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewBusCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewBusCase.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewBusCase.Location = new System.Drawing.Point(439, 490);
-            this.btnViewBusCase.Name = "btnViewBusCase";
-            this.btnViewBusCase.Size = new System.Drawing.Size(115, 27);
-            this.btnViewBusCase.TabIndex = 15;
-            this.btnViewBusCase.Text = "View Template";
-            this.btnViewBusCase.UseVisualStyleBackColor = false;
-            this.btnViewBusCase.Visible = false;
-            this.btnViewBusCase.Click += new System.EventHandler(this.btnViewBusCase_Click);
             // 
             // btnClose
             // 
@@ -535,12 +444,103 @@
             this.lblBusCase.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblBusCase.Click += new System.EventHandler(this.lblBusCase_Click);
             // 
+            // btnViewBusCase
+            // 
+            this.btnViewBusCase.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewBusCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewBusCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBusCase.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewBusCase.Location = new System.Drawing.Point(439, 490);
+            this.btnViewBusCase.Name = "btnViewBusCase";
+            this.btnViewBusCase.Size = new System.Drawing.Size(115, 27);
+            this.btnViewBusCase.TabIndex = 15;
+            this.btnViewBusCase.Text = "View Template";
+            this.btnViewBusCase.UseVisualStyleBackColor = false;
+            this.btnViewBusCase.Visible = false;
+            this.btnViewBusCase.Click += new System.EventHandler(this.btnViewBusCase_Click);
+            // 
+            // btnViewFeasStudy
+            // 
+            this.btnViewFeasStudy.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewFeasStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewFeasStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewFeasStudy.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewFeasStudy.Location = new System.Drawing.Point(438, 490);
+            this.btnViewFeasStudy.Name = "btnViewFeasStudy";
+            this.btnViewFeasStudy.Size = new System.Drawing.Size(115, 27);
+            this.btnViewFeasStudy.TabIndex = 16;
+            this.btnViewFeasStudy.Text = "View Template";
+            this.btnViewFeasStudy.UseVisualStyleBackColor = false;
+            this.btnViewFeasStudy.Visible = false;
+            this.btnViewFeasStudy.Click += new System.EventHandler(this.btnViewFeasStudy_Click);
+            // 
+            // btnViewCharter
+            // 
+            this.btnViewCharter.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewCharter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCharter.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewCharter.Location = new System.Drawing.Point(439, 491);
+            this.btnViewCharter.Name = "btnViewCharter";
+            this.btnViewCharter.Size = new System.Drawing.Size(115, 27);
+            this.btnViewCharter.TabIndex = 17;
+            this.btnViewCharter.Text = "View Template";
+            this.btnViewCharter.UseVisualStyleBackColor = false;
+            this.btnViewCharter.Visible = false;
+            this.btnViewCharter.Click += new System.EventHandler(this.btnViewCharter_Click);
+            // 
+            // btnViewTeam
+            // 
+            this.btnViewTeam.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewTeam.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewTeam.Location = new System.Drawing.Point(439, 491);
+            this.btnViewTeam.Name = "btnViewTeam";
+            this.btnViewTeam.Size = new System.Drawing.Size(115, 27);
+            this.btnViewTeam.TabIndex = 18;
+            this.btnViewTeam.Text = "View Template";
+            this.btnViewTeam.UseVisualStyleBackColor = false;
+            this.btnViewTeam.Visible = false;
+            this.btnViewTeam.Click += new System.EventHandler(this.btnViewTeam_Click);
+            // 
+            // btnViewOffice
+            // 
+            this.btnViewOffice.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewOffice.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewOffice.Location = new System.Drawing.Point(439, 490);
+            this.btnViewOffice.Name = "btnViewOffice";
+            this.btnViewOffice.Size = new System.Drawing.Size(115, 27);
+            this.btnViewOffice.TabIndex = 19;
+            this.btnViewOffice.Text = "View Template";
+            this.btnViewOffice.UseVisualStyleBackColor = false;
+            this.btnViewOffice.Visible = false;
+            this.btnViewOffice.Click += new System.EventHandler(this.btnViewOffice_Click);
+            // 
+            // btnViewPhase
+            // 
+            this.btnViewPhase.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewPhase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewPhase.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewPhase.Location = new System.Drawing.Point(439, 490);
+            this.btnViewPhase.Name = "btnViewPhase";
+            this.btnViewPhase.Size = new System.Drawing.Size(115, 27);
+            this.btnViewPhase.TabIndex = 20;
+            this.btnViewPhase.Text = "View Template";
+            this.btnViewPhase.UseVisualStyleBackColor = false;
+            this.btnViewPhase.Visible = false;
+            this.btnViewPhase.Click += new System.EventHandler(this.btnViewPhase_Click);
+            // 
             // frmInitiation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(853, 638);
+            this.Controls.Add(this.pnlInstr);
             this.Controls.Add(this.pnlInitiation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInitiation";

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainAdmin));
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -45,8 +44,8 @@
             this.btnNewProj = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
             this.pnlDiagramsSub = new System.Windows.Forms.Panel();
-            this.btnDark = new System.Windows.Forms.Button();
-            this.btnTheme = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnDiagrams = new System.Windows.Forms.Button();
             this.pnlPhasesSub = new System.Windows.Forms.Panel();
             this.btnCloseOut = new System.Windows.Forms.Button();
             this.ctmsPlanning = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -66,33 +65,18 @@
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlTasks = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
-            this.pnlRemoved = new System.Windows.Forms.Panel();
-            this.pnlCompleted = new System.Windows.Forms.Panel();
-            this.pnlProgress = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.btnBackward = new System.Windows.Forms.Button();
-            this.btnForward = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBacklog = new System.Windows.Forms.Panel();
             this.btnTask1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
             this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.pnlChildForm2 = new System.Windows.Forms.Panel();
             this.pnlChildForm3 = new System.Windows.Forms.Panel();
             this.pnlChildForm5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHide = new System.Windows.Forms.Panel();
             this.btnExpand = new System.Windows.Forms.Button();
             this.tmrSliding = new System.Windows.Forms.Timer(this.components);
@@ -107,7 +91,10 @@
             this.ctmsCloseOut = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnLight = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -122,9 +109,9 @@
             this.pnlBacklog.SuspendLayout();
             this.pnlChildForm2.SuspendLayout();
             this.pnlChildForm3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHide.SuspendLayout();
             this.ctmsCloseOut.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -132,6 +119,7 @@
             this.pnlSideMenu.AutoScroll = true;
             this.pnlSideMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlSideMenu.BackColor = System.Drawing.Color.Black;
+            this.pnlSideMenu.Controls.Add(this.btnSettings);
             this.pnlSideMenu.Controls.Add(this.btnExit);
             this.pnlSideMenu.Controls.Add(this.btnLogout);
             this.pnlSideMenu.Controls.Add(this.pnlHelpSub);
@@ -141,7 +129,7 @@
             this.pnlSideMenu.Controls.Add(this.pnlProjectsSub);
             this.pnlSideMenu.Controls.Add(this.btnProjects);
             this.pnlSideMenu.Controls.Add(this.pnlDiagramsSub);
-            this.pnlSideMenu.Controls.Add(this.btnTheme);
+            this.pnlSideMenu.Controls.Add(this.btnDiagrams);
             this.pnlSideMenu.Controls.Add(this.pnlPhasesSub);
             this.pnlSideMenu.Controls.Add(this.btnPhases);
             this.pnlSideMenu.Controls.Add(this.lblTitle);
@@ -160,7 +148,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.MintCream;
-            this.btnExit.Location = new System.Drawing.Point(0, 631);
+            this.btnExit.Location = new System.Drawing.Point(0, 607);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(201, 34);
             this.btnExit.TabIndex = 11;
@@ -177,7 +165,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.MintCream;
-            this.btnLogout.Location = new System.Drawing.Point(0, 597);
+            this.btnLogout.Location = new System.Drawing.Point(0, 573);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(201, 34);
             this.btnLogout.TabIndex = 10;
@@ -191,7 +179,7 @@
             this.pnlHelpSub.Controls.Add(this.btnManualA);
             this.pnlHelpSub.Controls.Add(this.btnGoogle);
             this.pnlHelpSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHelpSub.Location = new System.Drawing.Point(0, 520);
+            this.pnlHelpSub.Location = new System.Drawing.Point(0, 496);
             this.pnlHelpSub.Name = "pnlHelpSub";
             this.pnlHelpSub.Size = new System.Drawing.Size(201, 77);
             this.pnlHelpSub.TabIndex = 9;
@@ -233,7 +221,7 @@
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.Color.MintCream;
-            this.btnHelp.Location = new System.Drawing.Point(0, 486);
+            this.btnHelp.Location = new System.Drawing.Point(0, 462);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(201, 34);
             this.btnHelp.TabIndex = 8;
@@ -246,7 +234,7 @@
             this.pnlMembersSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.pnlMembersSub.Controls.Add(this.btnNewMem);
             this.pnlMembersSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMembersSub.Location = new System.Drawing.Point(0, 445);
+            this.pnlMembersSub.Location = new System.Drawing.Point(0, 421);
             this.pnlMembersSub.Name = "pnlMembersSub";
             this.pnlMembersSub.Size = new System.Drawing.Size(201, 41);
             this.pnlMembersSub.TabIndex = 7;
@@ -273,7 +261,7 @@
             this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.Color.MintCream;
-            this.btnMembers.Location = new System.Drawing.Point(0, 411);
+            this.btnMembers.Location = new System.Drawing.Point(0, 387);
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(201, 34);
             this.btnMembers.TabIndex = 6;
@@ -287,7 +275,7 @@
             this.pnlProjectsSub.Controls.Add(this.button8);
             this.pnlProjectsSub.Controls.Add(this.btnNewProj);
             this.pnlProjectsSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProjectsSub.Location = new System.Drawing.Point(0, 342);
+            this.pnlProjectsSub.Location = new System.Drawing.Point(0, 318);
             this.pnlProjectsSub.Name = "pnlProjectsSub";
             this.pnlProjectsSub.Size = new System.Drawing.Size(201, 69);
             this.pnlProjectsSub.TabIndex = 5;
@@ -328,7 +316,7 @@
             this.btnProjects.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProjects.ForeColor = System.Drawing.Color.MintCream;
-            this.btnProjects.Location = new System.Drawing.Point(0, 308);
+            this.btnProjects.Location = new System.Drawing.Point(0, 284);
             this.btnProjects.Name = "btnProjects";
             this.btnProjects.Size = new System.Drawing.Size(201, 34);
             this.btnProjects.TabIndex = 4;
@@ -339,44 +327,43 @@
             // pnlDiagramsSub
             // 
             this.pnlDiagramsSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlDiagramsSub.Controls.Add(this.btnLight);
-            this.pnlDiagramsSub.Controls.Add(this.btnDark);
+            this.pnlDiagramsSub.Controls.Add(this.button4);
             this.pnlDiagramsSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDiagramsSub.Location = new System.Drawing.Point(0, 240);
             this.pnlDiagramsSub.Name = "pnlDiagramsSub";
-            this.pnlDiagramsSub.Size = new System.Drawing.Size(201, 68);
+            this.pnlDiagramsSub.Size = new System.Drawing.Size(201, 44);
             this.pnlDiagramsSub.TabIndex = 3;
             // 
-            // btnDark
+            // button4
             // 
-            this.btnDark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnDark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDark.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnDark.Location = new System.Drawing.Point(4, 8);
-            this.btnDark.Name = "btnDark";
-            this.btnDark.Size = new System.Drawing.Size(186, 24);
-            this.btnDark.TabIndex = 0;
-            this.btnDark.Text = "Dark Mode";
-            this.btnDark.UseVisualStyleBackColor = false;
-            this.btnDark.Click += new System.EventHandler(this.button4_Click);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button4.Location = new System.Drawing.Point(4, 8);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(186, 24);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "D1";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btnTheme
+            // btnDiagrams
             // 
-            this.btnTheme.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTheme.BackColor = System.Drawing.Color.Black;
-            this.btnTheme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnTheme.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTheme.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTheme.ForeColor = System.Drawing.Color.MintCream;
-            this.btnTheme.Location = new System.Drawing.Point(0, 206);
-            this.btnTheme.Name = "btnTheme";
-            this.btnTheme.Size = new System.Drawing.Size(201, 34);
-            this.btnTheme.TabIndex = 2;
-            this.btnTheme.Text = "Theme";
-            this.btnTheme.UseVisualStyleBackColor = false;
-            this.btnTheme.Click += new System.EventHandler(this.btnDiagrams_Click);
+            this.btnDiagrams.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDiagrams.BackColor = System.Drawing.Color.Black;
+            this.btnDiagrams.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDiagrams.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDiagrams.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDiagrams.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiagrams.ForeColor = System.Drawing.Color.MintCream;
+            this.btnDiagrams.Location = new System.Drawing.Point(0, 206);
+            this.btnDiagrams.Name = "btnDiagrams";
+            this.btnDiagrams.Size = new System.Drawing.Size(201, 34);
+            this.btnDiagrams.TabIndex = 2;
+            this.btnDiagrams.Text = "Documents and Templates";
+            this.btnDiagrams.UseVisualStyleBackColor = false;
+            this.btnDiagrams.Click += new System.EventHandler(this.btnDiagrams_Click);
             // 
             // pnlPhasesSub
             // 
@@ -567,26 +554,11 @@
             // 
             this.pnlTasks.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlTasks.Controls.Add(this.button14);
-            this.pnlTasks.Controls.Add(this.pnlRemoved);
-            this.pnlTasks.Controls.Add(this.pnlCompleted);
-            this.pnlTasks.Controls.Add(this.pnlProgress);
-            this.pnlTasks.Controls.Add(this.button13);
-            this.pnlTasks.Controls.Add(this.button12);
-            this.pnlTasks.Controls.Add(this.button11);
-            this.pnlTasks.Controls.Add(this.button10);
-            this.pnlTasks.Controls.Add(this.btnBackward);
-            this.pnlTasks.Controls.Add(this.btnForward);
-            this.pnlTasks.Controls.Add(this.button7);
-            this.pnlTasks.Controls.Add(this.button3);
-            this.pnlTasks.Controls.Add(this.button2);
-            this.pnlTasks.Controls.Add(this.button6);
-            this.pnlTasks.Controls.Add(this.button5);
             this.pnlTasks.Controls.Add(this.label4);
             this.pnlTasks.Controls.Add(this.label3);
             this.pnlTasks.Controls.Add(this.label2);
             this.pnlTasks.Controls.Add(this.label1);
             this.pnlTasks.Controls.Add(this.pnlBacklog);
-            this.pnlTasks.Controls.Add(this.button1);
             this.pnlTasks.Controls.Add(this.lblTasksHeading);
             this.pnlTasks.Location = new System.Drawing.Point(17, 19);
             this.pnlTasks.Name = "pnlTasks";
@@ -609,149 +581,23 @@
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
-            // pnlRemoved
-            // 
-            this.pnlRemoved.Location = new System.Drawing.Point(672, 79);
-            this.pnlRemoved.Name = "pnlRemoved";
-            this.pnlRemoved.Size = new System.Drawing.Size(134, 468);
-            this.pnlRemoved.TabIndex = 5;
-            // 
-            // pnlCompleted
-            // 
-            this.pnlCompleted.Location = new System.Drawing.Point(446, 79);
-            this.pnlCompleted.Name = "pnlCompleted";
-            this.pnlCompleted.Size = new System.Drawing.Size(134, 468);
-            this.pnlCompleted.TabIndex = 4;
-            // 
-            // pnlProgress
-            // 
-            this.pnlProgress.Location = new System.Drawing.Point(226, 79);
-            this.pnlProgress.Name = "pnlProgress";
-            this.pnlProgress.Size = new System.Drawing.Size(134, 468);
-            this.pnlProgress.TabIndex = 3;
-            // 
-            // button13
-            // 
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button13.Location = new System.Drawing.Point(600, 329);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(45, 45);
-            this.button13.TabIndex = 19;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button12.Location = new System.Drawing.Point(379, 331);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(45, 45);
-            this.button12.TabIndex = 18;
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button11.Location = new System.Drawing.Point(600, 254);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(45, 45);
-            this.button11.TabIndex = 17;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button10.Location = new System.Drawing.Point(380, 254);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(45, 45);
-            this.button10.TabIndex = 16;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // btnBackward
-            // 
-            this.btnBackward.Image = ((System.Drawing.Image)(resources.GetObject("btnBackward.Image")));
-            this.btnBackward.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnBackward.Location = new System.Drawing.Point(160, 333);
-            this.btnBackward.Name = "btnBackward";
-            this.btnBackward.Size = new System.Drawing.Size(45, 45);
-            this.btnBackward.TabIndex = 15;
-            this.btnBackward.UseVisualStyleBackColor = true;
-            // 
-            // btnForward
-            // 
-            this.btnForward.Image = ((System.Drawing.Image)(resources.GetObject("btnForward.Image")));
-            this.btnForward.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnForward.Location = new System.Drawing.Point(159, 254);
-            this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(45, 45);
-            this.btnForward.TabIndex = 14;
-            this.btnForward.UseVisualStyleBackColor = true;
-            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.SystemColors.Desktop;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button7.Location = new System.Drawing.Point(643, 76);
+            this.button7.Location = new System.Drawing.Point(628, 1);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(13, 466);
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button3.Location = new System.Drawing.Point(587, 76);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(13, 469);
-            this.button3.TabIndex = 12;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button2.Location = new System.Drawing.Point(426, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(13, 466);
-            this.button2.TabIndex = 11;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button6.Location = new System.Drawing.Point(365, 79);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(13, 466);
-            this.button6.TabIndex = 10;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button5.Location = new System.Drawing.Point(206, 78);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(12, 469);
-            this.button5.TabIndex = 9;
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Silver;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(687, 51);
+            this.label4.Location = new System.Drawing.Point(672, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 24);
             this.label4.TabIndex = 6;
@@ -784,7 +630,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 52);
+            this.label1.Location = new System.Drawing.Point(43, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 24);
             this.label1.TabIndex = 3;
@@ -792,10 +638,13 @@
             // 
             // pnlBacklog
             // 
+            this.pnlBacklog.Controls.Add(this.button2);
+            this.pnlBacklog.Controls.Add(this.button7);
+            this.pnlBacklog.Controls.Add(this.button1);
             this.pnlBacklog.Controls.Add(this.btnTask1);
             this.pnlBacklog.Location = new System.Drawing.Point(5, 79);
             this.pnlBacklog.Name = "pnlBacklog";
-            this.pnlBacklog.Size = new System.Drawing.Size(134, 468);
+            this.pnlBacklog.Size = new System.Drawing.Size(788, 468);
             this.pnlBacklog.TabIndex = 2;
             // 
             // btnTask1
@@ -805,30 +654,19 @@
             this.btnTask1.ContextMenuStrip = this.ctmsExecution;
             this.btnTask1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTask1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTask1.Location = new System.Drawing.Point(4, 16);
+            this.btnTask1.Location = new System.Drawing.Point(18, 13);
             this.btnTask1.Name = "btnTask1";
             this.btnTask1.Size = new System.Drawing.Size(127, 69);
             this.btnTask1.TabIndex = 4;
             this.btnTask1.Text = "Execution";
             this.btnTask1.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(145, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(11, 469);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // lblTasksHeading
             // 
             this.lblTasksHeading.AutoSize = true;
             this.lblTasksHeading.BackColor = System.Drawing.Color.Silver;
             this.lblTasksHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTasksHeading.Location = new System.Drawing.Point(303, 13);
+            this.lblTasksHeading.Location = new System.Drawing.Point(248, 13);
             this.lblTasksHeading.Name = "lblTasksHeading";
             this.lblTasksHeading.Size = new System.Drawing.Size(318, 24);
             this.lblTasksHeading.TabIndex = 0;
@@ -871,16 +709,6 @@
             this.pnlChildForm5.Size = new System.Drawing.Size(865, 648);
             this.pnlChildForm5.TabIndex = 4;
             this.pnlChildForm5.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TechGenics.Properties.Resources.VID_20201002_WA0011;
-            this.pictureBox1.Location = new System.Drawing.Point(173, 111);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(511, 378);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pnlHide
             // 
@@ -1049,18 +877,54 @@
             this.toolStripMenuItem6.Size = new System.Drawing.Size(169, 22);
             this.toolStripMenuItem6.Text = "Open in dual view";
             // 
-            // btnLight
+            // button1
             // 
-            this.btnLight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnLight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLight.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnLight.Location = new System.Drawing.Point(4, 37);
-            this.btnLight.Name = "btnLight";
-            this.btnLight.Size = new System.Drawing.Size(186, 24);
-            this.btnLight.TabIndex = 1;
-            this.btnLight.Text = "Light Mode";
-            this.btnLight.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button1.Location = new System.Drawing.Point(392, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(13, 466);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button2.Location = new System.Drawing.Point(164, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(13, 466);
+            this.button2.TabIndex = 15;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSettings.BackColor = System.Drawing.Color.Black;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSettings.Location = new System.Drawing.Point(0, 641);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(201, 34);
+            this.btnSettings.TabIndex = 12;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TechGenics.Properties.Resources.VID_20201002_WA0011;
+            this.pictureBox1.Location = new System.Drawing.Point(173, 111);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(511, 378);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmMainAdmin
             // 
@@ -1101,9 +965,9 @@
             this.pnlBacklog.ResumeLayout(false);
             this.pnlChildForm2.ResumeLayout(false);
             this.pnlChildForm3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHide.ResumeLayout(false);
             this.ctmsCloseOut.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1119,8 +983,8 @@
         private System.Windows.Forms.Button btnInitiation;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.Panel pnlDiagramsSub;
-        private System.Windows.Forms.Button btnDark;
-        private System.Windows.Forms.Button btnTheme;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDiagrams;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMembers;
@@ -1166,27 +1030,15 @@
         private System.Windows.Forms.Panel pnlTasks;
         private System.Windows.Forms.Label lblTasksHeading;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Panel pnlRemoved;
-        private System.Windows.Forms.Panel pnlCompleted;
-        private System.Windows.Forms.Panel pnlProgress;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button btnBackward;
-        private System.Windows.Forms.Button btnForward;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlBacklog;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTask1;
-        private System.Windows.Forms.Button btnLight;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
