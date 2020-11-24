@@ -31,6 +31,8 @@ namespace TechGenics
 
         //User model
         List<User> _users = new List<User>();
+        //Admin model
+        List<Admin> _admins = new List<Admin>();
         #endregion
 
         /// <summary>
@@ -252,32 +254,61 @@ namespace TechGenics
         {
             try
             {
+                bool loginFailed = false;
+
                 //Finds entries in list where username = txtUsername.Text
                 DataAccess db = new DataAccess();
                 _users = db.GetUser(txtUsername.Text);
 
-                //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a pain to work with
-                DataSet ds = new DataSet();
-                ds = ListToDataSet.ToDataSet(_users);
+                //Finds entries in list where adminname = txtUsername.Text
+                _admins = db.GetAdmin(txtUsername.Text);
 
-                if (ds.Tables[0].Rows.Count > 0)
+                //Converts list to dataset using the ListToDataSet Class and ToDataSet method inside because lists<T> are a pain to work with
+                DataSet dsUser = new DataSet();
+                dsUser = ListToDataSet.ToDataSet(_users);
+
+                DataSet dsAdmin = new DataSet();
+                dsAdmin = ListToDataSet.ToDataSet(_admins);
+
+                if (dsUser.Tables[0].Rows.Count > 0)
                 {
                     //Checks if user name and password combination exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
-                    if (ds.Tables[0].Rows[0]["UserName"].ToString() != txtUsername.Text || ds.Tables[0].Rows[0]["UserPassword"].ToString() != txtPassword.Text)
+                    if (dsUser.Tables[0].Rows[0]["UserName"].ToString() != txtUsername.Text || dsAdmin.Tables[0].Rows[0]["UserPassword"].ToString() != txtPassword.Text)
                     {
-                        MessageBox.Show("The username or password is incorrect.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        loginFailed = true;
                     }
-                    else if (ds.Tables[0].Rows[0]["UserName"].ToString() == txtUsername.Text && ds.Tables[0].Rows[0]["UserPassword"].ToString() == txtPassword.Text)
+                    else if (dsUser.Tables[0].Rows[0]["UserName"].ToString() == txtUsername.Text && dsAdmin.Tables[0].Rows[0]["UserPassword"].ToString() == txtPassword.Text)
                     {
                         //MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         SettingsConstructor settings = new SettingsConstructor();
                         settings.CurrentUser = txtUsername.Text;
+                        settings.IsAdmin = false;
+                        loginFailed = false;
                         this.Hide();
                         this.Enabled = false;
                         loadScreen.Show();
                     }
                 }
-                else 
+                else if (dsAdmin.Tables[0].Rows.Count > 0)
+                {
+                    //Checks if user name and password combination exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
+                    if (dsAdmin.Tables[0].Rows[0]["AdminName"].ToString() != txtUsername.Text || dsAdmin.Tables[0].Rows[0]["AdminPassword"].ToString() != txtPassword.Text)
+                    {
+                        loginFailed = true;
+                    }
+                    else if (dsAdmin.Tables[0].Rows[0]["AdminName"].ToString() == txtUsername.Text && dsAdmin.Tables[0].Rows[0]["AdminPassword"].ToString() == txtPassword.Text)
+                    {
+                        //MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SettingsConstructor settings = new SettingsConstructor();
+                        settings.CurrentUser = txtUsername.Text;
+                        settings.IsAdmin = true;
+                        loginFailed = false;
+                        this.Hide();
+                        this.Enabled = false;
+                        loadScreen.Show();
+                    }
+                }
+                else if(loginFailed == true) 
                 {
                     MessageBox.Show("The username or password is incorrect.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

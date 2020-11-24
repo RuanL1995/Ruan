@@ -18,6 +18,8 @@ namespace TechGenics
         public static bool useManualConString = false;
         //CurrentUser
         public static string currentUser = String.Empty;
+        //IsAdmin
+        public static bool isAdmin = false;
 
 
         #endregion
@@ -41,6 +43,13 @@ namespace TechGenics
         {
             get { return currentUser; }   // get method
             set { currentUser = value; }  // set method
+        }
+
+        //IsAdmin
+        public bool IsAdmin // property
+        {
+            get { return isAdmin; }   // get method
+            set { isAdmin = value; }  // set method
         }
     }
 }

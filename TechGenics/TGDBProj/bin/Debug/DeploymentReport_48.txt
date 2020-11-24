@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The table [dbo].[tblAdmin] is being dropped and re-created since all non-computed columns within the table have been
+         redefined.
+
+** User actions
+     Drop
+       [dbo].[tblAdmin] (Table)
+     Create
+       [dbo].[tblAdmin] (Table)
+
+** Supporting actions
+
+The table [dbo].[tblAdmin] is being dropped and re-created since all non-computed columns within the table have been redefined.
+

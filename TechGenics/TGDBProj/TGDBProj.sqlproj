@@ -68,11 +68,11 @@
     <Folder Include="dbo\Stored Procedures\ProjectPhase" />
     <Folder Include="dbo\Stored Procedures\UserProject" />
     <Folder Include="dbo\Stored Procedures\Task" />
+    <Folder Include="dbo\Stored Procedures\Admin" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\tblUser.sql" />
     <Build Include="dbo\Tables\tblPhase.sql" />
-    <Build Include="dbo\Tables\tblProject.sql" />
     <Build Include="dbo\Tables\tblProjectPhase.sql" />
     <Build Include="dbo\Tables\tblUserProject.sql" />
     <Build Include="dbo\Stored Procedures\Phase\spPhaseC1.sql" />
@@ -95,6 +95,8 @@
     <Build Include="dbo\Stored Procedures\Task\spTaskR1.sql" />
     <Build Include="dbo\Stored Procedures\Task\spTaskC1.sql" />
     <Build Include="dbo\Tables\tblAdmin_1.sql" />
+    <Build Include="dbo\Tables\tblProject.sql" />
+    <Build Include="dbo\Stored Procedures\Admin\spAdminR1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />

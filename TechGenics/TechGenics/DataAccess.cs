@@ -58,6 +58,52 @@ namespace TechGenics
         #endregion
 
         /// <summary>
+        /// Data Access for tblAdmin
+        /// </summary>
+        #region tblAdmin
+        /// <summary>
+        /// All data read operations for tblAdmin
+        /// </summary>
+        #region Data Read
+        /// <summary>
+        /// Gets the user filtered by txtUserName in order to login
+        /// </summary>
+        public List<Admin> GetAdmin(string adminName)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                return connection.Query<Admin>("dbo.spAdminR1 @AdminName", new { AdminName = adminName }).ToList();
+            }
+        }
+        #endregion
+        /// <summary>
+        /// All data write operations for tblAdmin
+        /// </summary>
+        #region Data Write
+        /// <summary>
+        /// Inserts a new admin when btnRegister is clicked
+        /// </summary>
+        internal void InsertAdmin(string userName, string userPassword, string firstName, string surName, string email)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                User newUser = new User();
+                newUser.UserName = userName;
+                newUser.UserPassword = userPassword;
+                newUser.FirstName = firstName;
+                newUser.SurName = surName;
+                newUser.Email = email;
+
+                List<User> user = new List<User>();
+                user.Add(newUser);
+
+                connection.Execute("dbo.spUserC1 @UserName, @UserPassword, @FirstName, @SurName, @Email", user);
+            }
+        }
+        #endregion
+        #endregion
+
+        /// <summary>
         /// Data Access for tblPhase
         /// </summary>
         #region tblPhase
