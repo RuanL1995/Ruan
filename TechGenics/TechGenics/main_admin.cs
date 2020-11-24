@@ -310,11 +310,11 @@ namespace TechGenics
 
             SqlConnection sqlConnection;
 
-            dbConnection = @"Data Source=WIN-50GP30FGO75;Initial Catalog=Demodb;User ID=sa;Password=demol23";
+            dbConnection = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True";
             sqlConnection = new SqlConnection(dbConnection);
-            //sqlConnection.Open();
-            //MessageBox.Show("Connection Open!");
-            //sqlConnection.Close();
+            sqlConnection.Open();
+            MessageBox.Show("Connection Open!");
+            sqlConnection.Close();
 
 
 
@@ -742,11 +742,23 @@ namespace TechGenics
 
         private void button14_Click(object sender, EventArgs e)
         {
+            pnlNewTask.Visible = true;
+            pnlNewTask.BringToFront();
 
+            MessageBox.Show("its working duhh");
+
+            pnlNewTask.Visible = true;
+            pnlNewTask.BringToFront();
+
+            pnlTasks.Visible = false;
+            pnlTasks.SendToBack();
+
+            
         }
 
         private void btnNewProj_Click(object sender, EventArgs e)
         {
+            
 
             int XPos = -1;
             int YPos = -1;
@@ -756,8 +768,9 @@ namespace TechGenics
 
             if(inputB != null)
             {
-                pnlTasks.Visible = true;
-                pnlTasks.BringToFront();
+                openChildForm(new frmNewProject());
+                //pnlTasks.Visible = true;
+                //pnlTasks.BringToFront();
 
             }
 
@@ -789,6 +802,20 @@ namespace TechGenics
         private void pnlChildForm_Paint(object sender, PaintEventArgs e)
         {
             ControlExtension.Draggable(btnTask1, true);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            pnlNewTask.Visible = false;
+            pnlNewTask.SendToBack();
+
+            pnlTasks.Visible = true;
+            pnlTasks.BringToFront();
+        }
+
+        private void btnTask1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("i aint never seen two pretty best friends its one gotta be ugly");
         }
     }
 }

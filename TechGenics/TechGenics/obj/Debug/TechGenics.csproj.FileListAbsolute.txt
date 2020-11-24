@@ -186,3 +186,4 @@ C:\Users\pc\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csp
 C:\Users\pc\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe
 C:\Users\pc\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
 C:\Users\pc\Documents\GitHub\Ruan\TechGenics\TechGenics\bin\Debug\Control.Draggable.dll
+C:\Users\pc\Documents\GitHub\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmNewProject.resources
