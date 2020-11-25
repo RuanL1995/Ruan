@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnMode = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -38,6 +37,7 @@
             this.gradient1 = new TechGenics.gradient();
             this.btnSettingsLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.btnLExit = new System.Windows.Forms.Button();
             this.pboPassIcon = new System.Windows.Forms.PictureBox();
             this.pboUserIcon = new System.Windows.Forms.PictureBox();
             this.pboLogo = new System.Windows.Forms.PictureBox();
@@ -49,6 +49,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlSignUp = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnSExit = new System.Windows.Forms.Button();
             this.chckBoxAdmin = new System.Windows.Forms.CheckBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtSPass = new System.Windows.Forms.TextBox();
@@ -65,6 +67,9 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.lblsExit = new System.Windows.Forms.Label();
+            this.lblLExit = new System.Windows.Forms.Label();
+            this.lblBLog = new System.Windows.Forms.Label();
             this.gradient1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
@@ -73,22 +78,6 @@
             this.pnlSignUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnMode
-            // 
-            this.btnMode.BackColor = System.Drawing.Color.Black;
-            this.btnMode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMode.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnMode.Location = new System.Drawing.Point(835, 24);
-            this.btnMode.Name = "btnMode";
-            this.btnMode.Size = new System.Drawing.Size(160, 31);
-            this.btnMode.TabIndex = 15;
-            this.btnMode.Text = "Dark Mode";
-            this.btnMode.UseVisualStyleBackColor = false;
-            this.btnMode.Visible = false;
-            this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
             // 
             // timer1
             // 
@@ -114,7 +103,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(879, 158);
+            this.label3.Location = new System.Drawing.Point(1070, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 16;
@@ -128,11 +117,12 @@
             this.gradient1.colourBot = System.Drawing.Color.Aquamarine;
             this.gradient1.colourTop = System.Drawing.Color.DarkSlateGray;
             this.gradient1.Controls.Add(this.btnSettingsLogin);
+            this.gradient1.Controls.Add(this.label3);
             this.gradient1.Controls.Add(this.pnlLogin);
             this.gradient1.Controls.Add(this.pnlSignUp);
-            this.gradient1.Location = new System.Drawing.Point(-6, 24);
+            this.gradient1.Location = new System.Drawing.Point(-6, 1);
             this.gradient1.Name = "gradient1";
-            this.gradient1.Size = new System.Drawing.Size(835, 699);
+            this.gradient1.Size = new System.Drawing.Size(1157, 722);
             this.gradient1.TabIndex = 17;
             // 
             // btnSettingsLogin
@@ -140,19 +130,21 @@
             this.btnSettingsLogin.BackColor = System.Drawing.Color.Black;
             this.btnSettingsLogin.BackgroundImage = global::TechGenics.Properties.Resources.Settings;
             this.btnSettingsLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSettingsLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettingsLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSettingsLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettingsLogin.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnSettingsLogin.Location = new System.Drawing.Point(10, 4);
+            this.btnSettingsLogin.Location = new System.Drawing.Point(1115, 4);
             this.btnSettingsLogin.Name = "btnSettingsLogin";
             this.btnSettingsLogin.Size = new System.Drawing.Size(39, 38);
-            this.btnSettingsLogin.TabIndex = 16;
+            this.btnSettingsLogin.TabIndex = 13;
             this.btnSettingsLogin.UseVisualStyleBackColor = false;
             this.btnSettingsLogin.Click += new System.EventHandler(this.btnSettingsLogin_Click);
             // 
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.lblLExit);
+            this.pnlLogin.Controls.Add(this.btnLExit);
             this.pnlLogin.Controls.Add(this.pboPassIcon);
             this.pnlLogin.Controls.Add(this.pboUserIcon);
             this.pnlLogin.Controls.Add(this.pboLogo);
@@ -163,10 +155,26 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(761, 54);
+            this.pnlLogin.Location = new System.Drawing.Point(34, 84);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
+            // 
+            // btnLExit
+            // 
+            this.btnLExit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLExit.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnLExit.Location = new System.Drawing.Point(345, 3);
+            this.btnLExit.Name = "btnLExit";
+            this.btnLExit.Size = new System.Drawing.Size(31, 30);
+            this.btnLExit.TabIndex = 26;
+            this.btnLExit.Text = "X";
+            this.btnLExit.UseVisualStyleBackColor = false;
+            this.btnLExit.Click += new System.EventHandler(this.btnLExit_Click);
+            this.btnLExit.MouseLeave += new System.EventHandler(this.btnLExit_MouseLeave);
+            this.btnLExit.MouseHover += new System.EventHandler(this.btnLExit_MouseHover);
             // 
             // pboPassIcon
             // 
@@ -210,7 +218,7 @@
             this.txtPassword.Location = new System.Drawing.Point(122, 273);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(115, 19);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.Tag = "11";
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
@@ -226,7 +234,7 @@
             this.lblSignUp.Location = new System.Drawing.Point(155, 435);
             this.lblSignUp.Name = "lblSignUp";
             this.lblSignUp.Size = new System.Drawing.Size(67, 18);
-            this.lblSignUp.TabIndex = 10;
+            this.lblSignUp.TabIndex = 4;
             this.lblSignUp.Text = "Sign Up";
             this.lblSignUp.Click += new System.EventHandler(this.lblSignUp_Click);
             // 
@@ -239,7 +247,7 @@
             this.txtUsername.Location = new System.Drawing.Point(121, 226);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(115, 19);
-            this.txtUsername.TabIndex = 15;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.Tag = "10";
             this.txtUsername.Text = "Username";
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
@@ -255,7 +263,7 @@
             this.btnLogin.Location = new System.Drawing.Point(112, 383);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(160, 31);
-            this.btnLogin.TabIndex = 8;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -268,7 +276,7 @@
             this.lblForgotPassword.Location = new System.Drawing.Point(124, 342);
             this.lblForgotPassword.Name = "lblForgotPassword";
             this.lblForgotPassword.Size = new System.Drawing.Size(138, 18);
-            this.lblForgotPassword.TabIndex = 9;
+            this.lblForgotPassword.TabIndex = 2;
             this.lblForgotPassword.Text = "Forgot Password";
             this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
             // 
@@ -295,6 +303,10 @@
             // pnlSignUp
             // 
             this.pnlSignUp.BackColor = System.Drawing.Color.Black;
+            this.pnlSignUp.Controls.Add(this.lblBLog);
+            this.pnlSignUp.Controls.Add(this.lblsExit);
+            this.pnlSignUp.Controls.Add(this.btnBack);
+            this.pnlSignUp.Controls.Add(this.btnSExit);
             this.pnlSignUp.Controls.Add(this.chckBoxAdmin);
             this.pnlSignUp.Controls.Add(this.lblTitle);
             this.pnlSignUp.Controls.Add(this.txtSPass);
@@ -311,11 +323,43 @@
             this.pnlSignUp.Controls.Add(this.txtFirst);
             this.pnlSignUp.Controls.Add(this.label5);
             this.pnlSignUp.Controls.Add(this.btnRegister);
-            this.pnlSignUp.Location = new System.Drawing.Point(376, 98);
+            this.pnlSignUp.Location = new System.Drawing.Point(434, 84);
             this.pnlSignUp.Name = "pnlSignUp";
             this.pnlSignUp.Size = new System.Drawing.Size(379, 549);
             this.pnlSignUp.TabIndex = 12;
             this.pnlSignUp.Visible = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBack.Font = new System.Drawing.Font("Wingdings 3", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnBack.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnBack.Location = new System.Drawing.Point(3, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(31, 30);
+            this.btnBack.TabIndex = 26;
+            this.btnBack.Text = "";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
+            this.btnBack.MouseHover += new System.EventHandler(this.btnBack_MouseHover);
+            // 
+            // btnSExit
+            // 
+            this.btnSExit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSExit.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnSExit.Location = new System.Drawing.Point(348, 0);
+            this.btnSExit.Name = "btnSExit";
+            this.btnSExit.Size = new System.Drawing.Size(31, 30);
+            this.btnSExit.TabIndex = 25;
+            this.btnSExit.Text = "X";
+            this.btnSExit.UseVisualStyleBackColor = false;
+            this.btnSExit.Click += new System.EventHandler(this.btnSExit_Click);
+            this.btnSExit.MouseLeave += new System.EventHandler(this.btnSExit_MouseLeave);
+            this.btnSExit.MouseHover += new System.EventHandler(this.btnSExit_MouseHover);
             // 
             // chckBoxAdmin
             // 
@@ -324,7 +368,7 @@
             this.chckBoxAdmin.Location = new System.Drawing.Point(99, 468);
             this.chckBoxAdmin.Name = "chckBoxAdmin";
             this.chckBoxAdmin.Size = new System.Drawing.Size(110, 17);
-            this.chckBoxAdmin.TabIndex = 25;
+            this.chckBoxAdmin.TabIndex = 12;
             this.chckBoxAdmin.Text = "Register as admin";
             this.chckBoxAdmin.UseVisualStyleBackColor = true;
             this.chckBoxAdmin.CheckedChanged += new System.EventHandler(this.chckBoxAdmin_CheckedChanged);
@@ -349,7 +393,7 @@
             this.txtSPass.Location = new System.Drawing.Point(24, 310);
             this.txtSPass.Name = "txtSPass";
             this.txtSPass.Size = new System.Drawing.Size(139, 19);
-            this.txtSPass.TabIndex = 23;
+            this.txtSPass.TabIndex = 9;
             this.txtSPass.Text = "Password";
             this.txtSPass.Click += new System.EventHandler(this.txtSPass_Click);
             this.txtSPass.Leave += new System.EventHandler(this.txtSPass_Leave);
@@ -385,7 +429,7 @@
             this.txtSCPass.Location = new System.Drawing.Point(22, 368);
             this.txtSCPass.Name = "txtSCPass";
             this.txtSCPass.Size = new System.Drawing.Size(139, 19);
-            this.txtSCPass.TabIndex = 20;
+            this.txtSCPass.TabIndex = 10;
             this.txtSCPass.Text = "Confirm Password";
             this.txtSCPass.Click += new System.EventHandler(this.txtSCPass_Click);
             this.txtSCPass.Leave += new System.EventHandler(this.txtSCPass_Leave);
@@ -411,7 +455,7 @@
             this.txtSUser.Location = new System.Drawing.Point(25, 249);
             this.txtSUser.Name = "txtSUser";
             this.txtSUser.Size = new System.Drawing.Size(115, 19);
-            this.txtSUser.TabIndex = 18;
+            this.txtSUser.TabIndex = 7;
             this.txtSUser.Text = "Username";
             this.txtSUser.Click += new System.EventHandler(this.txtSUser_Click);
             this.txtSUser.Leave += new System.EventHandler(this.txtSUser_Leave);
@@ -435,7 +479,7 @@
             this.txtEmail.Location = new System.Drawing.Point(196, 249);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(115, 19);
-            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabIndex = 8;
             this.txtEmail.Text = "Email";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
@@ -459,7 +503,7 @@
             this.txtLast.Location = new System.Drawing.Point(199, 179);
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(115, 19);
-            this.txtLast.TabIndex = 14;
+            this.txtLast.TabIndex = 6;
             this.txtLast.Text = "Surname";
             this.txtLast.Click += new System.EventHandler(this.txtLast_Click);
             this.txtLast.Leave += new System.EventHandler(this.txtLast_Leave);
@@ -483,7 +527,7 @@
             this.txtFirst.Location = new System.Drawing.Point(28, 179);
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(115, 19);
-            this.txtFirst.TabIndex = 12;
+            this.txtFirst.TabIndex = 5;
             this.txtFirst.Text = "First Name";
             this.txtFirst.Click += new System.EventHandler(this.txtFirst_Click);
             this.txtFirst.Leave += new System.EventHandler(this.txtFirst_Leave);
@@ -505,13 +549,49 @@
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
-            this.btnRegister.Location = new System.Drawing.Point(99, 431);
+            this.btnRegister.Location = new System.Drawing.Point(99, 422);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(160, 31);
-            this.btnRegister.TabIndex = 8;
+            this.btnRegister.TabIndex = 11;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // lblsExit
+            // 
+            this.lblsExit.AutoSize = true;
+            this.lblsExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsExit.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.lblsExit.Location = new System.Drawing.Point(345, 33);
+            this.lblsExit.Name = "lblsExit";
+            this.lblsExit.Size = new System.Drawing.Size(29, 16);
+            this.lblsExit.TabIndex = 27;
+            this.lblsExit.Text = "Exit";
+            this.lblsExit.Visible = false;
+            // 
+            // lblLExit
+            // 
+            this.lblLExit.AutoSize = true;
+            this.lblLExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLExit.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.lblLExit.Location = new System.Drawing.Point(342, 36);
+            this.lblLExit.Name = "lblLExit";
+            this.lblLExit.Size = new System.Drawing.Size(29, 16);
+            this.lblLExit.TabIndex = 28;
+            this.lblLExit.Text = "Exit";
+            this.lblLExit.Visible = false;
+            // 
+            // lblBLog
+            // 
+            this.lblBLog.AutoSize = true;
+            this.lblBLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBLog.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.lblBLog.Location = new System.Drawing.Point(5, 33);
+            this.lblBLog.Name = "lblBLog";
+            this.lblBLog.Size = new System.Drawing.Size(89, 16);
+            this.lblBLog.TabIndex = 29;
+            this.lblBLog.Text = "Back to Login";
+            this.lblBLog.Visible = false;
             // 
             // login_signup
             // 
@@ -520,8 +600,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1151, 725);
             this.Controls.Add(this.gradient1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnMode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login_signup";
             this.ShowIcon = false;
@@ -529,6 +607,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.login_signup_Load);
             this.gradient1.ResumeLayout(false);
+            this.gradient1.PerformLayout();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).EndInit();
@@ -538,12 +617,10 @@
             this.pnlSignUp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogoSignUp)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnMode;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
@@ -579,6 +656,12 @@
         private gradient gradient1;
         private System.Windows.Forms.Button btnSettingsLogin;
         private System.Windows.Forms.CheckBox chckBoxAdmin;
+        private System.Windows.Forms.Button btnSExit;
+        private System.Windows.Forms.Button btnLExit;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblsExit;
+        private System.Windows.Forms.Label lblLExit;
+        private System.Windows.Forms.Label lblBLog;
     }
 }
 

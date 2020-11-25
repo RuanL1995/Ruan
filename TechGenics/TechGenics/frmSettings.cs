@@ -20,6 +20,8 @@ namespace TechGenics
             InitializeComponent();
         }
 
+        frmMainAdmin admin = new frmMainAdmin();
+
         private void radBtnManualConString_CheckedChanged(object sender, EventArgs e)
         {
             if (radBtnManualConString.Checked == true)
@@ -44,6 +46,18 @@ namespace TechGenics
                 SettingsConstructor settings = new SettingsConstructor();
                 settings.UseManualConString = false;
             }
+        }
+
+        private void btnPhases_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.SendToBack();
+            admin.Show();
         }
     }
 }

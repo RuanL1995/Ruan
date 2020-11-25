@@ -53,68 +53,7 @@ namespace TechGenics
         /// Mehtods used for general purpose
         /// </summary>
         #region General Methods
-
-        public void darkMode()
-        {
-            this.BackColor = Color.Black;
-
-            btnMode.BackColor = Color.Black;
-            btnMode.Text = "Dark Mode";
-
-            //login
-            pboUserIcon.Image = Properties.Resources.user2_dark;
-            pboPassIcon.Image = Properties.Resources.pass2_dark;
-
-            txtUsername.BackColor = Color.Black;
-            txtUsername.ForeColor = Color.White;
-            txtPassword.BackColor = Color.Black;
-            txtPassword.ForeColor = Color.White;
-
-            //sign up
-            txtFirst.BackColor = Color.Black;
-            txtFirst.ForeColor = Color.White;
-            txtLast.BackColor = Color.Black;
-            txtLast.ForeColor = Color.White;
-            txtEmail.BackColor = Color.Black;
-            txtEmail.ForeColor = Color.White;
-            txtSUser.BackColor = Color.Black;
-            txtSUser.ForeColor = Color.White;
-            txtSPass.BackColor = Color.Black;
-            txtSPass.ForeColor = Color.White;
-            txtSCPass.BackColor = Color.Black;
-            txtSCPass.ForeColor = Color.White;
-        }
-
-        public void lightMode()
-        {
-            this.BackColor = Color.DarkGray;
-
-            btnMode.BackColor = Color.DarkGray;
-            btnMode.Text = "Light Mode";
-
-            //login
-            pboUserIcon.Image = Properties.Resources.uLightmode;
-            pboPassIcon.Image = Properties.Resources.lightmode;
-
-            txtUsername.BackColor = Color.DarkGray;
-            txtUsername.ForeColor = Color.Black;
-            txtPassword.BackColor = Color.DarkGray;
-            txtPassword.ForeColor = Color.Black;
-
-            //sign up
-            txtFirst.BackColor = Color.DarkGray;
-            txtFirst.ForeColor = Color.Black;
-            txtLast.BackColor = Color.DarkGray;
-            txtLast.ForeColor = Color.Black;
-            txtEmail.BackColor = Color.DarkGray;
-            txtEmail.ForeColor = Color.Black;
-            txtSUser.BackColor = Color.DarkGray;
-            txtSUser.ForeColor = Color.Black;
-            txtSPass.BackColor = Color.DarkGray;
-            txtSPass.ForeColor = Color.Black;
-            txtSCPass.BackColor = Color.DarkGray;
-            txtSCPass.ForeColor = Color.Black;
-        }
+           
 
         //enter default text if textbox empty
         public void defaultText()
@@ -353,7 +292,7 @@ namespace TechGenics
 
 
                 ////send email
-                /* Random random = new Random();
+                Random random = new Random();
                  validationCode = random.Next(0, 1000).ToString();
 
                  using (MailMessage mail = new MailMessage())
@@ -387,7 +326,7 @@ namespace TechGenics
                      {
                          pnlLogin.Enabled = true;
                      }
-                 }*/
+                 }
 
                 //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
                 if (chckBoxAdmin.Checked == false)
@@ -483,19 +422,7 @@ namespace TechGenics
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnMode_Click(object sender, EventArgs e)
-        {
-            if (btnMode.BackColor == Color.DarkGray)
-            {
-                darkMode();
-
-            }
-            else if (btnMode.BackColor == Color.Black)
-            {
-
-                lightMode();
-            }
-        }
+        
 
         /// <summary>
         /// login form
@@ -777,6 +704,55 @@ namespace TechGenics
         private void chckBoxAdmin_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            pnlSignUp.Visible = false;
+            pnlSignUp.SendToBack();
+
+            pnlLogin.Visible = true;
+            pnlLogin.BringToFront();
+        }
+
+        private void btnSExit_MouseHover(object sender, EventArgs e)
+        {
+            lblsExit.Visible = true;
+        }
+
+        private void btnSExit_MouseLeave(object sender, EventArgs e)
+        {
+            lblsExit.Visible = false;
+        }
+
+        private void btnLExit_MouseHover(object sender, EventArgs e)
+        {
+            lblLExit.Visible = true;
+        }
+
+        private void btnLExit_MouseLeave(object sender, EventArgs e)
+        {
+            lblLExit.Visible = false;
+        }
+
+        private void btnBack_MouseHover(object sender, EventArgs e)
+        {
+            lblBLog.Visible = true;
+        }
+
+        private void btnBack_MouseLeave(object sender, EventArgs e)
+        {
+            lblBLog.Visible = false;
         }
     }
 }

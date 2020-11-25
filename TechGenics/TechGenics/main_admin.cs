@@ -363,16 +363,18 @@ namespace TechGenics
         /// Logout section
         /// </summary>
         #region Logout
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            
+            frmSettings frmSettings = new frmSettings();
+            frmSettings.ShowDialog();
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             login_signup login = new login_signup();
             login.Show();
             this.Dispose();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         #endregion
@@ -418,7 +420,7 @@ namespace TechGenics
             pnlSideMenu.Width = 0;
             btnExpand.Text = ">>";
             SettingsConstructor settings = new SettingsConstructor();
-            lblCurrentUser.Text = "Welcome " + settings.CurrentUser;
+           //lblCurrentUser.Text = "Welcome " + settings.CurrentUser;
             
         }
 
@@ -795,10 +797,9 @@ namespace TechGenics
             ControlExtension.Draggable(btnTask1, true);
         }
 
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            frmSettings frmSettings = new frmSettings();
-            frmSettings.ShowDialog();
+            Application.Exit();
         }
     }
 }
