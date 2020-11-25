@@ -59,5 +59,62 @@ namespace TechGenics
             this.SendToBack();
             admin.Show();
         }
+
+        private void btnThemeSave_Click(object sender, EventArgs e)
+        {
+            if(rgbDark.Checked)
+            {
+                
+                TechGenics.Properties.Settings.Default.Theme = "Dark";
+            }
+            if(rgbLight.Checked)
+            {
+                
+                TechGenics.Properties.Settings.Default.Theme = "Light";
+            }
+        }
+
+        
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(TechGenics.Properties.Settings.Default.Theme == "Dark")
+            {
+                this.BackColor = SystemColors.ActiveCaptionText;
+
+                lblSettings.BackColor = SystemColors.ActiveCaptionText;
+                tabPage1.BackColor = SystemColors.ActiveCaptionText;
+                tabPage2.BackColor = SystemColors.ActiveCaptionText;
+
+                btnPhases.BackColor = SystemColors.ActiveCaptionText;
+                pnlDiagramsSub.BackColor = SystemColors.ActiveCaptionText;
+                btnSaveSettings.BackColor = SystemColors.ActiveCaptionText;
+                btnMain.BackColor = SystemColors.ActiveCaptionText;
+                btnThemeSave.BackColor = SystemColors.ActiveCaptionText; 
+                btnTheme.BackColor = SystemColors.ActiveCaptionText;
+
+
+            }
+            if(TechGenics.Properties.Settings.Default.Theme == "Light")
+            {
+                this.BackColor = SystemColors.AppWorkspace;
+
+                lblSettings.BackColor = SystemColors.AppWorkspace;
+                tabPage1.BackColor = SystemColors.AppWorkspace;
+                tabPage2.BackColor = SystemColors.AppWorkspace;
+
+                btnPhases.BackColor = SystemColors.AppWorkspace;
+                pnlDiagramsSub.BackColor = SystemColors.AppWorkspace;
+                btnSaveSettings.BackColor = SystemColors.AppWorkspace;
+                btnMain.BackColor = SystemColors.AppWorkspace;
+                btnThemeSave.BackColor = SystemColors.AppWorkspace;
+                btnTheme.BackColor = SystemColors.AppWorkspace;
+
+            }
+        }
     }
 }

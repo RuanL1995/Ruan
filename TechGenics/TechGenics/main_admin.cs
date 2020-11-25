@@ -120,73 +120,8 @@ namespace TechGenics
             frmChild.Show();
         }
 
-        private void openChildForm2(Form frmChild)
-        {
-            if (frmActive != null)
-            {
-                frmActive.Close();
-            }
-
-            frmActive = frmChild;
-            frmChild.TopLevel = false;
-            frmChild.FormBorderStyle = FormBorderStyle.None;
-            frmChild.Dock = DockStyle.Fill;
-            pnlChildForm2.Controls.Add(frmChild);
-            pnlChildForm2.Tag = frmChild;
-            frmChild.BringToFront();
-            frmChild.Show();
-        }
-
-        private void openChildForm3(Form frmChild)
-        {
-            if (frmActive != null)
-            {
-                frmActive.Close();
-            }
-
-            frmActive = frmChild;
-            frmChild.TopLevel = false;
-            frmChild.FormBorderStyle = FormBorderStyle.None;
-            frmChild.Dock = DockStyle.Fill;
-            pnlChildForm3.Controls.Add(frmChild);
-            pnlChildForm3.Tag = frmChild;
-            frmChild.BringToFront();
-            frmChild.Show();
-        }
-
-        private void openChildForm4(Form frmChild)
-        {
-            if (frmActive != null)
-            {
-                frmActive.Close();
-            }
-
-            frmActive = frmChild;
-            frmChild.TopLevel = false;
-            frmChild.FormBorderStyle = FormBorderStyle.None;
-            frmChild.Dock = DockStyle.Fill;
-            pnlChildForm4.Controls.Add(frmChild);
-            pnlChildForm4.Tag = frmChild;
-            frmChild.BringToFront();
-            frmChild.Show();
-        }
-
-        private void openChildForm5(Form frmChild)
-        {
-            if (frmActive != null)
-            {
-                frmActive.Close();
-            }
-
-            frmActive = frmChild;
-            frmChild.TopLevel = false;
-            frmChild.FormBorderStyle = FormBorderStyle.None;
-            frmChild.Dock = DockStyle.Fill;
-            pnlChildForm5.Controls.Add(frmChild);
-            pnlChildForm5.Tag = frmChild;
-            frmChild.BringToFront();
-            frmChild.Show();
-        }
+        
+        
         #endregion
 
         /// <summary>
@@ -400,6 +335,8 @@ namespace TechGenics
                     
                 }
             }
+
+
         }
                 
         private void frmMainAdmin_Load(object sender, EventArgs e)
@@ -436,7 +373,7 @@ namespace TechGenics
         }
 
         
-        private void button4_Click(object sender, EventArgs e)
+        private void btnTemplate_Click(object sender, EventArgs e)
         {
             Docs docs = new Docs();
             openDocsFrom(docs);
@@ -465,7 +402,7 @@ namespace TechGenics
 
         private void btnPlanning_Click(object sender, EventArgs e)
         {
-            planning1 = true;
+            
         }
                 
         private void btnNewProj_Click(object sender, EventArgs e)
@@ -525,6 +462,83 @@ namespace TechGenics
                 pnlChildForm.Dock = DockStyle.Left;
                 pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
             }
+        }
+
+        private void btnLightMode_Click(object sender, EventArgs e)
+        {
+            lightMode();
+        }
+
+        public void lightMode()
+        {
+            lblTitle.BackColor = Color.DimGray;
+            pnlSideMenu.BackColor = Color.DimGray;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TechGenics.Properties.Settings.Default.Theme == "Light")
+            {
+                pnlSideMenu.BackColor = SystemColors.AppWorkspace;
+                btnInitiation.BackColor = SystemColors.AppWorkspace;
+                btnPlanning.BackColor = SystemColors.AppWorkspace;
+                btnExecution.BackColor = SystemColors.AppWorkspace;
+                btnCloseOut.BackColor = SystemColors.AppWorkspace;
+                btnTemplate.BackColor = SystemColors.AppWorkspace;
+                btnNewProj.BackColor = SystemColors.AppWorkspace;
+                btnNewMem.BackColor = SystemColors.AppWorkspace;
+                btnGoogle.BackColor = SystemColors.AppWorkspace;
+                btnManualA.BackColor = SystemColors.AppWorkspace;
+                btnHelp.BackColor = SystemColors.AppWorkspace;
+                btnFull.BackColor = SystemColors.AppWorkspace;
+                btnMin.BackColor = SystemColors.AppWorkspace;
+                btnMax.BackColor = SystemColors.AppWorkspace;
+                btnHelp.ForeColor = SystemColors.Desktop;
+
+                btnPhases.BackColor = SystemColors.AppWorkspace;
+                btnPhases.ForeColor = SystemColors.Desktop;
+
+                btnDocs.BackColor = SystemColors.AppWorkspace;
+                btnDocs.ForeColor = SystemColors.Desktop;
+
+                btnProjects.BackColor = SystemColors.AppWorkspace;
+                btnProjects.ForeColor = SystemColors.Desktop;
+
+                btnMembers.BackColor = SystemColors.AppWorkspace;
+                btnMembers.ForeColor = SystemColors.Desktop;
+
+                btnSettings.BackColor = SystemColors.AppWorkspace;
+                btnSettings.ForeColor = SystemColors.Desktop;
+
+                btnLogout.BackColor = SystemColors.AppWorkspace;
+                btnLogout.ForeColor = SystemColors.Desktop;
+
+                btnClose.BackColor = SystemColors.AppWorkspace;
+                btnClose.ForeColor = SystemColors.Desktop;
+
+                this.BackColor = SystemColors.AppWorkspace;
+                btnExpand.BackColor = SystemColors.AppWorkspace;
+
+                pnlHide.BackColor = SystemColors.Desktop; 
+
+                pnlPhasesSub.BackColor = SystemColors.AppWorkspace;
+                pnlDiagramsSub.BackColor = SystemColors.AppWorkspace;
+                pnlProjectsSub.BackColor = SystemColors.AppWorkspace;
+                pnlHelpSub.BackColor = SystemColors.AppWorkspace;
+                pnlMembersSub.BackColor = SystemColors.AppWorkspace;
+                pnlChildForm.BackColor = SystemColors.Desktop;
+                button8.BackColor = SystemColors.AppWorkspace;
+            }
+            if (TechGenics.Properties.Settings.Default.Theme == "Dark")
+            {
+                btnDocs.BackColor = SystemColors.Desktop;
+                btnDocs.ForeColor = SystemColors.ActiveBorder;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
