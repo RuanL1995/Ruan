@@ -33,6 +33,7 @@
             this.btnClosure = new System.Windows.Forms.Button();
             this.lstInfo = new System.Windows.Forms.ListBox();
             this.pnlInstr = new System.Windows.Forms.Panel();
+            this.btnViewCompletion = new System.Windows.Forms.Button();
             this.btnViewClosure = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lstInstr = new System.Windows.Forms.ListBox();
@@ -41,13 +42,13 @@
             this.btnFirst = new System.Windows.Forms.Button();
             this.lblCompletion = new System.Windows.Forms.Label();
             this.lblClosure = new System.Windows.Forms.Label();
-            this.btnViewCompletion = new System.Windows.Forms.Button();
             this.pnlCloseOut.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCloseOut
             // 
+            this.pnlCloseOut.Controls.Add(this.pnlInstr);
             this.pnlCloseOut.Controls.Add(this.btnRev);
             this.pnlCloseOut.Controls.Add(this.btnClosure);
             this.pnlCloseOut.Controls.Add(this.lstInfo);
@@ -87,7 +88,7 @@
             // 
             // lstInfo
             // 
-            this.lstInfo.BackColor = System.Drawing.Color.DarkRed;
+            this.lstInfo.BackColor = System.Drawing.Color.Black;
             this.lstInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstInfo.ForeColor = System.Drawing.SystemColors.Info;
             this.lstInfo.FormattingEnabled = true;
@@ -115,12 +116,27 @@
             this.pnlInstr.Controls.Add(this.btnFirst);
             this.pnlInstr.Controls.Add(this.lblCompletion);
             this.pnlInstr.Controls.Add(this.lblClosure);
-            this.pnlInstr.Location = new System.Drawing.Point(22, 15);
+            this.pnlInstr.Location = new System.Drawing.Point(2, 3);
             this.pnlInstr.Name = "pnlInstr";
             this.pnlInstr.Size = new System.Drawing.Size(835, 614);
             this.pnlInstr.TabIndex = 3;
             this.pnlInstr.Visible = false;
             this.pnlInstr.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInstr_Paint);
+            // 
+            // btnViewCompletion
+            // 
+            this.btnViewCompletion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewCompletion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewCompletion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCompletion.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewCompletion.Location = new System.Drawing.Point(359, 527);
+            this.btnViewCompletion.Name = "btnViewCompletion";
+            this.btnViewCompletion.Size = new System.Drawing.Size(115, 27);
+            this.btnViewCompletion.TabIndex = 16;
+            this.btnViewCompletion.Text = "View Template";
+            this.btnViewCompletion.UseVisualStyleBackColor = false;
+            this.btnViewCompletion.Visible = false;
+            this.btnViewCompletion.Click += new System.EventHandler(this.btnViewCompletion_Click);
             // 
             // btnViewClosure
             // 
@@ -244,28 +260,12 @@
             this.lblClosure.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblClosure.Click += new System.EventHandler(this.lblClosure_Click);
             // 
-            // btnViewCompletion
-            // 
-            this.btnViewCompletion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnViewCompletion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewCompletion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewCompletion.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewCompletion.Location = new System.Drawing.Point(359, 527);
-            this.btnViewCompletion.Name = "btnViewCompletion";
-            this.btnViewCompletion.Size = new System.Drawing.Size(115, 27);
-            this.btnViewCompletion.TabIndex = 16;
-            this.btnViewCompletion.Text = "View Template";
-            this.btnViewCompletion.UseVisualStyleBackColor = false;
-            this.btnViewCompletion.Visible = false;
-            this.btnViewCompletion.Click += new System.EventHandler(this.btnViewCompletion_Click);
-            // 
             // frmCloseOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(871, 628);
-            this.Controls.Add(this.pnlInstr);
             this.Controls.Add(this.pnlCloseOut);
             this.Name = "frmCloseOut";
             this.Text = "frmCloseOut";

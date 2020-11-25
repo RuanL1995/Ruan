@@ -22,7 +22,32 @@ namespace TechGenics
         bool closeOut = false;
         bool planning = false; 
 
+        //tab control
         int tab = 1;
+        
+        bool initiation1 = false;
+        bool initiation2 = false;
+        bool initiation3 = false;
+        bool initiation4 = false;
+        bool initiation5 = false;
+
+        bool planning1 = false;
+        bool planning2 = false;
+        bool planning3 = false;
+        bool planning4 = false;
+        bool planning5= false;
+
+        bool execution1 = false;
+        bool execution2 = false;
+        bool execution3 = false;
+        bool execution4 = false;
+        bool execution5 = false;
+
+        bool closeOut1 = false;
+        bool closeOut2 = false;
+        bool closeOut3 = false;
+        bool closeOut4 = false;
+        bool closeOut5 = false;
 
         public frmMainAdmin()
         {
@@ -481,7 +506,7 @@ namespace TechGenics
                 btnTab5.Visible = true;
             }
 
-            if (tab == 6)
+            if (tab >= 6)
             {
                 MessageBox.Show("Tab bar full!");
             }
@@ -504,15 +529,17 @@ namespace TechGenics
             pnlChildForm.BringToFront();
 
             pnlChildForm2.Visible = false;
-            pnlChildForm2.SendToBack();
+            //pnlChildForm2.SendToBack();
             pnlChildForm3.Visible = false;
-            pnlChildForm3.SendToBack();
+            //pnlChildForm3.SendToBack();
             pnlChildForm4.Visible = false;
-            pnlChildForm4.SendToBack();
+            //pnlChildForm4.SendToBack();
             pnlChildForm5.Visible = false;
-            pnlChildForm5.SendToBack();
+            //pnlChildForm5.SendToBack();
             //pnlTasks.Visible = false;
             //pnlTasks.SendToBack();
+
+            tabControl();
         }
 
         private void btnTab2_Click(object sender, EventArgs e)
@@ -521,13 +548,15 @@ namespace TechGenics
             pnlChildForm2.BringToFront();
 
             pnlChildForm.Visible = false;
-            pnlChildForm2.SendToBack();
+            //pnlChildForm2.SendToBack();
             pnlChildForm3.Visible = false;
-            pnlChildForm3.SendToBack();
+            //pnlChildForm3.SendToBack();
             pnlChildForm4.Visible = false;
-            pnlChildForm4.SendToBack();
+            //pnlChildForm4.SendToBack();
             pnlChildForm5.Visible = false;
-            pnlChildForm5.SendToBack();
+            //pnlChildForm5.SendToBack();
+
+            tabControl();
 
         }
 
@@ -537,13 +566,15 @@ namespace TechGenics
             pnlChildForm3.BringToFront();
 
             pnlChildForm2.Visible = false;
-            pnlChildForm2.SendToBack();
+            //pnlChildForm2.SendToBack();
             pnlChildForm.Visible = false;
-            pnlChildForm.SendToBack();
+            //pnlChildForm.SendToBack();
             pnlChildForm4.Visible = false;
-            pnlChildForm4.SendToBack();
+            //pnlChildForm4.SendToBack();
             pnlChildForm5.Visible = false;
-            pnlChildForm5.SendToBack();
+            //pnlChildForm5.SendToBack();
+
+            tabControl();
         }
 
         private void btnTab4_Click(object sender, EventArgs e)
@@ -552,13 +583,15 @@ namespace TechGenics
             pnlChildForm4.BringToFront();
 
             pnlChildForm2.Visible = false;
-            pnlChildForm2.SendToBack();
+            //pnlChildForm2.SendToBack();
             pnlChildForm3.Visible = false;
-            pnlChildForm3.SendToBack();
+            //pnlChildForm3.SendToBack();
             pnlChildForm.Visible = false;
-            pnlChildForm.SendToBack();
+            //pnlChildForm.SendToBack();
             pnlChildForm5.Visible = false;
-            pnlChildForm5.SendToBack();
+            //pnlChildForm5.SendToBack();
+
+            tabControl();
         }
 
         private void btnTab5_Click(object sender, EventArgs e)
@@ -567,52 +600,71 @@ namespace TechGenics
             pnlChildForm5.BringToFront();
 
             pnlChildForm2.Visible = false;
-            pnlChildForm2.SendToBack();
+            //pnlChildForm2.SendToBack();
             pnlChildForm3.Visible = false;
-            pnlChildForm3.SendToBack();
+            //pnlChildForm3.SendToBack();
             pnlChildForm4.Visible = false;
-            pnlChildForm4.SendToBack();
+            //pnlChildForm4.SendToBack();
             pnlChildForm.Visible = false;
-            pnlChildForm.SendToBack();
+            //pnlChildForm.SendToBack();
+
+            tabControl();
         }
 
         private void openInNewTabToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             
-                btnTab1.Visible = true;
-                btnTab2.Visible = true;
-                tab++;
-                showTabs();
+            btnTab1.Visible = true;
+            btnTab2.Visible = true;
+            tab++;
+            showTabs();
                 
 
-                if (tab == 2)
-                {
-                    openChildForm2(new frmInitiation());
-                    pnlChildForm2.BringToFront();
-                    pnlChildForm2.Visible = true;
-                   
-                }
-                else if (tab == 3)
-                {
-                    openChildForm3(new frmInitiation());
-                    pnlChildForm3.BringToFront();
-                    pnlChildForm3.Visible = true;
-                    
-                }
-                else if (tab == 4)
-                {
-                    openChildForm4(new frmInitiation());
-                    pnlChildForm4.BringToFront();
-                    pnlChildForm4.Visible = true;
-                    
-                }
-                else if (tab == 5)
-                {
-                    openChildForm5(new frmInitiation());
-                    pnlChildForm5.BringToFront();
-                    pnlChildForm5.Visible = true;
-                    
-                }
+            if (tab == 2)
+            {
+                openChildForm2(new frmInitiation());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+
+                initiation2 = true;
+                //planning2 = false;
+                //execution2 = false;
+                //closeOut2 = false;
+            }
+            else if (tab == 3)
+            {
+                openChildForm3(new frmInitiation());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+
+                initiation3 = true;
+                //planning3 = false;
+                //execution3 = false;
+                //closeOut3 = false;
+            }
+            else if (tab == 4)
+            {
+                openChildForm4(new frmInitiation());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+
+                initiation4 = true;
+                //planning4 = false;
+                //execution4 = false;
+                //closeOut4 = false;
+            }
+            else if (tab == 5)
+            {
+                openChildForm5(new frmInitiation());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+
+                initiation5 = true;
+                //planning5 = false;
+                //execution5 = false;
+                //closeOut5 = false;
+
+            }
                        
         }
 
@@ -629,28 +681,44 @@ namespace TechGenics
                 openChildForm2(new frmPlanning());
                 pnlChildForm2.BringToFront();
                 pnlChildForm2.Visible = true;
-                
+
+                //initiation2 = false;
+                planning2 = true;
+                //execution2 = false;
+                //closeOut2 = false;
             }
             else if (tab == 3)
             {
                 openChildForm3(new frmPlanning());
                 pnlChildForm3.BringToFront();
                 pnlChildForm3.Visible = true;
-                
+
+                //initiation3 = false;
+                planning3 = true;
+                //execution3 = false;
+                //closeOut3 = false;
             }
             else if (tab == 4)
             {
                 openChildForm4(new frmPlanning());
                 pnlChildForm4.BringToFront();
                 pnlChildForm4.Visible = true;
-                
+
+                //initiation4 = false;
+                planning4 = true;
+                //execution4 = false;
+                //closeOut4 = false;
             }
             else if (tab == 5)
             {
                 openChildForm5(new frmPlanning());
                 pnlChildForm5.BringToFront();
                 pnlChildForm5.Visible = true;
-                
+
+                //initiation5 = false;
+                planning5 = true;
+                //execution5 = false;
+                //closeOut5 = false;
             }
         }
 
@@ -668,28 +736,47 @@ namespace TechGenics
                 openChildForm2(new frmExecution());
                 pnlChildForm2.BringToFront();
                 pnlChildForm2.Visible = true;
-                
+
+                //initiation2 = false;
+                //planning2 = false;
+                execution2 = true;
+                //closeOut2 = false;
             }
             else if (tab == 3)
             {
                 openChildForm3(new frmExecution());
                 pnlChildForm3.BringToFront();
                 pnlChildForm3.Visible = true;
-                
+
+                //initiation3 = false;
+                //planning3 = false;
+                execution3 = true;
+                //closeOut3 = false;
+
             }
             else if (tab == 4)
             {
                 openChildForm4(new frmExecution());
                 pnlChildForm4.BringToFront();
                 pnlChildForm4.Visible = true;
-                
+
+                //initiation4 = false;
+                //planning4 = false;
+                execution4 = true;
+                //closeOut4 = false;
+
             }
             else if (tab == 5)
             {
                 openChildForm5(new frmExecution());
                 pnlChildForm5.BringToFront();
                 pnlChildForm5.Visible = true;
-                
+
+                //initiation5 = false;
+                //planning5 = false;
+                execution5 = true;
+                //closeOut5 = false;
+
             }
         }
 
@@ -706,51 +793,58 @@ namespace TechGenics
                 openChildForm2(new frmCloseOut());
                 pnlChildForm2.BringToFront();
                 pnlChildForm2.Visible = true;
-                
+
+                //initiation2 = false;
+                //planning2 = false;
+                //execution2 = false;
+                closeOut2 = true;
+
             }
             else if (tab == 3)
             {
                 openChildForm3(new frmCloseOut());
                 pnlChildForm3.BringToFront();
                 pnlChildForm3.Visible = true;
-                
+
+                //initiation3 = false;
+                //planning3 = false;
+                //execution3 = false;
+                closeOut3 = true;
             }
             else if (tab == 4)
             {
                 openChildForm4(new frmCloseOut());
                 pnlChildForm4.BringToFront();
                 pnlChildForm4.Visible = true;
-               
+
+                //initiation4 = false;
+                //planning4 = false;
+                //execution4 = false;
+                closeOut4 = true;
             }
             else if (tab == 5)
             {
                 openChildForm5(new frmCloseOut());
                 pnlChildForm5.BringToFront();
                 pnlChildForm5.Visible = true;
-                
+
+                //initiation5 = false;
+                //planning5 = false;
+                //execution5 = false;
+                closeOut5 = true;
             }
         }
 
         private void btnInitiation_Click(object sender, EventArgs e)
         {
-
+            initiation1 = true;
         }
 
         private void btnPlanning_Click(object sender, EventArgs e)
         {
-
+            planning1 = true;
         }
-
-        private void pnlTasks_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
+                
         private void btnNewProj_Click(object sender, EventArgs e)
         {
 
@@ -774,24 +868,14 @@ namespace TechGenics
 
         private void btnExecution_Click(object sender, EventArgs e)
         {
-
+            execution1 = true;
         }
 
         private void btnCloseOut_Click(object sender, EventArgs e)
         {
-
+            closeOut1 = true;
         }
-
-        private void btnManualA_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnForward_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void pnlChildForm_Paint(object sender, PaintEventArgs e)
         {
             ControlExtension.Draggable(btnTask1, true);
@@ -800,6 +884,135 @@ namespace TechGenics
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        
+        //set child form to panel
+        public void tabControl()
+        {
+            if(initiation1 == true)
+            {
+                openChildForm(new frmInitiation());
+                pnlChildForm.BringToFront();
+                pnlChildForm.Visible = true;
+            }
+            else if(initiation2 == true)
+            {
+                openChildForm2(new frmInitiation());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+            }
+            else if (initiation3 == true)
+            {
+                openChildForm3(new frmInitiation());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+            }
+            else if (initiation4 == true)
+            {
+                openChildForm4(new frmInitiation());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+            }
+            else if (initiation5 == true)
+            {
+                openChildForm5(new frmInitiation());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+            }
+
+            if (planning1 == true)
+            {
+                openChildForm(new frmPlanning());
+                pnlChildForm.BringToFront();
+                pnlChildForm.Visible = true;
+            }
+            else if (planning2 == true)
+            {
+                openChildForm2(new frmPlanning());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+            }
+            else if (planning3 == true)
+            {
+                openChildForm3(new frmPlanning());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+            }
+            else if (planning4 == true)
+            {
+                openChildForm4(new frmPlanning());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+            }
+            else if (planning5 == true)
+            {
+                openChildForm5(new frmPlanning());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+            }
+
+            if (execution1 == true)
+            {
+                openChildForm(new frmExecution());
+                pnlChildForm.BringToFront();
+                pnlChildForm.Visible = true;
+            }
+            else if (execution2 == true)
+            {
+                openChildForm2(new frmExecution());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+            }
+            else if (execution3 == true)
+            {
+                openChildForm3(new frmExecution());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+            }
+            else if (execution4 == true)
+            {
+                openChildForm4(new frmExecution());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+            }
+            else if (execution5 == true)
+            {
+                openChildForm(new frmExecution());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+            }
+
+            if (closeOut1 == true)
+            {
+                openChildForm(new frmCloseOut());
+                pnlChildForm.BringToFront();
+                pnlChildForm.Visible = true;
+            }
+            else if (closeOut2 == true)
+            {
+                openChildForm2(new frmCloseOut());
+                pnlChildForm2.BringToFront();
+                pnlChildForm2.Visible = true;
+            }
+            else if (closeOut3 == true)
+            {
+                openChildForm3(new frmCloseOut());
+                pnlChildForm3.BringToFront();
+                pnlChildForm3.Visible = true;
+            }
+            else if (closeOut4 == true)
+            {
+                openChildForm4(new frmCloseOut());
+                pnlChildForm4.BringToFront();
+                pnlChildForm4.Visible = true;
+            }
+            else if (closeOut5 == true)
+            {
+                openChildForm5(new frmCloseOut());
+                pnlChildForm5.BringToFront();
+                pnlChildForm5.Visible = true;
+            }
         }
     }
 }

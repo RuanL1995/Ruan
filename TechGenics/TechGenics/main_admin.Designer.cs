@@ -108,8 +108,8 @@
             this.pnlChildForm.SuspendLayout();
             this.pnlTasks.SuspendLayout();
             this.pnlBacklog.SuspendLayout();
-            this.pnlChildForm2.SuspendLayout();
             this.pnlChildForm3.SuspendLayout();
+            this.pnlChildForm5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHide.SuspendLayout();
             this.ctmsCloseOut.SuspendLayout();
@@ -213,7 +213,6 @@
             this.btnManualA.TabIndex = 1;
             this.btnManualA.Text = "Manual";
             this.btnManualA.UseVisualStyleBackColor = false;
-            this.btnManualA.Click += new System.EventHandler(this.btnManualA_Click);
             // 
             // btnGoogle
             // 
@@ -526,14 +525,14 @@
             // openInNewTabToolStripMenuItem
             // 
             this.openInNewTabToolStripMenuItem.Name = "openInNewTabToolStripMenuItem";
-            this.openInNewTabToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.openInNewTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openInNewTabToolStripMenuItem.Text = "Open in new tab";
             this.openInNewTabToolStripMenuItem.Click += new System.EventHandler(this.openInNewTabToolStripMenuItem_Click_1);
             // 
             // openInDualViewToolStripMenuItem
             // 
             this.openInDualViewToolStripMenuItem.Name = "openInDualViewToolStripMenuItem";
-            this.openInDualViewToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.openInDualViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openInDualViewToolStripMenuItem.Text = "Open in dual view";
             // 
             // btnPhases
@@ -572,7 +571,6 @@
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.pnlChildForm.Controls.Add(this.pnlTasks);
-            this.pnlChildForm.Controls.Add(this.pnlChildForm4);
             this.pnlChildForm.Controls.Add(this.pnlChildForm2);
             this.pnlChildForm.Controls.Add(this.pictureBox1);
             this.pnlChildForm.Location = new System.Drawing.Point(241, 41);
@@ -591,12 +589,11 @@
             this.pnlTasks.Controls.Add(this.label1);
             this.pnlTasks.Controls.Add(this.pnlBacklog);
             this.pnlTasks.Controls.Add(this.lblTasksHeading);
-            this.pnlTasks.Location = new System.Drawing.Point(17, 19);
+            this.pnlTasks.Location = new System.Drawing.Point(795, 622);
             this.pnlTasks.Name = "pnlTasks";
-            this.pnlTasks.Size = new System.Drawing.Size(825, 629);
+            this.pnlTasks.Size = new System.Drawing.Size(47, 26);
             this.pnlTasks.TabIndex = 0;
             this.pnlTasks.Visible = false;
-            this.pnlTasks.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTasks_Paint);
             // 
             // button14
             // 
@@ -610,7 +607,6 @@
             this.button14.TabIndex = 1;
             this.button14.Text = "ADD NEW TASK";
             this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label4
             // 
@@ -728,17 +724,16 @@
             // pnlChildForm4
             // 
             this.pnlChildForm4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm4.Location = new System.Drawing.Point(32, 22);
+            this.pnlChildForm4.Location = new System.Drawing.Point(8, 3);
             this.pnlChildForm4.Name = "pnlChildForm4";
-            this.pnlChildForm4.Size = new System.Drawing.Size(861, 648);
+            this.pnlChildForm4.Size = new System.Drawing.Size(860, 640);
             this.pnlChildForm4.TabIndex = 4;
             this.pnlChildForm4.Visible = false;
             // 
             // pnlChildForm2
             // 
             this.pnlChildForm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm2.Controls.Add(this.pnlChildForm3);
-            this.pnlChildForm2.Location = new System.Drawing.Point(83, 62);
+            this.pnlChildForm2.Location = new System.Drawing.Point(3, 3);
             this.pnlChildForm2.Name = "pnlChildForm2";
             this.pnlChildForm2.Size = new System.Drawing.Size(814, 628);
             this.pnlChildForm2.TabIndex = 2;
@@ -748,7 +743,7 @@
             // 
             this.pnlChildForm3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.pnlChildForm3.Controls.Add(this.pnlChildForm5);
-            this.pnlChildForm3.Location = new System.Drawing.Point(90, 84);
+            this.pnlChildForm3.Location = new System.Drawing.Point(239, 41);
             this.pnlChildForm3.Name = "pnlChildForm3";
             this.pnlChildForm3.Size = new System.Drawing.Size(861, 648);
             this.pnlChildForm3.TabIndex = 3;
@@ -757,7 +752,8 @@
             // pnlChildForm5
             // 
             this.pnlChildForm5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm5.Location = new System.Drawing.Point(133, 79);
+            this.pnlChildForm5.Controls.Add(this.pnlChildForm4);
+            this.pnlChildForm5.Location = new System.Drawing.Point(0, 3);
             this.pnlChildForm5.Name = "pnlChildForm5";
             this.pnlChildForm5.Size = new System.Drawing.Size(865, 648);
             this.pnlChildForm5.TabIndex = 4;
@@ -945,6 +941,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1107, 699);
+            this.Controls.Add(this.pnlChildForm3);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.btnTab5);
             this.Controls.Add(this.btnTab4);
@@ -976,8 +973,8 @@
             this.pnlTasks.ResumeLayout(false);
             this.pnlTasks.PerformLayout();
             this.pnlBacklog.ResumeLayout(false);
-            this.pnlChildForm2.ResumeLayout(false);
             this.pnlChildForm3.ResumeLayout(false);
+            this.pnlChildForm5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHide.ResumeLayout(false);
             this.ctmsCloseOut.ResumeLayout(false);
