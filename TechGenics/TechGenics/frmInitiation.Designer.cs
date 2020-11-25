@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlInitiation = new System.Windows.Forms.Panel();
             this.lstInfo = new System.Windows.Forms.ListBox();
             this.btnPhaseReview = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             this.lblProjCharter = new System.Windows.Forms.Label();
             this.lblFeasStudy = new System.Windows.Forms.Label();
             this.lblBusCase = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlInitiation.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
@@ -231,7 +233,7 @@
             this.btnViewPhase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewPhase.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewPhase.Location = new System.Drawing.Point(439, 490);
+            this.btnViewPhase.Location = new System.Drawing.Point(434, 529);
             this.btnViewPhase.Name = "btnViewPhase";
             this.btnViewPhase.Size = new System.Drawing.Size(115, 27);
             this.btnViewPhase.TabIndex = 20;
@@ -246,7 +248,7 @@
             this.btnViewOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewOffice.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewOffice.Location = new System.Drawing.Point(439, 490);
+            this.btnViewOffice.Location = new System.Drawing.Point(435, 529);
             this.btnViewOffice.Name = "btnViewOffice";
             this.btnViewOffice.Size = new System.Drawing.Size(115, 27);
             this.btnViewOffice.TabIndex = 19;
@@ -261,7 +263,7 @@
             this.btnViewTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewTeam.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewTeam.Location = new System.Drawing.Point(439, 491);
+            this.btnViewTeam.Location = new System.Drawing.Point(435, 530);
             this.btnViewTeam.Name = "btnViewTeam";
             this.btnViewTeam.Size = new System.Drawing.Size(115, 27);
             this.btnViewTeam.TabIndex = 18;
@@ -276,7 +278,7 @@
             this.btnViewCharter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewCharter.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewCharter.Location = new System.Drawing.Point(439, 491);
+            this.btnViewCharter.Location = new System.Drawing.Point(435, 530);
             this.btnViewCharter.Name = "btnViewCharter";
             this.btnViewCharter.Size = new System.Drawing.Size(115, 27);
             this.btnViewCharter.TabIndex = 17;
@@ -291,7 +293,7 @@
             this.btnViewFeasStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewFeasStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewFeasStudy.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewFeasStudy.Location = new System.Drawing.Point(438, 490);
+            this.btnViewFeasStudy.Location = new System.Drawing.Point(434, 529);
             this.btnViewFeasStudy.Name = "btnViewFeasStudy";
             this.btnViewFeasStudy.Size = new System.Drawing.Size(115, 27);
             this.btnViewFeasStudy.TabIndex = 16;
@@ -306,7 +308,7 @@
             this.btnViewBusCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewBusCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewBusCase.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewBusCase.Location = new System.Drawing.Point(439, 490);
+            this.btnViewBusCase.Location = new System.Drawing.Point(435, 529);
             this.btnViewBusCase.Name = "btnViewBusCase";
             this.btnViewBusCase.Size = new System.Drawing.Size(115, 27);
             this.btnViewBusCase.TabIndex = 15;
@@ -321,7 +323,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnClose.Location = new System.Drawing.Point(786, 12);
+            this.btnClose.Location = new System.Drawing.Point(795, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(34, 21);
             this.btnClose.TabIndex = 14;
@@ -335,7 +337,7 @@
             this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnPrev.Location = new System.Drawing.Point(244, 490);
+            this.btnPrev.Location = new System.Drawing.Point(244, 529);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(85, 27);
             this.btnPrev.TabIndex = 13;
@@ -350,7 +352,7 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnNext.Location = new System.Drawing.Point(684, 490);
+            this.btnNext.Location = new System.Drawing.Point(675, 530);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(85, 27);
             this.btnNext.TabIndex = 12;
@@ -365,7 +367,7 @@
             this.btnFifth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFifth.CausesValidation = false;
             this.btnFifth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFifth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFifth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFifth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnFifth.Location = new System.Drawing.Point(36, 472);
             this.btnFifth.Name = "btnFifth";
@@ -381,7 +383,7 @@
             this.btnFourth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFourth.CausesValidation = false;
             this.btnFourth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFourth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFourth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFourth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnFourth.Location = new System.Drawing.Point(36, 389);
             this.btnFourth.Name = "btnFourth";
@@ -401,9 +403,9 @@
             this.lstInstr.ItemHeight = 16;
             this.lstInstr.Items.AddRange(new object[] {
             " "});
-            this.lstInstr.Location = new System.Drawing.Point(227, 168);
+            this.lstInstr.Location = new System.Drawing.Point(181, 113);
             this.lstInstr.Name = "lstInstr";
-            this.lstInstr.Size = new System.Drawing.Size(543, 352);
+            this.lstInstr.Size = new System.Drawing.Size(605, 400);
             this.lstInstr.TabIndex = 9;
             // 
             // btnThird
@@ -412,7 +414,7 @@
             this.btnThird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThird.CausesValidation = false;
             this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThird.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnThird.Location = new System.Drawing.Point(36, 306);
             this.btnThird.Name = "btnThird";
@@ -428,7 +430,7 @@
             this.btnSec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSec.CausesValidation = false;
             this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSec.Location = new System.Drawing.Point(36, 223);
             this.btnSec.Name = "btnSec";
@@ -444,7 +446,7 @@
             this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFirst.CausesValidation = false;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnFirst.Location = new System.Drawing.Point(36, 141);
             this.btnFirst.Name = "btnFirst";
@@ -456,9 +458,10 @@
             // 
             // lblPhaseRev
             // 
-            this.lblPhaseRev.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPhaseRev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPhaseRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPhaseRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblPhaseRev.ForeColor = System.Drawing.Color.MintCream;
+            this.lblPhaseRev.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblPhaseRev.Location = new System.Drawing.Point(662, 21);
             this.lblPhaseRev.Name = "lblPhaseRev";
             this.lblPhaseRev.Size = new System.Drawing.Size(124, 65);
@@ -469,9 +472,10 @@
             // 
             // lblProjOffice
             // 
-            this.lblProjOffice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblProjOffice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblProjOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblProjOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblProjOffice.ForeColor = System.Drawing.Color.MintCream;
+            this.lblProjOffice.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblProjOffice.Location = new System.Drawing.Point(536, 21);
             this.lblProjOffice.Name = "lblProjOffice";
             this.lblProjOffice.Size = new System.Drawing.Size(124, 65);
@@ -482,9 +486,10 @@
             // 
             // lblProjTeam
             // 
-            this.lblProjTeam.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblProjTeam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblProjTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblProjTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblProjTeam.ForeColor = System.Drawing.Color.MintCream;
+            this.lblProjTeam.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblProjTeam.Location = new System.Drawing.Point(410, 21);
             this.lblProjTeam.Name = "lblProjTeam";
             this.lblProjTeam.Size = new System.Drawing.Size(124, 65);
@@ -495,9 +500,10 @@
             // 
             // lblProjCharter
             // 
-            this.lblProjCharter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblProjCharter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblProjCharter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblProjCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblProjCharter.ForeColor = System.Drawing.Color.MintCream;
+            this.lblProjCharter.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblProjCharter.Location = new System.Drawing.Point(284, 21);
             this.lblProjCharter.Name = "lblProjCharter";
             this.lblProjCharter.Size = new System.Drawing.Size(124, 65);
@@ -508,9 +514,10 @@
             // 
             // lblFeasStudy
             // 
-            this.lblFeasStudy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFeasStudy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFeasStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFeasStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblFeasStudy.ForeColor = System.Drawing.Color.MintCream;
+            this.lblFeasStudy.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblFeasStudy.Location = new System.Drawing.Point(158, 21);
             this.lblFeasStudy.Name = "lblFeasStudy";
             this.lblFeasStudy.Size = new System.Drawing.Size(124, 65);
@@ -523,10 +530,10 @@
             // 
             this.lblBusCase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblBusCase.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBusCase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblBusCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblBusCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblBusCase.ForeColor = System.Drawing.Color.MintCream;
+            this.lblBusCase.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblBusCase.Location = new System.Drawing.Point(32, 21);
             this.lblBusCase.Name = "lblBusCase";
             this.lblBusCase.Size = new System.Drawing.Size(124, 65);
@@ -534,6 +541,11 @@
             this.lblBusCase.Text = "Develop a Business Case";
             this.lblBusCase.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblBusCase.Click += new System.EventHandler(this.lblBusCase_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmInitiation
             // 
@@ -585,5 +597,6 @@
         private System.Windows.Forms.Button btnViewTeam;
         private System.Windows.Forms.Button btnViewOffice;
         private System.Windows.Forms.Button btnViewPhase;
+        private System.Windows.Forms.Timer timer1;
     }
 }

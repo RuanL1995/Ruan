@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlCloseOut = new System.Windows.Forms.Panel();
             this.btnRev = new System.Windows.Forms.Button();
             this.btnClosure = new System.Windows.Forms.Button();
@@ -42,13 +43,13 @@
             this.btnFirst = new System.Windows.Forms.Button();
             this.lblCompletion = new System.Windows.Forms.Label();
             this.lblClosure = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlCloseOut.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCloseOut
             // 
-            this.pnlCloseOut.Controls.Add(this.pnlInstr);
             this.pnlCloseOut.Controls.Add(this.btnRev);
             this.pnlCloseOut.Controls.Add(this.btnClosure);
             this.pnlCloseOut.Controls.Add(this.lstInfo);
@@ -90,8 +91,10 @@
             // 
             this.lstInfo.BackColor = System.Drawing.Color.Black;
             this.lstInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstInfo.ForeColor = System.Drawing.SystemColors.Info;
+            this.lstInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstInfo.ForeColor = System.Drawing.Color.White;
             this.lstInfo.FormattingEnabled = true;
+            this.lstInfo.ItemHeight = 16;
             this.lstInfo.Items.AddRange(new object[] {
             "Project Closure involves releasing the final deliverables to the customer, handin" +
                 "g over project documentation",
@@ -102,11 +105,12 @@
             "success of the project and list any lessons learnt for future projects."});
             this.lstInfo.Location = new System.Drawing.Point(24, 36);
             this.lstInfo.Name = "lstInfo";
-            this.lstInfo.Size = new System.Drawing.Size(765, 429);
+            this.lstInfo.Size = new System.Drawing.Size(765, 416);
             this.lstInfo.TabIndex = 0;
             // 
             // pnlInstr
             // 
+            this.pnlInstr.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlInstr.Controls.Add(this.btnViewCompletion);
             this.pnlInstr.Controls.Add(this.btnViewClosure);
             this.pnlInstr.Controls.Add(this.btnClose);
@@ -116,9 +120,9 @@
             this.pnlInstr.Controls.Add(this.btnFirst);
             this.pnlInstr.Controls.Add(this.lblCompletion);
             this.pnlInstr.Controls.Add(this.lblClosure);
-            this.pnlInstr.Location = new System.Drawing.Point(2, 3);
+            this.pnlInstr.Location = new System.Drawing.Point(25, 12);
             this.pnlInstr.Name = "pnlInstr";
-            this.pnlInstr.Size = new System.Drawing.Size(835, 614);
+            this.pnlInstr.Size = new System.Drawing.Size(832, 614);
             this.pnlInstr.TabIndex = 3;
             this.pnlInstr.Visible = false;
             this.pnlInstr.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInstr_Paint);
@@ -188,7 +192,7 @@
             this.btnThird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnThird.CausesValidation = false;
             this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThird.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnThird.Location = new System.Drawing.Point(36, 344);
             this.btnThird.Name = "btnThird";
@@ -205,7 +209,7 @@
             this.btnSec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSec.CausesValidation = false;
             this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSec.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSec.Location = new System.Drawing.Point(36, 261);
             this.btnSec.Name = "btnSec";
@@ -221,7 +225,7 @@
             this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnFirst.CausesValidation = false;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnFirst.Location = new System.Drawing.Point(36, 179);
             this.btnFirst.Name = "btnFirst";
@@ -233,9 +237,10 @@
             // 
             // lblCompletion
             // 
-            this.lblCompletion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCompletion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCompletion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCompletion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblCompletion.ForeColor = System.Drawing.Color.MintCream;
+            this.lblCompletion.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblCompletion.Location = new System.Drawing.Point(439, 48);
             this.lblCompletion.Name = "lblCompletion";
             this.lblCompletion.Size = new System.Drawing.Size(124, 65);
@@ -248,10 +253,10 @@
             // 
             this.lblClosure.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblClosure.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblClosure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblClosure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblClosure.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblClosure.ForeColor = System.Drawing.Color.MintCream;
+            this.lblClosure.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblClosure.Location = new System.Drawing.Point(309, 48);
             this.lblClosure.Name = "lblClosure";
             this.lblClosure.Size = new System.Drawing.Size(124, 65);
@@ -260,12 +265,18 @@
             this.lblClosure.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblClosure.Click += new System.EventHandler(this.lblClosure_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmCloseOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(871, 628);
+            this.Controls.Add(this.pnlInstr);
             this.Controls.Add(this.pnlCloseOut);
             this.Name = "frmCloseOut";
             this.Text = "frmCloseOut";
@@ -292,5 +303,6 @@
         private System.Windows.Forms.Label lblCompletion;
         private System.Windows.Forms.Label lblClosure;
         private System.Windows.Forms.Button btnViewCompletion;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -41,6 +41,7 @@
             this.btnNewMem = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
             this.pnlProjectsSub = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.btnNewProj = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
             this.pnlDiagramsSub = new System.Windows.Forms.Panel();
@@ -66,7 +67,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnTask1 = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
-            this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.pnlHide = new System.Windows.Forms.Panel();
             this.btnExpand = new System.Windows.Forms.Button();
             this.tmrSliding = new System.Windows.Forms.Timer(this.components);
@@ -79,7 +79,6 @@
             this.btnTab4 = new System.Windows.Forms.Button();
             this.btnTab5 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button8 = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -126,7 +125,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnClose.Location = new System.Drawing.Point(0, 631);
+            this.btnClose.Location = new System.Drawing.Point(0, 625);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(201, 34);
             this.btnClose.TabIndex = 12;
@@ -143,7 +142,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnLogout.Location = new System.Drawing.Point(0, 597);
+            this.btnLogout.Location = new System.Drawing.Point(0, 591);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(201, 34);
             this.btnLogout.TabIndex = 11;
@@ -159,7 +158,7 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnSettings.Location = new System.Drawing.Point(0, 563);
+            this.btnSettings.Location = new System.Drawing.Point(0, 557);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(201, 34);
             this.btnSettings.TabIndex = 10;
@@ -175,7 +174,7 @@
             this.pnlHelpSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHelpSub.Location = new System.Drawing.Point(0, 492);
             this.pnlHelpSub.Name = "pnlHelpSub";
-            this.pnlHelpSub.Size = new System.Drawing.Size(201, 71);
+            this.pnlHelpSub.Size = new System.Drawing.Size(201, 65);
             this.pnlHelpSub.TabIndex = 9;
             // 
             // btnManualA
@@ -275,6 +274,21 @@
             this.pnlProjectsSub.Name = "pnlProjectsSub";
             this.pnlProjectsSub.Size = new System.Drawing.Size(201, 69);
             this.pnlProjectsSub.TabIndex = 5;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button8.Location = new System.Drawing.Point(4, 38);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(186, 24);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "P2";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnNewProj
             // 
@@ -462,11 +476,11 @@
             // pnlChildForm
             // 
             this.pnlChildForm.AutoScroll = true;
-            this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm.BackColor = System.Drawing.Color.Black;
             this.pnlChildForm.Controls.Add(this.pnlTasks);
             this.pnlChildForm.Location = new System.Drawing.Point(244, 44);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(860, 648);
+            this.pnlChildForm.Size = new System.Drawing.Size(884, 665);
             this.pnlChildForm.TabIndex = 1;
             this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint);
             // 
@@ -611,21 +625,9 @@
             this.lblTasksHeading.TabIndex = 0;
             this.lblTasksHeading.Text = "TASKS FOR \"INSERT PROJ NAME\"";
             // 
-            // pnlChildForm4
-            // 
-            this.pnlChildForm4.AutoScroll = true;
-            this.pnlChildForm4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlChildForm4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm4.Location = new System.Drawing.Point(38, 41);
-            this.pnlChildForm4.Name = "pnlChildForm4";
-            this.pnlChildForm4.Size = new System.Drawing.Size(860, 640);
-            this.pnlChildForm4.TabIndex = 4;
-            this.pnlChildForm4.Visible = false;
-            // 
             // pnlHide
             // 
-            this.pnlHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlHide.Controls.Add(this.pnlChildForm4);
+            this.pnlHide.BackColor = System.Drawing.Color.Black;
             this.pnlHide.Controls.Add(this.btnExpand);
             this.pnlHide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlHide.Location = new System.Drawing.Point(201, 0);
@@ -659,7 +661,7 @@
             this.btnMin.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnMin.Location = new System.Drawing.Point(1004, -5);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(32, 27);
+            this.btnMin.Size = new System.Drawing.Size(32, 38);
             this.btnMin.TabIndex = 4;
             this.btnMin.Text = "_";
             this.btnMin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -674,7 +676,7 @@
             this.btnMax.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnMax.Location = new System.Drawing.Point(1036, -1);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(32, 29);
+            this.btnMax.Size = new System.Drawing.Size(32, 34);
             this.btnMax.TabIndex = 5;
             this.btnMax.Text = "1";
             this.btnMax.UseVisualStyleBackColor = false;
@@ -686,7 +688,7 @@
             this.btnFull.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFull.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFull.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnFull.Location = new System.Drawing.Point(1071, -2);
+            this.btnFull.Location = new System.Drawing.Point(1066, -2);
             this.btnFull.Name = "btnFull";
             this.btnFull.Size = new System.Drawing.Size(29, 35);
             this.btnFull.TabIndex = 6;
@@ -769,26 +771,11 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button8.Location = new System.Drawing.Point(4, 38);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(186, 24);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "P2";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1140, 721);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.btnTab5);
@@ -860,7 +847,7 @@
         private System.Windows.Forms.Button btnTab3;
         private System.Windows.Forms.Button btnTab4;
         private System.Windows.Forms.Button btnTab5;
-        private System.Windows.Forms.Panel pnlChildForm4;
+        //private System.Windows.Forms.Panel pnlChildForm4;
         private System.Windows.Forms.Panel pnlTasks;
         private System.Windows.Forms.Label lblTasksHeading;
         private System.Windows.Forms.Button button14;

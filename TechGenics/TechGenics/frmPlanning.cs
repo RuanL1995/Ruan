@@ -942,6 +942,7 @@ namespace TechGenics
                     lstInstr.Items.Clear();
                     
                     pboTender.Visible = true;
+                    pboTender.BringToFront();
                     break;
             }
         }
@@ -1375,6 +1376,98 @@ namespace TechGenics
         {
             string filename = "Procurement_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TechGenics.Properties.Settings.Default.Theme == "Light")
+            {
+                this.BackColor = SystemColors.AppWorkspace;
+                pnlInstr.BackColor = SystemColors.AppWorkspace;
+                pnlPlanning.BackColor = SystemColors.AppWorkspace;
+                pnlSideMenu.BackColor = SystemColors.AppWorkspace;
+                pnlHeading.BackColor = SystemColors.AppWorkspace;
+
+                lstInstr.BackColor = SystemColors.AppWorkspace;
+                lstInstr.ForeColor = SystemColors.Desktop;
+                lstInfo.BackColor = SystemColors.AppWorkspace;
+                lstInfo.ForeColor = SystemColors.Desktop;
+
+                btnViewProjectPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewResPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewFinPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewQPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewComPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewAPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewRiskPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewProcPlan.BackColor = SystemColors.AppWorkspace;
+                btnViewPhaseRev.BackColor = SystemColors.AppWorkspace;
+
+                btnPPLan.BackColor = SystemColors.AppWorkspace;
+                btnRPlan.BackColor = SystemColors.AppWorkspace;
+                btnFPlan.BackColor = SystemColors.AppWorkspace;
+                btnQPlan.BackColor = SystemColors.AppWorkspace;
+                btnCPlan.BackColor = SystemColors.AppWorkspace;
+                btnAPlan.BackColor = SystemColors.AppWorkspace;
+                btnRisk.BackColor = SystemColors.AppWorkspace;
+                btnPhase.BackColor = SystemColors.AppWorkspace;
+                btnProc.BackColor = SystemColors.AppWorkspace;
+
+                btnPPLan.ForeColor = SystemColors.Desktop;
+                btnRPlan.ForeColor = SystemColors.Desktop;
+                btnFPlan.ForeColor = SystemColors.Desktop;
+                btnQPlan.ForeColor = SystemColors.Desktop;
+                btnCPlan.ForeColor = SystemColors.Desktop;
+                btnAPlan.ForeColor = SystemColors.Desktop;
+                btnRisk.ForeColor = SystemColors.Desktop;
+                btnPhase.ForeColor = SystemColors.Desktop;
+                btnProc.ForeColor = SystemColors.Desktop;
+
+            }
+            if (TechGenics.Properties.Settings.Default.Theme == "Dark")
+            {
+
+                this.BackColor = SystemColors.Desktop;
+                pnlInstr.BackColor = SystemColors.Desktop;
+                pnlPlanning.BackColor = SystemColors.Desktop;
+                pnlSideMenu.BackColor = SystemColors.Desktop;
+                pnlHeading.BackColor = SystemColors.Desktop;
+
+                lstInstr.BackColor = SystemColors.Desktop;
+                lstInstr.ForeColor = SystemColors.ActiveBorder; ;
+                lstInfo.BackColor = SystemColors.Desktop;
+                lstInfo.ForeColor = SystemColors.ActiveBorder;
+
+                btnViewProjectPlan.BackColor = SystemColors.Desktop;
+                btnViewResPlan.BackColor = SystemColors.Desktop;
+                btnViewFinPlan.BackColor = SystemColors.Desktop;
+                btnViewQPlan.BackColor = SystemColors.Desktop;
+                btnViewComPlan.BackColor = SystemColors.Desktop;
+                btnViewAPlan.BackColor = SystemColors.Desktop;
+                btnViewRiskPlan.BackColor = SystemColors.Desktop;
+                btnViewProcPlan.BackColor = SystemColors.Desktop;
+                btnViewPhaseRev.BackColor = SystemColors.Desktop;
+
+                btnPPLan.BackColor = SystemColors.Desktop;
+                btnRPlan.BackColor = SystemColors.Desktop;
+                btnFPlan.BackColor = SystemColors.Desktop;
+                btnQPlan.BackColor = SystemColors.Desktop;
+                btnCPlan.BackColor = SystemColors.Desktop;
+                btnAPlan.BackColor = SystemColors.Desktop;
+                btnRisk.BackColor = SystemColors.Desktop;
+                btnPhase.BackColor = SystemColors.Desktop;
+                btnProc.BackColor = SystemColors.Desktop;
+
+                btnPPLan.ForeColor = SystemColors.ActiveBorder;
+                btnRPlan.ForeColor = SystemColors.ActiveBorder;
+                btnFPlan.ForeColor = SystemColors.ActiveBorder;
+                btnQPlan.ForeColor = SystemColors.ActiveBorder;
+                btnCPlan.ForeColor = SystemColors.ActiveBorder;
+                btnAPlan.ForeColor = SystemColors.ActiveBorder;
+                btnRisk.ForeColor = SystemColors.ActiveBorder;
+                btnPhase.ForeColor = SystemColors.ActiveBorder;
+                btnProc.ForeColor = SystemColors.ActiveBorder;
+            }
         }
     }
 }

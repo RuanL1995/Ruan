@@ -810,27 +810,7 @@ namespace TechGenics
 
         #endregion
 
-        /// <summary>
-        /// View two forms at a time 
-        /// </summary>
-        #region Dual view
-        /* 
-            To be added
-            *case statement 
-            *boolean - if first form open (send left & cut in half)
-            *Else send right & cut in half
-        */
-        #endregion
-
-        /// <summary>
-        /// Have multiple tabs open
-        /// </summary>
-        #region Tab control
-        /*
-            To be added
-            *tab control page - add panels to form 
-        */
-        #endregion
+               
 
         private void btnViewBusCase_Click(object sender, EventArgs e)
         {
@@ -866,6 +846,86 @@ namespace TechGenics
         {
             string filename = "Phase_Review_Form_Initiation.pdf";
             System.Diagnostics.Process.Start(filename);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TechGenics.Properties.Settings.Default.Theme == "Light")
+            {
+                this.BackColor = SystemColors.AppWorkspace;
+               
+                pnlInitiation.BackColor = SystemColors.AppWorkspace;
+                pnlInstr.BackColor = SystemColors.AppWorkspace;
+
+                btnClose.BackColor = SystemColors.AppWorkspace;
+                btnPrev.BackColor = SystemColors.AppWorkspace;
+                btnNext.BackColor = SystemColors.AppWorkspace;
+
+                lstInstr.BackColor = SystemColors.AppWorkspace;
+                lstInstr.ForeColor = SystemColors.Desktop;
+                lstInfo.BackColor = SystemColors.AppWorkspace;
+                lstInfo.ForeColor = SystemColors.Desktop;
+
+                lblBusCase.BackColor = SystemColors.AppWorkspace;
+                lblBusCase.ForeColor = SystemColors.Desktop;
+                lblFeasStudy.BackColor = SystemColors.AppWorkspace;
+                lblFeasStudy.ForeColor = SystemColors.Desktop;
+                lblProjCharter.BackColor = SystemColors.AppWorkspace;
+                lblProjCharter.ForeColor = SystemColors.Desktop;
+                lblProjTeam.BackColor = SystemColors.AppWorkspace;
+                lblProjTeam.ForeColor = SystemColors.Desktop;
+                lblProjOffice.BackColor = SystemColors.AppWorkspace;
+                lblProjOffice.ForeColor = SystemColors.Desktop;
+                lblPhaseRev.BackColor = SystemColors.AppWorkspace;
+                lblPhaseRev.ForeColor = SystemColors.Desktop;
+
+                btnViewBusCase.BackColor = SystemColors.AppWorkspace;
+                btnViewFeasStudy.BackColor = SystemColors.AppWorkspace;
+                btnViewCharter.BackColor = SystemColors.AppWorkspace;
+                btnViewTeam.BackColor = SystemColors.AppWorkspace;
+                btnViewOffice.BackColor = SystemColors.AppWorkspace;
+                btnViewPhase.BackColor = SystemColors.AppWorkspace;
+
+            }
+            if (TechGenics.Properties.Settings.Default.Theme == "Dark")
+            {
+
+                this.BackColor = SystemColors.Desktop;
+                pnlInstr.BackColor = SystemColors.Desktop;
+                pnlInitiation.BackColor = SystemColors.Desktop;
+                btnClose.BackColor = SystemColors.Desktop;
+
+               
+
+                lstInstr.BackColor = SystemColors.Desktop;
+                lstInstr.ForeColor = SystemColors.ActiveBorder; ;
+                lstInfo.BackColor = SystemColors.Desktop;
+                lstInfo.ForeColor = SystemColors.ActiveBorder;
+
+                btnClose.BackColor = SystemColors.Desktop;
+                btnPrev.BackColor = SystemColors.Desktop;
+                btnNext.BackColor = SystemColors.Desktop;
+
+                lblBusCase.BackColor = SystemColors.Desktop;
+                lblBusCase.ForeColor = SystemColors.ActiveBorder;
+                lblFeasStudy.BackColor = SystemColors.Desktop;
+                lblFeasStudy.ForeColor = SystemColors.ActiveBorder;
+                lblProjCharter.BackColor = SystemColors.Desktop;
+                lblProjCharter.ForeColor = SystemColors.ActiveBorder;
+                lblProjTeam.BackColor = SystemColors.Desktop;
+                lblProjTeam.ForeColor = SystemColors.ActiveBorder;
+                lblProjOffice.BackColor = SystemColors.Desktop;
+                lblProjOffice.ForeColor = SystemColors.ActiveBorder;
+                lblPhaseRev.BackColor = SystemColors.Desktop;
+                lblPhaseRev.ForeColor = SystemColors.ActiveBorder;
+
+                btnViewBusCase.BackColor = SystemColors.Desktop;
+                btnViewFeasStudy.BackColor = SystemColors.Desktop;
+                btnViewCharter.BackColor = SystemColors.Desktop;
+                btnViewTeam.BackColor = SystemColors.Desktop;
+                btnViewOffice.BackColor = SystemColors.Desktop;
+                btnViewPhase.BackColor = SystemColors.Desktop;
+            }
         }
     }
 }

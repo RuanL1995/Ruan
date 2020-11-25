@@ -297,6 +297,13 @@ namespace TechGenics
             pnlCloseOut.Visible = true;
             pnlInstr.Visible = false;
             pnlCloseOut.BringToFront();
+
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("Project Closure involves releasing the final deliverables to the customer, handing over project documentation");
+            lstInfo.Items.Add("terminating supplier contracts, releasing project resources and communicating the closure of the project to all");
+            lstInfo.Items.Add("stakeholders.The last remaining step is to undertake a Post Implementation Review to quantify the overall");
+            lstInfo.Items.Add("success of the project and list any lessons learnt for future projects.");
+
         }
 
         private void btnViewClosure_Click(object sender, EventArgs e)
@@ -309,6 +316,55 @@ namespace TechGenics
         {
             string filename = "Post_Implementation_Review.pdf";
             System.Diagnostics.Process.Start(filename);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TechGenics.Properties.Settings.Default.Theme == "Light")
+            {
+                this.BackColor = SystemColors.AppWorkspace;
+                pnlInstr.BackColor = SystemColors.AppWorkspace;
+                pnlCloseOut.BackColor = SystemColors.AppWorkspace;
+
+                btnViewCompletion.BackColor = SystemColors.AppWorkspace;
+                btnViewClosure.BackColor = SystemColors.AppWorkspace;
+                btnClose.BackColor = SystemColors.AppWorkspace;
+
+                lblClosure.BackColor = SystemColors.AppWorkspace;
+                lblClosure.ForeColor = SystemColors.Desktop;
+                lblCompletion.BackColor = SystemColors.AppWorkspace;
+                lblCompletion.ForeColor = SystemColors.Desktop;
+
+                lstInstr.BackColor = SystemColors.AppWorkspace;
+                lstInstr.ForeColor = SystemColors.Desktop;
+                lstInfo.BackColor = SystemColors.AppWorkspace;
+                lstInfo.ForeColor = SystemColors.Desktop;
+                
+
+
+            }
+            if (TechGenics.Properties.Settings.Default.Theme == "Dark")
+            {
+                
+                this.BackColor = SystemColors.Desktop;
+                pnlInstr.BackColor = SystemColors.Desktop;
+                pnlCloseOut.BackColor = SystemColors.Desktop;
+
+                btnViewCompletion.BackColor = SystemColors.Desktop;
+                btnViewClosure.BackColor = SystemColors.Desktop;
+                btnClose.BackColor = SystemColors.Desktop;
+
+                lblClosure.BackColor = SystemColors.Desktop;
+                lblClosure.ForeColor = SystemColors.ActiveBorder;
+                lblCompletion.BackColor = SystemColors.Desktop;
+                lblCompletion.ForeColor = SystemColors.ActiveBorder;
+
+                lstInstr.BackColor = SystemColors.Desktop;
+                lstInstr.ForeColor = SystemColors.ActiveBorder; ;
+                lstInfo.BackColor = SystemColors.Desktop;
+                lstInfo.ForeColor = SystemColors.ActiveBorder;
+
+            }
         }
     }
 }

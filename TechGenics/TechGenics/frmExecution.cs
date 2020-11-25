@@ -1685,5 +1685,114 @@ namespace TechGenics
             System.Diagnostics.Process.Start(filename);
             
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (TechGenics.Properties.Settings.Default.Theme == "Light")
+            {
+                this.BackColor = SystemColors.AppWorkspace;
+                
+                lstInstr.BackColor = SystemColors.AppWorkspace;
+                lstInstr.ForeColor = SystemColors.Desktop;
+                lstInfo.BackColor = SystemColors.AppWorkspace;
+                lstInfo.ForeColor = SystemColors.Desktop;
+                pnlInfo.BackColor = SystemColors.AppWorkspace;
+                pnlExecution.BackColor = SystemColors.AppWorkspace;
+                pnlTopMenu.BackColor = SystemColors.AppWorkspace;
+
+                btnViewIssueMan.BackColor = SystemColors.AppWorkspace;
+                btnViewRiskMan.BackColor = SystemColors.AppWorkspace;
+                btnViewQualityMan.BackColor = SystemColors.AppWorkspace;
+                btnViewChangeMan.BackColor = SystemColors.AppWorkspace;
+                btnViewComMan.BackColor = SystemColors.AppWorkspace;
+                btnViewTimeMan1.BackColor = SystemColors.AppWorkspace;
+                btnViewCostMan.BackColor = SystemColors.AppWorkspace;
+                btnViewProcMan.BackColor = SystemColors.AppWorkspace;
+                btnViewAccMan.BackColor = SystemColors.AppWorkspace;
+                btnViewPRev.BackColor = SystemColors.AppWorkspace;
+
+                btnCommunications.BackColor = SystemColors.AppWorkspace;
+                btnIssue.BackColor = SystemColors.AppWorkspace;
+                btnRisk.BackColor = SystemColors.AppWorkspace;
+                btnQuality.BackColor = SystemColors.AppWorkspace;
+                btnAccept.BackColor = SystemColors.AppWorkspace;
+                btnProcurement.BackColor = SystemColors.AppWorkspace;
+                btnChange.BackColor = SystemColors.AppWorkspace;
+                btnTime.BackColor = SystemColors.AppWorkspace;
+                btnCost.BackColor = SystemColors.AppWorkspace;
+                btnReview.BackColor = SystemColors.AppWorkspace;
+
+                btnCommunications.ForeColor = SystemColors.Desktop;
+                btnIssue.ForeColor = SystemColors.Desktop;
+                btnRisk.ForeColor = SystemColors.Desktop;
+                btnQuality.ForeColor = SystemColors.Desktop;
+                btnAccept.ForeColor = SystemColors.Desktop;
+                btnProcurement.ForeColor = SystemColors.Desktop;
+                btnChange.ForeColor = SystemColors.Desktop;
+                btnTime.ForeColor = SystemColors.Desktop;
+                btnCost.ForeColor = SystemColors.Desktop;
+                btnReview.ForeColor = SystemColors.Desktop;
+            }
+            if (TechGenics.Properties.Settings.Default.Theme == "Dark")
+            {
+
+                this.BackColor = SystemColors.Desktop;
+
+                pnlInfo.BackColor = SystemColors.Desktop;
+                pnlTopMenu.BackColor = SystemColors.Desktop;
+                pnlExecution.BackColor = SystemColors.Desktop;
+                lstInstr.BackColor = SystemColors.Desktop;
+                lstInstr.ForeColor = SystemColors.ActiveBorder; 
+                lstInfo.BackColor = SystemColors.Desktop;
+                lstInfo.ForeColor = SystemColors.ActiveBorder;
+
+                btnViewIssueMan.BackColor = SystemColors.Desktop;
+                btnViewRiskMan.BackColor = SystemColors.Desktop;
+                btnViewQualityMan.BackColor = SystemColors.Desktop;
+                btnViewChangeMan.BackColor = SystemColors.Desktop;
+                btnViewComMan.BackColor = SystemColors.Desktop;
+                btnViewTimeMan1.BackColor = SystemColors.Desktop;
+                btnViewCostMan.BackColor = SystemColors.Desktop;
+                btnViewProcMan.BackColor = SystemColors.Desktop;
+                btnViewAccMan.BackColor = SystemColors.Desktop;
+                btnViewPRev.BackColor = SystemColors.Desktop;
+
+                btnCommunications.BackColor = SystemColors.Desktop;
+                btnIssue.BackColor = SystemColors.Desktop;
+                btnRisk.BackColor = SystemColors.Desktop;
+                btnQuality.BackColor = SystemColors.Desktop;
+                btnAccept.BackColor = SystemColors.Desktop;
+                btnProcurement.BackColor = SystemColors.Desktop;
+                btnChange.BackColor = SystemColors.Desktop;
+                btnTime.BackColor = SystemColors.Desktop;
+                btnCost.BackColor = SystemColors.Desktop;
+                btnReview.BackColor = SystemColors.Desktop;
+
+                btnCommunications.ForeColor = SystemColors.ActiveBorder;
+                btnIssue.ForeColor = SystemColors.ActiveBorder;
+                btnRisk.ForeColor = SystemColors.ActiveBorder;
+                btnQuality.ForeColor = SystemColors.ActiveBorder;
+                btnAccept.ForeColor = SystemColors.ActiveBorder;
+                btnProcurement.ForeColor = SystemColors.ActiveBorder;
+                btnChange.ForeColor = SystemColors.ActiveBorder;
+                btnTime.ForeColor = SystemColors.ActiveBorder;
+                btnCost.ForeColor = SystemColors.ActiveBorder;
+                btnReview.ForeColor = SystemColors.ActiveBorder;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            pnlInfo.Hide();
+            pnlExecution.Visible = true;
+
+            lstInfo.Items.Clear();
+            lstInfo.Items.Add("This phase involves the execution of each activity and task listed in the Project Plan.While the activities and tasks");
+            lstInfo.Items.Add("are being executed, a series of management processes are undertaken to monitor and control the deliverables");
+            lstInfo.Items.Add("being output by the project.This includes the identification of changes, risks and issues, the review of deliverable");
+            lstInfo.Items.Add("quality and the measurement of each deliverable being produced against the acceptance criteria. Once all of the");
+            lstInfo.Items.Add("deliverables have been produced and the customer has accepted the final solution, the project is ready for closure");
+
+        }
     }
 }

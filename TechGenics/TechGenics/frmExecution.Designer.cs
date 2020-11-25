@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCPhaseRev = new System.Windows.Forms.Button();
             this.lstInfo = new System.Windows.Forms.ListBox();
             this.btnOperate = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.btnComMan = new System.Windows.Forms.Button();
             this.pnlExecution = new System.Windows.Forms.Panel();
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnViewPRev = new System.Windows.Forms.Button();
             this.btnViewComMan = new System.Windows.Forms.Button();
             this.btnViewAccMan = new System.Windows.Forms.Button();
@@ -55,7 +57,7 @@
             this.btnSec = new System.Windows.Forms.Button();
             this.btnThird = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlTopMenu = new System.Windows.Forms.Panel();
             this.btnReview = new System.Windows.Forms.Button();
             this.btnCost = new System.Windows.Forms.Button();
             this.btnTime = new System.Windows.Forms.Button();
@@ -67,9 +69,10 @@
             this.btnIssue = new System.Windows.Forms.Button();
             this.btnCommunications = new System.Windows.Forms.Button();
             this.lstInstr = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlExecution.SuspendLayout();
             this.pnlInfo.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlTopMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCPhaseRev
@@ -280,6 +283,7 @@
             // 
             // pnlInfo
             // 
+            this.pnlInfo.Controls.Add(this.btnClose);
             this.pnlInfo.Controls.Add(this.btnViewPRev);
             this.pnlInfo.Controls.Add(this.btnViewComMan);
             this.pnlInfo.Controls.Add(this.btnViewAccMan);
@@ -293,13 +297,27 @@
             this.pnlInfo.Controls.Add(this.btnSec);
             this.pnlInfo.Controls.Add(this.btnThird);
             this.pnlInfo.Controls.Add(this.btnFirst);
-            this.pnlInfo.Controls.Add(this.panel1);
+            this.pnlInfo.Controls.Add(this.pnlTopMenu);
             this.pnlInfo.Controls.Add(this.lstInstr);
-            this.pnlInfo.Location = new System.Drawing.Point(12, 12);
+            this.pnlInfo.Location = new System.Drawing.Point(25, 12);
             this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(847, 607);
+            this.pnlInfo.Size = new System.Drawing.Size(834, 607);
             this.pnlInfo.TabIndex = 12;
             this.pnlInfo.Visible = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnClose.Location = new System.Drawing.Point(798, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(34, 21);
+            this.btnClose.TabIndex = 39;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnViewPRev
             // 
@@ -455,7 +473,7 @@
             // 
             this.btnSec.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSec.Location = new System.Drawing.Point(22, 259);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(124, 64);
@@ -468,7 +486,7 @@
             // 
             this.btnThird.BackColor = System.Drawing.Color.Aquamarine;
             this.btnThird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThird.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThird.Location = new System.Drawing.Point(22, 329);
             this.btnThird.Name = "btnThird";
             this.btnThird.Size = new System.Drawing.Size(124, 64);
@@ -482,7 +500,7 @@
             this.btnFirst.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFirst.Location = new System.Drawing.Point(22, 189);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(124, 64);
@@ -491,30 +509,30 @@
             this.btnFirst.Visible = false;
             this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
-            // panel1
+            // pnlTopMenu
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.btnReview);
-            this.panel1.Controls.Add(this.btnCost);
-            this.panel1.Controls.Add(this.btnTime);
-            this.panel1.Controls.Add(this.btnChange);
-            this.panel1.Controls.Add(this.btnProcurement);
-            this.panel1.Controls.Add(this.btnAccept);
-            this.panel1.Controls.Add(this.btnQuality);
-            this.panel1.Controls.Add(this.btnRisk);
-            this.panel1.Controls.Add(this.btnIssue);
-            this.panel1.Controls.Add(this.btnCommunications);
-            this.panel1.Location = new System.Drawing.Point(19, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(835, 83);
-            this.panel1.TabIndex = 1;
+            this.pnlTopMenu.AutoScroll = true;
+            this.pnlTopMenu.Controls.Add(this.btnReview);
+            this.pnlTopMenu.Controls.Add(this.btnCost);
+            this.pnlTopMenu.Controls.Add(this.btnTime);
+            this.pnlTopMenu.Controls.Add(this.btnChange);
+            this.pnlTopMenu.Controls.Add(this.btnProcurement);
+            this.pnlTopMenu.Controls.Add(this.btnAccept);
+            this.pnlTopMenu.Controls.Add(this.btnQuality);
+            this.pnlTopMenu.Controls.Add(this.btnRisk);
+            this.pnlTopMenu.Controls.Add(this.btnIssue);
+            this.pnlTopMenu.Controls.Add(this.btnCommunications);
+            this.pnlTopMenu.Location = new System.Drawing.Point(19, 17);
+            this.pnlTopMenu.Name = "pnlTopMenu";
+            this.pnlTopMenu.Size = new System.Drawing.Size(781, 83);
+            this.pnlTopMenu.TabIndex = 1;
             // 
             // btnReview
             // 
             this.btnReview.BackColor = System.Drawing.Color.Black;
             this.btnReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReview.ForeColor = System.Drawing.Color.MintCream;
+            this.btnReview.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnReview.Location = new System.Drawing.Point(1224, 2);
             this.btnReview.Name = "btnReview";
             this.btnReview.Size = new System.Drawing.Size(134, 49);
@@ -528,7 +546,7 @@
             this.btnCost.BackColor = System.Drawing.Color.Black;
             this.btnCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCost.ForeColor = System.Drawing.Color.MintCream;
+            this.btnCost.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCost.Location = new System.Drawing.Point(1088, 2);
             this.btnCost.Name = "btnCost";
             this.btnCost.Size = new System.Drawing.Size(134, 49);
@@ -542,7 +560,7 @@
             this.btnTime.BackColor = System.Drawing.Color.Black;
             this.btnTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTime.ForeColor = System.Drawing.Color.MintCream;
+            this.btnTime.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnTime.Location = new System.Drawing.Point(952, 2);
             this.btnTime.Name = "btnTime";
             this.btnTime.Size = new System.Drawing.Size(134, 49);
@@ -556,7 +574,7 @@
             this.btnChange.BackColor = System.Drawing.Color.Black;
             this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChange.ForeColor = System.Drawing.Color.MintCream;
+            this.btnChange.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnChange.Location = new System.Drawing.Point(816, 2);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(134, 49);
@@ -570,7 +588,7 @@
             this.btnProcurement.BackColor = System.Drawing.Color.Black;
             this.btnProcurement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcurement.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcurement.ForeColor = System.Drawing.Color.MintCream;
+            this.btnProcurement.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnProcurement.Location = new System.Drawing.Point(680, 2);
             this.btnProcurement.Name = "btnProcurement";
             this.btnProcurement.Size = new System.Drawing.Size(134, 49);
@@ -584,7 +602,7 @@
             this.btnAccept.BackColor = System.Drawing.Color.Black;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccept.ForeColor = System.Drawing.Color.MintCream;
+            this.btnAccept.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnAccept.Location = new System.Drawing.Point(544, 2);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(134, 49);
@@ -598,7 +616,7 @@
             this.btnQuality.BackColor = System.Drawing.Color.Black;
             this.btnQuality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuality.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuality.ForeColor = System.Drawing.Color.MintCream;
+            this.btnQuality.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnQuality.Location = new System.Drawing.Point(408, 2);
             this.btnQuality.Name = "btnQuality";
             this.btnQuality.Size = new System.Drawing.Size(134, 49);
@@ -612,7 +630,7 @@
             this.btnRisk.BackColor = System.Drawing.Color.Black;
             this.btnRisk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRisk.ForeColor = System.Drawing.Color.MintCream;
+            this.btnRisk.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnRisk.Location = new System.Drawing.Point(272, 2);
             this.btnRisk.Name = "btnRisk";
             this.btnRisk.Size = new System.Drawing.Size(134, 49);
@@ -626,7 +644,7 @@
             this.btnIssue.BackColor = System.Drawing.Color.Black;
             this.btnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIssue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIssue.ForeColor = System.Drawing.Color.MintCream;
+            this.btnIssue.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnIssue.Location = new System.Drawing.Point(136, 2);
             this.btnIssue.Name = "btnIssue";
             this.btnIssue.Size = new System.Drawing.Size(134, 49);
@@ -640,7 +658,7 @@
             this.btnCommunications.BackColor = System.Drawing.Color.Black;
             this.btnCommunications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCommunications.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCommunications.ForeColor = System.Drawing.Color.MintCream;
+            this.btnCommunications.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCommunications.Location = new System.Drawing.Point(0, 2);
             this.btnCommunications.Name = "btnCommunications";
             this.btnCommunications.Size = new System.Drawing.Size(134, 49);
@@ -659,10 +677,15 @@
             this.lstInstr.ItemHeight = 18;
             this.lstInstr.Items.AddRange(new object[] {
             " "});
-            this.lstInstr.Location = new System.Drawing.Point(217, 132);
+            this.lstInstr.Location = new System.Drawing.Point(168, 132);
             this.lstInstr.Name = "lstInstr";
-            this.lstInstr.Size = new System.Drawing.Size(586, 378);
+            this.lstInstr.Size = new System.Drawing.Size(650, 378);
             this.lstInstr.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmExecution
             // 
@@ -676,7 +699,7 @@
             this.Text = "frmExecution";
             this.pnlExecution.ResumeLayout(false);
             this.pnlInfo.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlTopMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -698,7 +721,7 @@
         private System.Windows.Forms.Panel pnlExecution;
         private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.ListBox lstInstr;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlTopMenu;
         private System.Windows.Forms.Button btnCommunications;
         private System.Windows.Forms.Button btnIssue;
         private System.Windows.Forms.Button btnChange;
@@ -722,5 +745,7 @@
         private System.Windows.Forms.Button btnViewAccMan;
         private System.Windows.Forms.Button btnViewComMan;
         private System.Windows.Forms.Button btnViewPRev;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnClose;
     }
 }

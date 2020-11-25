@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlanning));
             this.pnlPlanning = new System.Windows.Forms.Panel();
             this.lstInfo = new System.Windows.Forms.ListBox();
@@ -41,6 +42,15 @@
             this.btnResPlan = new System.Windows.Forms.Button();
             this.btnProjectPlan = new System.Windows.Forms.Button();
             this.pnlInstr = new System.Windows.Forms.Panel();
+            this.btnViewProcPlan = new System.Windows.Forms.Button();
+            this.btnViewPhaseRev = new System.Windows.Forms.Button();
+            this.btnViewRiskPlan = new System.Windows.Forms.Button();
+            this.btnViewAPlan = new System.Windows.Forms.Button();
+            this.btnViewComPlan = new System.Windows.Forms.Button();
+            this.btnViewQPlan = new System.Windows.Forms.Button();
+            this.btnViewFinPlan = new System.Windows.Forms.Button();
+            this.btnViewResPlan = new System.Windows.Forms.Button();
+            this.btnViewProjectPlan = new System.Windows.Forms.Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
             this.btnFirst = new System.Windows.Forms.Button();
             this.btnSec = new System.Windows.Forms.Button();
@@ -50,26 +60,18 @@
             this.btnFifth = new System.Windows.Forms.Button();
             this.pboTender = new System.Windows.Forms.PictureBox();
             this.pnlHeading = new System.Windows.Forms.Panel();
-            this.btnFPlan = new System.Windows.Forms.Button();
             this.btnQPlan = new System.Windows.Forms.Button();
             this.btnProc = new System.Windows.Forms.Button();
+            this.btnFPlan = new System.Windows.Forms.Button();
             this.btnPhase = new System.Windows.Forms.Button();
             this.btnCPlan = new System.Windows.Forms.Button();
             this.btnPPLan = new System.Windows.Forms.Button();
+            this.btnAPlan = new System.Windows.Forms.Button();
             this.btnRisk = new System.Windows.Forms.Button();
             this.btnRPlan = new System.Windows.Forms.Button();
-            this.btnAPlan = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
             this.lstInstr = new System.Windows.Forms.ListBox();
-            this.btnViewProjectPlan = new System.Windows.Forms.Button();
-            this.btnViewResPlan = new System.Windows.Forms.Button();
-            this.btnViewFinPlan = new System.Windows.Forms.Button();
-            this.btnViewQPlan = new System.Windows.Forms.Button();
-            this.btnViewComPlan = new System.Windows.Forms.Button();
-            this.btnViewAPlan = new System.Windows.Forms.Button();
-            this.btnViewRiskPlan = new System.Windows.Forms.Button();
-            this.btnViewPhaseRev = new System.Windows.Forms.Button();
-            this.btnViewProcPlan = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlPlanning.SuspendLayout();
             this.pnlInstr.SuspendLayout();
             this.pnlSideMenu.SuspendLayout();
@@ -272,11 +274,146 @@
             this.pnlInstr.Controls.Add(this.pnlHeading);
             this.pnlInstr.Controls.Add(this.btnHide);
             this.pnlInstr.Controls.Add(this.lstInstr);
-            this.pnlInstr.Location = new System.Drawing.Point(20, 16);
+            this.pnlInstr.Location = new System.Drawing.Point(15, 16);
             this.pnlInstr.Name = "pnlInstr";
-            this.pnlInstr.Size = new System.Drawing.Size(839, 600);
+            this.pnlInstr.Size = new System.Drawing.Size(844, 600);
             this.pnlInstr.TabIndex = 1;
             this.pnlInstr.Visible = false;
+            // 
+            // btnViewProcPlan
+            // 
+            this.btnViewProcPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewProcPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProcPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewProcPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewProcPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewProcPlan.Name = "btnViewProcPlan";
+            this.btnViewProcPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewProcPlan.TabIndex = 28;
+            this.btnViewProcPlan.Text = "View Template";
+            this.btnViewProcPlan.UseVisualStyleBackColor = false;
+            this.btnViewProcPlan.Visible = false;
+            this.btnViewProcPlan.Click += new System.EventHandler(this.btnViewProcPlan_Click);
+            // 
+            // btnViewPhaseRev
+            // 
+            this.btnViewPhaseRev.BackColor = System.Drawing.Color.Black;
+            this.btnViewPhaseRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewPhaseRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewPhaseRev.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewPhaseRev.Location = new System.Drawing.Point(403, 561);
+            this.btnViewPhaseRev.Name = "btnViewPhaseRev";
+            this.btnViewPhaseRev.Size = new System.Drawing.Size(140, 34);
+            this.btnViewPhaseRev.TabIndex = 27;
+            this.btnViewPhaseRev.Text = "View Template";
+            this.btnViewPhaseRev.UseVisualStyleBackColor = false;
+            this.btnViewPhaseRev.Visible = false;
+            this.btnViewPhaseRev.Click += new System.EventHandler(this.btnViewPhaseRev_Click);
+            // 
+            // btnViewRiskPlan
+            // 
+            this.btnViewRiskPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewRiskPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRiskPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewRiskPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewRiskPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewRiskPlan.Name = "btnViewRiskPlan";
+            this.btnViewRiskPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewRiskPlan.TabIndex = 26;
+            this.btnViewRiskPlan.Text = "View Template";
+            this.btnViewRiskPlan.UseVisualStyleBackColor = false;
+            this.btnViewRiskPlan.Visible = false;
+            this.btnViewRiskPlan.Click += new System.EventHandler(this.btnViewRiskPlan_Click);
+            // 
+            // btnViewAPlan
+            // 
+            this.btnViewAPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewAPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewAPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewAPlan.Name = "btnViewAPlan";
+            this.btnViewAPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewAPlan.TabIndex = 25;
+            this.btnViewAPlan.Text = "View Template";
+            this.btnViewAPlan.UseVisualStyleBackColor = false;
+            this.btnViewAPlan.Visible = false;
+            this.btnViewAPlan.Click += new System.EventHandler(this.btnViewAPlan_Click);
+            // 
+            // btnViewComPlan
+            // 
+            this.btnViewComPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewComPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewComPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewComPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewComPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewComPlan.Name = "btnViewComPlan";
+            this.btnViewComPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewComPlan.TabIndex = 24;
+            this.btnViewComPlan.Text = "View Template";
+            this.btnViewComPlan.UseVisualStyleBackColor = false;
+            this.btnViewComPlan.Visible = false;
+            this.btnViewComPlan.Click += new System.EventHandler(this.btnViewComPlan_Click);
+            // 
+            // btnViewQPlan
+            // 
+            this.btnViewQPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewQPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewQPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewQPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewQPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewQPlan.Name = "btnViewQPlan";
+            this.btnViewQPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewQPlan.TabIndex = 23;
+            this.btnViewQPlan.Text = "View Template";
+            this.btnViewQPlan.UseVisualStyleBackColor = false;
+            this.btnViewQPlan.Visible = false;
+            this.btnViewQPlan.Click += new System.EventHandler(this.btnViewQPlan_Click);
+            // 
+            // btnViewFinPlan
+            // 
+            this.btnViewFinPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewFinPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewFinPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewFinPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewFinPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewFinPlan.Name = "btnViewFinPlan";
+            this.btnViewFinPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewFinPlan.TabIndex = 22;
+            this.btnViewFinPlan.Text = "View Template";
+            this.btnViewFinPlan.UseVisualStyleBackColor = false;
+            this.btnViewFinPlan.Visible = false;
+            this.btnViewFinPlan.Click += new System.EventHandler(this.btnViewFinPlan_Click);
+            // 
+            // btnViewResPlan
+            // 
+            this.btnViewResPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewResPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewResPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewResPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewResPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewResPlan.Name = "btnViewResPlan";
+            this.btnViewResPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewResPlan.TabIndex = 21;
+            this.btnViewResPlan.Text = "View Template";
+            this.btnViewResPlan.UseVisualStyleBackColor = false;
+            this.btnViewResPlan.Visible = false;
+            this.btnViewResPlan.Click += new System.EventHandler(this.btnViewResPlan_Click);
+            // 
+            // btnViewProjectPlan
+            // 
+            this.btnViewProjectPlan.BackColor = System.Drawing.Color.Black;
+            this.btnViewProjectPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewProjectPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewProjectPlan.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnViewProjectPlan.Location = new System.Drawing.Point(403, 561);
+            this.btnViewProjectPlan.Name = "btnViewProjectPlan";
+            this.btnViewProjectPlan.Size = new System.Drawing.Size(140, 34);
+            this.btnViewProjectPlan.TabIndex = 20;
+            this.btnViewProjectPlan.Text = "View Template";
+            this.btnViewProjectPlan.UseVisualStyleBackColor = false;
+            this.btnViewProjectPlan.Visible = false;
+            this.btnViewProjectPlan.Click += new System.EventHandler(this.btnViewProjectPlan_Click);
             // 
             // pnlSideMenu
             // 
@@ -373,7 +510,7 @@
             // pboTender
             // 
             this.pboTender.Image = ((System.Drawing.Image)(resources.GetObject("pboTender.Image")));
-            this.pboTender.Location = new System.Drawing.Point(201, 125);
+            this.pboTender.Location = new System.Drawing.Point(212, 128);
             this.pboTender.Name = "pboTender";
             this.pboTender.Size = new System.Drawing.Size(545, 419);
             this.pboTender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -398,26 +535,12 @@
             this.pnlHeading.Size = new System.Drawing.Size(800, 100);
             this.pnlHeading.TabIndex = 17;
             // 
-            // btnFPlan
-            // 
-            this.btnFPlan.BackColor = System.Drawing.Color.Black;
-            this.btnFPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFPlan.ForeColor = System.Drawing.Color.MintCream;
-            this.btnFPlan.Location = new System.Drawing.Point(315, 3);
-            this.btnFPlan.Name = "btnFPlan";
-            this.btnFPlan.Size = new System.Drawing.Size(154, 65);
-            this.btnFPlan.TabIndex = 2;
-            this.btnFPlan.Text = "Create a Financial Plan";
-            this.btnFPlan.UseVisualStyleBackColor = false;
-            this.btnFPlan.Click += new System.EventHandler(this.btnFPlan_Click);
-            // 
             // btnQPlan
             // 
             this.btnQPlan.BackColor = System.Drawing.Color.Black;
             this.btnQPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQPlan.ForeColor = System.Drawing.Color.MintCream;
+            this.btnQPlan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnQPlan.Location = new System.Drawing.Point(471, 3);
             this.btnQPlan.Name = "btnQPlan";
             this.btnQPlan.Size = new System.Drawing.Size(154, 65);
@@ -431,7 +554,7 @@
             this.btnProc.BackColor = System.Drawing.Color.Black;
             this.btnProc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProc.ForeColor = System.Drawing.Color.MintCream;
+            this.btnProc.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnProc.Location = new System.Drawing.Point(1251, 3);
             this.btnProc.Name = "btnProc";
             this.btnProc.Size = new System.Drawing.Size(154, 65);
@@ -440,12 +563,26 @@
             this.btnProc.UseVisualStyleBackColor = false;
             this.btnProc.Click += new System.EventHandler(this.btnProc_Click);
             // 
+            // btnFPlan
+            // 
+            this.btnFPlan.BackColor = System.Drawing.Color.Black;
+            this.btnFPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFPlan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnFPlan.Location = new System.Drawing.Point(315, 3);
+            this.btnFPlan.Name = "btnFPlan";
+            this.btnFPlan.Size = new System.Drawing.Size(154, 65);
+            this.btnFPlan.TabIndex = 2;
+            this.btnFPlan.Text = "Create a Financial Plan";
+            this.btnFPlan.UseVisualStyleBackColor = false;
+            this.btnFPlan.Click += new System.EventHandler(this.btnFPlan_Click);
+            // 
             // btnPhase
             // 
             this.btnPhase.BackColor = System.Drawing.Color.Black;
             this.btnPhase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhase.ForeColor = System.Drawing.Color.MintCream;
+            this.btnPhase.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnPhase.Location = new System.Drawing.Point(1095, 3);
             this.btnPhase.Name = "btnPhase";
             this.btnPhase.Size = new System.Drawing.Size(154, 65);
@@ -459,7 +596,7 @@
             this.btnCPlan.BackColor = System.Drawing.Color.Black;
             this.btnCPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCPlan.ForeColor = System.Drawing.Color.MintCream;
+            this.btnCPlan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCPlan.Location = new System.Drawing.Point(627, 3);
             this.btnCPlan.Name = "btnCPlan";
             this.btnCPlan.Size = new System.Drawing.Size(154, 65);
@@ -473,7 +610,7 @@
             this.btnPPLan.BackColor = System.Drawing.Color.Black;
             this.btnPPLan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPPLan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPPLan.ForeColor = System.Drawing.Color.MintCream;
+            this.btnPPLan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnPPLan.Location = new System.Drawing.Point(3, 3);
             this.btnPPLan.Name = "btnPPLan";
             this.btnPPLan.Size = new System.Drawing.Size(154, 65);
@@ -482,12 +619,26 @@
             this.btnPPLan.UseVisualStyleBackColor = false;
             this.btnPPLan.Click += new System.EventHandler(this.btnPPLan_Click);
             // 
+            // btnAPlan
+            // 
+            this.btnAPlan.BackColor = System.Drawing.Color.Black;
+            this.btnAPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAPlan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAPlan.Location = new System.Drawing.Point(783, 3);
+            this.btnAPlan.Name = "btnAPlan";
+            this.btnAPlan.Size = new System.Drawing.Size(154, 65);
+            this.btnAPlan.TabIndex = 5;
+            this.btnAPlan.Text = "Create an Acceptance Plan";
+            this.btnAPlan.UseVisualStyleBackColor = false;
+            this.btnAPlan.Click += new System.EventHandler(this.btnAPlan_Click);
+            // 
             // btnRisk
             // 
             this.btnRisk.BackColor = System.Drawing.Color.Black;
             this.btnRisk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRisk.ForeColor = System.Drawing.Color.MintCream;
+            this.btnRisk.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnRisk.Location = new System.Drawing.Point(939, 3);
             this.btnRisk.Name = "btnRisk";
             this.btnRisk.Size = new System.Drawing.Size(154, 65);
@@ -501,7 +652,7 @@
             this.btnRPlan.BackColor = System.Drawing.Color.Black;
             this.btnRPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRPlan.ForeColor = System.Drawing.Color.MintCream;
+            this.btnRPlan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnRPlan.Location = new System.Drawing.Point(159, 3);
             this.btnRPlan.Name = "btnRPlan";
             this.btnRPlan.Size = new System.Drawing.Size(154, 65);
@@ -509,20 +660,6 @@
             this.btnRPlan.Text = "Create a Resource Plan";
             this.btnRPlan.UseVisualStyleBackColor = false;
             this.btnRPlan.Click += new System.EventHandler(this.btnRPlan_Click);
-            // 
-            // btnAPlan
-            // 
-            this.btnAPlan.BackColor = System.Drawing.Color.Black;
-            this.btnAPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAPlan.ForeColor = System.Drawing.Color.MintCream;
-            this.btnAPlan.Location = new System.Drawing.Point(783, 3);
-            this.btnAPlan.Name = "btnAPlan";
-            this.btnAPlan.Size = new System.Drawing.Size(154, 65);
-            this.btnAPlan.TabIndex = 5;
-            this.btnAPlan.Text = "Create an Acceptance Plan";
-            this.btnAPlan.UseVisualStyleBackColor = false;
-            this.btnAPlan.Click += new System.EventHandler(this.btnAPlan_Click);
             // 
             // btnHide
             // 
@@ -549,140 +686,10 @@
             this.lstInstr.Size = new System.Drawing.Size(549, 390);
             this.lstInstr.TabIndex = 15;
             // 
-            // btnViewProjectPlan
+            // timer1
             // 
-            this.btnViewProjectPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewProjectPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewProjectPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewProjectPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewProjectPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewProjectPlan.Name = "btnViewProjectPlan";
-            this.btnViewProjectPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewProjectPlan.TabIndex = 20;
-            this.btnViewProjectPlan.Text = "View Template";
-            this.btnViewProjectPlan.UseVisualStyleBackColor = false;
-            this.btnViewProjectPlan.Visible = false;
-            this.btnViewProjectPlan.Click += new System.EventHandler(this.btnViewProjectPlan_Click);
-            // 
-            // btnViewResPlan
-            // 
-            this.btnViewResPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewResPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewResPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewResPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewResPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewResPlan.Name = "btnViewResPlan";
-            this.btnViewResPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewResPlan.TabIndex = 21;
-            this.btnViewResPlan.Text = "View Template";
-            this.btnViewResPlan.UseVisualStyleBackColor = false;
-            this.btnViewResPlan.Visible = false;
-            this.btnViewResPlan.Click += new System.EventHandler(this.btnViewResPlan_Click);
-            // 
-            // btnViewFinPlan
-            // 
-            this.btnViewFinPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewFinPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewFinPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewFinPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewFinPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewFinPlan.Name = "btnViewFinPlan";
-            this.btnViewFinPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewFinPlan.TabIndex = 22;
-            this.btnViewFinPlan.Text = "View Template";
-            this.btnViewFinPlan.UseVisualStyleBackColor = false;
-            this.btnViewFinPlan.Visible = false;
-            this.btnViewFinPlan.Click += new System.EventHandler(this.btnViewFinPlan_Click);
-            // 
-            // btnViewQPlan
-            // 
-            this.btnViewQPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewQPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewQPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewQPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewQPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewQPlan.Name = "btnViewQPlan";
-            this.btnViewQPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewQPlan.TabIndex = 23;
-            this.btnViewQPlan.Text = "View Template";
-            this.btnViewQPlan.UseVisualStyleBackColor = false;
-            this.btnViewQPlan.Visible = false;
-            this.btnViewQPlan.Click += new System.EventHandler(this.btnViewQPlan_Click);
-            // 
-            // btnViewComPlan
-            // 
-            this.btnViewComPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewComPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewComPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewComPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewComPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewComPlan.Name = "btnViewComPlan";
-            this.btnViewComPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewComPlan.TabIndex = 24;
-            this.btnViewComPlan.Text = "View Template";
-            this.btnViewComPlan.UseVisualStyleBackColor = false;
-            this.btnViewComPlan.Visible = false;
-            this.btnViewComPlan.Click += new System.EventHandler(this.btnViewComPlan_Click);
-            // 
-            // btnViewAPlan
-            // 
-            this.btnViewAPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewAPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewAPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewAPlan.Name = "btnViewAPlan";
-            this.btnViewAPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewAPlan.TabIndex = 25;
-            this.btnViewAPlan.Text = "View Template";
-            this.btnViewAPlan.UseVisualStyleBackColor = false;
-            this.btnViewAPlan.Visible = false;
-            this.btnViewAPlan.Click += new System.EventHandler(this.btnViewAPlan_Click);
-            // 
-            // btnViewRiskPlan
-            // 
-            this.btnViewRiskPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewRiskPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewRiskPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewRiskPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewRiskPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewRiskPlan.Name = "btnViewRiskPlan";
-            this.btnViewRiskPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewRiskPlan.TabIndex = 26;
-            this.btnViewRiskPlan.Text = "View Template";
-            this.btnViewRiskPlan.UseVisualStyleBackColor = false;
-            this.btnViewRiskPlan.Visible = false;
-            this.btnViewRiskPlan.Click += new System.EventHandler(this.btnViewRiskPlan_Click);
-            // 
-            // btnViewPhaseRev
-            // 
-            this.btnViewPhaseRev.BackColor = System.Drawing.Color.Black;
-            this.btnViewPhaseRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewPhaseRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewPhaseRev.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewPhaseRev.Location = new System.Drawing.Point(403, 561);
-            this.btnViewPhaseRev.Name = "btnViewPhaseRev";
-            this.btnViewPhaseRev.Size = new System.Drawing.Size(140, 34);
-            this.btnViewPhaseRev.TabIndex = 27;
-            this.btnViewPhaseRev.Text = "View Template";
-            this.btnViewPhaseRev.UseVisualStyleBackColor = false;
-            this.btnViewPhaseRev.Visible = false;
-            this.btnViewPhaseRev.Click += new System.EventHandler(this.btnViewPhaseRev_Click);
-            // 
-            // btnViewProcPlan
-            // 
-            this.btnViewProcPlan.BackColor = System.Drawing.Color.Black;
-            this.btnViewProcPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewProcPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewProcPlan.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnViewProcPlan.Location = new System.Drawing.Point(403, 561);
-            this.btnViewProcPlan.Name = "btnViewProcPlan";
-            this.btnViewProcPlan.Size = new System.Drawing.Size(140, 34);
-            this.btnViewProcPlan.TabIndex = 28;
-            this.btnViewProcPlan.Text = "View Template";
-            this.btnViewProcPlan.UseVisualStyleBackColor = false;
-            this.btnViewProcPlan.Visible = false;
-            this.btnViewProcPlan.Click += new System.EventHandler(this.btnViewProcPlan_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmPlanning
             // 
@@ -747,5 +754,6 @@
         private System.Windows.Forms.Button btnViewRiskPlan;
         private System.Windows.Forms.Button btnViewPhaseRev;
         private System.Windows.Forms.Button btnViewProcPlan;
+        private System.Windows.Forms.Timer timer1;
     }
 }

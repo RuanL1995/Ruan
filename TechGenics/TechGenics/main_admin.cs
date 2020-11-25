@@ -519,8 +519,8 @@ namespace TechGenics
                 this.BackColor = SystemColors.AppWorkspace;
                 btnExpand.BackColor = SystemColors.AppWorkspace;
 
-                pnlHide.BackColor = SystemColors.Desktop; 
-
+                pnlHide.BackColor = SystemColors.AppWorkspace;
+                pnlChildForm.BackColor = SystemColors.AppWorkspace;
                 pnlPhasesSub.BackColor = SystemColors.AppWorkspace;
                 pnlDiagramsSub.BackColor = SystemColors.AppWorkspace;
                 pnlProjectsSub.BackColor = SystemColors.AppWorkspace;
@@ -533,6 +533,53 @@ namespace TechGenics
             {
                 btnDocs.BackColor = SystemColors.Desktop;
                 btnDocs.ForeColor = SystemColors.ActiveBorder;
+
+                pnlSideMenu.BackColor = SystemColors.Desktop;
+                btnInitiation.BackColor = SystemColors.Desktop;
+                btnPlanning.BackColor = SystemColors.Desktop;
+                btnExecution.BackColor = SystemColors.Desktop;
+                btnCloseOut.BackColor = SystemColors.Desktop;
+                btnTemplate.BackColor = SystemColors.Desktop;
+                btnNewProj.BackColor = SystemColors.Desktop;
+                btnNewMem.BackColor = SystemColors.Desktop;
+                btnGoogle.BackColor = SystemColors.Desktop;
+                btnManualA.BackColor = SystemColors.Desktop;
+                btnHelp.BackColor = SystemColors.Desktop;
+                btnFull.BackColor = SystemColors.Desktop;
+                btnMin.BackColor = SystemColors.Desktop;
+                btnMax.BackColor = SystemColors.Desktop;
+                btnHelp.ForeColor = SystemColors.ActiveBorder;
+
+                btnPhases.BackColor = SystemColors.Desktop;
+                btnPhases.ForeColor = SystemColors.ActiveBorder;
+
+                btnProjects.BackColor = SystemColors.Desktop;
+                btnProjects.ForeColor = SystemColors.ActiveBorder;
+
+                btnMembers.BackColor = SystemColors.Desktop;
+                btnMembers.ForeColor = SystemColors.ActiveBorder;
+
+                btnSettings.BackColor = SystemColors.Desktop;
+                btnSettings.ForeColor = SystemColors.ActiveBorder;
+
+                btnLogout.BackColor = SystemColors.Desktop;
+                btnLogout.ForeColor = SystemColors.ActiveBorder;
+
+                btnClose.BackColor = SystemColors.Desktop;
+                btnClose.ForeColor = SystemColors.ActiveBorder;
+
+                this.BackColor = SystemColors.Desktop;
+                btnExpand.BackColor = SystemColors.Desktop;
+
+                pnlHide.BackColor = SystemColors.Desktop;
+
+                pnlPhasesSub.BackColor = SystemColors.Desktop;
+                pnlDiagramsSub.BackColor = SystemColors.Desktop;
+                pnlProjectsSub.BackColor = SystemColors.Desktop;
+                pnlHelpSub.BackColor = SystemColors.Desktop;
+                pnlMembersSub.BackColor = SystemColors.Desktop;
+                pnlChildForm.BackColor = SystemColors.Desktop;
+                button8.BackColor = SystemColors.Desktop;
             }
         }
 
