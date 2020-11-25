@@ -50,18 +50,9 @@
             this.btnTheme = new System.Windows.Forms.Button();
             this.pnlPhasesSub = new System.Windows.Forms.Panel();
             this.btnCloseOut = new System.Windows.Forms.Button();
-            this.ctmsPlanning = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExecution = new System.Windows.Forms.Button();
-            this.ctmsExecution = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPlanning = new System.Windows.Forms.Button();
             this.btnInitiation = new System.Windows.Forms.Button();
-            this.ctmsInittiation = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.openInNewTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openInDualViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPhases = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlChildForm = new System.Windows.Forms.Panel();
@@ -77,11 +68,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnTask1 = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
-            this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.pnlChildForm2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlChildForm4 = new System.Windows.Forms.Panel();
             this.pnlChildForm3 = new System.Windows.Forms.Panel();
             this.pnlChildForm5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHide = new System.Windows.Forms.Panel();
             this.btnExpand = new System.Windows.Forms.Button();
             this.tmrSliding = new System.Windows.Forms.Timer(this.components);
@@ -93,26 +84,18 @@
             this.btnTab3 = new System.Windows.Forms.Button();
             this.btnTab4 = new System.Windows.Forms.Button();
             this.btnTab5 = new System.Windows.Forms.Button();
-            this.ctmsCloseOut = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
             this.pnlProjectsSub.SuspendLayout();
             this.pnlDiagramsSub.SuspendLayout();
             this.pnlPhasesSub.SuspendLayout();
-            this.ctmsPlanning.SuspendLayout();
-            this.ctmsExecution.SuspendLayout();
-            this.ctmsInittiation.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             this.pnlTasks.SuspendLayout();
             this.pnlBacklog.SuspendLayout();
-            this.pnlChildForm3.SuspendLayout();
-            this.pnlChildForm5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlChildForm3.SuspendLayout();
             this.pnlHide.SuspendLayout();
-            this.ctmsCloseOut.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -137,7 +120,7 @@
             this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlSideMenu.Name = "pnlSideMenu";
-            this.pnlSideMenu.Size = new System.Drawing.Size(201, 699);
+            this.pnlSideMenu.Size = new System.Drawing.Size(201, 721);
             this.pnlSideMenu.TabIndex = 0;
             // 
             // btnClose
@@ -412,7 +395,6 @@
             // 
             this.btnCloseOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnCloseOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCloseOut.ContextMenuStrip = this.ctmsPlanning;
             this.btnCloseOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseOut.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnCloseOut.Location = new System.Drawing.Point(4, 98);
@@ -424,32 +406,10 @@
             this.btnCloseOut.Click += new System.EventHandler(this.btnCloseOut_Click);
             this.btnCloseOut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnCloseOut_MouseUp);
             // 
-            // ctmsPlanning
-            // 
-            this.ctmsPlanning.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
-            this.ctmsPlanning.Name = "contextMenuStrip1";
-            this.ctmsPlanning.Size = new System.Drawing.Size(170, 48);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
-            this.toolStripMenuItem1.Text = "Open in new tab";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(169, 22);
-            this.toolStripMenuItem2.Text = "Open in dual view";
-            // 
             // btnExecution
             // 
             this.btnExecution.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnExecution.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExecution.ContextMenuStrip = this.ctmsExecution;
             this.btnExecution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExecution.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnExecution.Location = new System.Drawing.Point(4, 68);
@@ -461,32 +421,10 @@
             this.btnExecution.Click += new System.EventHandler(this.btnExecution_Click);
             this.btnExecution.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnExecution_MouseUp);
             // 
-            // ctmsExecution
-            // 
-            this.ctmsExecution.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
-            this.ctmsExecution.Name = "contextMenuStrip1";
-            this.ctmsExecution.Size = new System.Drawing.Size(170, 48);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(169, 22);
-            this.toolStripMenuItem3.Text = "Open in new tab";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(169, 22);
-            this.toolStripMenuItem4.Text = "Open in dual view";
-            // 
             // btnPlanning
             // 
             this.btnPlanning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnPlanning.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPlanning.ContextMenuStrip = this.ctmsPlanning;
             this.btnPlanning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanning.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnPlanning.Location = new System.Drawing.Point(4, 38);
@@ -502,7 +440,6 @@
             // 
             this.btnInitiation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnInitiation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnInitiation.ContextMenuStrip = this.ctmsInittiation;
             this.btnInitiation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInitiation.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnInitiation.Location = new System.Drawing.Point(4, 8);
@@ -513,27 +450,6 @@
             this.btnInitiation.UseVisualStyleBackColor = false;
             this.btnInitiation.Click += new System.EventHandler(this.btnInitiation_Click);
             this.btnInitiation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnInitiation_MouseUp);
-            // 
-            // ctmsInittiation
-            // 
-            this.ctmsInittiation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openInNewTabToolStripMenuItem,
-            this.openInDualViewToolStripMenuItem});
-            this.ctmsInittiation.Name = "contextMenuStrip1";
-            this.ctmsInittiation.Size = new System.Drawing.Size(170, 48);
-            // 
-            // openInNewTabToolStripMenuItem
-            // 
-            this.openInNewTabToolStripMenuItem.Name = "openInNewTabToolStripMenuItem";
-            this.openInNewTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openInNewTabToolStripMenuItem.Text = "Open in new tab";
-            this.openInNewTabToolStripMenuItem.Click += new System.EventHandler(this.openInNewTabToolStripMenuItem_Click_1);
-            // 
-            // openInDualViewToolStripMenuItem
-            // 
-            this.openInDualViewToolStripMenuItem.Name = "openInDualViewToolStripMenuItem";
-            this.openInDualViewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openInDualViewToolStripMenuItem.Text = "Open in dual view";
             // 
             // btnPhases
             // 
@@ -569,13 +485,14 @@
             // 
             // pnlChildForm
             // 
+            this.pnlChildForm.AutoScroll = true;
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
             this.pnlChildForm.Controls.Add(this.pnlTasks);
             this.pnlChildForm.Controls.Add(this.pnlChildForm2);
             this.pnlChildForm.Controls.Add(this.pictureBox1);
-            this.pnlChildForm.Location = new System.Drawing.Point(241, 41);
+            this.pnlChildForm.Location = new System.Drawing.Point(244, 41);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(869, 648);
+            this.pnlChildForm.Size = new System.Drawing.Size(860, 648);
             this.pnlChildForm.TabIndex = 1;
             this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint);
             // 
@@ -700,7 +617,6 @@
             // 
             this.btnTask1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnTask1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnTask1.ContextMenuStrip = this.ctmsExecution;
             this.btnTask1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTask1.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnTask1.Location = new System.Drawing.Point(18, 13);
@@ -721,43 +637,15 @@
             this.lblTasksHeading.TabIndex = 0;
             this.lblTasksHeading.Text = "TASKS FOR \"INSERT PROJ NAME\"";
             // 
-            // pnlChildForm4
-            // 
-            this.pnlChildForm4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm4.Location = new System.Drawing.Point(8, 3);
-            this.pnlChildForm4.Name = "pnlChildForm4";
-            this.pnlChildForm4.Size = new System.Drawing.Size(860, 640);
-            this.pnlChildForm4.TabIndex = 4;
-            this.pnlChildForm4.Visible = false;
-            // 
             // pnlChildForm2
             // 
-            this.pnlChildForm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm2.AutoScroll = true;
+            this.pnlChildForm2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pnlChildForm2.Location = new System.Drawing.Point(3, 3);
             this.pnlChildForm2.Name = "pnlChildForm2";
-            this.pnlChildForm2.Size = new System.Drawing.Size(814, 628);
+            this.pnlChildForm2.Size = new System.Drawing.Size(860, 628);
             this.pnlChildForm2.TabIndex = 2;
             this.pnlChildForm2.Visible = false;
-            // 
-            // pnlChildForm3
-            // 
-            this.pnlChildForm3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm3.Controls.Add(this.pnlChildForm5);
-            this.pnlChildForm3.Location = new System.Drawing.Point(239, 41);
-            this.pnlChildForm3.Name = "pnlChildForm3";
-            this.pnlChildForm3.Size = new System.Drawing.Size(861, 648);
-            this.pnlChildForm3.TabIndex = 3;
-            this.pnlChildForm3.Visible = false;
-            // 
-            // pnlChildForm5
-            // 
-            this.pnlChildForm5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
-            this.pnlChildForm5.Controls.Add(this.pnlChildForm4);
-            this.pnlChildForm5.Location = new System.Drawing.Point(0, 3);
-            this.pnlChildForm5.Name = "pnlChildForm5";
-            this.pnlChildForm5.Size = new System.Drawing.Size(865, 648);
-            this.pnlChildForm5.TabIndex = 4;
-            this.pnlChildForm5.Visible = false;
             // 
             // pictureBox1
             // 
@@ -768,14 +656,47 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlChildForm4
+            // 
+            this.pnlChildForm4.AutoScroll = true;
+            this.pnlChildForm4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlChildForm4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm4.Location = new System.Drawing.Point(38, 41);
+            this.pnlChildForm4.Name = "pnlChildForm4";
+            this.pnlChildForm4.Size = new System.Drawing.Size(860, 640);
+            this.pnlChildForm4.TabIndex = 4;
+            this.pnlChildForm4.Visible = false;
+            // 
+            // pnlChildForm3
+            // 
+            this.pnlChildForm3.AutoScroll = true;
+            this.pnlChildForm3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm3.Controls.Add(this.pnlChildForm5);
+            this.pnlChildForm3.Location = new System.Drawing.Point(244, 44);
+            this.pnlChildForm3.Name = "pnlChildForm3";
+            this.pnlChildForm3.Size = new System.Drawing.Size(860, 648);
+            this.pnlChildForm3.TabIndex = 3;
+            this.pnlChildForm3.Visible = false;
+            // 
+            // pnlChildForm5
+            // 
+            this.pnlChildForm5.AutoScroll = true;
+            this.pnlChildForm5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlChildForm5.Location = new System.Drawing.Point(3, 3);
+            this.pnlChildForm5.Name = "pnlChildForm5";
+            this.pnlChildForm5.Size = new System.Drawing.Size(860, 656);
+            this.pnlChildForm5.TabIndex = 4;
+            this.pnlChildForm5.Visible = false;
+            // 
             // pnlHide
             // 
             this.pnlHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(37)))), ((int)(((byte)(45)))));
+            this.pnlHide.Controls.Add(this.pnlChildForm4);
             this.pnlHide.Controls.Add(this.btnExpand);
             this.pnlHide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlHide.Location = new System.Drawing.Point(201, 0);
             this.pnlHide.Name = "pnlHide";
-            this.pnlHide.Size = new System.Drawing.Size(37, 699);
+            this.pnlHide.Size = new System.Drawing.Size(37, 721);
             this.pnlHide.TabIndex = 3;
             // 
             // btnExpand
@@ -785,7 +706,7 @@
             this.btnExpand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpand.Font = new System.Drawing.Font("Monotype Corsiva", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpand.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnExpand.Location = new System.Drawing.Point(5, 274);
+            this.btnExpand.Location = new System.Drawing.Point(5, 285);
             this.btnExpand.Name = "btnExpand";
             this.btnExpand.Size = new System.Drawing.Size(27, 82);
             this.btnExpand.TabIndex = 0;
@@ -852,7 +773,6 @@
             this.btnTab1.Text = "T1";
             this.btnTab1.UseVisualStyleBackColor = false;
             this.btnTab1.Visible = false;
-            this.btnTab1.Click += new System.EventHandler(this.btnTab1_Click);
             // 
             // btnTab2
             // 
@@ -867,7 +787,6 @@
             this.btnTab2.Text = "T2";
             this.btnTab2.UseVisualStyleBackColor = false;
             this.btnTab2.Visible = false;
-            this.btnTab2.Click += new System.EventHandler(this.btnTab2_Click);
             // 
             // btnTab3
             // 
@@ -882,7 +801,6 @@
             this.btnTab3.Text = "T3";
             this.btnTab3.UseVisualStyleBackColor = false;
             this.btnTab3.Visible = false;
-            this.btnTab3.Click += new System.EventHandler(this.btnTab3_Click);
             // 
             // btnTab4
             // 
@@ -897,7 +815,6 @@
             this.btnTab4.Text = "T4";
             this.btnTab4.UseVisualStyleBackColor = false;
             this.btnTab4.Visible = false;
-            this.btnTab4.Click += new System.EventHandler(this.btnTab4_Click);
             // 
             // btnTab5
             // 
@@ -912,35 +829,13 @@
             this.btnTab5.Text = "T5";
             this.btnTab5.UseVisualStyleBackColor = false;
             this.btnTab5.Visible = false;
-            this.btnTab5.Click += new System.EventHandler(this.btnTab5_Click);
-            // 
-            // ctmsCloseOut
-            // 
-            this.ctmsCloseOut.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6});
-            this.ctmsCloseOut.Name = "contextMenuStrip1";
-            this.ctmsCloseOut.Size = new System.Drawing.Size(170, 48);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(169, 22);
-            this.toolStripMenuItem5.Text = "Open in new tab";
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(169, 22);
-            this.toolStripMenuItem6.Text = "Open in dual view";
             // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1107, 699);
+            this.ClientSize = new System.Drawing.Size(1140, 721);
             this.Controls.Add(this.pnlChildForm3);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.btnTab5);
@@ -966,18 +861,13 @@
             this.pnlProjectsSub.ResumeLayout(false);
             this.pnlDiagramsSub.ResumeLayout(false);
             this.pnlPhasesSub.ResumeLayout(false);
-            this.ctmsPlanning.ResumeLayout(false);
-            this.ctmsExecution.ResumeLayout(false);
-            this.ctmsInittiation.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
             this.pnlTasks.ResumeLayout(false);
             this.pnlTasks.PerformLayout();
             this.pnlBacklog.ResumeLayout(false);
-            this.pnlChildForm3.ResumeLayout(false);
-            this.pnlChildForm5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlChildForm3.ResumeLayout(false);
             this.pnlHide.ResumeLayout(false);
-            this.ctmsCloseOut.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1025,18 +915,6 @@
         private System.Windows.Forms.Panel pnlChildForm3;
         private System.Windows.Forms.Panel pnlChildForm5;
         private System.Windows.Forms.Panel pnlChildForm4;
-        private System.Windows.Forms.ContextMenuStrip ctmsInittiation;
-        private System.Windows.Forms.ToolStripMenuItem openInNewTabToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openInDualViewToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip ctmsPlanning;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ContextMenuStrip ctmsExecution;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ContextMenuStrip ctmsCloseOut;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.Panel pnlTasks;
         private System.Windows.Forms.Label lblTasksHeading;
         private System.Windows.Forms.Button button14;
