@@ -541,7 +541,6 @@ namespace TechGenics
                 pnlHelpSub.BackColor = SystemColors.Desktop;
                 pnlMembersSub.BackColor = SystemColors.Desktop;
                 pnlChildForm.BackColor = SystemColors.Desktop;
-                button8.BackColor = SystemColors.Desktop;
             }
         }
 
@@ -628,7 +627,7 @@ namespace TechGenics
         }
         private void pnlChildForm_Paint(object sender, PaintEventArgs e)
         {
-            ControlExtension.Draggable(btnTaskBacklog, true);
+            //ControlExtension.Draggable(btnTaskBacklog, true);
         }
         private void openInDualViewToolStripMenuItem_Click(object sender, EventArgs e)
         {

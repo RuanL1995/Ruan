@@ -41,7 +41,6 @@
             this.btnNewMem = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
             this.pnlProjectsSub = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.btnNewProj = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
             this.pnlDiagramsSub = new System.Windows.Forms.Panel();
@@ -79,6 +78,12 @@
             this.btnTab4 = new System.Windows.Forms.Button();
             this.btnTab5 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cboPhases = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCurrentUser = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -89,6 +94,7 @@
             this.pnlTasks.SuspendLayout();
             this.pnlBacklog.SuspendLayout();
             this.pnlHide.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenu
@@ -267,28 +273,13 @@
             // pnlProjectsSub
             // 
             this.pnlProjectsSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlProjectsSub.Controls.Add(this.button8);
+            this.pnlProjectsSub.Controls.Add(this.cboPhases);
             this.pnlProjectsSub.Controls.Add(this.btnNewProj);
             this.pnlProjectsSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProjectsSub.Location = new System.Drawing.Point(0, 314);
             this.pnlProjectsSub.Name = "pnlProjectsSub";
             this.pnlProjectsSub.Size = new System.Drawing.Size(201, 69);
             this.pnlProjectsSub.TabIndex = 5;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button8.Location = new System.Drawing.Point(4, 38);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(186, 24);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "P2";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnNewProj
             // 
@@ -297,13 +288,13 @@
             this.btnNewProj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewProj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewProj.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnNewProj.Location = new System.Drawing.Point(4, 8);
+            this.btnNewProj.Location = new System.Drawing.Point(3, 39);
             this.btnNewProj.Name = "btnNewProj";
             this.btnNewProj.Size = new System.Drawing.Size(186, 24);
             this.btnNewProj.TabIndex = 0;
             this.btnNewProj.Text = "New Project";
             this.btnNewProj.UseVisualStyleBackColor = false;
-            this.btnNewProj.Click += new System.EventHandler(this.btnNewProj_Click);
+            this.btnNewProj.Visible = false;
             // 
             // btnProjects
             // 
@@ -477,15 +468,17 @@
             // 
             this.pnlChildForm.AutoScroll = true;
             this.pnlChildForm.BackColor = System.Drawing.Color.Black;
+            this.pnlChildForm.Controls.Add(this.panel1);
             this.pnlChildForm.Controls.Add(this.pnlTasks);
-            this.pnlChildForm.Location = new System.Drawing.Point(244, 44);
+            this.pnlChildForm.Location = new System.Drawing.Point(244, 51);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(884, 665);
+            this.pnlChildForm.Size = new System.Drawing.Size(884, 658);
             this.pnlChildForm.TabIndex = 1;
             this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint);
             // 
             // pnlTasks
             // 
+            this.pnlTasks.AutoScroll = true;
             this.pnlTasks.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlTasks.Controls.Add(this.button14);
             this.pnlTasks.Controls.Add(this.label4);
@@ -494,9 +487,9 @@
             this.pnlTasks.Controls.Add(this.label1);
             this.pnlTasks.Controls.Add(this.pnlBacklog);
             this.pnlTasks.Controls.Add(this.lblTasksHeading);
-            this.pnlTasks.Location = new System.Drawing.Point(792, 601);
+            this.pnlTasks.Location = new System.Drawing.Point(0, 38);
             this.pnlTasks.Name = "pnlTasks";
-            this.pnlTasks.Size = new System.Drawing.Size(47, 26);
+            this.pnlTasks.Size = new System.Drawing.Size(884, 617);
             this.pnlTasks.TabIndex = 0;
             this.pnlTasks.Visible = false;
             // 
@@ -506,7 +499,7 @@
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button14.Location = new System.Drawing.Point(620, 570);
+            this.button14.Location = new System.Drawing.Point(665, 553);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(186, 24);
             this.button14.TabIndex = 1;
@@ -518,7 +511,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Silver;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(672, 52);
+            this.label4.Location = new System.Drawing.Point(709, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 24);
             this.label4.TabIndex = 6;
@@ -529,7 +522,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Silver;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(454, 52);
+            this.label3.Location = new System.Drawing.Point(478, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 24);
             this.label3.TabIndex = 5;
@@ -540,7 +533,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Silver;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(224, 51);
+            this.label2.Location = new System.Drawing.Point(242, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 24);
             this.label2.TabIndex = 4;
@@ -551,7 +544,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 52);
+            this.label1.Location = new System.Drawing.Point(64, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 24);
             this.label1.TabIndex = 3;
@@ -559,13 +552,16 @@
             // 
             // pnlBacklog
             // 
+            this.pnlBacklog.Controls.Add(this.button5);
+            this.pnlBacklog.Controls.Add(this.button4);
+            this.pnlBacklog.Controls.Add(this.button3);
             this.pnlBacklog.Controls.Add(this.button2);
             this.pnlBacklog.Controls.Add(this.button7);
             this.pnlBacklog.Controls.Add(this.button1);
             this.pnlBacklog.Controls.Add(this.btnTask1);
-            this.pnlBacklog.Location = new System.Drawing.Point(5, 79);
+            this.pnlBacklog.Location = new System.Drawing.Point(28, 79);
             this.pnlBacklog.Name = "pnlBacklog";
-            this.pnlBacklog.Size = new System.Drawing.Size(788, 468);
+            this.pnlBacklog.Size = new System.Drawing.Size(823, 468);
             this.pnlBacklog.TabIndex = 2;
             // 
             // button2
@@ -619,7 +615,7 @@
             this.lblTasksHeading.AutoSize = true;
             this.lblTasksHeading.BackColor = System.Drawing.Color.Silver;
             this.lblTasksHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTasksHeading.Location = new System.Drawing.Point(248, 13);
+            this.lblTasksHeading.Location = new System.Drawing.Point(262, 15);
             this.lblTasksHeading.Name = "lblTasksHeading";
             this.lblTasksHeading.Size = new System.Drawing.Size(318, 24);
             this.lblTasksHeading.TabIndex = 0;
@@ -702,7 +698,7 @@
             this.btnTab1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab1.Location = new System.Drawing.Point(241, 12);
+            this.btnTab1.Location = new System.Drawing.Point(12, 9);
             this.btnTab1.Name = "btnTab1";
             this.btnTab1.Size = new System.Drawing.Size(75, 23);
             this.btnTab1.TabIndex = 7;
@@ -716,7 +712,7 @@
             this.btnTab2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab2.Location = new System.Drawing.Point(322, 12);
+            this.btnTab2.Location = new System.Drawing.Point(93, 9);
             this.btnTab2.Name = "btnTab2";
             this.btnTab2.Size = new System.Drawing.Size(75, 23);
             this.btnTab2.TabIndex = 8;
@@ -730,7 +726,7 @@
             this.btnTab3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab3.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab3.Location = new System.Drawing.Point(403, 12);
+            this.btnTab3.Location = new System.Drawing.Point(174, 9);
             this.btnTab3.Name = "btnTab3";
             this.btnTab3.Size = new System.Drawing.Size(75, 23);
             this.btnTab3.TabIndex = 8;
@@ -744,7 +740,7 @@
             this.btnTab4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab4.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab4.Location = new System.Drawing.Point(484, 12);
+            this.btnTab4.Location = new System.Drawing.Point(255, 9);
             this.btnTab4.Name = "btnTab4";
             this.btnTab4.Size = new System.Drawing.Size(75, 23);
             this.btnTab4.TabIndex = 9;
@@ -758,7 +754,7 @@
             this.btnTab5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTab5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTab5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab5.Location = new System.Drawing.Point(565, 12);
+            this.btnTab5.Location = new System.Drawing.Point(336, 9);
             this.btnTab5.Name = "btnTab5";
             this.btnTab5.Size = new System.Drawing.Size(75, 23);
             this.btnTab5.TabIndex = 10;
@@ -771,18 +767,93 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cboPhases
+            // 
+            this.cboPhases.FormattingEnabled = true;
+            this.cboPhases.Items.AddRange(new object[] {
+            "--All Phases--",
+            "Initiation",
+            "Planning",
+            "Execution",
+            "CloseOut"});
+            this.cboPhases.Location = new System.Drawing.Point(4, 12);
+            this.cboPhases.Name = "cboPhases";
+            this.cboPhases.Size = new System.Drawing.Size(186, 21);
+            this.cboPhases.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.btnTab1);
+            this.panel1.Controls.Add(this.btnTab5);
+            this.panel1.Controls.Add(this.btnTab2);
+            this.panel1.Controls.Add(this.btnTab4);
+            this.panel1.Controls.Add(this.btnTab3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(884, 40);
+            this.panel1.TabIndex = 4;
+            this.panel1.Visible = false;
+            // 
+            // lblCurrentUser
+            // 
+            this.lblCurrentUser.AutoSize = true;
+            this.lblCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblCurrentUser.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblCurrentUser.Location = new System.Drawing.Point(253, 15);
+            this.lblCurrentUser.Name = "lblCurrentUser";
+            this.lblCurrentUser.Size = new System.Drawing.Size(154, 18);
+            this.lblCurrentUser.TabIndex = 7;
+            this.lblCurrentUser.Text = "Welcome Placeholder";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button3.Location = new System.Drawing.Point(218, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 69);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Execution";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button4.Location = new System.Drawing.Point(450, 13);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(127, 69);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Execution";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button5.Location = new System.Drawing.Point(669, 13);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 69);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Execution";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1140, 721);
+            this.Controls.Add(this.lblCurrentUser);
             this.Controls.Add(this.pnlChildForm);
-            this.Controls.Add(this.btnTab5);
-            this.Controls.Add(this.btnTab4);
-            this.Controls.Add(this.btnTab3);
-            this.Controls.Add(this.btnTab2);
-            this.Controls.Add(this.btnTab1);
             this.Controls.Add(this.btnFull);
             this.Controls.Add(this.btnMax);
             this.Controls.Add(this.btnMin);
@@ -806,7 +877,9 @@
             this.pnlTasks.PerformLayout();
             this.pnlBacklog.ResumeLayout(false);
             this.pnlHide.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -862,6 +935,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ComboBox cboPhases;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCurrentUser;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }
