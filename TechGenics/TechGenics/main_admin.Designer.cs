@@ -56,11 +56,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTab1 = new System.Windows.Forms.Button();
-            this.btnTab5 = new System.Windows.Forms.Button();
-            this.btnTab2 = new System.Windows.Forms.Button();
-            this.btnTab4 = new System.Windows.Forms.Button();
-            this.btnTab3 = new System.Windows.Forms.Button();
             this.pnlTasks = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,6 +85,7 @@
             this.btnFull = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblCurrentUser = new System.Windows.Forms.Label();
+            this.btnCloseTaskPanel = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -97,7 +93,6 @@
             this.pnlDiagramsSub.SuspendLayout();
             this.pnlPhasesSub.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.pnlTasks.SuspendLayout();
             this.pnlBacklog.SuspendLayout();
             this.pnlHide.SuspendLayout();
@@ -500,11 +495,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.btnTab1);
-            this.panel1.Controls.Add(this.btnTab5);
-            this.panel1.Controls.Add(this.btnTab2);
-            this.panel1.Controls.Add(this.btnTab4);
-            this.panel1.Controls.Add(this.btnTab3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -512,80 +502,11 @@
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
             // 
-            // btnTab1
-            // 
-            this.btnTab1.BackColor = System.Drawing.Color.Black;
-            this.btnTab1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTab1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab1.Location = new System.Drawing.Point(12, 9);
-            this.btnTab1.Name = "btnTab1";
-            this.btnTab1.Size = new System.Drawing.Size(75, 23);
-            this.btnTab1.TabIndex = 7;
-            this.btnTab1.Text = "T1";
-            this.btnTab1.UseVisualStyleBackColor = false;
-            this.btnTab1.Visible = false;
-            // 
-            // btnTab5
-            // 
-            this.btnTab5.BackColor = System.Drawing.Color.Black;
-            this.btnTab5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTab5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTab5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab5.Location = new System.Drawing.Point(336, 9);
-            this.btnTab5.Name = "btnTab5";
-            this.btnTab5.Size = new System.Drawing.Size(75, 23);
-            this.btnTab5.TabIndex = 10;
-            this.btnTab5.Text = "T5";
-            this.btnTab5.UseVisualStyleBackColor = false;
-            this.btnTab5.Visible = false;
-            // 
-            // btnTab2
-            // 
-            this.btnTab2.BackColor = System.Drawing.Color.Black;
-            this.btnTab2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTab2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab2.Location = new System.Drawing.Point(93, 9);
-            this.btnTab2.Name = "btnTab2";
-            this.btnTab2.Size = new System.Drawing.Size(75, 23);
-            this.btnTab2.TabIndex = 8;
-            this.btnTab2.Text = "T2";
-            this.btnTab2.UseVisualStyleBackColor = false;
-            this.btnTab2.Visible = false;
-            // 
-            // btnTab4
-            // 
-            this.btnTab4.BackColor = System.Drawing.Color.Black;
-            this.btnTab4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTab4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTab4.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab4.Location = new System.Drawing.Point(255, 9);
-            this.btnTab4.Name = "btnTab4";
-            this.btnTab4.Size = new System.Drawing.Size(75, 23);
-            this.btnTab4.TabIndex = 9;
-            this.btnTab4.Text = "T4";
-            this.btnTab4.UseVisualStyleBackColor = false;
-            this.btnTab4.Visible = false;
-            // 
-            // btnTab3
-            // 
-            this.btnTab3.BackColor = System.Drawing.Color.Black;
-            this.btnTab3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTab3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTab3.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnTab3.Location = new System.Drawing.Point(174, 9);
-            this.btnTab3.Name = "btnTab3";
-            this.btnTab3.Size = new System.Drawing.Size(75, 23);
-            this.btnTab3.TabIndex = 8;
-            this.btnTab3.Text = "T3";
-            this.btnTab3.UseVisualStyleBackColor = false;
-            this.btnTab3.Visible = false;
-            // 
             // pnlTasks
             // 
             this.pnlTasks.AutoScroll = true;
             this.pnlTasks.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTasks.Controls.Add(this.btnCloseTaskPanel);
             this.pnlTasks.Controls.Add(this.button14);
             this.pnlTasks.Controls.Add(this.label4);
             this.pnlTasks.Controls.Add(this.label3);
@@ -605,12 +526,13 @@
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button14.Location = new System.Drawing.Point(665, 553);
+            this.button14.Location = new System.Drawing.Point(658, 569);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(186, 24);
+            this.button14.Size = new System.Drawing.Size(96, 24);
             this.button14.TabIndex = 1;
             this.button14.Text = "ADD NEW TASK";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Visible = false;
             // 
             // label4
             // 
@@ -926,6 +848,20 @@
             this.lblCurrentUser.TabIndex = 7;
             this.lblCurrentUser.Text = "Welcome Placeholder";
             // 
+            // btnCloseTaskPanel
+            // 
+            this.btnCloseTaskPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnCloseTaskPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCloseTaskPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseTaskPanel.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnCloseTaskPanel.Location = new System.Drawing.Point(760, 569);
+            this.btnCloseTaskPanel.Name = "btnCloseTaskPanel";
+            this.btnCloseTaskPanel.Size = new System.Drawing.Size(91, 24);
+            this.btnCloseTaskPanel.TabIndex = 7;
+            this.btnCloseTaskPanel.Text = "CLOSE";
+            this.btnCloseTaskPanel.UseVisualStyleBackColor = false;
+            this.btnCloseTaskPanel.Click += new System.EventHandler(this.btnCloseTaskPanel_Click);
+            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,7 +889,6 @@
             this.pnlDiagramsSub.ResumeLayout(false);
             this.pnlPhasesSub.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.pnlTasks.ResumeLayout(false);
             this.pnlTasks.PerformLayout();
             this.pnlBacklog.ResumeLayout(false);
@@ -995,11 +930,6 @@
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Button btnMax;
         private System.Windows.Forms.Button btnFull;
-        private System.Windows.Forms.Button btnTab1;
-        private System.Windows.Forms.Button btnTab2;
-        private System.Windows.Forms.Button btnTab3;
-        private System.Windows.Forms.Button btnTab4;
-        private System.Windows.Forms.Button btnTab5;
         //private System.Windows.Forms.Panel pnlChildForm4;
         private System.Windows.Forms.Panel pnlTasks;
         private System.Windows.Forms.Label lblTasksHeading;
@@ -1027,5 +957,6 @@
         private System.Windows.Forms.Button btnCtoP;
         private System.Windows.Forms.Button btnBtoP;
         private System.Windows.Forms.Button btnPtoB;
+        private System.Windows.Forms.Button btnCloseTaskPanel;
     }
 }

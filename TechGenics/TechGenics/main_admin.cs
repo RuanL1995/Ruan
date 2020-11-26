@@ -28,11 +28,25 @@ namespace TechGenics
 
         public static bool isAdmin = false;
         public static string currentUser = String.Empty;
+        //projects ctrl
         private Control ctrl;
+        //tasks ctrl
+        //private Control ctrlTaskPanel;
+        //private Control ctrlTaskCard;
+        //private Control ctrlTaskDividerLeft;
+        //private Control ctrlTaskDividerMiddle;
+        //private Control ctrlTaskDividerRight;
+        //private Control ctrlPToB;
+        //private Control ctrlBToP;
+        //private Control ctrlCToP;
+        //private Control ctrlPToC;
+        //private
         private int numberOfProjectsToRemove = 0;
 
         //Projects and tasks model
         List<ProjectsAndTasksByUserPhase> _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>();
+        //Tasks
+        List<ProjectsAndTasksByUserPhase> _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
 
         public frmMainAdmin()
         {
@@ -600,6 +614,7 @@ namespace TechGenics
                     ctrl.Text = Text = row.Field<String>("ProjectName");
                     ctrl.Location = new Point(locationStartX, locationStartY);
                     ctrl.Visible = true;
+                    ctrl.Click += project_Click;
 
                     locationStartY += 30;
                     pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
@@ -608,23 +623,80 @@ namespace TechGenics
                 }
             }     
         }
+
+        private void project_Click(object sender, EventArgs e)
+        {
+            generateTasks();
+            //if (btnUpdate.Enabled == true)
+            //{
+            //    generateUpdateInputForms();
+            //    TextBox txtBoxUpdateDisabled = updateTxtBoxList[0];
+            //    txtBoxUpdateDisabled.Enabled = false;
+            //    updateForm.ShowDialog(this);
+            //}
+            //if (btnUpdate.Enabled == false)
+            //{
+            //    MessageBox.Show("Editing is disabled on this table.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
         private void generateTasks()
         {
-            int XPos = -1;
-            int YPos = -1;
-            object inputB = "";
+            pnlTasks.Visible = true;
 
-            inputB = Interaction.InputBox("New Project Creation", "Enter the name of the new project", "new project 1..", XPos, YPos);
 
-            if (inputB != null)
+            DataAccess db = new DataAccess();
+            _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
+            DataSet dsGeneratedTasks = new DataSet();
+            dsGeneratedTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+            DataView view = new DataView(dsGeneratedTasks.Tables[0]);
+            DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
+
+            DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectPhase = '" + cboPhases.Text + "'");
+            DataTable dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
+
+            foreach (DataRow row in dtGeneratedTasksFilterRow)
             {
-                pnlTasks.Visible = true;
-                pnlTasks.BringToFront();
-
+                dtGeneratedTasksFilter.ImportRow(row);
             }
 
-            string actualHeading = Convert.ToString(inputB);
-            lblTasksHeading.Text = ("Tasks for " + actualHeading).ToUpper();
+            //DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
+            //DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
+            //DataRow[] projectByPhase;
+            //DataTable dtProjectByPhase;
+            //if (cboPhases.Text == "--All Phases--")
+            //{
+            //    dtProjectByPhase = distinctProjects;
+            //}
+            //else
+            //{
+            //    projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
+            //    dtProjectByPhase = distinctProjects.Clone();
+            //    foreach (DataRow row in projectByPhase)
+            //    {
+            //        dtProjectByPhase.ImportRow(row);
+            //    }
+            //}
+
+            //int locationStartX = 4;
+            //int locationStartY = 38;
+            //int projPanelSizeX = 201;
+            //int projPanelSizeY = 65;
+
+            //foreach (DataRow row in dtProjectByPhase.Rows)
+            //{
+            //    numberOfProjectsToRemove++;
+            //    ctrl = btnNewProj.Clone();
+            //    ctrl.Name = row.Field<String>("ProjectName");
+            //    ctrl.Text = Text = row.Field<String>("ProjectName");
+            //    ctrl.Location = new Point(locationStartX, locationStartY);
+            //    ctrl.Visible = true;
+            //    ctrl.Click += project_Click;
+
+            //    locationStartY += 30;
+            //    pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
+            //    projPanelSizeY += 30;
+            //    pnlProjectsSub.Controls.Add(ctrl);
+            //}
         }
 
         private void btnInitiation_Click(object sender, EventArgs e)
@@ -666,6 +738,11 @@ namespace TechGenics
             }
                  
             generateProjects();
+        }
+
+        private void btnCloseTaskPanel_Click(object sender, EventArgs e)
+        {
+            pnlTasks.Visible = false;
         }
     }
 }
