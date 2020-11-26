@@ -557,47 +557,54 @@ namespace TechGenics
 
         private void generateProjects()
         {
-            DataAccess db = new DataAccess();
-            _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser,true,false,true,false); //Change to read from db
-            DataSet dsProjectsAndTasks = new DataSet();
-            dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+            SettingsConstructor settings = new SettingsConstructor();
+            bool byPassLogin = settings.ByPassLogin;
+            if (byPassLogin == true)
+            { }
+            else if(byPassLogin == false)
+            {
+                DataAccess db = new DataAccess();
+                _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
+                DataSet dsProjectsAndTasks = new DataSet();
+                dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
 
-            DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
-            DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
-            DataRow[] projectByPhase;
-            DataTable dtProjectByPhase;
-            if (cboPhases.Text == "--All Phases--")
-            {
-                dtProjectByPhase = distinctProjects;
-            }
-            else
-            {
-                projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
-                dtProjectByPhase = distinctProjects.Clone();
-                foreach (DataRow row in projectByPhase)
+                DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
+                DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
+                DataRow[] projectByPhase;
+                DataTable dtProjectByPhase;
+                if (cboPhases.Text == "--All Phases--")
                 {
-                    dtProjectByPhase.ImportRow(row);
+                    dtProjectByPhase = distinctProjects;
                 }
-            }
+                else
+                {
+                    projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
+                    dtProjectByPhase = distinctProjects.Clone();
+                    foreach (DataRow row in projectByPhase)
+                    {
+                        dtProjectByPhase.ImportRow(row);
+                    }
+                }
 
-            int locationStartX = 4;
-            int locationStartY = 38;
-            int projPanelSizeX = 201;
-            int projPanelSizeY = 65;           
+                int locationStartX = 4;
+                int locationStartY = 38;
+                int projPanelSizeX = 201;
+                int projPanelSizeY = 65;
 
-            foreach (DataRow row in dtProjectByPhase.Rows)
-            {
-                ctrl = btnNewProj.Clone();
-                ctrl.Name = row.Field<String>("ProjectName");
-                ctrl.Text = Text = row.Field<String>("ProjectName");
-                ctrl.Location = new Point(locationStartX, locationStartY);
-                ctrl.Visible = true;
+                foreach (DataRow row in dtProjectByPhase.Rows)
+                {
+                    ctrl = btnNewProj.Clone();
+                    ctrl.Name = row.Field<String>("ProjectName");
+                    ctrl.Text = Text = row.Field<String>("ProjectName");
+                    ctrl.Location = new Point(locationStartX, locationStartY);
+                    ctrl.Visible = true;
 
-                locationStartY += 30;
-                pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
-                projPanelSizeY += 30;
-                pnlProjectsSub.Controls.Add(ctrl);
-            }
+                    locationStartY += 30;
+                    pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
+                    projPanelSizeY += 30;
+                    pnlProjectsSub.Controls.Add(ctrl);
+                }
+            }     
         }
         private void generateTasks()
         {

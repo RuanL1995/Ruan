@@ -682,6 +682,8 @@ namespace TechGenics
         frmMainAdmin admin = new frmMainAdmin();
         private void label3_Click(object sender, EventArgs e)
         {
+            SettingsConstructor settings = new SettingsConstructor();
+            settings.ByPassLogin = true;
             this.Hide();
             this.Enabled = false;
             admin.Show();

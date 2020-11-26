@@ -20,6 +20,8 @@ namespace TechGenics
         public static string currentUser = String.Empty;
         //IsAdmin
         public static bool isAdmin = false;
+        //ByPassLogin
+        public static bool byPassLogin = false;
 
 
         #endregion
@@ -50,6 +52,13 @@ namespace TechGenics
         {
             get { return isAdmin; }   // get method
             set { isAdmin = value; }  // set method
+        }
+
+        //ByPassLogin
+        public bool ByPassLogin // property
+        {
+            get { return byPassLogin; }   // get method
+            set { byPassLogin = value; }  // set method
         }
     }
 }

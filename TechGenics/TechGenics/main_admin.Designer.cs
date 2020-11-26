@@ -62,7 +62,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBacklog = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTask1 = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
@@ -84,6 +83,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -552,11 +552,12 @@
             // 
             // pnlBacklog
             // 
+            this.pnlBacklog.AutoScroll = true;
+            this.pnlBacklog.Controls.Add(this.button6);
             this.pnlBacklog.Controls.Add(this.button5);
             this.pnlBacklog.Controls.Add(this.button4);
             this.pnlBacklog.Controls.Add(this.button3);
             this.pnlBacklog.Controls.Add(this.button2);
-            this.pnlBacklog.Controls.Add(this.button7);
             this.pnlBacklog.Controls.Add(this.button1);
             this.pnlBacklog.Controls.Add(this.btnTask1);
             this.pnlBacklog.Location = new System.Drawing.Point(28, 79);
@@ -566,6 +567,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button2.BackColor = System.Drawing.SystemColors.Desktop;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Aquamarine;
@@ -575,19 +577,9 @@
             this.button2.TabIndex = 15;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button7.Location = new System.Drawing.Point(628, 1);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(13, 466);
-            this.button7.TabIndex = 13;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button1.BackColor = System.Drawing.SystemColors.Desktop;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Aquamarine;
@@ -839,12 +831,24 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button5.Location = new System.Drawing.Point(669, 13);
+            this.button5.Location = new System.Drawing.Point(673, 13);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 69);
             this.button5.TabIndex = 18;
             this.button5.Text = "Execution";
             this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button6.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.Aquamarine;
+            this.button6.Location = new System.Drawing.Point(616, 1);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(13, 466);
+            this.button6.TabIndex = 19;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // frmMainAdmin
             // 
@@ -924,7 +928,6 @@
         private System.Windows.Forms.Panel pnlTasks;
         private System.Windows.Forms.Label lblTasksHeading;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -941,5 +944,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
     }
 }
