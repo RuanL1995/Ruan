@@ -5,24 +5,24 @@
 ** Created On :	15 Oct 2020
 */
 @ProjectName VARCHAR(50),
-@ProjectType VARCHAR(50),
+@ProjectPhase VARCHAR(50),
 @ProjectStatus VARCHAR(50),
-@ProjectLocation VARCHAR(50)
+@DocumentLocation VARCHAR(MAX)
 
 AS
 BEGIN
 	INSERT INTO dbo.tblProject
 	(
 	    ProjectName,
-	    ProjectType,
+	    ProjectPhase,
 	    ProjectStatus,
-	    ProjectLocation
+	    DocumentLocation
 	)
 	VALUES
 	(   
 		@ProjectName,
-	    @ProjectType, 
+	    @ProjectPhase, 
 	    @ProjectStatus, 
-	    @ProjectLocation  
+	    @DocumentLocation
 	)
 END

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TechGenics.Models
 {
-    public class Project
+    public class Projects
     {
         public int ProjecId { get; set; }
         public string ProjectName { get; set; }
         public string ProjectType { get; set; }
-        public string ProjectStatus { get; set; }
-        public string ProjectLocation { get; set; }
+        public string ProjectPhase { get; set; }
+        public string DocumentLocation { get; set; }
     }
 }

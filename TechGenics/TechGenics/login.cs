@@ -216,11 +216,11 @@ namespace TechGenics
                 if (dsUser.Tables[0].Rows.Count > 0)
                 {
                     //Checks if user name and password combination exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
-                    if (dsUser.Tables[0].Rows[0]["UserName"].ToString() != txtUsername.Text || dsAdmin.Tables[0].Rows[0]["UserPassword"].ToString() != txtPassword.Text)
+                    if (dsUser.Tables[0].Rows[0]["UserName"].ToString() != txtUsername.Text || dsUser.Tables[0].Rows[0]["UserPassword"].ToString() != txtPassword.Text)
                     {
                         loginFailed = true;
                     }
-                    else if (dsUser.Tables[0].Rows[0]["UserName"].ToString() == txtUsername.Text && dsAdmin.Tables[0].Rows[0]["UserPassword"].ToString() == txtPassword.Text)
+                    else if (dsUser.Tables[0].Rows[0]["UserName"].ToString() == txtUsername.Text && dsUser.Tables[0].Rows[0]["UserPassword"].ToString() == txtPassword.Text)
                     {
                         //MessageBox.Show("Loged in Successfully.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         SettingsConstructor settings = new SettingsConstructor();
@@ -288,126 +288,130 @@ namespace TechGenics
                 dsUser = ListToDataSet.ToDataSet(_users);
 
                 DataSet dsAdmin = new DataSet();
-                dsAdmin = ListToDataSet.ToDataSet(_admins);
+                dsAdmin = ListToDataSet.ToDataSet(_admins);               
 
-
-                ////send email
-                Random random = new Random();
-                 validationCode = random.Next(0, 1000).ToString();
-
-                 using (MailMessage mail = new MailMessage())
-                 {
-                     try
-                     {
-                         //MailMessage mail = new MailMessage();
-                         SmtpClient smpt = new SmtpClient("smtp.gmail.com", 587);
-                         mail.From = new MailAddress(emailAddress);
-                         mail.To.Add(new MailAddress(txtEmail.Text));
-                         mail.Subject = emailSubject;
-                         mail.Body = "Hello " + userFirstName + ", \n\n" + "Please enter the following code before proceeding to Login." + "\n" + validationCode;
-
-
-
-                         smpt.Port = 587;
-                         smpt.Credentials = new System.Net.NetworkCredential(emailAddress, emailPassword);
-                         smpt.EnableSsl = true;
-                         smpt.Send(mail);
-                         pnlLogin.Enabled = true;
-
-                     }
-                     catch (Exception ex)
-                     {
-                         MessageBox.Show(ex.Message);
-                     }
-
-                     //inputBox for email validate
-                     string userCode = Interaction.InputBox("Enter Code", "Validation");
-                     if (userCode == validationCode)
-                     {
-                         pnlLogin.Enabled = true;
-                     }
-                 }
-
-                //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
-                if (chckBoxAdmin.Checked == false)
-                {
-                    if (dsUser.Tables[0].Rows.Count == 0)
-                    {
-                        //Inserts a new user when register is clicked
-                        db.InsertUser(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
-                        txtUsername.Text = "";
-                        txtPassword.Text = "";
-                        txtFirst.Text = "";
-                        txtLast.Text = "";
-                        txtEmail.Text = "";
-                        pnlLogin.Enabled = true;
-                        //MessageBox.Show("Your account has been registered successfully.", "Registration Success.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else if (dsUser.Tables[0].Rows.Count > 0)
-                    {
-                        if (dsUser.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
-                        {
-                            MessageBox.Show("The username already exists.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                }
-                else if (chckBoxAdmin.Checked == true)
-                {
-                    masterPassword = Interaction.InputBox("", "Enter master password", "Enter master password here...", -1, -1);
-                    if (masterPassword == "TGA79135#")
-                    {
-                        if (dsAdmin.Tables[0].Rows.Count == 0)
-                        {
-                            //Inserts a new user when register is clicked
-                            db.InsertAdmin(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
-                            txtUsername.Text = "";
-                            txtPassword.Text = "";
-                            txtFirst.Text = "";
-                            txtLast.Text = "";
-                            txtEmail.Text = "";
-                            pnlLogin.Enabled = true;
-                            //MessageBox.Show("Your account has been registered successfully.", "Registration Success.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else if (dsAdmin.Tables[0].Rows.Count > 0)
-                        {
-                            if (dsAdmin.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
-                            {
-                                MessageBox.Show("The username already exists.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Incorrect master password, cannot add an admin account.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-
-               
+                bool validationFine = false;
+                bool validationPasswordFine = false;
+                bool validationPasswordMatchFine = false;
 
                 //Validate password 
                 if (validatePassword(txtSPass.Text) && validatePassword(txtSCPass.Text))
                 {
-                    pnlLogin.Visible = true;
-                    //pnlLogin.Enabled = false;
-
-                    timer3.Start();
+                    validationPasswordFine = true;
                 }
                 else if (!(validatePassword(txtSPass.Text)) || !(validatePassword(txtSCPass.Text)))
                 {
                     MessageBox.Show("Invalid Password");
                 }
-                else if (txtSPass.Text == txtSCPass.Text)
-                {
-                    pnlLogin.Visible = true;
-                    //pnlLogin.Enabled = false;
-                    pnlLogin.Enabled = true;
 
-                    timer3.Start();
+                if (txtSPass.Text == txtSCPass.Text)
+                {
+                    validationPasswordMatchFine = true;
                 }
                 else if (txtSPass.Text != txtSCPass.Text)
                 {
                     MessageBox.Show("Passwords don't match");
+                }
 
+                if (validationPasswordFine == true && validationPasswordMatchFine == true)
+                {
+                    validationFine = true;
+                    if (validationFine == true)
+                    {
+                        //Checks if user name  exists where returned data set is filtered by entered username, will always be Row[0] becaus of this
+                        if (chckBoxAdmin.Checked == false)
+                        {
+                            if (dsUser.Tables[0].Rows.Count == 0)
+                            {
+                                //Inserts a new user when register is clicked
+                                db.InsertUser(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
+                                txtUsername.Text = "";
+                                txtPassword.Text = "";
+                                txtFirst.Text = "";
+                                txtLast.Text = "";
+                                txtEmail.Text = "";
+                                pnlLogin.Visible = true;
+                                pnlLogin.Enabled = true;
+                                timer3.Start();
+                                //MessageBox.Show("Your account has been registered successfully.", "Registration Success.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else if (dsUser.Tables[0].Rows.Count > 0)
+                            {
+                                if (dsUser.Tables[0].Rows[0]["UserName"].ToString() == txtSUser.Text)
+                                {
+                                    MessageBox.Show("The username already exists.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                        }
+                        else if (chckBoxAdmin.Checked == true)
+                        {
+                            masterPassword = Interaction.InputBox("", "Enter master password", "Enter master password here...", -1, -1);
+                            if (masterPassword == "TGA79135#")
+                            {
+                                if (dsAdmin.Tables[0].Rows.Count == 0)
+                                {
+                                    //Inserts a new user when register is clicked
+                                    db.InsertAdmin(txtSUser.Text, txtSPass.Text, txtFirst.Text, txtLast.Text, txtEmail.Text);
+                                    txtUsername.Text = "";
+                                    txtPassword.Text = "";
+                                    txtFirst.Text = "";
+                                    txtLast.Text = "";
+                                    txtEmail.Text = "";
+                                    pnlLogin.Visible = true;
+                                    pnlLogin.Enabled = true;
+                                    timer3.Start();
+                                    //MessageBox.Show("Your account has been registered successfully.", "Registration Success.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                                else if (dsAdmin.Tables[0].Rows.Count > 0)
+                                {
+                                    if (dsAdmin.Tables[0].Rows[0]["AdminName"].ToString() == txtSUser.Text)
+                                    {
+                                        MessageBox.Show("The username already exists.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect master password, cannot add an admin account.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        //////send email
+                        //Random random = new Random();
+                        // validationCode = random.Next(0, 1000).ToString();
+
+                        // using (MailMessage mail = new MailMessage())
+                        // {
+                        //     try
+                        //     {
+                        //         //MailMessage mail = new MailMessage();
+                        //         SmtpClient smpt = new SmtpClient("smtp.gmail.com", 587);
+                        //         mail.From = new MailAddress(emailAddress);
+                        //         mail.To.Add(new MailAddress(txtEmail.Text));
+                        //         mail.Subject = emailSubject;
+                        //         mail.Body = "Hello " + userFirstName + ", \n\n" + "Please enter the following code before proceeding to Login." + "\n" + validationCode;
+
+
+
+                        //         smpt.Port = 587;
+                        //         smpt.Credentials = new System.Net.NetworkCredential(emailAddress, emailPassword);
+                        //         smpt.EnableSsl = true;
+                        //         smpt.Send(mail);
+                        //         pnlLogin.Enabled = true;
+
+                        //     }
+                        //     catch (Exception ex)
+                        //     {
+                        //         MessageBox.Show(ex.Message);
+                        //     }
+
+                        //     //inputBox for email validate
+                        //     string userCode = Interaction.InputBox("Enter Code", "Validation");
+                        //     if (userCode == validationCode)
+                        //     {
+                        //         pnlLogin.Enabled = true;
+                        //     }
+                        // }
+                    }
                 }
                                 
             }

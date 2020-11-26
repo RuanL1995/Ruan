@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic;
+using TechGenics.Models;
 
 
 namespace TechGenics
@@ -25,7 +26,12 @@ namespace TechGenics
         bool leftDock = false;
         bool rightDock = false;
 
-        
+        public static bool isAdmin = false;
+        public static string currentUser = String.Empty;
+        private Control ctrl;
+
+        //Projects and tasks model
+        List<ProjectsAndTasksByUserPhase> _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>();
 
         public frmMainAdmin()
         {
@@ -340,14 +346,17 @@ namespace TechGenics
         }
                 
         private void frmMainAdmin_Load(object sender, EventArgs e)
-        {
-                       
+        {                      
             tmrSliding.Start();
             pnlSideMenu.Width = 0;
             btnExpand.Text = ">>";
             SettingsConstructor settings = new SettingsConstructor();
-           //lblCurrentUser.Text = "Welcome " + settings.CurrentUser;
-            
+            currentUser = settings.CurrentUser;
+            isAdmin = settings.IsAdmin;
+            lblCurrentUser.Text = "Welcome " + currentUser;
+
+            cboPhases.SelectedIndex = 0;
+            generateProjects();
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -392,37 +401,10 @@ namespace TechGenics
            
        
 
-        private void btnInitiation_Click(object sender, EventArgs e)
-        {
-            
-            pnlChildForm.Size = new Size(860, 656);
-            //pnlChildForm.BringToFront();
-            leftDock = true;
-        }
+        
 
         private void btnPlanning_Click(object sender, EventArgs e)
         {
-            
-        }
-                
-        private void btnNewProj_Click(object sender, EventArgs e)
-        {
-
-            int XPos = -1;
-            int YPos = -1;
-            object inputB = "";
-
-            inputB = Interaction.InputBox("New Project Creation", "Enter the name of the new project","new project 1..", XPos, YPos);
-
-            if(inputB != null)
-            {
-                pnlTasks.Visible = true;
-                pnlTasks.BringToFront();
-
-            }
-
-            string actualHeading = Convert.ToString(inputB);
-            lblTasksHeading.Text = ("Tasks for " +actualHeading).ToUpper();
             
         }
 
@@ -436,33 +418,14 @@ namespace TechGenics
             
         }
         
-        private void pnlChildForm_Paint(object sender, PaintEventArgs e)
-        {
-            ControlExtension.Draggable(btnTask1, true);
-        }
+        
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-              
-       
-        private void openInDualViewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
 
-            if(leftDock == true)
-            {
-                //dock panel right
-                pnlChildForm.Dock = DockStyle.Right;
-                pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
-            }
-            else
-            {
-                pnlChildForm.Dock = DockStyle.Left;
-                pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
-            }
-        }
+        
 
         private void btnLightMode_Click(object sender, EventArgs e)
         {
@@ -485,7 +448,7 @@ namespace TechGenics
                 btnExecution.BackColor = SystemColors.AppWorkspace;
                 btnCloseOut.BackColor = SystemColors.AppWorkspace;
                 btnTemplate.BackColor = SystemColors.AppWorkspace;
-                btnNewProj.BackColor = SystemColors.AppWorkspace;
+                //btnNewProj.BackColor = SystemColors.AppWorkspace;
                 btnNewMem.BackColor = SystemColors.AppWorkspace;
                 btnGoogle.BackColor = SystemColors.AppWorkspace;
                 btnManualA.BackColor = SystemColors.AppWorkspace;
@@ -527,7 +490,6 @@ namespace TechGenics
                 pnlHelpSub.BackColor = SystemColors.AppWorkspace;
                 pnlMembersSub.BackColor = SystemColors.AppWorkspace;
                 pnlChildForm.BackColor = SystemColors.Desktop;
-                button8.BackColor = SystemColors.AppWorkspace;
             }
             if (TechGenics.Properties.Settings.Default.Theme == "Dark")
             {
@@ -583,9 +545,115 @@ namespace TechGenics
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            SettingsConstructor settings = new SettingsConstructor();
+            settings.CurrentUser = "";
+            lblCurrentUser.Text = "";
+
+            login_signup login = new login_signup();
+            login.Show();
+            this.Dispose();
+        }
+
+        private void generateProjects()
+        {
+            DataAccess db = new DataAccess();
+            _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser,true,false,true,false); //Change to read from db
+            DataSet dsProjectsAndTasks = new DataSet();
+            dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+
+            DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
+            DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
+            DataRow[] projectByPhase;
+            DataTable dtProjectByPhase;
+            if (cboPhases.Text == "--All Phases--")
+            {
+                dtProjectByPhase = distinctProjects;
+            }
+            else
+            {
+                projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
+                dtProjectByPhase = distinctProjects.Clone();
+                foreach (DataRow row in projectByPhase)
+                {
+                    dtProjectByPhase.ImportRow(row);
+                }
+            }
+
+            int locationStartX = 4;
+            int locationStartY = 38;
+            int projPanelSizeX = 201;
+            int projPanelSizeY = 65;           
+
+            foreach (DataRow row in dtProjectByPhase.Rows)
+            {
+                ctrl = btnNewProj.Clone();
+                ctrl.Name = row.Field<String>("ProjectName");
+                ctrl.Text = Text = row.Field<String>("ProjectName");
+                ctrl.Location = new Point(locationStartX, locationStartY);
+                ctrl.Visible = true;
+
+                locationStartY += 30;
+                pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
+                projPanelSizeY += 30;
+                pnlProjectsSub.Controls.Add(ctrl);
+            }
+        }
+        private void generateTasks()
+        {
+            int XPos = -1;
+            int YPos = -1;
+            object inputB = "";
+
+            inputB = Interaction.InputBox("New Project Creation", "Enter the name of the new project", "new project 1..", XPos, YPos);
+
+            if (inputB != null)
+            {
+                pnlTasks.Visible = true;
+                pnlTasks.BringToFront();
+
+            }
+
+            string actualHeading = Convert.ToString(inputB);
+            lblTasksHeading.Text = ("Tasks for " + actualHeading).ToUpper();
+        }
+
+        private void btnInitiation_Click(object sender, EventArgs e)
         {
 
+            //pnlChildForm.Size = new Size(860, 656);
+            ////pnlChildForm.BringToFront();
+            //leftDock = true;
+        }
+        private void pnlChildForm_Paint(object sender, PaintEventArgs e)
+        {
+            ControlExtension.Draggable(btnTaskBacklog, true);
+        }
+        private void openInDualViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            if (leftDock == true)
+            {
+                //dock panel right
+                pnlChildForm.Dock = DockStyle.Right;
+                pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
+            }
+            else
+            {
+                pnlChildForm.Dock = DockStyle.Left;
+                pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
+            }
+        }
+
+        private void cboPhases_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Control item in pnlProjectsSub.Controls.OfType<Button>())
+            {
+                pnlProjectsSub.Controls.Remove(item);
+            }
+            generateProjects();
         }
     }
 }

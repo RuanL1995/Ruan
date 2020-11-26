@@ -7,9 +7,9 @@
 
 	@ProjectId int,
 	@ProjectName VARCHAR(50),
-	@ProjectType VARCHAR(50),
+	@ProjectPhase VARCHAR(50),
 	@ProjectStatus VARCHAR(50),
-	@ProjectLocation VARCHAR(50)
+	@DocumentLocation VARCHAR(MAX)
 
 AS
 BEGIN
@@ -17,9 +17,9 @@ BEGIN
 UPDATE tblProject
 	SET
 		ProjectName = @ProjectName,
-		ProjectType = @ProjectType,
+		ProjectPhase = @ProjectPhase,
 		ProjectStatus = @ProjectStatus,
-		ProjectLocation = @ProjectLocation
+		DocumentLocation = @DocumentLocation
 	WHERE 
 		ProjectId = @ProjectId
 END

@@ -72,9 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\tblUser.sql" />
-    <Build Include="dbo\Tables\tblPhase.sql" />
-    <Build Include="dbo\Tables\tblProjectPhase.sql" />
-    <Build Include="dbo\Tables\tblUserProject.sql" />
     <Build Include="dbo\Stored Procedures\Phase\spPhaseC1.sql" />
     <Build Include="dbo\Stored Procedures\Phase\spPhaseR1.sql" />
     <Build Include="dbo\Stored Procedures\Project\spProjectC1.sql" />
@@ -98,6 +95,7 @@
     <Build Include="dbo\Tables\tblProject.sql" />
     <Build Include="dbo\Stored Procedures\Admin\spAdminR1.sql" />
     <Build Include="dbo\Stored Procedures\Admin\spAdminC1.sql" />
+    <Build Include="dbo\Stored Procedures\Project\spProjectR2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />

@@ -97,53 +97,11 @@ namespace TechGenics
                 List<Admin> admin = new List<Admin>();
                 admin.Add(newAdmin);
 
-                connection.Execute("dbo.spAdminC1 @ADminName, @AdminPassword, @AdminFirstName, @AdminSurName, @AdminEmail", admin);
+                connection.Execute("dbo.spAdminC1 @AdminName, @AdminPassword, @AdminFirstName, @AdminSurName, @AdminEmail", admin);
             }
         }
         #endregion
-        #endregion
-
-        /// <summary>
-        /// Data Access for tblPhase
-        /// </summary>
-        #region tblPhase
-        /// <summary>
-        /// All data read operations for tblPhase
-        /// </summary>
-        #region Data Read
-        /// <summary>
-        /// Gets all the phase information
-        /// </summary>
-        public List<Phase> GetPhase()
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
-            {
-                return connection.Query<Phase>("dbo.spPhaseR1").ToList();
-            }
-        }
-        #endregion
-        /// <summary>
-        /// All data write operations for tblPhase
-        /// </summary>
-        #region Data Write
-        /// <summary>
-        /// Inserts a new phase into tblPhase
-        /// </summary>
-        internal void InsertPhase(string phaseName)
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
-            {
-                Phase newPhase = new Phase();
-                newPhase.PhaseName = phaseName;
-
-                List<Phase> phase = new List<Phase>();
-                phase.Add(newPhase);
-
-                connection.Execute("dbo.spPhaseC1 @PhaseName", phase);
-            }
-        }
-        #endregion
-        #endregion
+        #endregion    
 
         /// <summary>
         /// Data Access for tblProject
@@ -156,11 +114,29 @@ namespace TechGenics
         /// <summary>
         /// Gets all information on all projects
         /// </summary>
-        public List<Project> GetProject()
+        public List<Projects> GetProject()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
             {
-                return connection.Query<Project>("dbo.spProjectR1").ToList();
+                return connection.Query<Projects>("dbo.spProjectR1").ToList();
+            }
+        }
+        /// <summary>
+        /// Gets all information all projects and tasks assigend to a user by phase
+        /// </summary>
+        public List<ProjectsAndTasksByUserPhase> GetProjectAndTaskInfo(string currentUser, bool initiation, bool planning, bool execution, bool closeOut)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                return connection.Query<ProjectsAndTasksByUserPhase>("dbo.spProjectR2 @CurrentUser, @Initiation, @Planning, @Execution, @closeOut",
+                    new { 
+                            CurrentUser = currentUser,
+                            Initiation = initiation, 
+                            Planning = planning, 
+                            Execution = execution, 
+                            CloseOut = closeOut
+                        }
+                    ).ToList();
             }
         }
         #endregion
@@ -171,62 +147,20 @@ namespace TechGenics
         /// <summary>
         /// Inserts a new project into tblProject
         /// </summary>
-        internal void InsertProject(string projectName, string projectType, string projectStatus, string projectLocation)
+        internal void InsertProject(string projectName, string projectType, string projectPhase, string documentLocation)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
             {
-                Project newProject = new Project();
+                Projects newProject = new Projects();
                 newProject.ProjectName = projectName;
                 newProject.ProjectType = projectType;
-                newProject.ProjectStatus = projectStatus;
-                newProject.ProjectLocation = projectLocation;
+                newProject.ProjectPhase = projectPhase;
+                newProject.DocumentLocation = documentLocation;
 
-                List<Project> project = new List<Project>();
+                List<Projects> project = new List<Projects>();
                 project.Add(newProject);
 
-                connection.Execute("dbo.spProjectC1 @ProjectName, @ProjectType, @ProjectStatus, @ProjectLocation", project);
-            }
-        }
-        #endregion
-        #endregion
-
-        /// <summary>
-        /// Data Access for tblProjectPhase
-        /// </summary>
-        #region tblProjectPhase
-        /// <summary>
-        /// All data read operations for tblProjectPhase
-        /// </summary>
-        #region Data Read
-        /// <summary>
-        /// Gets all information from tblProjectPhase
-        /// </summary>
-        public List<ProjectPhase> GetProjectPhase()
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
-            {
-                return connection.Query<ProjectPhase>("dbo.spProjectPhaseR1").ToList();
-            }
-        }
-        #endregion
-        #endregion
-
-        /// <summary>
-        /// Data Access for tblUserProject
-        /// </summary>
-        #region tblUserProject
-        /// <summary>
-        /// All data read operations for tblUserProject
-        /// </summary>
-        #region Data Read
-        /// <summary>
-        /// Gets all information on tblUserProject
-        /// </summary>
-        public List<UserProject> GetUserProject()
-        {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
-            {
-                return connection.Query<UserProject>("dbo.spUserProjectR1").ToList();
+                connection.Execute("dbo.spProjectC1 @ProjectName, @ProjectType, @ProjectPhase, @DocumentLocation", project);
             }
         }
         #endregion

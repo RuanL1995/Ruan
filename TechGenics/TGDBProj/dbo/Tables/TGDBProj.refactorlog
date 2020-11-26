@@ -105,4 +105,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="TaskAssignedTo" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="8dc60ffe-4304-49d0-84a3-700ff5a40661" ChangeDateTime="11/25/2020 18:08:48">
+    <Property Name="ElementName" Value="[dbo].[tblTask].[ProjectId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblTask]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProjectName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e5f8d39a-c1ee-483a-96a3-ceba65183568" ChangeDateTime="11/25/2020 18:15:10">
+    <Property Name="ElementName" Value="[dbo].[tblProject].[ProjectType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProject]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProjectPhase" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75ff9bfd-6330-4f77-b470-6613521a1f1b" ChangeDateTime="11/25/2020 18:16:02">
+    <Property Name="ElementName" Value="[dbo].[tblProject].[ProjectLocation]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tblProject]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DocumentLocation" />
+  </Operation>
 </Operations>
