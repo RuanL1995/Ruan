@@ -86,6 +86,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.btnCloseTaskPanel = new System.Windows.Forms.Button();
+            this.btnShowDocuments = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -506,6 +507,7 @@
             // 
             this.pnlTasks.AutoScroll = true;
             this.pnlTasks.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTasks.Controls.Add(this.btnShowDocuments);
             this.pnlTasks.Controls.Add(this.btnCloseTaskPanel);
             this.pnlTasks.Controls.Add(this.button14);
             this.pnlTasks.Controls.Add(this.label4);
@@ -526,9 +528,9 @@
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button14.Location = new System.Drawing.Point(658, 569);
+            this.button14.Location = new System.Drawing.Point(446, 581);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(96, 24);
+            this.button14.Size = new System.Drawing.Size(131, 24);
             this.button14.TabIndex = 1;
             this.button14.Text = "ADD NEW TASK";
             this.button14.UseVisualStyleBackColor = false;
@@ -854,13 +856,27 @@
             this.btnCloseTaskPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCloseTaskPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseTaskPanel.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnCloseTaskPanel.Location = new System.Drawing.Point(760, 569);
+            this.btnCloseTaskPanel.Location = new System.Drawing.Point(720, 581);
             this.btnCloseTaskPanel.Name = "btnCloseTaskPanel";
-            this.btnCloseTaskPanel.Size = new System.Drawing.Size(91, 24);
+            this.btnCloseTaskPanel.Size = new System.Drawing.Size(131, 24);
             this.btnCloseTaskPanel.TabIndex = 7;
             this.btnCloseTaskPanel.Text = "CLOSE";
             this.btnCloseTaskPanel.UseVisualStyleBackColor = false;
             this.btnCloseTaskPanel.Click += new System.EventHandler(this.btnCloseTaskPanel_Click);
+            // 
+            // btnShowDocuments
+            // 
+            this.btnShowDocuments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnShowDocuments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnShowDocuments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowDocuments.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnShowDocuments.Location = new System.Drawing.Point(583, 581);
+            this.btnShowDocuments.Name = "btnShowDocuments";
+            this.btnShowDocuments.Size = new System.Drawing.Size(131, 24);
+            this.btnShowDocuments.TabIndex = 8;
+            this.btnShowDocuments.Text = "SHOW DOCUMENT";
+            this.btnShowDocuments.UseVisualStyleBackColor = false;
+            this.btnShowDocuments.Visible = false;
             // 
             // frmMainAdmin
             // 
@@ -958,5 +974,6 @@
         private System.Windows.Forms.Button btnBtoP;
         private System.Windows.Forms.Button btnPtoB;
         private System.Windows.Forms.Button btnCloseTaskPanel;
+        private System.Windows.Forms.Button btnShowDocuments;
     }
 }
