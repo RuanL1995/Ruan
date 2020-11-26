@@ -29,6 +29,7 @@ namespace TechGenics
         public static bool isAdmin = false;
         public static string currentUser = String.Empty;
         private Control ctrl;
+        private int numberOfProjectsToRemove = 0;
 
         //Projects and tasks model
         List<ProjectsAndTasksByUserPhase> _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>();
@@ -593,6 +594,7 @@ namespace TechGenics
 
                 foreach (DataRow row in dtProjectByPhase.Rows)
                 {
+                    numberOfProjectsToRemove ++;
                     ctrl = btnNewProj.Clone();
                     ctrl.Name = row.Field<String>("ProjectName");
                     ctrl.Text = Text = row.Field<String>("ProjectName");
@@ -655,10 +657,14 @@ namespace TechGenics
 
         private void cboPhases_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Control item in pnlProjectsSub.Controls.OfType<Button>())
+            for (int i = 0; i < numberOfProjectsToRemove; i++)
             {
-                pnlProjectsSub.Controls.Remove(item);
+                foreach (Control item in pnlProjectsSub.Controls.OfType<Button>())
+                {
+                    pnlProjectsSub.Controls.Remove(item);
+                }
             }
+                 
             generateProjects();
         }
     }
