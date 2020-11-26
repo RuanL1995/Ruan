@@ -1,0 +1,60 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[tblProject].[UserID] is being dropped, data loss could occur.
+       The column [dbo].[tblTask].[ProjectId] on table [dbo].[tblTask] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[tblTask].[UserId] on table [dbo].[tblTask] must be added, but the column has no default value and does
+         not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either:
+         add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a
+         deployment option.
+
+** User actions
+     Rename
+       [dbo].[tblTask].[ProjectName] (Column)
+       [dbo].[tblProject].[ProjectPhase] (Column)
+       [dbo].[tblProject].[DocumentLocation] (Column)
+     Drop
+       [dbo].[FK_tblTask_tblProject] (Foreign Key)
+       [dbo].[FK_tblProject_UserId] (Foreign Key)
+     Alter
+       [dbo].[tblProject] (Table)
+       [dbo].[tblTask] (Table)
+       [dbo].[tblUser] (Table)
+       [dbo].[spProjectC1] (Procedure)
+       [dbo].[spProjectR1] (Procedure)
+       [dbo].[spUpdateProjectRecord] (Procedure)
+     Create
+       [dbo].[FK_tblTask_tblProject] (Foreign Key)
+       [dbo].[FK_tblTask_tblUser] (Foreign Key)
+       [dbo].[spProjectR2] (Procedure)
+
+** Supporting actions
+     Refresh
+       [dbo].[spDeleteProjectRecord] (Procedure)
+       [dbo].[spDeleteTaskRecord] (Procedure)
+       [dbo].[spTaskC1] (Procedure)
+       [dbo].[spTaskR1] (Procedure)
+       [dbo].[spUpdateTaskRecord] (Procedure)
+       [dbo].[spDeleteUserRecord] (Procedure)
+       [dbo].[spUpdate] (Procedure)
+       [dbo].[spUserC1] (Procedure)
+       [dbo].[spUserR1] (Procedure)
+
+The column [dbo].[tblProject].[UserID] is being dropped, data loss could occur.
+The column ProjectName on table [dbo].[tblProject] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column ProjectPhase on table [dbo].[tblProject] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[tblTask].[ProjectId] on table [dbo].[tblTask] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[tblTask].[UserId] on table [dbo].[tblTask] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column TaskAssignedTo on table [dbo].[tblTask] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column TaskDescription on table [dbo].[tblTask] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column TaskName on table [dbo].[tblTask] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column TaskProgress on table [dbo].[tblTask] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

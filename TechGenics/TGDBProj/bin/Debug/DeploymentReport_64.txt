@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[tblTask] (Table)
+       [dbo].[spProjectR2] (Procedure)
+
+** Supporting actions
+     Refresh
+       [dbo].[spDeleteTaskRecord] (Procedure)
+       [dbo].[spTaskC1] (Procedure)
+       [dbo].[spTaskR1] (Procedure)
+       [dbo].[spUpdateTaskRecord] (Procedure)

@@ -1,0 +1,27 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[tblTask]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[tblTask] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_tblTask_tblProject] (Foreign Key)
+       [dbo].[FK_tblTask_tblUser] (Foreign Key)
+     Create
+       [dbo].[FK_tblTask_tblProject] (Foreign Key)
+       [dbo].[FK_tblTask_tblUser] (Foreign Key)
+     Refresh
+       [dbo].[spDeleteTaskRecord] (Procedure)
+       [dbo].[spProjectR2] (Procedure)
+       [dbo].[spTaskC1] (Procedure)
+       [dbo].[spTaskR1] (Procedure)
+       [dbo].[spUpdateTaskRecord] (Procedure)
