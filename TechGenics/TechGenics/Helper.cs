@@ -29,7 +29,7 @@ namespace TechGenics
                     {
                         foreach (var instanceName in instanceKey.GetValueNames())
                         {
-                            svrInstance = /*Environment.MachineName + @"\" + */instanceName;
+                            svrInstance += /*Environment.MachineName + @"\" + */instanceName;
                         }
                     }
                 }

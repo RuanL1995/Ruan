@@ -13,13 +13,13 @@ namespace TechGenics.Models
         public string ProjectPhase { get; set; }
         public string ProjectStatus { get; set; }
         public string DocumentLocation { get; set; }
-        public string TaskId { get; set; }
+        public int TaskId { get; set; }
         public string TaskName { get; set; }
         public string TaskDescription { get; set; }
         public string TaskProgress { get; set; }
         public string TaskAssignedTo { get; set; }
         public string TaskStatus { get; set; }
-        public string UserId { get; set; }
+        public int UserId { get; set; }
         public string UserName { get; set; }
 
     }

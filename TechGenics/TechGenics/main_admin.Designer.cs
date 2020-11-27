@@ -71,12 +71,12 @@
             this.btnCtoP = new System.Windows.Forms.Button();
             this.btnBtoP = new System.Windows.Forms.Button();
             this.btnPtoB = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnDividerRight = new System.Windows.Forms.Button();
             this.btnRemovedEx = new System.Windows.Forms.Button();
             this.btnCompletedEx = new System.Windows.Forms.Button();
             this.btnProgressEx = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDividerLeft = new System.Windows.Forms.Button();
+            this.btnDividerMid = new System.Windows.Forms.Button();
             this.btnBackLogEx = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
             this.pnlHide = new System.Windows.Forms.Panel();
@@ -617,12 +617,12 @@
             this.pnlBacklog.Controls.Add(this.btnCtoP);
             this.pnlBacklog.Controls.Add(this.btnBtoP);
             this.pnlBacklog.Controls.Add(this.btnPtoB);
-            this.pnlBacklog.Controls.Add(this.button6);
+            this.pnlBacklog.Controls.Add(this.btnDividerRight);
             this.pnlBacklog.Controls.Add(this.btnRemovedEx);
             this.pnlBacklog.Controls.Add(this.btnCompletedEx);
             this.pnlBacklog.Controls.Add(this.btnProgressEx);
-            this.pnlBacklog.Controls.Add(this.button2);
-            this.pnlBacklog.Controls.Add(this.button1);
+            this.pnlBacklog.Controls.Add(this.btnDividerLeft);
+            this.pnlBacklog.Controls.Add(this.btnDividerMid);
             this.pnlBacklog.Controls.Add(this.btnBackLogEx);
             this.pnlBacklog.Location = new System.Drawing.Point(28, 79);
             this.pnlBacklog.Name = "pnlBacklog";
@@ -639,6 +639,7 @@
             this.btnCtoR.Size = new System.Drawing.Size(17, 14);
             this.btnCtoR.TabIndex = 25;
             this.btnCtoR.UseVisualStyleBackColor = false;
+            this.btnCtoR.Click += new System.EventHandler(this.btnCtoR_Click);
             // 
             // btnRtoC
             // 
@@ -650,6 +651,7 @@
             this.btnRtoC.Size = new System.Drawing.Size(17, 14);
             this.btnRtoC.TabIndex = 24;
             this.btnRtoC.UseVisualStyleBackColor = false;
+            this.btnRtoC.Click += new System.EventHandler(this.btnRtoC_Click);
             // 
             // btnPtoC
             // 
@@ -661,6 +663,7 @@
             this.btnPtoC.Size = new System.Drawing.Size(17, 14);
             this.btnPtoC.TabIndex = 23;
             this.btnPtoC.UseVisualStyleBackColor = false;
+            this.btnPtoC.Click += new System.EventHandler(this.btnPtoC_Click);
             // 
             // btnCtoP
             // 
@@ -672,6 +675,7 @@
             this.btnCtoP.Size = new System.Drawing.Size(17, 14);
             this.btnCtoP.TabIndex = 22;
             this.btnCtoP.UseVisualStyleBackColor = false;
+            this.btnCtoP.Click += new System.EventHandler(this.btnCtoP_Click);
             // 
             // btnBtoP
             // 
@@ -683,6 +687,7 @@
             this.btnBtoP.Size = new System.Drawing.Size(17, 14);
             this.btnBtoP.TabIndex = 21;
             this.btnBtoP.UseVisualStyleBackColor = false;
+            this.btnBtoP.Click += new System.EventHandler(this.btnBtoP_Click);
             // 
             // btnPtoB
             // 
@@ -694,17 +699,18 @@
             this.btnPtoB.Size = new System.Drawing.Size(17, 14);
             this.btnPtoB.TabIndex = 20;
             this.btnPtoB.UseVisualStyleBackColor = false;
+            this.btnPtoB.Click += new System.EventHandler(this.btnPtoB_Click);
             // 
-            // button6
+            // btnDividerRight
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button6.Location = new System.Drawing.Point(616, 1);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(13, 466);
-            this.button6.TabIndex = 19;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnDividerRight.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnDividerRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDividerRight.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnDividerRight.Location = new System.Drawing.Point(616, 1);
+            this.btnDividerRight.Name = "btnDividerRight";
+            this.btnDividerRight.Size = new System.Drawing.Size(13, 2000);
+            this.btnDividerRight.TabIndex = 19;
+            this.btnDividerRight.UseVisualStyleBackColor = false;
             // 
             // btnRemovedEx
             // 
@@ -718,6 +724,7 @@
             this.btnRemovedEx.TabIndex = 18;
             this.btnRemovedEx.Text = "Removed";
             this.btnRemovedEx.UseVisualStyleBackColor = false;
+            this.btnRemovedEx.Visible = false;
             // 
             // btnCompletedEx
             // 
@@ -731,6 +738,7 @@
             this.btnCompletedEx.TabIndex = 17;
             this.btnCompletedEx.Text = "Completed";
             this.btnCompletedEx.UseVisualStyleBackColor = false;
+            this.btnCompletedEx.Visible = false;
             // 
             // btnProgressEx
             // 
@@ -744,28 +752,29 @@
             this.btnProgressEx.TabIndex = 16;
             this.btnProgressEx.Text = "In Progress";
             this.btnProgressEx.UseVisualStyleBackColor = false;
+            this.btnProgressEx.Visible = false;
             // 
-            // button2
+            // btnDividerLeft
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button2.Location = new System.Drawing.Point(164, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(13, 466);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDividerLeft.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnDividerLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDividerLeft.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnDividerLeft.Location = new System.Drawing.Point(164, 2);
+            this.btnDividerLeft.Name = "btnDividerLeft";
+            this.btnDividerLeft.Size = new System.Drawing.Size(13, 2000);
+            this.btnDividerLeft.TabIndex = 15;
+            this.btnDividerLeft.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnDividerMid
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.button1.Location = new System.Drawing.Point(392, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(13, 466);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDividerMid.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnDividerMid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDividerMid.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnDividerMid.Location = new System.Drawing.Point(392, 1);
+            this.btnDividerMid.Name = "btnDividerMid";
+            this.btnDividerMid.Size = new System.Drawing.Size(13, 2000);
+            this.btnDividerMid.TabIndex = 14;
+            this.btnDividerMid.UseVisualStyleBackColor = false;
             // 
             // btnBackLogEx
             // 
@@ -779,6 +788,7 @@
             this.btnBackLogEx.TabIndex = 4;
             this.btnBackLogEx.Text = "Backlog";
             this.btnBackLogEx.UseVisualStyleBackColor = false;
+            this.btnBackLogEx.Visible = false;
             // 
             // lblTasksHeading
             // 
@@ -956,8 +966,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlBacklog;
         private System.Windows.Forms.Button btnBackLogEx;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDividerLeft;
+        private System.Windows.Forms.Button btnDividerMid;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox cboPhases;
@@ -966,7 +976,7 @@
         private System.Windows.Forms.Button btnRemovedEx;
         private System.Windows.Forms.Button btnCompletedEx;
         private System.Windows.Forms.Button btnProgressEx;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDividerRight;
         private System.Windows.Forms.Button btnCtoR;
         private System.Windows.Forms.Button btnRtoC;
         private System.Windows.Forms.Button btnPtoC;

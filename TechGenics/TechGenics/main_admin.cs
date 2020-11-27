@@ -30,18 +30,28 @@ namespace TechGenics
         public static string currentUser = String.Empty;
         //projects ctrl
         private Control ctrl;
-        //tasks ctrl
-        //private Control ctrlTaskPanel;
-        //private Control ctrlTaskCard;
-        //private Control ctrlTaskDividerLeft;
-        //private Control ctrlTaskDividerMiddle;
-        //private Control ctrlTaskDividerRight;
-        //private Control ctrlPToB;
-        //private Control ctrlBToP;
-        //private Control ctrlCToP;
-        //private Control ctrlPToC;
-        //private
+        //Tasks ctrl
+        private Control ctrlTask;
+
         private int numberOfProjectsToRemove = 0;
+        private int numberOfTasksToRemove = 0;
+        private string taskToMoveId;
+        private int backlogLocationStartX = 18;
+        private int progressLocationStartX = 221;
+        private int completedLocationStartX = 447;
+        private int removedLocationStartX = 662;
+        private int backlogLocationStartY = 13;
+        private int progressLocationStartY = 13;
+        private int completedLocationStartY = 13;
+        private int removedLocationStartY = 13;
+        private int lastBacklogLocationX = 0;
+        private int lastBacklogLocationY = 0;
+        private int lastProgressLocationX = 0;
+        private int lastProgressLocationY = 0;
+        private int lastCompletedLocationX = 0;
+        private int lastCompletedLocationY = 0;
+        private int lastRemovedLocationX = 0;
+        private int lastRemovedLocationY = 0;
 
         //Projects and tasks model
         List<ProjectsAndTasksByUserPhase> _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>();
@@ -1140,24 +1150,49 @@ namespace TechGenics
             string buttonTag;
             var button = (Button)sender;
             buttonTag = button.Tag.ToString();
-            generateTasks();
-            //if (btnUpdate.Enabled == true)
-            //{
-            //    generateUpdateInputForms();
-            //    TextBox txtBoxUpdateDisabled = updateTxtBoxList[0];
-            //    txtBoxUpdateDisabled.Enabled = false;
-            //    updateForm.ShowDialog(this);
-            //}
-            //if (btnUpdate.Enabled == false)
-            //{
-            //    MessageBox.Show("Editing is disabled on this table.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-        }
-        private void generateTasks()
-        {
+
+            for (int i = 0; i < numberOfTasksToRemove; i++)
+            {
+                foreach (Control item in pnlBacklog.Controls.OfType<Button>())
+                {
+                    if (item.Name != "btnPtoB" 
+                        && item.Name != "btnBtoP" 
+                        && item.Name != "btnCtoP"
+                        && item.Name != "btnPtoC"
+                        && item.Name != "btnRtoC"
+                        && item.Name != "btnCtoR"
+                        && item.Name != "btnDividerLeft"
+                        && item.Name != "btnDividerMid"
+                        && item.Name != "btnDividerRight")
+                    {
+                        pnlBacklog.Controls.Remove(item);
+                    }
+                }
+            }
+
+            backlogLocationStartX = 18;
+            progressLocationStartX = 221;
+            completedLocationStartX = 447;
+            removedLocationStartX = 662;
+            backlogLocationStartY = 13;
+            progressLocationStartY = 13;
+            completedLocationStartY = 13;
+            removedLocationStartY = 13;
+
+            lastBacklogLocationX = 0;
+            lastBacklogLocationY = 0;
+            lastProgressLocationX = 0;
+            lastProgressLocationY = 0;
+            lastCompletedLocationX = 0;
+            lastCompletedLocationY = 0;
+            lastRemovedLocationX = 0;
+            lastRemovedLocationY = 0;
+
+            generateTasks(buttonTag);
             pnlTasks.Visible = true;
-
-
+        }
+        private void generateTasks(string buttonTag)
+        {
             DataAccess db = new DataAccess();
             _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
             DataSet dsGeneratedTasks = new DataSet();
@@ -1165,7 +1200,7 @@ namespace TechGenics
             DataView view = new DataView(dsGeneratedTasks.Tables[0]);
             DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
 
-            DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectPhase = '" + cboPhases.Text + "'");
+            DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
             DataTable dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
 
             foreach (DataRow row in dtGeneratedTasksFilterRow)
@@ -1173,46 +1208,83 @@ namespace TechGenics
                 dtGeneratedTasksFilter.ImportRow(row);
             }
 
-            
+            foreach (DataRow row in dtGeneratedTasksFilter.Rows)
+            {
+                numberOfTasksToRemove ++;
+                ctrlTask = btnBackLogEx.Clone();
+                ctrlTask.Name = row.Field<String>("TaskName");
+                ctrlTask.Text = row.Field<String>("TaskName");
+                ctrlTask.Tag = row.Field<Int32>("TaskId");
 
-            //DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
-            //DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
-            //DataRow[] projectByPhase;
-            //DataTable dtProjectByPhase;
-            //if (cboPhases.Text == "--All Phases--")
-            //{
-            //    dtProjectByPhase = distinctProjects;
-            //}
-            //else
-            //{
-            //    projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
-            //    dtProjectByPhase = distinctProjects.Clone();
-            //    foreach (DataRow row in projectByPhase)
-            //    {
-            //        dtProjectByPhase.ImportRow(row);
-            //    }
-            //}
+                if (row.Field<String>("TaskStatus") == "Backlog")
+                {
+                    ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
+                    backlogLocationStartY += 90;
+                    lastBacklogLocationY = backlogLocationStartY;
+                }
+                else if (row.Field<String>("TaskStatus") == "Progress")
+                {
+                    ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
+                    progressLocationStartY += 90;
+                    lastProgressLocationY = progressLocationStartY
+                }
+                else if (row.Field<String>("TaskStatus") == "Completed")
+                {
+                    ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
+                    completedLocationStartY += 90;
+                    lastCompletedLocationY = completedLocationStartY;
+                }
+                else if (row.Field<String>("completedLocationStartX") == "Removed")
+                {
+                    ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
+                    removedLocationStartY += 90;
+                    lastRemovedLocationY = removedLocationStartY;
+                }
+                
+                ctrlTask.Visible = true;
+                ctrlTask.Click += task_Click;
+                             
+                pnlBacklog.Controls.Add(ctrlTask);
+            }
+        }
 
-            //int locationStartX = 4;
-            //int locationStartY = 38;
-            //int projPanelSizeX = 201;
-            //int projPanelSizeY = 65;
+        private void task_Click(object sender, EventArgs e)
+        {
+            string taskTag;
+            var button = (Button)sender;
+            taskTag = button.Tag.ToString();
+            taskToMoveId = taskTag;
 
-            //foreach (DataRow row in dtProjectByPhase.Rows)
-            //{
-            //    numberOfProjectsToRemove++;
-            //    ctrl = btnNewProj.Clone();
-            //    ctrl.Name = row.Field<String>("ProjectName");
-            //    ctrl.Text = Text = row.Field<String>("ProjectName");
-            //    ctrl.Location = new Point(locationStartX, locationStartY);
-            //    ctrl.Visible = true;
-            //    ctrl.Click += project_Click;
+        }
 
-            //    locationStartY += 30;
-            //    pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
-            //    projPanelSizeY += 30;
-            //    pnlProjectsSub.Controls.Add(ctrl);
-            //}
+        private void btnPtoB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBtoP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCtoP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPtoC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRtoC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCtoR_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnInitiation_Click(object sender, EventArgs e)

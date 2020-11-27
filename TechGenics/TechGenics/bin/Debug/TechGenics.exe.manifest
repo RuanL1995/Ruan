@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TechGenics.exe" size="1682904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TechGenics.exe" size="1685464">
       <assemblyIdentity name="TechGenics" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KSrx6xIX0oqNypLD+Y8QauIJKl5stfw2deifYHYb5Kc=</dsig:DigestValue>
+        <dsig:DigestValue>tmYbORl4y1V0K5zi0mW3S0DHu8bffhLLvoVgj4j+grM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -161,13 +161,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="TechGenics.exe.config" size="1062">
+  <file name="TechGenics.exe.config" size="1063">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>G/s5/kgA3aR/WikjzHSmXwX/SjibAs4FfQW+hX4R66M=</dsig:DigestValue>
+      <dsig:DigestValue>yu3OVcOd4aQpWiRMXcsTpxwbIxDDncIOvnXCQ1yNDvY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
