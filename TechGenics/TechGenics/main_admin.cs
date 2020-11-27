@@ -32,10 +32,14 @@ namespace TechGenics
         private Control ctrl;
         //Tasks ctrl
         private Control ctrlTask;
+        private Control ctrlTaskToMove;
 
         private int numberOfProjectsToRemove = 0;
+        private string buttonTag;
         private int numberOfTasksToRemove = 0;
         private string taskToMoveId;
+
+
         private int backlogLocationStartX = 18;
         private int progressLocationStartX = 221;
         private int completedLocationStartX = 447;
@@ -52,6 +56,8 @@ namespace TechGenics
         private int lastCompletedLocationY = 0;
         private int lastRemovedLocationX = 0;
         private int lastRemovedLocationY = 0;
+
+        DataTable dtGeneratedTasksFilter;
 
         //Projects and tasks model
         List<ProjectsAndTasksByUserPhase> _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>();
@@ -1146,8 +1152,7 @@ namespace TechGenics
         }
 
         private void project_Click(object sender, EventArgs e)
-        {
-            string buttonTag;
+        {          
             var button = (Button)sender;
             buttonTag = button.Tag.ToString();
 
@@ -1194,14 +1199,15 @@ namespace TechGenics
         private void generateTasks(string buttonTag)
         {
             DataAccess db = new DataAccess();
+            _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
             _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
             DataSet dsGeneratedTasks = new DataSet();
-            dsGeneratedTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+            dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
             DataView view = new DataView(dsGeneratedTasks.Tables[0]);
             DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
 
             DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
-            DataTable dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
+            dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
 
             foreach (DataRow row in dtGeneratedTasksFilterRow)
             {
@@ -1226,7 +1232,7 @@ namespace TechGenics
                 {
                     ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
                     progressLocationStartY += 90;
-                    lastProgressLocationY = progressLocationStartY
+                    lastProgressLocationY = progressLocationStartY;
                 }
                 else if (row.Field<String>("TaskStatus") == "Completed")
                 {
@@ -1234,7 +1240,7 @@ namespace TechGenics
                     completedLocationStartY += 90;
                     lastCompletedLocationY = completedLocationStartY;
                 }
-                else if (row.Field<String>("completedLocationStartX") == "Removed")
+                else if (row.Field<String>("TaskStatus") == "Removed")
                 {
                     ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
                     removedLocationStartY += 90;
@@ -1254,37 +1260,116 @@ namespace TechGenics
             var button = (Button)sender;
             taskTag = button.Tag.ToString();
             taskToMoveId = taskTag;
+            ctrlTaskToMove = button;
+        }
 
+        private void removeTasks()
+        {
+            for (int i = 0; i < numberOfTasksToRemove; i++)
+            {
+                foreach (Control item in pnlBacklog.Controls.OfType<Button>())
+                {
+                    if (item.Name != "btnPtoB"
+                        && item.Name != "btnBtoP"
+                        && item.Name != "btnCtoP"
+                        && item.Name != "btnPtoC"
+                        && item.Name != "btnRtoC"
+                        && item.Name != "btnCtoR"
+                        && item.Name != "btnDividerLeft"
+                        && item.Name != "btnDividerMid"
+                        && item.Name != "btnDividerRight")
+                    {
+                        pnlBacklog.Controls.Remove(item);
+                    }
+                }
+            }
+        }
+
+        private void resetPos()
+        {
+            backlogLocationStartX = 18;
+            progressLocationStartX = 221;
+            completedLocationStartX = 447;
+            removedLocationStartX = 662;
+            backlogLocationStartY = 13;
+            progressLocationStartY = 13;
+            completedLocationStartY = 13;
+            removedLocationStartY = 13;
+
+            lastBacklogLocationX = 0;
+            lastBacklogLocationY = 0;
+            lastProgressLocationX = 0;
+            lastProgressLocationY = 0;
+            lastCompletedLocationX = 0;
+            lastCompletedLocationY = 0;
+            lastRemovedLocationX = 0;
+            lastRemovedLocationY = 0;
         }
 
         private void btnPtoB_Click(object sender, EventArgs e)
         {
-
+            DataAccess db = new DataAccess();
+            ctrlTaskToMove.Location = new Point(backlogLocationStartX, lastBacklogLocationY + 90);
+            lastBacklogLocationY += 90;
+            db.UpdateTaskStatus(Int32.Parse(taskToMoveId), "Backlog");
+            removeTasks();
+            resetPos();
+            generateTasks(buttonTag);
         }
 
         private void btnBtoP_Click(object sender, EventArgs e)
         {
-
+            DataAccess db = new DataAccess();
+            ctrlTaskToMove.Location = new Point(progressLocationStartX, lastProgressLocationY + 90);
+            lastProgressLocationY += 90;
+            db.UpdateTaskStatus(Int32.Parse(taskToMoveId), "Progress");
+            removeTasks();
+            resetPos();
+            generateTasks(buttonTag);
         }
 
         private void btnCtoP_Click(object sender, EventArgs e)
         {
-
+            DataAccess db = new DataAccess();
+            ctrlTaskToMove.Location = new Point(progressLocationStartX, lastProgressLocationY + 90);
+            lastProgressLocationY += 90;
+            db.UpdateTaskStatus(Int32.Parse(taskToMoveId), "Progress");
+            removeTasks();
+            resetPos();
+            generateTasks(buttonTag);
         }
 
         private void btnPtoC_Click(object sender, EventArgs e)
         {
-
+            DataAccess db = new DataAccess();
+            ctrlTaskToMove.Location = new Point(completedLocationStartX, lastCompletedLocationY + 90);
+            lastCompletedLocationY += 90;
+            db.UpdateTaskStatus(Int32.Parse(taskToMoveId), "Completed");
+            removeTasks();
+            resetPos();
+            generateTasks(buttonTag);
         }
 
         private void btnRtoC_Click(object sender, EventArgs e)
         {
-
+            DataAccess db = new DataAccess();
+            ctrlTaskToMove.Location = new Point(completedLocationStartX, lastCompletedLocationY + 90);
+            lastCompletedLocationY += 90;
+            db.UpdateTaskStatus(Int32.Parse(taskToMoveId), "Completed");
+            removeTasks();
+            resetPos();
+            generateTasks(buttonTag);
         }
 
         private void btnCtoR_Click(object sender, EventArgs e)
         {
-
+            DataAccess db = new DataAccess();
+            ctrlTaskToMove.Location = new Point(removedLocationStartX, lastRemovedLocationY + 90);
+            lastRemovedLocationY += 90;
+            db.UpdateTaskStatus(Int32.Parse(taskToMoveId), "Removed");
+            removeTasks();
+            resetPos();
+            generateTasks(buttonTag);
         }
 
         private void btnInitiation_Click(object sender, EventArgs e)

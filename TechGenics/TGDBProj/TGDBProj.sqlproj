@@ -96,6 +96,7 @@
     <Build Include="dbo\Stored Procedures\Admin\spAdminR1.sql" />
     <Build Include="dbo\Stored Procedures\Admin\spAdminC1.sql" />
     <Build Include="dbo\Stored Procedures\Project\spProjectR2.sql" />
+    <Build Include="dbo\Stored Procedures\Task\spTaskU1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />

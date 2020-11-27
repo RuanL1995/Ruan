@@ -165,5 +165,39 @@ namespace TechGenics
         }
         #endregion
         #endregion
+
+        /// <summary>
+        /// Data Access for tblTask
+        /// </summary>
+        #region tblTask
+        /// <summary>
+        /// All data read operations for tblTask
+        /// </summary>
+        #region Data Read
+              
+        #endregion
+        /// <summary>
+        /// All data write operations for tblProject
+        /// </summary>
+        #region Data Write
+        /// <summary>
+        /// Inserts a new project into tblTask
+        /// </summary>
+        internal void UpdateTaskStatus(int taskId, string taskStatus)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                ProjectTasks newTask = new ProjectTasks();
+                newTask.TaskId = taskId;
+                newTask.TaskStatus = taskStatus;
+
+                List<ProjectTasks> task = new List<ProjectTasks>();
+                task.Add(newTask);
+
+                connection.Execute("dbo.spTaskU1 @TaskId, @TaskStatus", task);
+            }
+        }
+        #endregion
+        #endregion
     }
 }
