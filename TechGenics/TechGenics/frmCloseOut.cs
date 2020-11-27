@@ -340,8 +340,6 @@ namespace TechGenics
                 lstInfo.BackColor = SystemColors.AppWorkspace;
                 lstInfo.ForeColor = SystemColors.Desktop;
                 
-
-
             }
             if (TechGenics.Properties.Settings.Default.Theme == "Dark")
             {
@@ -363,6 +361,245 @@ namespace TechGenics
                 lstInstr.ForeColor = SystemColors.ActiveBorder; ;
                 lstInfo.BackColor = SystemColors.Desktop;
                 lstInfo.ForeColor = SystemColors.ActiveBorder;
+
+            }
+
+            //custom
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC")
+            {
+                this.BackColor = SystemColors.ActiveCaption;
+                pnlInstr.BackColor = SystemColors.ActiveCaption;
+                pnlCloseOut.BackColor = SystemColors.ActiveCaption;
+
+                btnViewCompletion.BackColor = SystemColors.ActiveCaption;
+                btnViewClosure.BackColor = SystemColors.ActiveCaption;
+                btnClose.BackColor = SystemColors.ActiveCaption;
+
+                lblClosure.BackColor = SystemColors.ActiveCaption;
+
+                lblCompletion.BackColor = SystemColors.ActiveCaption;
+
+
+                lstInstr.BackColor = SystemColors.ActiveCaption;
+
+                lstInfo.BackColor = SystemColors.ActiveCaption;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC")
+            {
+                this.BackColor = SystemColors.Highlight;
+                pnlInstr.BackColor = SystemColors.Highlight;
+                pnlCloseOut.BackColor = SystemColors.Highlight;
+
+                btnViewCompletion.BackColor = SystemColors.Highlight;
+                btnViewClosure.BackColor = SystemColors.Highlight;
+                btnClose.BackColor = SystemColors.Highlight;
+
+                lblClosure.BackColor = SystemColors.Highlight;
+
+                lblCompletion.BackColor = SystemColors.Highlight;
+
+
+                lstInstr.BackColor = SystemColors.Highlight;
+
+                lstInfo.BackColor = SystemColors.Highlight;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC")
+            {
+                this.BackColor = SystemColors.Info;
+                pnlInstr.BackColor = SystemColors.Info;
+                pnlCloseOut.BackColor = SystemColors.Info;
+
+                btnViewCompletion.BackColor = SystemColors.Info;
+                btnViewClosure.BackColor = SystemColors.Info;
+                btnClose.BackColor = SystemColors.Info;
+
+                lblClosure.BackColor = SystemColors.Info;
+
+                lblCompletion.BackColor = SystemColors.Info;
+
+
+                lstInstr.BackColor = SystemColors.Info;
+
+                lstInfo.BackColor = SystemColors.Info;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC")
+            {
+                this.BackColor = SystemColors.ControlDark;
+                pnlInstr.BackColor = SystemColors.ControlDark;
+                pnlCloseOut.BackColor = SystemColors.ControlDark;
+
+                btnViewCompletion.BackColor = SystemColors.ControlDark;
+                btnViewClosure.BackColor = SystemColors.ControlDark;
+                btnClose.BackColor = SystemColors.ControlDark;
+
+                lblClosure.BackColor = SystemColors.ControlDark;
+
+                lblCompletion.BackColor = SystemColors.ControlDark;
+
+
+                lstInstr.BackColor = SystemColors.ControlDark;
+
+                lstInfo.BackColor = SystemColors.ControlDark;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC")
+            {
+                this.BackColor = SystemColors.ControlDarkDark;
+                pnlInstr.BackColor = SystemColors.ControlDarkDark;
+                pnlCloseOut.BackColor = SystemColors.ControlDarkDark;
+
+                btnViewCompletion.BackColor = SystemColors.ControlDarkDark;
+                btnViewClosure.BackColor = SystemColors.ControlDarkDark;
+                btnClose.BackColor = SystemColors.ControlDarkDark;
+
+                lblClosure.BackColor = SystemColors.ControlDarkDark;
+
+                lblCompletion.BackColor = SystemColors.ControlDarkDark;
+
+
+                lstInstr.BackColor = SystemColors.ControlDarkDark;
+
+                lstInfo.BackColor = SystemColors.ControlDarkDark;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC")
+            {
+                this.BackColor = SystemColors.Desktop;
+                pnlInstr.BackColor = SystemColors.Desktop;
+                pnlCloseOut.BackColor = SystemColors.Desktop;
+
+                btnViewCompletion.BackColor = SystemColors.Desktop;
+                btnViewClosure.BackColor = SystemColors.Desktop;
+                btnClose.BackColor = SystemColors.Desktop;
+
+                lblClosure.BackColor = SystemColors.Desktop;
+
+                lblCompletion.BackColor = SystemColors.Desktop;
+
+
+                lstInstr.BackColor = SystemColors.Desktop;
+
+                lstInfo.BackColor = SystemColors.Desktop;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC")
+            {
+                this.BackColor = SystemColors.Window;
+                pnlInstr.BackColor = SystemColors.Window;
+                pnlCloseOut.BackColor = SystemColors.Window;
+
+                btnViewCompletion.BackColor = SystemColors.Window;
+                btnViewClosure.BackColor = SystemColors.Window;
+                btnClose.BackColor = SystemColors.Window;
+
+                lblClosure.BackColor = SystemColors.Window;
+
+                lblCompletion.BackColor = SystemColors.Window;
+
+
+                lstInstr.BackColor = SystemColors.Window;
+
+                lstInfo.BackColor = SystemColors.Window;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC2")
+            {
+
+                lblClosure.ForeColor = SystemColors.ActiveCaption;
+
+                lblCompletion.ForeColor = SystemColors.ActiveCaption;
+
+
+                lstInstr.ForeColor = SystemColors.ActiveCaption;
+
+                lstInfo.ForeColor = SystemColors.ActiveCaption;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC2")
+            {
+
+                lblClosure.ForeColor = SystemColors.Highlight;
+
+                lblCompletion.ForeColor = SystemColors.Highlight;
+
+
+                lstInstr.ForeColor = SystemColors.Highlight;
+
+                lstInfo.ForeColor = SystemColors.Highlight;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC2")
+            {
+
+                lblClosure.ForeColor = SystemColors.Info;
+
+                lblCompletion.ForeColor = SystemColors.Info;
+
+
+                lstInstr.ForeColor = SystemColors.Info;
+
+                lstInfo.ForeColor = SystemColors.Info;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC2")
+            {
+
+                lblClosure.ForeColor = SystemColors.ControlDark;
+
+                lblCompletion.ForeColor = SystemColors.ControlDark;
+
+
+                lstInstr.ForeColor = SystemColors.ControlDark;
+
+                lstInfo.ForeColor = SystemColors.ControlDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC2")
+            {
+
+                lblClosure.ForeColor = SystemColors.ControlDarkDark;
+
+                lblCompletion.ForeColor = SystemColors.ControlDarkDark;
+
+
+                lstInstr.ForeColor = SystemColors.ControlDarkDark;
+
+                lstInfo.ForeColor = SystemColors.ControlDarkDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC2")
+            {
+
+                lblClosure.ForeColor = SystemColors.Desktop;
+
+                lblCompletion.ForeColor = SystemColors.Desktop;
+
+
+                lstInstr.ForeColor = SystemColors.Desktop;
+
+                lstInfo.ForeColor = SystemColors.Desktop;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC2")
+            {
+
+                lblClosure.ForeColor = SystemColors.Window;
+
+                lblCompletion.ForeColor = SystemColors.Window;
+
+
+                lstInstr.ForeColor = SystemColors.Window;
+
+                lstInfo.ForeColor = SystemColors.Window;
 
             }
         }

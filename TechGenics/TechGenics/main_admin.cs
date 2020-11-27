@@ -440,18 +440,7 @@ namespace TechGenics
             Application.Exit();
         }
 
-        
-
-        private void btnLightMode_Click(object sender, EventArgs e)
-        {
-            lightMode();
-        }
-
-        public void lightMode()
-        {
-            lblTitle.BackColor = Color.DimGray;
-            pnlSideMenu.BackColor = Color.DimGray;
-        }
+              
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -505,6 +494,7 @@ namespace TechGenics
                 pnlHelpSub.BackColor = SystemColors.AppWorkspace;
                 pnlMembersSub.BackColor = SystemColors.AppWorkspace;
                 pnlChildForm.BackColor = SystemColors.Desktop;
+                panel1.BackColor = SystemColors.AppWorkspace;
             }
             if (TechGenics.Properties.Settings.Default.Theme == "Dark")
             {
@@ -556,6 +546,526 @@ namespace TechGenics
                 pnlHelpSub.BackColor = SystemColors.Desktop;
                 pnlMembersSub.BackColor = SystemColors.Desktop;
                 pnlChildForm.BackColor = SystemColors.Desktop;
+                panel1.BackColor = SystemColors.Desktop;
+            }
+
+            //Custom
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC")
+            {
+                btnDocs.BackColor = SystemColors.ActiveCaption;
+                
+
+                pnlSideMenu.BackColor = SystemColors.ActiveCaption;
+                btnInitiation.BackColor = SystemColors.ActiveCaption;
+                btnPlanning.BackColor = SystemColors.ActiveCaption;
+                btnExecution.BackColor = SystemColors.ActiveCaption;
+                btnCloseOut.BackColor = SystemColors.ActiveCaption;
+                btnTemplate.BackColor = SystemColors.ActiveCaption;
+                btnNewProj.BackColor = SystemColors.ActiveCaption;
+                btnNewMem.BackColor = SystemColors.ActiveCaption;
+                btnGoogle.BackColor = SystemColors.ActiveCaption;
+                btnManualA.BackColor = SystemColors.ActiveCaption;
+                btnHelp.BackColor = SystemColors.ActiveCaption;
+                btnFull.BackColor = SystemColors.ActiveCaption;
+                btnMin.BackColor = SystemColors.ActiveCaption;
+                btnMax.BackColor = SystemColors.ActiveCaption;
+
+
+                btnPhases.BackColor = SystemColors.ActiveCaption;
+
+
+                btnProjects.BackColor = SystemColors.ActiveCaption;
+
+
+                btnMembers.BackColor = SystemColors.ActiveCaption;
+
+
+                btnSettings.BackColor = SystemColors.ActiveCaption;
+
+
+                btnLogout.BackColor = SystemColors.ActiveCaption;
+                
+
+                btnClose.BackColor = SystemColors.ActiveCaption;
+
+
+                this.BackColor = SystemColors.ActiveCaption;
+                btnExpand.BackColor = SystemColors.ActiveCaption;
+
+                pnlHide.BackColor = SystemColors.ActiveCaption;
+
+                pnlPhasesSub.BackColor = SystemColors.ActiveCaption;
+                pnlDiagramsSub.BackColor = SystemColors.ActiveCaption;
+                pnlProjectsSub.BackColor = SystemColors.ActiveCaption;
+                pnlHelpSub.BackColor = SystemColors.ActiveCaption;
+                pnlMembersSub.BackColor = SystemColors.ActiveCaption;
+                pnlChildForm.BackColor = SystemColors.ActiveCaption;
+                panel1.BackColor = SystemColors.ActiveCaption;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC")
+            {
+                btnDocs.BackColor = SystemColors.Highlight;
+
+
+                pnlSideMenu.BackColor = SystemColors.Highlight;
+                btnInitiation.BackColor = SystemColors.Highlight;
+                btnPlanning.BackColor = SystemColors.Highlight;
+                btnExecution.BackColor = SystemColors.Highlight;
+                btnCloseOut.BackColor = SystemColors.Highlight;
+                btnTemplate.BackColor = SystemColors.Highlight;
+                btnNewProj.BackColor = SystemColors.Highlight;
+                btnNewMem.BackColor = SystemColors.Highlight;
+                btnGoogle.BackColor = SystemColors.Highlight;
+                btnManualA.BackColor = SystemColors.Highlight;
+                btnHelp.BackColor = SystemColors.Highlight;
+                btnFull.BackColor = SystemColors.Highlight;
+                btnMin.BackColor = SystemColors.Highlight;
+                btnMax.BackColor = SystemColors.Highlight;
+
+
+                btnPhases.BackColor = SystemColors.Highlight;
+
+
+                btnProjects.BackColor = SystemColors.Highlight;
+
+
+                btnMembers.BackColor = SystemColors.Highlight;
+
+
+                btnSettings.BackColor = SystemColors.Highlight;
+
+
+                btnLogout.BackColor = SystemColors.Highlight;
+
+
+                btnClose.BackColor = SystemColors.Highlight;
+
+
+                this.BackColor = SystemColors.Highlight;
+                btnExpand.BackColor = SystemColors.Highlight;
+
+                pnlHide.BackColor = SystemColors.Highlight;
+
+                pnlPhasesSub.BackColor = SystemColors.Highlight;
+                pnlDiagramsSub.BackColor = SystemColors.Highlight;
+                pnlProjectsSub.BackColor = SystemColors.Highlight;
+                pnlHelpSub.BackColor = SystemColors.Highlight;
+                pnlMembersSub.BackColor = SystemColors.Highlight;
+                pnlChildForm.BackColor = SystemColors.Highlight;
+                panel1.BackColor = SystemColors.Highlight;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC")
+            {
+                btnDocs.BackColor = SystemColors.Info;
+
+
+                pnlSideMenu.BackColor = SystemColors.Info;
+                btnInitiation.BackColor = SystemColors.Info;
+                btnPlanning.BackColor = SystemColors.Info;
+                btnExecution.BackColor = SystemColors.Info;
+                btnCloseOut.BackColor = SystemColors.Info;
+                btnTemplate.BackColor = SystemColors.Info;
+                btnNewProj.BackColor = SystemColors.Info;
+                btnNewMem.BackColor = SystemColors.Info;
+                btnGoogle.BackColor = SystemColors.Info;
+                btnManualA.BackColor = SystemColors.Info;
+                btnHelp.BackColor = SystemColors.Info;
+                btnFull.BackColor = SystemColors.Info;
+                btnMin.BackColor = SystemColors.Info;
+                btnMax.BackColor = SystemColors.Info;
+
+
+                btnPhases.BackColor = SystemColors.Info;
+
+
+                btnProjects.BackColor = SystemColors.Info;
+
+
+                btnMembers.BackColor = SystemColors.Info;
+
+
+                btnSettings.BackColor = SystemColors.Info;
+
+
+                btnLogout.BackColor = SystemColors.Info;
+
+
+                btnClose.BackColor = SystemColors.Info;
+
+
+                this.BackColor = SystemColors.Info;
+                btnExpand.BackColor = SystemColors.Info;
+
+                pnlHide.BackColor = SystemColors.Info;
+
+                pnlPhasesSub.BackColor = SystemColors.Info;
+                pnlDiagramsSub.BackColor = SystemColors.Info;
+                pnlProjectsSub.BackColor = SystemColors.Info;
+                pnlHelpSub.BackColor = SystemColors.Info;
+                pnlMembersSub.BackColor = SystemColors.Info;
+                pnlChildForm.BackColor = SystemColors.Info;
+                panel1.BackColor = SystemColors.Info;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC")
+            {
+                btnDocs.BackColor = SystemColors.ControlDark;
+
+
+                pnlSideMenu.BackColor = SystemColors.ControlDark;
+                btnInitiation.BackColor = SystemColors.ControlDark;
+                btnPlanning.BackColor = SystemColors.ControlDark;
+                btnExecution.BackColor = SystemColors.ControlDark;
+                btnCloseOut.BackColor = SystemColors.ControlDark;
+                btnTemplate.BackColor = SystemColors.ControlDark;
+                btnNewProj.BackColor = SystemColors.ControlDark;
+                btnNewMem.BackColor = SystemColors.ControlDark;
+                btnGoogle.BackColor = SystemColors.ControlDark;
+                btnManualA.BackColor = SystemColors.ControlDark;
+                btnHelp.BackColor = SystemColors.ControlDark;
+                btnFull.BackColor = SystemColors.ControlDark;
+                btnMin.BackColor = SystemColors.ControlDark;
+                btnMax.BackColor = SystemColors.ControlDark;
+
+
+                btnPhases.BackColor = SystemColors.ControlDark;
+
+
+                btnProjects.BackColor = SystemColors.ControlDark;
+
+
+                btnMembers.BackColor = SystemColors.ControlDark;
+
+
+                btnSettings.BackColor = SystemColors.ControlDark;
+
+
+                btnLogout.BackColor = SystemColors.ControlDark;
+
+
+                btnClose.BackColor = SystemColors.ControlDark;
+
+
+                this.BackColor = SystemColors.ControlDark;
+                btnExpand.BackColor = SystemColors.ControlDark;
+
+                pnlHide.BackColor = SystemColors.ControlDark;
+
+                pnlPhasesSub.BackColor = SystemColors.ControlDark;
+                pnlDiagramsSub.BackColor = SystemColors.ControlDark;
+                pnlProjectsSub.BackColor = SystemColors.ControlDark;
+                pnlHelpSub.BackColor = SystemColors.ControlDark;
+                pnlMembersSub.BackColor = SystemColors.ControlDark;
+                pnlChildForm.BackColor = SystemColors.ControlDark;
+                panel1.BackColor = SystemColors.ControlDark;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC")
+            {
+                btnDocs.BackColor = SystemColors.ControlDarkDark;
+
+
+                pnlSideMenu.BackColor = SystemColors.ControlDarkDark;
+                btnInitiation.BackColor = SystemColors.ControlDarkDark;
+                btnPlanning.BackColor = SystemColors.ControlDarkDark;
+                btnExecution.BackColor = SystemColors.ControlDarkDark;
+                btnCloseOut.BackColor = SystemColors.ControlDarkDark; 
+                btnTemplate.BackColor = SystemColors.ControlDarkDark;
+                btnNewProj.BackColor = SystemColors.ControlDarkDark;
+                btnNewMem.BackColor = SystemColors.ControlDarkDark;
+                btnGoogle.BackColor = SystemColors.ControlDarkDark;
+                btnManualA.BackColor = SystemColors.ControlDarkDark;
+                btnHelp.BackColor = SystemColors.ControlDarkDark;
+                btnFull.BackColor = SystemColors.ControlDarkDark;
+                btnMin.BackColor = SystemColors.ControlDarkDark;
+                btnMax.BackColor = SystemColors.ControlDarkDark;
+
+
+                btnPhases.BackColor = SystemColors.ControlDarkDark;
+
+
+                btnProjects.BackColor = SystemColors.ControlDarkDark;
+
+
+                btnMembers.BackColor = SystemColors.ControlDarkDark;
+
+
+                btnSettings.BackColor = SystemColors.ControlDarkDark;
+
+
+                btnLogout.BackColor = SystemColors.ControlDarkDark;
+
+
+                btnClose.BackColor = SystemColors.ControlDarkDark;
+
+
+                this.BackColor = SystemColors.ControlDarkDark;
+                btnExpand.BackColor = SystemColors.ControlDarkDark;
+
+                pnlHide.BackColor = SystemColors.ControlDarkDark;
+
+                pnlPhasesSub.BackColor = SystemColors.ControlDarkDark;
+                pnlDiagramsSub.BackColor = SystemColors.ControlDarkDark;
+                pnlProjectsSub.BackColor = SystemColors.ControlDarkDark;
+                pnlHelpSub.BackColor = SystemColors.ControlDarkDark;
+                pnlMembersSub.BackColor = SystemColors.ControlDarkDark;
+                pnlChildForm.BackColor = SystemColors.ControlDarkDark;
+                panel1.BackColor = SystemColors.ControlDarkDark;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC")
+            {
+                btnDocs.BackColor = SystemColors.Desktop;
+
+
+                pnlSideMenu.BackColor = SystemColors.Desktop;
+                btnInitiation.BackColor = SystemColors.Desktop;
+                btnPlanning.BackColor = SystemColors.Desktop;
+                btnExecution.BackColor = SystemColors.Desktop;
+                btnCloseOut.BackColor = SystemColors.Desktop;
+                btnTemplate.BackColor = SystemColors.Desktop;
+                btnNewProj.BackColor = SystemColors.Desktop;
+                btnNewMem.BackColor = SystemColors.Desktop;
+                btnGoogle.BackColor = SystemColors.Desktop;
+                btnManualA.BackColor = SystemColors.Desktop;
+                btnHelp.BackColor = SystemColors.Desktop;
+                btnFull.BackColor = SystemColors.Desktop;
+                btnMin.BackColor = SystemColors.Desktop;
+                btnMax.BackColor = SystemColors.Desktop;
+
+
+                btnPhases.BackColor = SystemColors.Desktop;
+
+
+                btnProjects.BackColor = SystemColors.Desktop;
+
+
+                btnMembers.BackColor = SystemColors.Desktop;
+
+
+                btnSettings.BackColor = SystemColors.Desktop;
+
+
+                btnLogout.BackColor = SystemColors.Desktop;
+
+
+                btnClose.BackColor = SystemColors.Desktop;
+
+
+                this.BackColor = SystemColors.Desktop;
+                btnExpand.BackColor = SystemColors.Desktop;
+
+                pnlHide.BackColor = SystemColors.Desktop;
+
+                pnlPhasesSub.BackColor = SystemColors.Desktop;
+                pnlDiagramsSub.BackColor = SystemColors.Desktop;
+                pnlProjectsSub.BackColor = SystemColors.Desktop;
+                pnlHelpSub.BackColor = SystemColors.Desktop;
+                pnlMembersSub.BackColor = SystemColors.Desktop;
+                pnlChildForm.BackColor = SystemColors.Desktop;
+                panel1.BackColor = SystemColors.Desktop;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC")
+            {
+                btnDocs.BackColor = SystemColors.Window;
+
+
+                pnlSideMenu.BackColor = SystemColors.Window;
+                btnInitiation.BackColor = SystemColors.Window;
+                btnPlanning.BackColor = SystemColors.Window;
+                btnExecution.BackColor = SystemColors.Window;
+                btnCloseOut.BackColor = SystemColors.Window;
+                btnTemplate.BackColor = SystemColors.Window;
+                btnNewProj.BackColor = SystemColors.Window;
+                btnNewMem.BackColor = SystemColors.Window;
+                btnGoogle.BackColor = SystemColors.Window;
+                btnManualA.BackColor = SystemColors.Window;
+                btnHelp.BackColor = SystemColors.Window;
+                btnFull.BackColor = SystemColors.Window;
+                btnMin.BackColor = SystemColors.Window;
+                btnMax.BackColor = SystemColors.Window;
+
+
+                btnPhases.BackColor = SystemColors.Window;
+
+
+                btnProjects.BackColor = SystemColors.Window;
+
+
+                btnMembers.BackColor = SystemColors.Window;
+
+
+                btnSettings.BackColor = SystemColors.Window;
+
+
+                btnLogout.BackColor = SystemColors.Window;
+
+
+                btnClose.BackColor = SystemColors.Window;
+
+
+                this.BackColor = SystemColors.Window;
+                btnExpand.BackColor = SystemColors.Window;
+
+                pnlHide.BackColor = SystemColors.Window;
+
+                pnlPhasesSub.BackColor = SystemColors.Window;
+                pnlDiagramsSub.BackColor = SystemColors.Window;
+                pnlProjectsSub.BackColor = SystemColors.Window;
+                pnlHelpSub.BackColor = SystemColors.Window;
+                pnlMembersSub.BackColor = SystemColors.Window;
+                pnlChildForm.BackColor = SystemColors.Window;
+                panel1.BackColor = SystemColors.Window;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC2")
+            {
+                
+                btnDocs.ForeColor = SystemColors.ActiveCaption;
+
+                btnHelp.ForeColor = SystemColors.ActiveCaption;
+
+                btnPhases.ForeColor = SystemColors.ActiveCaption;
+
+                btnProjects.ForeColor = SystemColors.ActiveCaption;
+
+                btnMembers.ForeColor = SystemColors.ActiveCaption;
+
+                btnSettings.ForeColor = SystemColors.ActiveCaption;
+
+                btnLogout.ForeColor = SystemColors.ActiveCaption;
+
+                btnClose.ForeColor = SystemColors.ActiveCaption;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC2")
+            {
+
+                btnDocs.ForeColor = SystemColors.Highlight;
+
+                btnHelp.ForeColor = SystemColors.Highlight;
+
+                btnPhases.ForeColor = SystemColors.Highlight;
+
+                btnProjects.ForeColor = SystemColors.Highlight;
+
+                btnMembers.ForeColor = SystemColors.Highlight;
+
+                btnSettings.ForeColor = SystemColors.Highlight;
+
+                btnLogout.ForeColor = SystemColors.Highlight;
+
+                btnClose.ForeColor = SystemColors.Highlight;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC2")
+            {
+
+                btnDocs.ForeColor = SystemColors.Info;
+
+                btnHelp.ForeColor = SystemColors.Info;
+
+                btnPhases.ForeColor = SystemColors.Info;
+
+                btnProjects.ForeColor = SystemColors.Info;
+
+                btnMembers.ForeColor = SystemColors.Info;
+
+                btnSettings.ForeColor = SystemColors.Info;
+
+                btnLogout.ForeColor = SystemColors.Info;
+
+                btnClose.ForeColor = SystemColors.Info;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC2")
+            {
+
+                btnDocs.ForeColor = SystemColors.ControlDark;
+
+                btnHelp.ForeColor = SystemColors.ControlDark;
+
+                btnPhases.ForeColor = SystemColors.ControlDark;
+
+                btnProjects.ForeColor = SystemColors.ControlDark;
+
+                btnMembers.ForeColor = SystemColors.ControlDark;
+
+                btnSettings.ForeColor = SystemColors.ControlDark;
+
+                btnLogout.ForeColor = SystemColors.ControlDark;
+
+                btnClose.ForeColor = SystemColors.ControlDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC2")
+            {
+
+                btnDocs.ForeColor = SystemColors.ControlDarkDark;
+
+                btnHelp.ForeColor = SystemColors.ControlDarkDark;
+
+                btnPhases.ForeColor = SystemColors.ControlDarkDark;
+
+                btnProjects.ForeColor = SystemColors.ControlDarkDark;
+
+                btnMembers.ForeColor = SystemColors.ControlDarkDark;
+
+                btnSettings.ForeColor = SystemColors.ControlDarkDark;
+
+                btnLogout.ForeColor = SystemColors.ControlDarkDark;
+
+                btnClose.ForeColor = SystemColors.ControlDarkDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC2")
+            {
+
+                btnDocs.ForeColor = SystemColors.Desktop;
+
+                btnHelp.ForeColor = SystemColors.Desktop;
+
+                btnPhases.ForeColor = SystemColors.Desktop;
+
+                btnProjects.ForeColor = SystemColors.Desktop;
+
+                btnMembers.ForeColor = SystemColors.Desktop;
+
+                btnSettings.ForeColor = SystemColors.Desktop;
+
+                btnLogout.ForeColor = SystemColors.Desktop;
+
+                btnClose.ForeColor = SystemColors.Desktop;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC2")
+            {
+
+                btnDocs.ForeColor = SystemColors.Window;
+
+                btnHelp.ForeColor = SystemColors.Window;
+
+                btnPhases.ForeColor = SystemColors.Window;
+
+                btnProjects.ForeColor = SystemColors.Window;
+
+                btnMembers.ForeColor = SystemColors.Window;
+
+                btnSettings.ForeColor = SystemColors.Window;
+
+                btnLogout.ForeColor = SystemColors.Window;
+
+                btnClose.ForeColor = SystemColors.Window;
+
             }
         }
 

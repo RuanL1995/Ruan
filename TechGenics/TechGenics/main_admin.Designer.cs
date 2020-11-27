@@ -57,6 +57,8 @@
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTasks = new System.Windows.Forms.Panel();
+            this.btnShowDocuments = new System.Windows.Forms.Button();
+            this.btnCloseTaskPanel = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@
             this.btnFull = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblCurrentUser = new System.Windows.Forms.Label();
-            this.btnCloseTaskPanel = new System.Windows.Forms.Button();
-            this.btnShowDocuments = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -522,6 +522,34 @@
             this.pnlTasks.TabIndex = 0;
             this.pnlTasks.Visible = false;
             // 
+            // btnShowDocuments
+            // 
+            this.btnShowDocuments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnShowDocuments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnShowDocuments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowDocuments.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnShowDocuments.Location = new System.Drawing.Point(583, 581);
+            this.btnShowDocuments.Name = "btnShowDocuments";
+            this.btnShowDocuments.Size = new System.Drawing.Size(131, 24);
+            this.btnShowDocuments.TabIndex = 8;
+            this.btnShowDocuments.Text = "SHOW DOCUMENT";
+            this.btnShowDocuments.UseVisualStyleBackColor = false;
+            this.btnShowDocuments.Visible = false;
+            // 
+            // btnCloseTaskPanel
+            // 
+            this.btnCloseTaskPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnCloseTaskPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCloseTaskPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseTaskPanel.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnCloseTaskPanel.Location = new System.Drawing.Point(720, 581);
+            this.btnCloseTaskPanel.Name = "btnCloseTaskPanel";
+            this.btnCloseTaskPanel.Size = new System.Drawing.Size(131, 24);
+            this.btnCloseTaskPanel.TabIndex = 7;
+            this.btnCloseTaskPanel.Text = "CLOSE";
+            this.btnCloseTaskPanel.UseVisualStyleBackColor = false;
+            this.btnCloseTaskPanel.Click += new System.EventHandler(this.btnCloseTaskPanel_Click);
+            // 
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -849,34 +877,6 @@
             this.lblCurrentUser.Size = new System.Drawing.Size(154, 18);
             this.lblCurrentUser.TabIndex = 7;
             this.lblCurrentUser.Text = "Welcome Placeholder";
-            // 
-            // btnCloseTaskPanel
-            // 
-            this.btnCloseTaskPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnCloseTaskPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCloseTaskPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseTaskPanel.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnCloseTaskPanel.Location = new System.Drawing.Point(720, 581);
-            this.btnCloseTaskPanel.Name = "btnCloseTaskPanel";
-            this.btnCloseTaskPanel.Size = new System.Drawing.Size(131, 24);
-            this.btnCloseTaskPanel.TabIndex = 7;
-            this.btnCloseTaskPanel.Text = "CLOSE";
-            this.btnCloseTaskPanel.UseVisualStyleBackColor = false;
-            this.btnCloseTaskPanel.Click += new System.EventHandler(this.btnCloseTaskPanel_Click);
-            // 
-            // btnShowDocuments
-            // 
-            this.btnShowDocuments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnShowDocuments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnShowDocuments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowDocuments.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnShowDocuments.Location = new System.Drawing.Point(583, 581);
-            this.btnShowDocuments.Name = "btnShowDocuments";
-            this.btnShowDocuments.Size = new System.Drawing.Size(131, 24);
-            this.btnShowDocuments.TabIndex = 8;
-            this.btnShowDocuments.Text = "SHOW DOCUMENT";
-            this.btnShowDocuments.UseVisualStyleBackColor = false;
-            this.btnShowDocuments.Visible = false;
             // 
             // frmMainAdmin
             // 

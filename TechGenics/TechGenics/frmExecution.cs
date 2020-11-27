@@ -1779,6 +1779,384 @@ namespace TechGenics
                 btnCost.ForeColor = SystemColors.ActiveBorder;
                 btnReview.ForeColor = SystemColors.ActiveBorder;
             }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC")
+            {
+                this.BackColor = SystemColors.ActiveCaption;
+
+                lstInstr.BackColor = SystemColors.ActiveCaption;
+                
+                lstInfo.BackColor = SystemColors.ActiveCaption;
+
+                pnlInfo.BackColor = SystemColors.ActiveCaption;
+                pnlExecution.BackColor = SystemColors.ActiveCaption;
+                pnlTopMenu.BackColor = SystemColors.ActiveCaption;
+
+                btnViewIssueMan.BackColor = SystemColors.ActiveCaption;
+                btnViewRiskMan.BackColor = SystemColors.ActiveCaption;
+                btnViewQualityMan.BackColor = SystemColors.ActiveCaption;
+                btnViewChangeMan.BackColor = SystemColors.ActiveCaption;
+                btnViewComMan.BackColor = SystemColors.ActiveCaption;
+                btnViewTimeMan1.BackColor = SystemColors.ActiveCaption;
+                btnViewCostMan.BackColor = SystemColors.ActiveCaption;
+                btnViewProcMan.BackColor = SystemColors.ActiveCaption;
+                btnViewAccMan.BackColor = SystemColors.ActiveCaption;
+                btnViewPRev.BackColor = SystemColors.ActiveCaption;
+
+                btnCommunications.BackColor = SystemColors.ActiveCaption;
+                btnIssue.BackColor = SystemColors.ActiveCaption;
+                btnRisk.BackColor = SystemColors.ActiveCaption;
+                btnQuality.BackColor = SystemColors.ActiveCaption;
+                btnAccept.BackColor = SystemColors.ActiveCaption;
+                btnProcurement.BackColor = SystemColors.ActiveCaption;
+                btnChange.BackColor = SystemColors.ActiveCaption;
+                btnTime.BackColor = SystemColors.ActiveCaption;
+                btnCost.BackColor = SystemColors.ActiveCaption;
+                btnReview.BackColor = SystemColors.ActiveCaption;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC")
+            {
+                this.BackColor = SystemColors.Highlight;
+
+                lstInstr.BackColor = SystemColors.Highlight;
+
+                lstInfo.BackColor = SystemColors.Highlight;
+
+                pnlInfo.BackColor = SystemColors.Highlight;
+                pnlExecution.BackColor = SystemColors.Highlight;
+                pnlTopMenu.BackColor = SystemColors.Highlight;
+
+                btnViewIssueMan.BackColor = SystemColors.Highlight;
+                btnViewRiskMan.BackColor = SystemColors.Highlight;
+                btnViewQualityMan.BackColor = SystemColors.Highlight;
+                btnViewChangeMan.BackColor = SystemColors.Highlight;
+                btnViewComMan.BackColor = SystemColors.Highlight;
+                btnViewTimeMan1.BackColor = SystemColors.Highlight;
+                btnViewCostMan.BackColor = SystemColors.Highlight;
+                btnViewProcMan.BackColor = SystemColors.Highlight;
+                btnViewAccMan.BackColor = SystemColors.Highlight;
+                btnViewPRev.BackColor = SystemColors.Highlight;
+
+                btnCommunications.BackColor = SystemColors.Highlight;
+                btnIssue.BackColor = SystemColors.Highlight;
+                btnRisk.BackColor = SystemColors.Highlight;
+                btnQuality.BackColor = SystemColors.Highlight;
+                btnAccept.BackColor = SystemColors.Highlight;
+                btnProcurement.BackColor = SystemColors.Highlight;
+                btnChange.BackColor = SystemColors.Highlight;
+                btnTime.BackColor = SystemColors.Highlight;
+                btnCost.BackColor = SystemColors.Highlight;
+                btnReview.BackColor = SystemColors.Highlight;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC")
+            {
+                this.BackColor = SystemColors.Info;
+
+                lstInstr.BackColor = SystemColors.Info;
+
+                lstInfo.BackColor = SystemColors.Info;
+
+                pnlInfo.BackColor = SystemColors.Info;
+                pnlExecution.BackColor = SystemColors.Info;
+                pnlTopMenu.BackColor = SystemColors.Info;
+
+                btnViewIssueMan.BackColor = SystemColors.Info;
+                btnViewRiskMan.BackColor = SystemColors.Info;
+                btnViewQualityMan.BackColor = SystemColors.Info;
+                btnViewChangeMan.BackColor = SystemColors.Info;
+                btnViewComMan.BackColor = SystemColors.Info;
+                btnViewTimeMan1.BackColor = SystemColors.Info;
+                btnViewCostMan.BackColor = SystemColors.Info;
+                btnViewProcMan.BackColor = SystemColors.Info;
+                btnViewAccMan.BackColor = SystemColors.Info;
+                btnViewPRev.BackColor = SystemColors.Info;
+
+                btnCommunications.BackColor = SystemColors.Info;
+                btnIssue.BackColor = SystemColors.Info;
+                btnRisk.BackColor = SystemColors.Info;
+                btnQuality.BackColor = SystemColors.Info;
+                btnAccept.BackColor = SystemColors.Info;
+                btnProcurement.BackColor = SystemColors.Info;
+                btnChange.BackColor = SystemColors.Info;
+                btnTime.BackColor = SystemColors.Info;
+                btnCost.BackColor = SystemColors.Info;
+                btnReview.BackColor = SystemColors.Info;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC")
+            {
+                this.BackColor = SystemColors.ControlDark;
+
+                lstInstr.BackColor = SystemColors.ControlDark;
+
+                lstInfo.BackColor = SystemColors.ControlDark;
+
+                pnlInfo.BackColor = SystemColors.ControlDark;
+                pnlExecution.BackColor = SystemColors.ControlDark;
+                pnlTopMenu.BackColor = SystemColors.ControlDark;
+
+                btnViewIssueMan.BackColor = SystemColors.ControlDark;
+                btnViewRiskMan.BackColor = SystemColors.ControlDark;
+                btnViewQualityMan.BackColor = SystemColors.ControlDark;
+                btnViewChangeMan.BackColor = SystemColors.ControlDark;
+                btnViewComMan.BackColor = SystemColors.ControlDark;
+                btnViewTimeMan1.BackColor = SystemColors.ControlDark;
+                btnViewCostMan.BackColor = SystemColors.ControlDark;
+                btnViewProcMan.BackColor = SystemColors.ControlDark;
+                btnViewAccMan.BackColor = SystemColors.ControlDark;
+                btnViewPRev.BackColor = SystemColors.ControlDark;
+
+                btnCommunications.BackColor = SystemColors.ControlDark;
+                btnIssue.BackColor = SystemColors.ControlDark;
+                btnRisk.BackColor = SystemColors.ControlDark;
+                btnQuality.BackColor = SystemColors.ControlDark;
+                btnAccept.BackColor = SystemColors.ControlDark;
+                btnProcurement.BackColor = SystemColors.ControlDark;
+                btnChange.BackColor = SystemColors.ControlDark;
+                btnTime.BackColor = SystemColors.ControlDark;
+                btnCost.BackColor = SystemColors.ControlDark;
+                btnReview.BackColor = SystemColors.ControlDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC")
+            {
+                this.BackColor = SystemColors.ControlDarkDark;
+
+                lstInstr.BackColor = SystemColors.ControlDarkDark;
+
+                lstInfo.BackColor = SystemColors.ControlDarkDark;
+
+                pnlInfo.BackColor = SystemColors.ControlDarkDark;
+                pnlExecution.BackColor = SystemColors.ControlDarkDark;
+                pnlTopMenu.BackColor = SystemColors.ControlDarkDark;
+
+                btnViewIssueMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewRiskMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewQualityMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewChangeMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewComMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewTimeMan1.BackColor = SystemColors.ControlDarkDark;
+                btnViewCostMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewProcMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewAccMan.BackColor = SystemColors.ControlDarkDark;
+                btnViewPRev.BackColor = SystemColors.ControlDarkDark;
+
+                btnCommunications.BackColor = SystemColors.ControlDarkDark;
+                btnIssue.BackColor = SystemColors.ControlDarkDark;
+                btnRisk.BackColor = SystemColors.ControlDarkDark;
+                btnQuality.BackColor = SystemColors.ControlDarkDark;
+                btnAccept.BackColor = SystemColors.ControlDarkDark;
+                btnProcurement.BackColor = SystemColors.ControlDarkDark;
+                btnChange.BackColor = SystemColors.ControlDarkDark;
+                btnTime.BackColor = SystemColors.ControlDarkDark;
+                btnCost.BackColor = SystemColors.ControlDarkDark;
+                btnReview.BackColor = SystemColors.ControlDarkDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC")
+            {
+                this.BackColor = SystemColors.Desktop;
+
+                lstInstr.BackColor = SystemColors.Desktop;
+
+                lstInfo.BackColor = SystemColors.Desktop;
+
+                pnlInfo.BackColor = SystemColors.Desktop;
+                pnlExecution.BackColor = SystemColors.Desktop;
+                pnlTopMenu.BackColor = SystemColors.Desktop;
+
+                btnViewIssueMan.BackColor = SystemColors.Desktop;
+                btnViewRiskMan.BackColor = SystemColors.Desktop;
+                btnViewQualityMan.BackColor = SystemColors.Desktop;
+                btnViewChangeMan.BackColor = SystemColors.Desktop;
+                btnViewComMan.BackColor = SystemColors.Desktop;
+                btnViewTimeMan1.BackColor = SystemColors.Desktop;
+                btnViewCostMan.BackColor = SystemColors.Desktop;
+                btnViewProcMan.BackColor = SystemColors.Desktop;
+                btnViewAccMan.BackColor = SystemColors.Desktop;
+                btnViewPRev.BackColor = SystemColors.Desktop;
+
+                btnCommunications.BackColor = SystemColors.Desktop; 
+                btnIssue.BackColor = SystemColors.Desktop;
+                btnRisk.BackColor = SystemColors.Desktop;
+                btnQuality.BackColor = SystemColors.Desktop;
+                btnAccept.BackColor = SystemColors.Desktop;
+                btnProcurement.BackColor = SystemColors.Desktop;
+                btnChange.BackColor = SystemColors.Desktop;
+                btnTime.BackColor = SystemColors.Desktop;
+                btnCost.BackColor = SystemColors.Desktop;
+                btnReview.BackColor = SystemColors.Desktop;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC")
+            {
+                this.BackColor = SystemColors.Window;
+
+                lstInstr.BackColor = SystemColors.Window;
+
+                lstInfo.BackColor = SystemColors.Window;
+
+                pnlInfo.BackColor = SystemColors.Window;
+                pnlExecution.BackColor = SystemColors.Window;
+                pnlTopMenu.BackColor = SystemColors.Window;
+
+                btnViewIssueMan.BackColor = SystemColors.Window;
+                btnViewRiskMan.BackColor = SystemColors.Window;
+                btnViewQualityMan.BackColor = SystemColors.Window;
+                btnViewChangeMan.BackColor = SystemColors.Window;
+                btnViewComMan.BackColor = SystemColors.Window;
+                btnViewTimeMan1.BackColor = SystemColors.Window;
+                btnViewCostMan.BackColor = SystemColors.Window;
+                btnViewProcMan.BackColor = SystemColors.Window;
+                btnViewAccMan.BackColor = SystemColors.Window;
+                btnViewPRev.BackColor = SystemColors.Window;
+
+                btnCommunications.BackColor = SystemColors.Window;
+                btnIssue.BackColor = SystemColors.Window;
+                btnRisk.BackColor = SystemColors.Window;
+                btnQuality.BackColor = SystemColors.Window;
+                btnAccept.BackColor = SystemColors.Window;
+                btnProcurement.BackColor = SystemColors.Window;
+                btnChange.BackColor = SystemColors.Window;
+                btnTime.BackColor = SystemColors.Window;
+                btnCost.BackColor = SystemColors.Window;
+                btnReview.BackColor = SystemColors.Window;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC2")
+            {                
+                lstInstr.ForeColor = SystemColors.ActiveCaption;
+
+                lstInfo.ForeColor = SystemColors.ActiveCaption;
+
+                btnCommunications.ForeColor = SystemColors.ActiveCaption;
+                btnIssue.ForeColor = SystemColors.ActiveCaption;
+                btnRisk.ForeColor = SystemColors.ActiveCaption;
+                btnQuality.ForeColor = SystemColors.ActiveCaption;
+                btnAccept.ForeColor = SystemColors.ActiveCaption;
+                btnProcurement.ForeColor = SystemColors.ActiveCaption;
+                btnChange.ForeColor = SystemColors.ActiveCaption;
+                btnTime.ForeColor = SystemColors.ActiveCaption;
+                btnCost.ForeColor = SystemColors.ActiveCaption;
+                btnReview.ForeColor = SystemColors.ActiveCaption;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC2")
+            {
+                lstInstr.ForeColor = SystemColors.Highlight;
+
+                lstInfo.ForeColor = SystemColors.Highlight;
+
+                btnCommunications.ForeColor = SystemColors.Highlight;
+                btnIssue.ForeColor = SystemColors.Highlight;
+                btnRisk.ForeColor = SystemColors.Highlight;
+                btnQuality.ForeColor = SystemColors.Highlight;
+                btnAccept.ForeColor = SystemColors.Highlight;
+                btnProcurement.ForeColor = SystemColors.Highlight;
+                btnChange.ForeColor = SystemColors.Highlight;
+                btnTime.ForeColor = SystemColors.Highlight;
+                btnCost.ForeColor = SystemColors.Highlight;
+                btnReview.ForeColor = SystemColors.Highlight;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC2")
+            {
+                lstInstr.ForeColor = SystemColors.Info;
+
+                lstInfo.ForeColor = SystemColors.Info;
+
+                btnCommunications.ForeColor = SystemColors.Info;
+                btnIssue.ForeColor = SystemColors.Info;
+                btnRisk.ForeColor = SystemColors.Info;
+                btnQuality.ForeColor = SystemColors.Info;
+                btnAccept.ForeColor = SystemColors.Info;
+                btnProcurement.ForeColor = SystemColors.Info;
+                btnChange.ForeColor = SystemColors.Info;
+                btnTime.ForeColor = SystemColors.Info;
+                btnCost.ForeColor = SystemColors.Info;
+                btnReview.ForeColor = SystemColors.Info;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC2")
+            {
+                lstInstr.ForeColor = SystemColors.ControlDark;
+
+                lstInfo.ForeColor = SystemColors.ControlDark;
+
+                btnCommunications.ForeColor = SystemColors.ControlDark;
+                btnIssue.ForeColor = SystemColors.ControlDark;
+                btnRisk.ForeColor = SystemColors.ControlDark; 
+                btnQuality.ForeColor = SystemColors.ControlDark;
+                btnAccept.ForeColor = SystemColors.ControlDark;
+                btnProcurement.ForeColor = SystemColors.ControlDark;
+                btnChange.ForeColor = SystemColors.ControlDark;
+                btnTime.ForeColor = SystemColors.ControlDark;
+                btnCost.ForeColor = SystemColors.ControlDark;
+                btnReview.ForeColor = SystemColors.ControlDark;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC2")
+            {
+                lstInstr.ForeColor = SystemColors.ControlDarkDark;
+
+                lstInfo.ForeColor = SystemColors.ControlDarkDark;
+
+                btnCommunications.ForeColor = SystemColors.ControlDarkDark;
+                btnIssue.ForeColor = SystemColors.ControlDarkDark;
+                btnRisk.ForeColor = SystemColors.ControlDarkDark;
+                btnQuality.ForeColor = SystemColors.ControlDarkDark;
+                btnAccept.ForeColor = SystemColors.ControlDarkDark;
+                btnProcurement.ForeColor = SystemColors.ControlDarkDark;
+                btnChange.ForeColor = SystemColors.ControlDarkDark;
+                btnTime.ForeColor = SystemColors.ControlDarkDark;
+                btnCost.ForeColor = SystemColors.ControlDarkDark;
+                btnReview.ForeColor = SystemColors.ControlDarkDark;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC2")
+            {
+                lstInstr.ForeColor = SystemColors.Desktop;
+
+                lstInfo.ForeColor = SystemColors.Desktop;
+
+                btnCommunications.ForeColor = SystemColors.Desktop;
+                btnIssue.ForeColor = SystemColors.Desktop;
+                btnRisk.ForeColor = SystemColors.Desktop;
+                btnQuality.ForeColor = SystemColors.Desktop;
+                btnAccept.ForeColor = SystemColors.Desktop;
+                btnProcurement.ForeColor = SystemColors.Desktop;
+                btnChange.ForeColor = SystemColors.Desktop;
+                btnTime.ForeColor = SystemColors.Desktop;
+                btnCost.ForeColor = SystemColors.Desktop;
+                btnReview.ForeColor = SystemColors.Desktop;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC2")
+            {
+                lstInstr.ForeColor = SystemColors.Window;
+
+                lstInfo.ForeColor = SystemColors.Window;
+
+                btnCommunications.ForeColor = SystemColors.Window;
+                btnIssue.ForeColor = SystemColors.Window;
+                btnRisk.ForeColor = SystemColors.Window;
+                btnQuality.ForeColor = SystemColors.Window;
+                btnAccept.ForeColor = SystemColors.Window;
+                btnProcurement.ForeColor = SystemColors.Window;
+                btnChange.ForeColor = SystemColors.Window;
+                btnTime.ForeColor = SystemColors.Window;
+                btnCost.ForeColor = SystemColors.Window;
+                btnReview.ForeColor = SystemColors.Window;
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -898,7 +898,7 @@ namespace TechGenics
                
 
                 lstInstr.BackColor = SystemColors.Desktop;
-                lstInstr.ForeColor = SystemColors.ActiveBorder; ;
+                lstInstr.ForeColor = SystemColors.ActiveBorder; 
                 lstInfo.BackColor = SystemColors.Desktop;
                 lstInfo.ForeColor = SystemColors.ActiveBorder;
 
@@ -925,6 +925,419 @@ namespace TechGenics
                 btnViewTeam.BackColor = SystemColors.Desktop;
                 btnViewOffice.BackColor = SystemColors.Desktop;
                 btnViewPhase.BackColor = SystemColors.Desktop;
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC")
+            {
+                this.BackColor = SystemColors.ActiveCaption;
+
+                pnlInitiation.BackColor = SystemColors.ActiveCaption;
+                pnlInstr.BackColor = SystemColors.ActiveCaption;
+
+                btnClose.BackColor = SystemColors.ActiveCaption;
+                btnPrev.BackColor = SystemColors.ActiveCaption;
+                btnNext.BackColor = SystemColors.ActiveCaption;
+
+                lstInstr.BackColor = SystemColors.ActiveCaption;
+
+                lstInfo.BackColor = SystemColors.ActiveCaption;
+
+
+                lblBusCase.BackColor = SystemColors.ActiveCaption;
+
+                lblFeasStudy.BackColor = SystemColors.ActiveCaption;
+
+                lblProjCharter.BackColor = SystemColors.ActiveCaption;
+
+                lblProjTeam.BackColor = SystemColors.ActiveCaption;
+
+                lblProjOffice.BackColor = SystemColors.ActiveCaption;
+
+                lblPhaseRev.BackColor = SystemColors.ActiveCaption;
+
+
+                btnViewBusCase.BackColor = SystemColors.ActiveCaption;
+                btnViewFeasStudy.BackColor = SystemColors.ActiveCaption;
+                btnViewCharter.BackColor = SystemColors.ActiveCaption;
+                btnViewTeam.BackColor = SystemColors.ActiveCaption;
+                btnViewOffice.BackColor = SystemColors.ActiveCaption;
+                btnViewPhase.BackColor = SystemColors.ActiveCaption;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC")
+            {
+                this.BackColor = SystemColors.Highlight;
+
+                pnlInitiation.BackColor = SystemColors.Highlight;
+                pnlInstr.BackColor = SystemColors.Highlight;
+
+                btnClose.BackColor = SystemColors.Highlight;
+                btnPrev.BackColor = SystemColors.Highlight;
+                btnNext.BackColor = SystemColors.Highlight;
+
+                lstInstr.BackColor = SystemColors.Highlight;
+
+                lstInfo.BackColor = SystemColors.Highlight;
+
+
+                lblBusCase.BackColor = SystemColors.Highlight;
+
+                lblFeasStudy.BackColor = SystemColors.Highlight;
+
+                lblProjCharter.BackColor = SystemColors.Highlight;
+
+                lblProjTeam.BackColor = SystemColors.Highlight;
+
+                lblProjOffice.BackColor = SystemColors.Highlight;
+
+                lblPhaseRev.BackColor = SystemColors.Highlight;
+
+
+                btnViewBusCase.BackColor = SystemColors.Highlight;
+                btnViewFeasStudy.BackColor = SystemColors.Highlight;
+                btnViewCharter.BackColor = SystemColors.Highlight;
+                btnViewTeam.BackColor = SystemColors.Highlight;
+                btnViewOffice.BackColor = SystemColors.Highlight;
+                btnViewPhase.BackColor = SystemColors.Highlight;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC")
+            {
+                this.BackColor = SystemColors.Info;
+
+                pnlInitiation.BackColor = SystemColors.Info;
+                pnlInstr.BackColor = SystemColors.Info;
+
+                btnClose.BackColor = SystemColors.Info;
+                btnPrev.BackColor = SystemColors.Info;
+                btnNext.BackColor = SystemColors.Info;
+
+                lstInstr.BackColor = SystemColors.Info;
+
+                lstInfo.BackColor = SystemColors.Info;
+
+
+                lblBusCase.BackColor = SystemColors.Info;
+
+                lblFeasStudy.BackColor = SystemColors.Info;
+
+                lblProjCharter.BackColor = SystemColors.Info;
+
+                lblProjTeam.BackColor = SystemColors.Info;
+
+                lblProjOffice.BackColor = SystemColors.Info;
+
+                lblPhaseRev.BackColor = SystemColors.Info;
+
+
+                btnViewBusCase.BackColor = SystemColors.Info;
+                btnViewFeasStudy.BackColor = SystemColors.Info;
+                btnViewCharter.BackColor = SystemColors.Info;
+                btnViewTeam.BackColor = SystemColors.Info;
+                btnViewOffice.BackColor = SystemColors.Info;
+                btnViewPhase.BackColor = SystemColors.Info;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC")
+            {
+                this.BackColor = SystemColors.ControlDark;
+
+                pnlInitiation.BackColor = SystemColors.ControlDark;
+                pnlInstr.BackColor = SystemColors.ControlDark;
+
+                btnClose.BackColor = SystemColors.ControlDark;
+                btnPrev.BackColor = SystemColors.ControlDark;
+                btnNext.BackColor = SystemColors.ControlDark;
+
+                lstInstr.BackColor = SystemColors.ControlDark;
+
+                lstInfo.BackColor = SystemColors.ControlDark;
+
+
+                lblBusCase.BackColor = SystemColors.ControlDark;
+
+                lblFeasStudy.BackColor = SystemColors.ControlDark;
+
+                lblProjCharter.BackColor = SystemColors.ControlDark;
+
+                lblProjTeam.BackColor = SystemColors.ControlDark;
+
+                lblProjOffice.BackColor = SystemColors.ControlDark;
+
+                lblPhaseRev.BackColor = SystemColors.ControlDark;
+
+
+                btnViewBusCase.BackColor = SystemColors.ControlDark;
+                btnViewFeasStudy.BackColor = SystemColors.ControlDark;
+                btnViewCharter.BackColor = SystemColors.ControlDark;
+                btnViewTeam.BackColor = SystemColors.ControlDark;
+                btnViewOffice.BackColor = SystemColors.ControlDark;
+                btnViewPhase.BackColor = SystemColors.ControlDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC")
+            {
+                this.BackColor = SystemColors.ControlDarkDark;
+
+                pnlInitiation.BackColor = SystemColors.ControlDarkDark;
+                pnlInstr.BackColor = SystemColors.ControlDarkDark;
+
+                btnClose.BackColor = SystemColors.ControlDarkDark;
+                btnPrev.BackColor = SystemColors.ControlDarkDark;
+                btnNext.BackColor = SystemColors.ControlDarkDark;
+
+                lstInstr.BackColor = SystemColors.ControlDarkDark;
+
+                lstInfo.BackColor = SystemColors.ControlDarkDark;
+
+
+                lblBusCase.BackColor = SystemColors.ControlDarkDark;
+
+                lblFeasStudy.BackColor = SystemColors.ControlDarkDark;
+
+                lblProjCharter.BackColor = SystemColors.ControlDarkDark;
+
+                lblProjTeam.BackColor = SystemColors.ControlDarkDark;
+
+                lblProjOffice.BackColor = SystemColors.ControlDarkDark;
+
+                lblPhaseRev.BackColor = SystemColors.ControlDarkDark;
+
+
+                btnViewBusCase.BackColor = SystemColors.ControlDarkDark;
+                btnViewFeasStudy.BackColor = SystemColors.ControlDarkDark;
+                btnViewCharter.BackColor = SystemColors.ControlDarkDark;
+                btnViewTeam.BackColor = SystemColors.ControlDarkDark;
+                btnViewOffice.BackColor = SystemColors.ControlDarkDark;
+                btnViewPhase.BackColor = SystemColors.ControlDarkDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC")
+            {
+                this.BackColor = SystemColors.Desktop;
+
+                pnlInitiation.BackColor = SystemColors.Desktop;
+                pnlInstr.BackColor = SystemColors.Desktop;
+
+                btnClose.BackColor = SystemColors.Desktop;
+                btnPrev.BackColor = SystemColors.Desktop;
+                btnNext.BackColor = SystemColors.Desktop;
+
+                lstInstr.BackColor = SystemColors.Desktop;
+
+                lstInfo.BackColor = SystemColors.Desktop;
+
+
+                lblBusCase.BackColor = SystemColors.Desktop;
+
+                lblFeasStudy.BackColor = SystemColors.Desktop;
+
+                lblProjCharter.BackColor = SystemColors.Desktop;
+
+                lblProjTeam.BackColor = SystemColors.Desktop;
+
+                lblProjOffice.BackColor = SystemColors.Desktop;
+
+                lblPhaseRev.BackColor = SystemColors.Desktop;
+
+
+                btnViewBusCase.BackColor = SystemColors.Desktop;
+                btnViewFeasStudy.BackColor = SystemColors.Desktop;
+                btnViewCharter.BackColor = SystemColors.Desktop;
+                btnViewTeam.BackColor = SystemColors.Desktop;
+                btnViewOffice.BackColor = SystemColors.Desktop;
+                btnViewPhase.BackColor = SystemColors.Desktop;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC")
+            {
+                this.BackColor = SystemColors.Window;
+
+                pnlInitiation.BackColor = SystemColors.Window;
+                pnlInstr.BackColor = SystemColors.Window;
+
+                btnClose.BackColor = SystemColors.Window;
+                btnPrev.BackColor = SystemColors.Window;
+                btnNext.BackColor = SystemColors.Window;
+
+                lstInstr.BackColor = SystemColors.Window;
+
+                lstInfo.BackColor = SystemColors.Window;
+
+
+                lblBusCase.BackColor = SystemColors.Window;
+
+                lblFeasStudy.BackColor = SystemColors.Window;
+
+                lblProjCharter.BackColor = SystemColors.Window;
+
+                lblProjTeam.BackColor = SystemColors.Window;
+
+                lblProjOffice.BackColor = SystemColors.Window;
+
+                lblPhaseRev.BackColor = SystemColors.Window;
+
+
+                btnViewBusCase.BackColor = SystemColors.Window;
+                btnViewFeasStudy.BackColor = SystemColors.Window;
+                btnViewCharter.BackColor = SystemColors.Window;
+                btnViewTeam.BackColor = SystemColors.Window;
+                btnViewOffice.BackColor = SystemColors.Window;
+                btnViewPhase.BackColor = SystemColors.Window;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LBlueC2")
+            {
+
+                lstInstr.ForeColor = SystemColors.ActiveCaption;
+
+                lstInfo.ForeColor = SystemColors.ActiveCaption;
+
+                lblBusCase.ForeColor = SystemColors.ActiveCaption;
+
+                lblFeasStudy.ForeColor = SystemColors.ActiveCaption;
+
+                lblProjCharter.ForeColor = SystemColors.ActiveCaption;
+
+                lblProjTeam.ForeColor = SystemColors.ActiveCaption;
+
+                lblProjOffice.ForeColor = SystemColors.ActiveCaption;
+
+                lblPhaseRev.ForeColor = SystemColors.ActiveCaption;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlueC2")
+            {
+
+                lstInstr.ForeColor = SystemColors.Highlight;
+
+                lstInfo.ForeColor = SystemColors.Highlight;
+
+                lblBusCase.ForeColor = SystemColors.Highlight;
+
+                lblFeasStudy.ForeColor = SystemColors.Highlight;
+
+                lblProjCharter.ForeColor = SystemColors.Highlight;
+
+                lblProjTeam.ForeColor = SystemColors.Highlight;
+
+                lblProjOffice.ForeColor = SystemColors.Highlight;
+
+                lblPhaseRev.ForeColor = SystemColors.Highlight;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DBlueC2")
+            {
+
+                lstInstr.ForeColor = SystemColors.Info;
+
+                lstInfo.ForeColor = SystemColors.Info;
+
+                lblBusCase.ForeColor = SystemColors.Info;
+
+                lblFeasStudy.ForeColor = SystemColors.Info;
+
+                lblProjCharter.ForeColor = SystemColors.Info;
+
+                lblProjTeam.ForeColor = SystemColors.Info;
+
+                lblProjOffice.ForeColor = SystemColors.Info;
+
+                lblPhaseRev.ForeColor = SystemColors.Info;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "LGreyC2")
+            {
+
+                lstInstr.ForeColor = SystemColors.ControlDark;
+
+                lstInfo.ForeColor = SystemColors.ControlDark;
+
+                lblBusCase.ForeColor = SystemColors.ControlDark;
+
+                lblFeasStudy.ForeColor = SystemColors.ControlDark;
+
+                lblProjCharter.ForeColor = SystemColors.ControlDark;
+
+                lblProjTeam.ForeColor = SystemColors.ControlDark;
+
+                lblProjOffice.ForeColor = SystemColors.ControlDark;
+
+                lblPhaseRev.ForeColor = SystemColors.ControlDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "DGreyC2")
+            {
+
+                lstInstr.ForeColor = SystemColors.ControlDarkDark;
+
+                lstInfo.ForeColor = SystemColors.ControlDarkDark;
+
+                lblBusCase.ForeColor = SystemColors.ControlDarkDark;
+
+                lblFeasStudy.ForeColor = SystemColors.ControlDarkDark;
+
+                lblProjCharter.ForeColor = SystemColors.ControlDarkDark;
+
+                lblProjTeam.ForeColor = SystemColors.ControlDarkDark;
+
+                lblProjOffice.ForeColor = SystemColors.ControlDarkDark;
+
+                lblPhaseRev.ForeColor = SystemColors.ControlDarkDark;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "BlackC2")
+            {
+
+                lstInstr.ForeColor = SystemColors.Desktop;
+
+                lstInfo.ForeColor = SystemColors.Desktop;
+
+                lblBusCase.ForeColor = SystemColors.Desktop;
+
+                lblFeasStudy.ForeColor = SystemColors.Desktop;
+
+                lblProjCharter.ForeColor = SystemColors.Desktop;
+
+                lblProjTeam.ForeColor = SystemColors.Desktop;
+
+                lblProjOffice.ForeColor = SystemColors.Desktop;
+
+                lblPhaseRev.ForeColor = SystemColors.Desktop;
+
+            }
+
+            if (TechGenics.Properties.Settings.Default.Theme == "WhiteC2")
+            {
+
+                lstInstr.ForeColor = SystemColors.Window;
+
+                lstInfo.ForeColor = SystemColors.Window;
+
+                lblBusCase.ForeColor = SystemColors.Window;
+
+                lblFeasStudy.ForeColor = SystemColors.Window;
+
+                lblProjCharter.ForeColor = SystemColors.Window;
+
+                lblProjTeam.ForeColor = SystemColors.Window;
+
+                lblProjOffice.ForeColor = SystemColors.Window;
+
+                lblPhaseRev.ForeColor = SystemColors.Window;
+
             }
         }
     }
