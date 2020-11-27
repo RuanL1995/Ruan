@@ -1433,5 +1433,17 @@ namespace TechGenics
             pnlViewTask.Visible = false;
             pnlBacklog.Visible = true;
         }
+
+        private void btnLogout_Click_2(object sender, EventArgs e)
+        {
+            SettingsConstructor settings = new SettingsConstructor();
+            settings.CurrentUser = "";
+            lblCurrentUser.Text = "";
+            settings.ByPassLogin = false;
+
+            login_signup login = new login_signup();
+            login.Show();
+            this.Dispose();
+        }
     }
 }
