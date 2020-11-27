@@ -29,7 +29,7 @@ namespace TechGenics
                     {
                         foreach (var instanceName in instanceKey.GetValueNames())
                         {
-                            svrInstance = Environment.MachineName + @"\" + instanceName;
+                            svrInstance = /*Environment.MachineName + @"\" + */instanceName;
                         }
                     }
                 }
@@ -39,8 +39,9 @@ namespace TechGenics
             else if (settings.UseManualConString == true)
             {
                 //Sets connection string manually if option is chosen in settings menu
-                conString = settings.ManualConString;        
+                conString = settings.ManualConString;
             }
+
             return conString;
         }
     }

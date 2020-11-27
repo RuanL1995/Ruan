@@ -226,3 +226,7 @@ C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe.m
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.application
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe.manifest
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.application
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe.manifest
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.application
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe.manifest
+C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.application

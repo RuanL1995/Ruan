@@ -1121,7 +1121,8 @@ namespace TechGenics
                     numberOfProjectsToRemove ++;
                     ctrl = btnNewProj.Clone();
                     ctrl.Name = row.Field<String>("ProjectName");
-                    ctrl.Text = Text = row.Field<String>("ProjectName");
+                    ctrl.Text = row.Field<String>("ProjectName");
+                    ctrl.Tag =  row.Field<Int32>("ProjectId");
                     ctrl.Location = new Point(locationStartX, locationStartY);
                     ctrl.Visible = true;
                     ctrl.Click += project_Click;
@@ -1136,6 +1137,9 @@ namespace TechGenics
 
         private void project_Click(object sender, EventArgs e)
         {
+            string buttonTag;
+            var button = (Button)sender;
+            buttonTag = button.Tag.ToString();
             generateTasks();
             //if (btnUpdate.Enabled == true)
             //{
@@ -1168,6 +1172,8 @@ namespace TechGenics
             {
                 dtGeneratedTasksFilter.ImportRow(row);
             }
+
+            
 
             //DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
             //DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
