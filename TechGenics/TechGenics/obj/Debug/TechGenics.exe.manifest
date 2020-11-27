@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TechGenics.exe" size="1687512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TechGenics.exe" size="1692632">
       <assemblyIdentity name="TechGenics" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>q0K3APUOsbudYA8YK+BJ9oXtw4hS1GRCRZgLbajXn9M=</dsig:DigestValue>
+        <dsig:DigestValue>MaFUPf440E30IdoXdaXIwe+d6yrHvUU2Ar/gqL736jE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

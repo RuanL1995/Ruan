@@ -37,6 +37,7 @@
             this.gradient1 = new TechGenics.gradient();
             this.btnSettingsLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.lblLExit = new System.Windows.Forms.Label();
             this.btnLExit = new System.Windows.Forms.Button();
             this.pboPassIcon = new System.Windows.Forms.PictureBox();
             this.pboUserIcon = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlSignUp = new System.Windows.Forms.Panel();
+            this.lblBLog = new System.Windows.Forms.Label();
+            this.lblsExit = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSExit = new System.Windows.Forms.Button();
             this.chckBoxAdmin = new System.Windows.Forms.CheckBox();
@@ -67,9 +70,6 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.lblsExit = new System.Windows.Forms.Label();
-            this.lblLExit = new System.Windows.Forms.Label();
-            this.lblBLog = new System.Windows.Forms.Label();
             this.gradient1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
@@ -159,6 +159,18 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
+            // 
+            // lblLExit
+            // 
+            this.lblLExit.AutoSize = true;
+            this.lblLExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLExit.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.lblLExit.Location = new System.Drawing.Point(342, 36);
+            this.lblLExit.Name = "lblLExit";
+            this.lblLExit.Size = new System.Drawing.Size(29, 16);
+            this.lblLExit.TabIndex = 28;
+            this.lblLExit.Text = "Exit";
+            this.lblLExit.Visible = false;
             // 
             // btnLExit
             // 
@@ -328,6 +340,30 @@
             this.pnlSignUp.Size = new System.Drawing.Size(379, 549);
             this.pnlSignUp.TabIndex = 12;
             this.pnlSignUp.Visible = false;
+            // 
+            // lblBLog
+            // 
+            this.lblBLog.AutoSize = true;
+            this.lblBLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBLog.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.lblBLog.Location = new System.Drawing.Point(5, 33);
+            this.lblBLog.Name = "lblBLog";
+            this.lblBLog.Size = new System.Drawing.Size(89, 16);
+            this.lblBLog.TabIndex = 29;
+            this.lblBLog.Text = "Back to Login";
+            this.lblBLog.Visible = false;
+            // 
+            // lblsExit
+            // 
+            this.lblsExit.AutoSize = true;
+            this.lblsExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsExit.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.lblsExit.Location = new System.Drawing.Point(345, 33);
+            this.lblsExit.Name = "lblsExit";
+            this.lblsExit.Size = new System.Drawing.Size(29, 16);
+            this.lblsExit.TabIndex = 27;
+            this.lblsExit.Text = "Exit";
+            this.lblsExit.Visible = false;
             // 
             // btnBack
             // 
@@ -500,7 +536,7 @@
             this.txtLast.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLast.ForeColor = System.Drawing.Color.White;
-            this.txtLast.Location = new System.Drawing.Point(199, 179);
+            this.txtLast.Location = new System.Drawing.Point(196, 179);
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(115, 19);
             this.txtLast.TabIndex = 6;
@@ -556,42 +592,6 @@
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // lblsExit
-            // 
-            this.lblsExit.AutoSize = true;
-            this.lblsExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsExit.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.lblsExit.Location = new System.Drawing.Point(345, 33);
-            this.lblsExit.Name = "lblsExit";
-            this.lblsExit.Size = new System.Drawing.Size(29, 16);
-            this.lblsExit.TabIndex = 27;
-            this.lblsExit.Text = "Exit";
-            this.lblsExit.Visible = false;
-            // 
-            // lblLExit
-            // 
-            this.lblLExit.AutoSize = true;
-            this.lblLExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLExit.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.lblLExit.Location = new System.Drawing.Point(342, 36);
-            this.lblLExit.Name = "lblLExit";
-            this.lblLExit.Size = new System.Drawing.Size(29, 16);
-            this.lblLExit.TabIndex = 28;
-            this.lblLExit.Text = "Exit";
-            this.lblLExit.Visible = false;
-            // 
-            // lblBLog
-            // 
-            this.lblBLog.AutoSize = true;
-            this.lblBLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBLog.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.lblBLog.Location = new System.Drawing.Point(5, 33);
-            this.lblBLog.Name = "lblBLog";
-            this.lblBLog.Size = new System.Drawing.Size(89, 16);
-            this.lblBLog.TabIndex = 29;
-            this.lblBLog.Text = "Back to Login";
-            this.lblBLog.Visible = false;
             // 
             // login_signup
             // 

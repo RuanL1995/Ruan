@@ -1249,7 +1249,8 @@ namespace TechGenics
                 
                 ctrlTask.Visible = true;
                 ctrlTask.Click += task_Click;
-                             
+                ctrlTask.MouseDown += task_MouseDown;
+
                 pnlBacklog.Controls.Add(ctrlTask);
             }
         }
@@ -1261,6 +1262,15 @@ namespace TechGenics
             taskTag = button.Tag.ToString();
             taskToMoveId = taskTag;
             ctrlTaskToMove = button;
+        }
+
+        private void task_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Clicks == 2)
+            {
+                pnlBacklog.Visible = false;
+                pnlViewTask.Visible = true;
+            }     
         }
 
         private void removeTasks()
@@ -1416,6 +1426,12 @@ namespace TechGenics
         private void btnCloseTaskPanel_Click(object sender, EventArgs e)
         {
             pnlTasks.Visible = false;
+        }
+
+        private void btnBackTask_Click(object sender, EventArgs e)
+        {
+            pnlViewTask.Visible = false;
+            pnlBacklog.Visible = true;
         }
     }
 }
