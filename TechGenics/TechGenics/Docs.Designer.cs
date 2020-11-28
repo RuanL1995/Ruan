@@ -37,14 +37,16 @@
             this.radExistingDoc = new System.Windows.Forms.RadioButton();
             this.radNewDoc = new System.Windows.Forms.RadioButton();
             this.lblDocTemplates = new System.Windows.Forms.Label();
+            this.btnDocBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextEditor
             // 
-            this.TextEditor.Location = new System.Drawing.Point(12, 204);
+            this.TextEditor.Location = new System.Drawing.Point(9, 166);
+            this.TextEditor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextEditor.Name = "TextEditor";
-            this.TextEditor.Size = new System.Drawing.Size(1069, 504);
+            this.TextEditor.Size = new System.Drawing.Size(803, 410);
             this.TextEditor.TabIndex = 3;
             this.TextEditor.Text = "";
             this.TextEditor.TextChanged += new System.EventHandler(this.AutosaveDoc_TextChanged);
@@ -56,9 +58,10 @@
             "Proposal",
             "Feasibility study",
             "Business Case"});
-            this.cmbTemplate.Location = new System.Drawing.Point(566, 139);
+            this.cmbTemplate.Location = new System.Drawing.Point(424, 113);
+            this.cmbTemplate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTemplate.Name = "cmbTemplate";
-            this.cmbTemplate.Size = new System.Drawing.Size(188, 24);
+            this.cmbTemplate.Size = new System.Drawing.Size(142, 21);
             this.cmbTemplate.TabIndex = 5;
             this.cmbTemplate.SelectedIndexChanged += new System.EventHandler(this.Template_SelectedIndexChanged);
             // 
@@ -66,17 +69,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(341, 9);
+            this.label1.Location = new System.Drawing.Point(256, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(413, 55);
+            this.label1.Size = new System.Drawing.Size(330, 44);
             this.label1.TabIndex = 4;
             this.label1.Text = "Techgenics Word";
             // 
             // btnSaveDocToDB
             // 
-            this.btnSaveDocToDB.Location = new System.Drawing.Point(450, 714);
+            this.btnSaveDocToDB.Location = new System.Drawing.Point(338, 580);
+            this.btnSaveDocToDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSaveDocToDB.Name = "btnSaveDocToDB";
-            this.btnSaveDocToDB.Size = new System.Drawing.Size(145, 33);
+            this.btnSaveDocToDB.Size = new System.Drawing.Size(109, 27);
             this.btnSaveDocToDB.TabIndex = 6;
             this.btnSaveDocToDB.Text = "Save to Database";
             this.btnSaveDocToDB.UseVisualStyleBackColor = true;
@@ -85,9 +90,10 @@
             // AutoSave
             // 
             this.AutoSave.AutoSize = true;
-            this.AutoSave.Location = new System.Drawing.Point(101, 44);
+            this.AutoSave.Location = new System.Drawing.Point(76, 36);
+            this.AutoSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AutoSave.Name = "AutoSave";
-            this.AutoSave.Size = new System.Drawing.Size(159, 21);
+            this.AutoSave.Size = new System.Drawing.Size(125, 17);
             this.AutoSave.TabIndex = 7;
             this.AutoSave.Text = "AutoSave Document";
             this.AutoSave.UseVisualStyleBackColor = true;
@@ -97,9 +103,11 @@
             // 
             this.groupBox1.Controls.Add(this.radExistingDoc);
             this.groupBox1.Controls.Add(this.radNewDoc);
-            this.groupBox1.Location = new System.Drawing.Point(351, 67);
+            this.groupBox1.Location = new System.Drawing.Point(263, 54);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(413, 56);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(310, 46);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create new document or open existing?";
@@ -107,9 +115,10 @@
             // radExistingDoc
             // 
             this.radExistingDoc.AutoSize = true;
-            this.radExistingDoc.Location = new System.Drawing.Point(206, 22);
+            this.radExistingDoc.Location = new System.Drawing.Point(154, 18);
+            this.radExistingDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radExistingDoc.Name = "radExistingDoc";
-            this.radExistingDoc.Size = new System.Drawing.Size(201, 21);
+            this.radExistingDoc.Size = new System.Drawing.Size(154, 17);
             this.radExistingDoc.TabIndex = 1;
             this.radExistingDoc.TabStop = true;
             this.radExistingDoc.Text = "Open an existing document";
@@ -118,9 +127,10 @@
             // radNewDoc
             // 
             this.radNewDoc.AutoSize = true;
-            this.radNewDoc.Location = new System.Drawing.Point(10, 22);
+            this.radNewDoc.Location = new System.Drawing.Point(8, 18);
+            this.radNewDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radNewDoc.Name = "radNewDoc";
-            this.radNewDoc.Size = new System.Drawing.Size(166, 21);
+            this.radNewDoc.Size = new System.Drawing.Size(129, 17);
             this.radNewDoc.TabIndex = 0;
             this.radNewDoc.TabStop = true;
             this.radNewDoc.Text = "Create new document";
@@ -129,17 +139,30 @@
             // lblDocTemplates
             // 
             this.lblDocTemplates.AutoSize = true;
-            this.lblDocTemplates.Location = new System.Drawing.Point(411, 139);
+            this.lblDocTemplates.Location = new System.Drawing.Point(308, 113);
+            this.lblDocTemplates.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDocTemplates.Name = "lblDocTemplates";
-            this.lblDocTemplates.Size = new System.Drawing.Size(149, 17);
+            this.lblDocTemplates.Size = new System.Drawing.Size(115, 13);
             this.lblDocTemplates.TabIndex = 10;
             this.lblDocTemplates.Text = "Documents/Templates";
             // 
+            // btnDocBack
+            // 
+            this.btnDocBack.Location = new System.Drawing.Point(758, 580);
+            this.btnDocBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDocBack.Name = "btnDocBack";
+            this.btnDocBack.Size = new System.Drawing.Size(54, 27);
+            this.btnDocBack.TabIndex = 11;
+            this.btnDocBack.Text = "Back";
+            this.btnDocBack.UseVisualStyleBackColor = true;
+            this.btnDocBack.Click += new System.EventHandler(this.btnDocBack_Click);
+            // 
             // Docs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 759);
+            this.ClientSize = new System.Drawing.Size(820, 617);
+            this.Controls.Add(this.btnDocBack);
             this.Controls.Add(this.lblDocTemplates);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.AutoSave);
@@ -148,6 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TextEditor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Docs";
             this.Text = "Docs";
             this.groupBox1.ResumeLayout(false);
@@ -168,5 +192,6 @@
         private System.Windows.Forms.RadioButton radExistingDoc;
         private System.Windows.Forms.RadioButton radNewDoc;
         private System.Windows.Forms.Label lblDocTemplates;
+        private System.Windows.Forms.Button btnDocBack;
     }
 }

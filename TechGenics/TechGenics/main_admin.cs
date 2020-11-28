@@ -1446,10 +1446,13 @@ namespace TechGenics
             this.Dispose();
         }
 
-        private void btnDocuments_Click(object sender, EventArgs e)
+        private void btnShowDocuments_Click(object sender, EventArgs e)
         {
+            pnlViewTask.SendToBack();
+            pnlBacklog.SendToBack();
             Docs docs = new Docs();
-            openDocsFrom(docs); 
+            openDocsFrom(docs);
+            docs.BringToFront();
         }
     }
 }

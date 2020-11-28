@@ -103,5 +103,11 @@ namespace TechGenics
                 MessageBox.Show("AutoSave is off, this document will be saved as you type.", "AutoSave is Off", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnDocBack_Click(object sender, EventArgs e)
+        {
+
+            this.Dispose();
+        }
     }
 }
