@@ -6,8 +6,7 @@
 */
 @ProjectName VARCHAR(50),
 @ProjectPhase VARCHAR(50),
-@ProjectStatus VARCHAR(50),
-@DocumentLocation VARCHAR(MAX)
+@ProjectStatus VARCHAR(50)
 
 AS
 BEGIN
@@ -15,14 +14,12 @@ BEGIN
 	(
 	    ProjectName,
 	    ProjectPhase,
-	    ProjectStatus,
-	    DocumentLocation
+	    ProjectStatus
 	)
 	VALUES
 	(   
 		@ProjectName,
 	    @ProjectPhase, 
-	    @ProjectStatus, 
-	    @DocumentLocation
+	    @ProjectStatus
 	)
 END

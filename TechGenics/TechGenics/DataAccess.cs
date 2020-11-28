@@ -244,7 +244,7 @@ namespace TechGenics
         /// <summary>
         /// Inserts a new project into tblProject
         /// </summary>
-        internal void InsertProject(string projectName, string projectType, string projectPhase, string documentLocation)
+        internal void InsertProject(string projectName, string projectType, string projectPhase)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
             {
@@ -252,15 +252,53 @@ namespace TechGenics
                 newProject.ProjectName = projectName;
                 newProject.ProjectType = projectType;
                 newProject.ProjectPhase = projectPhase;
-                newProject.DocumentLocation = documentLocation;
 
                 List<Projects> project = new List<Projects>();
                 project.Add(newProject);
 
-                connection.Execute("dbo.spProjectC1 @ProjectName, @ProjectType, @ProjectPhase, @DocumentLocation", project);
+                connection.Execute("dbo.spProjectC1 @ProjectName, @ProjectType, @ProjectPhase", project);
             }
         }
+        /// <summary>
+        /// Updates a project
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="projectName"></param>
+        /// <param name="projectType"></param>
+        /// <param name="projectPhase"></param>
+        internal void UpdateProject(int projectId, string projectName, string projectType, string projectPhase)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                Projects newProject = new Projects();
+                newProject.ProjectId = projectId;
+                newProject.ProjectName = projectName;
+                newProject.ProjectType = projectType;
+                newProject.ProjectPhase = projectPhase;
 
+                List<Projects> project = new List<Projects>();
+                project.Add(newProject);
+
+                connection.Execute("dbo.spUpdateProjectRecord @ProjectId, @ProjectName, @ProjectType, @ProjectPhase", project);
+            }
+        }
+        /// <summary>
+        /// Deletes a project
+        /// </summary>
+        /// <param name="projectId"></param>
+        internal void DeleteProject(int projectId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                Projects newProject = new Projects();
+                newProject.ProjectId = projectId;
+
+                List<Projects> project = new List<Projects>();
+                project.Add(newProject);
+
+                connection.Execute("dbo.spDeleteProjectRecord @ProjectId", project);
+            }
+        }
         internal void insertDocumentLocation(string path, string projectName, string projectPhase)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))

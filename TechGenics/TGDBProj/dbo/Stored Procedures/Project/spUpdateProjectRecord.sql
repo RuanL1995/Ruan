@@ -8,8 +8,7 @@
 	@ProjectId int,
 	@ProjectName VARCHAR(50),
 	@ProjectPhase VARCHAR(50),
-	@ProjectStatus VARCHAR(50),
-	@DocumentLocation VARCHAR(MAX)
+	@ProjectStatus VARCHAR(50)
 
 AS
 BEGIN
@@ -18,8 +17,7 @@ UPDATE tblProject
 	SET
 		ProjectName = @ProjectName,
 		ProjectPhase = @ProjectPhase,
-		ProjectStatus = @ProjectStatus,
-		DocumentLocation = @DocumentLocation
+		ProjectStatus = @ProjectStatus
 	WHERE 
 		ProjectId = @ProjectId
 END

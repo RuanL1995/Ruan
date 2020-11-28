@@ -12,8 +12,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 		P.ProjectId,
 		P.ProjectName,
 		P.ProjectPhase,
-		P.ProjectStatus,
-		P.DocumentLocation
+		P.ProjectStatus
 	FROM 
 		tblProject P 		
 END

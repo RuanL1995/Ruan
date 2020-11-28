@@ -385,7 +385,6 @@ namespace TechGenics
             if (isAdmin == true)
             {
                 btnAddTasl.Visible = true;
-                btnRemoveTask.Visible = true;
 
                 btnMembers.Visible = true;
                 btnNewMem.Visible = true;
@@ -393,7 +392,6 @@ namespace TechGenics
             else if (isAdmin == false)
             {
                 btnAddTasl.Visible = false;
-                btnRemoveTask.Visible = false;
 
                 btnMembers.Visible = false;
                 btnNewMem.Visible = false;
@@ -1065,6 +1063,22 @@ namespace TechGenics
             this.Dispose();
         }
 
+        public void refreshProjects()
+        {
+            for (int i = 0; i < numberOfProjectsToRemove; i++)
+            {
+                foreach (Control item in pnlProjectsSub.Controls.OfType<Button>())
+                {
+                    if (item.Name != "btnNewProj" && item.Name != "btnRemoveProject")
+                    {
+                        pnlProjectsSub.Controls.Remove(item);
+                    }
+                }
+            }
+
+            generateProjects();
+        }
+
         private void generateProjects()
         {
             SettingsConstructor settings = new SettingsConstructor();
@@ -1081,10 +1095,11 @@ namespace TechGenics
                 if (isAdmin == true)
                 {
                     btnNewProj.Visible = true;
-                    locationStartY += 60;
-                    projPanelSizeY += 60;
+                    locationStartY += 90;
+                    projPanelSizeY += 90;
 
                     DataAccess db = new DataAccess();
+                    _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>(); 
                     _ProjectsAndTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); //Change to read from db
                     DataSet dsProjectsAndTasks = new DataSet();
                     dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
@@ -1127,6 +1142,8 @@ namespace TechGenics
                 else if (isAdmin == false)
                 {
                     btnNewProj.Visible = false;
+                    locationStartY += 30;
+                    projPanelSizeY += 30;
 
                     DataAccess db = new DataAccess();
                     _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
@@ -1563,6 +1580,11 @@ namespace TechGenics
         {
             frmAddUser addUser = new frmAddUser();
             addUser.ShowDialog();
+        }
+
+        private void btnViewTemplateDocs_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Docs());
         }
     }
 }
