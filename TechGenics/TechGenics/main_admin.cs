@@ -84,7 +84,6 @@ namespace TechGenics
         private void customDesign()
         {
             pnlPhasesSub.Visible = false;
-            pnlDiagramsSub.Visible = false;
             pnlProjectsSub.Visible = false;
             pnlMembersSub.Visible = false;
             pnlHelpSub.Visible = false;
@@ -96,11 +95,6 @@ namespace TechGenics
             if(pnlPhasesSub.Visible == true)
             {
                 pnlPhasesSub.Visible = false;
-            }
-
-            if (pnlDiagramsSub.Visible == true)
-            {
-                pnlDiagramsSub.Visible = false;
             }
 
             if (pnlProjectsSub.Visible == true)
@@ -249,7 +243,6 @@ namespace TechGenics
         //diagrams menu
         private void btnDiagrams_Click(object sender, EventArgs e)
         {
-            showSubs(pnlDiagramsSub);
             //pnlChildForm.BringToFront();
             
         }
@@ -388,6 +381,25 @@ namespace TechGenics
 
             cboPhases.SelectedIndex = 0;
             generateProjects();
+
+            if (isAdmin == true)
+            {
+                btnAddTasl.Visible = true;
+                btnRemoveTask.Visible = true;
+
+                btnMembers.Visible = true;
+                btnNewMem.Visible = true;
+                btnRemoveMember.Visible = true;
+            }
+            else if (isAdmin == false)
+            {
+                btnAddTasl.Visible = false;
+                btnRemoveTask.Visible = false;
+
+                btnMembers.Visible = false;
+                btnNewMem.Visible = false;
+                btnRemoveMember.Visible = false;
+            }
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -467,7 +479,6 @@ namespace TechGenics
                 btnPlanning.BackColor = SystemColors.AppWorkspace;
                 btnExecution.BackColor = SystemColors.AppWorkspace;
                 btnCloseOut.BackColor = SystemColors.AppWorkspace;
-                btnTemplate.BackColor = SystemColors.AppWorkspace;
                 //btnNewProj.BackColor = SystemColors.AppWorkspace;
                 btnNewMem.BackColor = SystemColors.AppWorkspace;
                 btnGoogle.BackColor = SystemColors.AppWorkspace;
@@ -481,8 +492,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.AppWorkspace;
                 btnPhases.ForeColor = SystemColors.Desktop;
 
-                btnDocs.BackColor = SystemColors.AppWorkspace;
-                btnDocs.ForeColor = SystemColors.Desktop;
 
                 btnProjects.BackColor = SystemColors.AppWorkspace;
                 btnProjects.ForeColor = SystemColors.Desktop;
@@ -505,24 +514,20 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.AppWorkspace;
                 pnlChildForm.BackColor = SystemColors.AppWorkspace;
                 pnlPhasesSub.BackColor = SystemColors.AppWorkspace;
-                pnlDiagramsSub.BackColor = SystemColors.AppWorkspace;
                 pnlProjectsSub.BackColor = SystemColors.AppWorkspace;
                 pnlHelpSub.BackColor = SystemColors.AppWorkspace;
                 pnlMembersSub.BackColor = SystemColors.AppWorkspace;
                 pnlChildForm.BackColor = SystemColors.Desktop;
-                panel1.BackColor = SystemColors.AppWorkspace;
+                //panel1.BackColor = SystemColors.AppWorkspace;
             }
             if (TechGenics.Properties.Settings.Default.Theme == "Dark")
             {
-                btnDocs.BackColor = SystemColors.Desktop;
-                btnDocs.ForeColor = SystemColors.ActiveBorder;
 
                 pnlSideMenu.BackColor = SystemColors.Desktop;
                 btnInitiation.BackColor = SystemColors.Desktop;
                 btnPlanning.BackColor = SystemColors.Desktop;
                 btnExecution.BackColor = SystemColors.Desktop;
                 btnCloseOut.BackColor = SystemColors.Desktop;
-                btnTemplate.BackColor = SystemColors.Desktop;
                 btnNewProj.BackColor = SystemColors.Desktop;
                 btnNewMem.BackColor = SystemColors.Desktop;
                 btnGoogle.BackColor = SystemColors.Desktop;
@@ -557,18 +562,16 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.Desktop;
 
                 pnlPhasesSub.BackColor = SystemColors.Desktop;
-                pnlDiagramsSub.BackColor = SystemColors.Desktop;
                 pnlProjectsSub.BackColor = SystemColors.Desktop;
                 pnlHelpSub.BackColor = SystemColors.Desktop;
                 pnlMembersSub.BackColor = SystemColors.Desktop;
                 pnlChildForm.BackColor = SystemColors.Desktop;
-                panel1.BackColor = SystemColors.Desktop;
+                //panel1.BackColor = SystemColors.Desktop;
             }
 
             //Custom
             if (TechGenics.Properties.Settings.Default.Theme == "LBlueC")
             {
-                btnDocs.BackColor = SystemColors.ActiveCaption;
                 
 
                 pnlSideMenu.BackColor = SystemColors.ActiveCaption;
@@ -576,7 +579,6 @@ namespace TechGenics
                 btnPlanning.BackColor = SystemColors.ActiveCaption;
                 btnExecution.BackColor = SystemColors.ActiveCaption;
                 btnCloseOut.BackColor = SystemColors.ActiveCaption;
-                btnTemplate.BackColor = SystemColors.ActiveCaption;
                 btnNewProj.BackColor = SystemColors.ActiveCaption;
                 btnNewMem.BackColor = SystemColors.ActiveCaption;
                 btnGoogle.BackColor = SystemColors.ActiveCaption;
@@ -611,17 +613,15 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.ActiveCaption;
 
                 pnlPhasesSub.BackColor = SystemColors.ActiveCaption;
-                pnlDiagramsSub.BackColor = SystemColors.ActiveCaption;
                 pnlProjectsSub.BackColor = SystemColors.ActiveCaption;
                 pnlHelpSub.BackColor = SystemColors.ActiveCaption;
                 pnlMembersSub.BackColor = SystemColors.ActiveCaption;
                 pnlChildForm.BackColor = SystemColors.ActiveCaption;
-                panel1.BackColor = SystemColors.ActiveCaption;
+                //panel1.BackColor = SystemColors.ActiveCaption;
             }
 
             if (TechGenics.Properties.Settings.Default.Theme == "BlueC")
             {
-                btnDocs.BackColor = SystemColors.Highlight;
 
 
                 pnlSideMenu.BackColor = SystemColors.Highlight;
@@ -629,7 +629,6 @@ namespace TechGenics
                 btnPlanning.BackColor = SystemColors.Highlight;
                 btnExecution.BackColor = SystemColors.Highlight;
                 btnCloseOut.BackColor = SystemColors.Highlight;
-                btnTemplate.BackColor = SystemColors.Highlight;
                 btnNewProj.BackColor = SystemColors.Highlight;
                 btnNewMem.BackColor = SystemColors.Highlight;
                 btnGoogle.BackColor = SystemColors.Highlight;
@@ -664,17 +663,15 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.Highlight;
 
                 pnlPhasesSub.BackColor = SystemColors.Highlight;
-                pnlDiagramsSub.BackColor = SystemColors.Highlight;
                 pnlProjectsSub.BackColor = SystemColors.Highlight;
                 pnlHelpSub.BackColor = SystemColors.Highlight;
                 pnlMembersSub.BackColor = SystemColors.Highlight;
                 pnlChildForm.BackColor = SystemColors.Highlight;
-                panel1.BackColor = SystemColors.Highlight;
+                //panel1.BackColor = SystemColors.Highlight;
             }
 
             if (TechGenics.Properties.Settings.Default.Theme == "DBlueC")
             {
-                btnDocs.BackColor = SystemColors.Info;
 
 
                 pnlSideMenu.BackColor = SystemColors.Info;
@@ -682,7 +679,6 @@ namespace TechGenics
                 btnPlanning.BackColor = SystemColors.Info;
                 btnExecution.BackColor = SystemColors.Info;
                 btnCloseOut.BackColor = SystemColors.Info;
-                btnTemplate.BackColor = SystemColors.Info;
                 btnNewProj.BackColor = SystemColors.Info;
                 btnNewMem.BackColor = SystemColors.Info;
                 btnGoogle.BackColor = SystemColors.Info;
@@ -717,17 +713,15 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.Info;
 
                 pnlPhasesSub.BackColor = SystemColors.Info;
-                pnlDiagramsSub.BackColor = SystemColors.Info;
                 pnlProjectsSub.BackColor = SystemColors.Info;
                 pnlHelpSub.BackColor = SystemColors.Info;
                 pnlMembersSub.BackColor = SystemColors.Info;
                 pnlChildForm.BackColor = SystemColors.Info;
-                panel1.BackColor = SystemColors.Info;
+                //panel1.BackColor = SystemColors.Info;
             }
 
             if (TechGenics.Properties.Settings.Default.Theme == "LGreyC")
             {
-                btnDocs.BackColor = SystemColors.ControlDark;
 
 
                 pnlSideMenu.BackColor = SystemColors.ControlDark;
@@ -735,7 +729,6 @@ namespace TechGenics
                 btnPlanning.BackColor = SystemColors.ControlDark;
                 btnExecution.BackColor = SystemColors.ControlDark;
                 btnCloseOut.BackColor = SystemColors.ControlDark;
-                btnTemplate.BackColor = SystemColors.ControlDark;
                 btnNewProj.BackColor = SystemColors.ControlDark;
                 btnNewMem.BackColor = SystemColors.ControlDark;
                 btnGoogle.BackColor = SystemColors.ControlDark;
@@ -770,25 +763,21 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.ControlDark;
 
                 pnlPhasesSub.BackColor = SystemColors.ControlDark;
-                pnlDiagramsSub.BackColor = SystemColors.ControlDark;
                 pnlProjectsSub.BackColor = SystemColors.ControlDark;
                 pnlHelpSub.BackColor = SystemColors.ControlDark;
                 pnlMembersSub.BackColor = SystemColors.ControlDark;
                 pnlChildForm.BackColor = SystemColors.ControlDark;
-                panel1.BackColor = SystemColors.ControlDark;
+                //panel1.BackColor = SystemColors.ControlDark;
             }
 
             if (TechGenics.Properties.Settings.Default.Theme == "DGreyC")
             {
-                btnDocs.BackColor = SystemColors.ControlDarkDark;
-
 
                 pnlSideMenu.BackColor = SystemColors.ControlDarkDark;
                 btnInitiation.BackColor = SystemColors.ControlDarkDark;
                 btnPlanning.BackColor = SystemColors.ControlDarkDark;
                 btnExecution.BackColor = SystemColors.ControlDarkDark;
                 btnCloseOut.BackColor = SystemColors.ControlDarkDark; 
-                btnTemplate.BackColor = SystemColors.ControlDarkDark;
                 btnNewProj.BackColor = SystemColors.ControlDarkDark;
                 btnNewMem.BackColor = SystemColors.ControlDarkDark;
                 btnGoogle.BackColor = SystemColors.ControlDarkDark;
@@ -823,17 +812,15 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.ControlDarkDark;
 
                 pnlPhasesSub.BackColor = SystemColors.ControlDarkDark;
-                pnlDiagramsSub.BackColor = SystemColors.ControlDarkDark;
                 pnlProjectsSub.BackColor = SystemColors.ControlDarkDark;
                 pnlHelpSub.BackColor = SystemColors.ControlDarkDark;
                 pnlMembersSub.BackColor = SystemColors.ControlDarkDark;
                 pnlChildForm.BackColor = SystemColors.ControlDarkDark;
-                panel1.BackColor = SystemColors.ControlDarkDark;
+                //panel1.BackColor = SystemColors.ControlDarkDark;
             }
 
             if (TechGenics.Properties.Settings.Default.Theme == "BlackC")
             {
-                btnDocs.BackColor = SystemColors.Desktop;
 
 
                 pnlSideMenu.BackColor = SystemColors.Desktop;
@@ -841,7 +828,6 @@ namespace TechGenics
                 btnPlanning.BackColor = SystemColors.Desktop;
                 btnExecution.BackColor = SystemColors.Desktop;
                 btnCloseOut.BackColor = SystemColors.Desktop;
-                btnTemplate.BackColor = SystemColors.Desktop;
                 btnNewProj.BackColor = SystemColors.Desktop;
                 btnNewMem.BackColor = SystemColors.Desktop;
                 btnGoogle.BackColor = SystemColors.Desktop;
@@ -876,25 +862,21 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.Desktop;
 
                 pnlPhasesSub.BackColor = SystemColors.Desktop;
-                pnlDiagramsSub.BackColor = SystemColors.Desktop;
                 pnlProjectsSub.BackColor = SystemColors.Desktop;
                 pnlHelpSub.BackColor = SystemColors.Desktop;
                 pnlMembersSub.BackColor = SystemColors.Desktop;
                 pnlChildForm.BackColor = SystemColors.Desktop;
-                panel1.BackColor = SystemColors.Desktop;
+                //panel1.BackColor = SystemColors.Desktop;
             }
 
             if (TechGenics.Properties.Settings.Default.Theme == "WhiteC")
             {
-                btnDocs.BackColor = SystemColors.Window;
-
 
                 pnlSideMenu.BackColor = SystemColors.Window;
                 btnInitiation.BackColor = SystemColors.Window;
                 btnPlanning.BackColor = SystemColors.Window;
                 btnExecution.BackColor = SystemColors.Window;
                 btnCloseOut.BackColor = SystemColors.Window;
-                btnTemplate.BackColor = SystemColors.Window;
                 btnNewProj.BackColor = SystemColors.Window;
                 btnNewMem.BackColor = SystemColors.Window;
                 btnGoogle.BackColor = SystemColors.Window;
@@ -929,18 +911,16 @@ namespace TechGenics
                 pnlHide.BackColor = SystemColors.Window;
 
                 pnlPhasesSub.BackColor = SystemColors.Window;
-                pnlDiagramsSub.BackColor = SystemColors.Window;
                 pnlProjectsSub.BackColor = SystemColors.Window;
                 pnlHelpSub.BackColor = SystemColors.Window;
                 pnlMembersSub.BackColor = SystemColors.Window;
                 pnlChildForm.BackColor = SystemColors.Window;
-                panel1.BackColor = SystemColors.Window;
+                //panel1.BackColor = SystemColors.Window;
             }
 
             if (TechGenics.Properties.Settings.Default.Theme == "LBlueC2")
             {
                 
-                btnDocs.ForeColor = SystemColors.ActiveCaption;
 
                 btnHelp.ForeColor = SystemColors.ActiveCaption;
 
@@ -961,7 +941,6 @@ namespace TechGenics
             if (TechGenics.Properties.Settings.Default.Theme == "BlueC2")
             {
 
-                btnDocs.ForeColor = SystemColors.Highlight;
 
                 btnHelp.ForeColor = SystemColors.Highlight;
 
@@ -982,8 +961,6 @@ namespace TechGenics
             if (TechGenics.Properties.Settings.Default.Theme == "DBlueC2")
             {
 
-                btnDocs.ForeColor = SystemColors.Info;
-
                 btnHelp.ForeColor = SystemColors.Info;
 
                 btnPhases.ForeColor = SystemColors.Info;
@@ -1003,7 +980,6 @@ namespace TechGenics
             if (TechGenics.Properties.Settings.Default.Theme == "LGreyC2")
             {
 
-                btnDocs.ForeColor = SystemColors.ControlDark;
 
                 btnHelp.ForeColor = SystemColors.ControlDark;
 
@@ -1024,7 +1000,6 @@ namespace TechGenics
             if (TechGenics.Properties.Settings.Default.Theme == "DGreyC2")
             {
 
-                btnDocs.ForeColor = SystemColors.ControlDarkDark;
 
                 btnHelp.ForeColor = SystemColors.ControlDarkDark;
 
@@ -1045,7 +1020,6 @@ namespace TechGenics
             if (TechGenics.Properties.Settings.Default.Theme == "BlackC2")
             {
 
-                btnDocs.ForeColor = SystemColors.Desktop;
 
                 btnHelp.ForeColor = SystemColors.Desktop;
 
@@ -1065,9 +1039,6 @@ namespace TechGenics
 
             if (TechGenics.Properties.Settings.Default.Theme == "WhiteC2")
             {
-
-                btnDocs.ForeColor = SystemColors.Window;
-
                 btnHelp.ForeColor = SystemColors.Window;
 
                 btnPhases.ForeColor = SystemColors.Window;
@@ -1104,50 +1075,103 @@ namespace TechGenics
             { }
             else if(byPassLogin == false)
             {
-                DataAccess db = new DataAccess();
-                _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
-                DataSet dsProjectsAndTasks = new DataSet();
-                dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
-
-                DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
-                DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
-                DataRow[] projectByPhase;
-                DataTable dtProjectByPhase;
-                if (cboPhases.Text == "--All Phases--")
-                {
-                    dtProjectByPhase = distinctProjects;
-                }
-                else
-                {
-                    projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
-                    dtProjectByPhase = distinctProjects.Clone();
-                    foreach (DataRow row in projectByPhase)
-                    {
-                        dtProjectByPhase.ImportRow(row);
-                    }
-                }
-
                 int locationStartX = 4;
                 int locationStartY = 38;
                 int projPanelSizeX = 201;
                 int projPanelSizeY = 65;
 
-                foreach (DataRow row in dtProjectByPhase.Rows)
+                if (isAdmin == true)
                 {
-                    numberOfProjectsToRemove ++;
-                    ctrl = btnNewProj.Clone();
-                    ctrl.Name = row.Field<String>("ProjectName");
-                    ctrl.Text = row.Field<String>("ProjectName");
-                    ctrl.Tag =  row.Field<Int32>("ProjectId");
-                    ctrl.Location = new Point(locationStartX, locationStartY);
-                    ctrl.Visible = true;
-                    ctrl.Click += project_Click;
+                    btnNewProj.Visible = true;
+                    btnRemoveProject.Visible = true;
+                    locationStartY += 60;
+                    projPanelSizeY += 60;
 
-                    locationStartY += 30;
-                    pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
-                    projPanelSizeY += 30;
-                    pnlProjectsSub.Controls.Add(ctrl);
+                    DataAccess db = new DataAccess();
+                    _ProjectsAndTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); //Change to read from db
+                    DataSet dsProjectsAndTasks = new DataSet();
+                    dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+
+                    DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
+                    DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
+                    DataRow[] projectByPhase;
+                    DataTable dtProjectByPhase;
+                    if (cboPhases.Text == "--All Phases--")
+                    {
+                        dtProjectByPhase = distinctProjects;
+                    }
+                    else
+                    {
+                        projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
+                        dtProjectByPhase = distinctProjects.Clone();
+                        foreach (DataRow row in projectByPhase)
+                        {
+                            dtProjectByPhase.ImportRow(row);
+                        }
+                    }
+
+                    foreach (DataRow row in dtProjectByPhase.Rows)
+                    {
+                        numberOfProjectsToRemove++;
+                        ctrl = btnNewProj.Clone();
+                        ctrl.Name = row.Field<String>("ProjectName");
+                        ctrl.Text = row.Field<String>("ProjectName");
+                        ctrl.Tag = row.Field<Int32>("ProjectId");
+                        ctrl.Location = new Point(locationStartX, locationStartY);
+                        ctrl.Visible = true;
+                        ctrl.Click += project_Click;
+
+                        locationStartY += 30;
+                        pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
+                        projPanelSizeY += 30;
+                        pnlProjectsSub.Controls.Add(ctrl);
+                    }
                 }
+                else if (isAdmin == false)
+                {
+                    btnNewProj.Visible = false;
+                    btnRemoveProject.Visible = false;
+
+                    DataAccess db = new DataAccess();
+                    _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
+                    DataSet dsProjectsAndTasks = new DataSet();
+                    dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+
+                    DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
+                    DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus", "DocumentLocation");
+                    DataRow[] projectByPhase;
+                    DataTable dtProjectByPhase;
+                    if (cboPhases.Text == "--All Phases--")
+                    {
+                        dtProjectByPhase = distinctProjects;
+                    }
+                    else
+                    {
+                        projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
+                        dtProjectByPhase = distinctProjects.Clone();
+                        foreach (DataRow row in projectByPhase)
+                        {
+                            dtProjectByPhase.ImportRow(row);
+                        }
+                    }
+
+                    foreach (DataRow row in dtProjectByPhase.Rows)
+                    {
+                        numberOfProjectsToRemove++;
+                        ctrl = btnNewProj.Clone();
+                        ctrl.Name = row.Field<String>("ProjectName");
+                        ctrl.Text = row.Field<String>("ProjectName");
+                        ctrl.Tag = row.Field<Int32>("ProjectId");
+                        ctrl.Location = new Point(locationStartX, locationStartY);
+                        ctrl.Visible = true;
+                        ctrl.Click += project_Click;
+
+                        locationStartY += 30;
+                        pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
+                        projPanelSizeY += 30;
+                        pnlProjectsSub.Controls.Add(ctrl);
+                    }
+                }              
             }     
         }
 
@@ -1198,61 +1222,122 @@ namespace TechGenics
         }
         private void generateTasks(string buttonTag)
         {
-            DataAccess db = new DataAccess();
-            _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
-            _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
-            DataSet dsGeneratedTasks = new DataSet();
-            dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
-            DataView view = new DataView(dsGeneratedTasks.Tables[0]);
-            DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
-
-            DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
-            dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
-
-            foreach (DataRow row in dtGeneratedTasksFilterRow)
+            if (isAdmin == true)
             {
-                dtGeneratedTasksFilter.ImportRow(row);
-            }
+                DataAccess db = new DataAccess();
+                _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
+                _GeneratedTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); //Change to read from db
+                DataSet dsGeneratedTasks = new DataSet();
+                dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
+                DataView view = new DataView(dsGeneratedTasks.Tables[0]);
+                DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
 
-            foreach (DataRow row in dtGeneratedTasksFilter.Rows)
+                DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
+                dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
+
+                foreach (DataRow row in dtGeneratedTasksFilterRow)
+                {
+                    dtGeneratedTasksFilter.ImportRow(row);
+                }
+
+                foreach (DataRow row in dtGeneratedTasksFilter.Rows)
+                {
+                    numberOfTasksToRemove++;
+                    ctrlTask = btnBackLogEx.Clone();
+                    ctrlTask.Name = row.Field<String>("TaskName");
+                    ctrlTask.Text = row.Field<String>("TaskName");
+                    ctrlTask.Tag = row.Field<Int32>("TaskId");
+
+                    if (row.Field<String>("TaskStatus") == "Backlog")
+                    {
+                        ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
+                        backlogLocationStartY += 90;
+                        lastBacklogLocationY = backlogLocationStartY;
+                    }
+                    else if (row.Field<String>("TaskStatus") == "Progress")
+                    {
+                        ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
+                        progressLocationStartY += 90;
+                        lastProgressLocationY = progressLocationStartY;
+                    }
+                    else if (row.Field<String>("TaskStatus") == "Completed")
+                    {
+                        ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
+                        completedLocationStartY += 90;
+                        lastCompletedLocationY = completedLocationStartY;
+                    }
+                    else if (row.Field<String>("TaskStatus") == "Removed")
+                    {
+                        ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
+                        removedLocationStartY += 90;
+                        lastRemovedLocationY = removedLocationStartY;
+                    }
+
+                    ctrlTask.Visible = true;
+                    ctrlTask.Click += task_Click;
+                    ctrlTask.MouseDown += task_MouseDown;
+
+                    pnlBacklog.Controls.Add(ctrlTask);
+                }
+            }
+            else if (isAdmin == false)
             {
-                numberOfTasksToRemove ++;
-                ctrlTask = btnBackLogEx.Clone();
-                ctrlTask.Name = row.Field<String>("TaskName");
-                ctrlTask.Text = row.Field<String>("TaskName");
-                ctrlTask.Tag = row.Field<Int32>("TaskId");
+                DataAccess db = new DataAccess();
+                _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
+                _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
+                DataSet dsGeneratedTasks = new DataSet();
+                dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
+                DataView view = new DataView(dsGeneratedTasks.Tables[0]);
+                DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
 
-                if (row.Field<String>("TaskStatus") == "Backlog")
-                {
-                    ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
-                    backlogLocationStartY += 90;
-                    lastBacklogLocationY = backlogLocationStartY;
-                }
-                else if (row.Field<String>("TaskStatus") == "Progress")
-                {
-                    ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
-                    progressLocationStartY += 90;
-                    lastProgressLocationY = progressLocationStartY;
-                }
-                else if (row.Field<String>("TaskStatus") == "Completed")
-                {
-                    ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
-                    completedLocationStartY += 90;
-                    lastCompletedLocationY = completedLocationStartY;
-                }
-                else if (row.Field<String>("TaskStatus") == "Removed")
-                {
-                    ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
-                    removedLocationStartY += 90;
-                    lastRemovedLocationY = removedLocationStartY;
-                }
-                
-                ctrlTask.Visible = true;
-                ctrlTask.Click += task_Click;
-                ctrlTask.MouseDown += task_MouseDown;
+                DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
+                dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
 
-                pnlBacklog.Controls.Add(ctrlTask);
-            }
+                foreach (DataRow row in dtGeneratedTasksFilterRow)
+                {
+                    dtGeneratedTasksFilter.ImportRow(row);
+                }
+
+                foreach (DataRow row in dtGeneratedTasksFilter.Rows)
+                {
+                    numberOfTasksToRemove++;
+                    ctrlTask = btnBackLogEx.Clone();
+                    ctrlTask.Name = row.Field<String>("TaskName");
+                    ctrlTask.Text = row.Field<String>("TaskName");
+                    ctrlTask.Tag = row.Field<Int32>("TaskId");
+
+                    if (row.Field<String>("TaskStatus") == "Backlog")
+                    {
+                        ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
+                        backlogLocationStartY += 90;
+                        lastBacklogLocationY = backlogLocationStartY;
+                    }
+                    else if (row.Field<String>("TaskStatus") == "Progress")
+                    {
+                        ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
+                        progressLocationStartY += 90;
+                        lastProgressLocationY = progressLocationStartY;
+                    }
+                    else if (row.Field<String>("TaskStatus") == "Completed")
+                    {
+                        ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
+                        completedLocationStartY += 90;
+                        lastCompletedLocationY = completedLocationStartY;
+                    }
+                    else if (row.Field<String>("TaskStatus") == "Removed")
+                    {
+                        ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
+                        removedLocationStartY += 90;
+                        lastRemovedLocationY = removedLocationStartY;
+                    }
+
+                    ctrlTask.Visible = true;
+                    ctrlTask.Click += task_Click;
+                    ctrlTask.MouseDown += task_MouseDown;
+
+                    pnlBacklog.Controls.Add(ctrlTask);
+                }
+            }          
         }
 
         private void task_Click(object sender, EventArgs e)
@@ -1416,7 +1501,10 @@ namespace TechGenics
             {
                 foreach (Control item in pnlProjectsSub.Controls.OfType<Button>())
                 {
-                    pnlProjectsSub.Controls.Remove(item);
+                    if (item.Name != "btnNewProj" && item.Name != "btnRemoveProject")
+                    {
+                        pnlProjectsSub.Controls.Remove(item);
+                    }  
                 }
             }
                  
@@ -1448,19 +1536,40 @@ namespace TechGenics
 
         private void btnShowDocuments_Click(object sender, EventArgs e)
         {
-            /*pnlViewTask.SendToBack();
-            pnlBacklog.SendToBack();
-            Docs docs = new Docs();
-            openDocsFrom(docs);
-            docs.BringToFront();
-            docs.Show();
-            MessageBox.Show("hello");
-            pnlTasks.Visible = false;
-            pnlTasks.SendToBack();*/
             openChildForm(new Docs());
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void btnNewProj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemoveProject_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManualA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemoveTask_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddTasl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNewMem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemoveMember_Click(object sender, EventArgs e)
         {
 
         }
