@@ -22,6 +22,8 @@ namespace TechGenics
 
         private void btnSaveDocToDB_Click(object sender, EventArgs e)
         {
+            string projectName = "";
+            string projectPhase = "";
 
         }
 

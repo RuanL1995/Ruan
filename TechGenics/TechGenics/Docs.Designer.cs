@@ -33,13 +33,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveDocToDB = new System.Windows.Forms.Button();
             this.AutoSave = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radExistingDoc = new System.Windows.Forms.RadioButton();
+            this.radNewDoc = new System.Windows.Forms.RadioButton();
+            this.lblDocTemplates = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextEditor
             // 
-            this.TextEditor.Location = new System.Drawing.Point(12, 102);
+            this.TextEditor.Location = new System.Drawing.Point(12, 204);
             this.TextEditor.Name = "TextEditor";
-            this.TextEditor.Size = new System.Drawing.Size(1069, 606);
+            this.TextEditor.Size = new System.Drawing.Size(1069, 504);
             this.TextEditor.TabIndex = 3;
             this.TextEditor.Text = "";
             this.TextEditor.TextChanged += new System.EventHandler(this.AutosaveDoc_TextChanged);
@@ -51,7 +56,7 @@
             "Proposal",
             "Feasibility study",
             "Business Case"});
-            this.cmbTemplate.Location = new System.Drawing.Point(461, 67);
+            this.cmbTemplate.Location = new System.Drawing.Point(566, 139);
             this.cmbTemplate.Name = "cmbTemplate";
             this.cmbTemplate.Size = new System.Drawing.Size(188, 24);
             this.cmbTemplate.TabIndex = 5;
@@ -82,17 +87,61 @@
             this.AutoSave.AutoSize = true;
             this.AutoSave.Location = new System.Drawing.Point(101, 44);
             this.AutoSave.Name = "AutoSave";
-            this.AutoSave.Size = new System.Drawing.Size(199, 26);
+            this.AutoSave.Size = new System.Drawing.Size(159, 21);
             this.AutoSave.TabIndex = 7;
             this.AutoSave.Text = "AutoSave Document";
             this.AutoSave.UseVisualStyleBackColor = true;
             this.AutoSave.CheckedChanged += new System.EventHandler(this.AutoSave_IsChecked);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radExistingDoc);
+            this.groupBox1.Controls.Add(this.radNewDoc);
+            this.groupBox1.Location = new System.Drawing.Point(351, 67);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(413, 56);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Create new document or open existing?";
+            // 
+            // radExistingDoc
+            // 
+            this.radExistingDoc.AutoSize = true;
+            this.radExistingDoc.Location = new System.Drawing.Point(206, 22);
+            this.radExistingDoc.Name = "radExistingDoc";
+            this.radExistingDoc.Size = new System.Drawing.Size(201, 21);
+            this.radExistingDoc.TabIndex = 1;
+            this.radExistingDoc.TabStop = true;
+            this.radExistingDoc.Text = "Open an existing document";
+            this.radExistingDoc.UseVisualStyleBackColor = true;
+            // 
+            // radNewDoc
+            // 
+            this.radNewDoc.AutoSize = true;
+            this.radNewDoc.Location = new System.Drawing.Point(10, 22);
+            this.radNewDoc.Name = "radNewDoc";
+            this.radNewDoc.Size = new System.Drawing.Size(166, 21);
+            this.radNewDoc.TabIndex = 0;
+            this.radNewDoc.TabStop = true;
+            this.radNewDoc.Text = "Create new document";
+            this.radNewDoc.UseVisualStyleBackColor = true;
+            // 
+            // lblDocTemplates
+            // 
+            this.lblDocTemplates.AutoSize = true;
+            this.lblDocTemplates.Location = new System.Drawing.Point(411, 139);
+            this.lblDocTemplates.Name = "lblDocTemplates";
+            this.lblDocTemplates.Size = new System.Drawing.Size(149, 17);
+            this.lblDocTemplates.TabIndex = 10;
+            this.lblDocTemplates.Text = "Documents/Templates";
             // 
             // Docs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 759);
+            this.Controls.Add(this.lblDocTemplates);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.AutoSave);
             this.Controls.Add(this.btnSaveDocToDB);
             this.Controls.Add(this.cmbTemplate);
@@ -101,6 +150,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Docs";
             this.Text = "Docs";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +164,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaveDocToDB;
         private System.Windows.Forms.CheckBox AutoSave;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radExistingDoc;
+        private System.Windows.Forms.RadioButton radNewDoc;
+        private System.Windows.Forms.Label lblDocTemplates;
     }
 }

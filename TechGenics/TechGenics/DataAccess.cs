@@ -163,6 +163,23 @@ namespace TechGenics
                 connection.Execute("dbo.spProjectC1 @ProjectName, @ProjectType, @ProjectPhase, @DocumentLocation", project);
             }
         }
+
+        internal void insertDocumentLocation(string path, string projectName, string projectPhase)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                Projects doc = new Projects();
+
+                string updateDocQuery = @"UPDATE tblProject SET documentation = " + path + " WHERE ProjectName = " + projectName + " AND ProjectPhase = " + projectPhase;
+
+                var result = connection.Execute(updateDocQuery, new
+                {
+                    doc.DocumentLocation,
+                    doc.ProjectName,
+                    doc.ProjectPhase
+                });
+            }
+        }
         #endregion
         #endregion
 
@@ -174,7 +191,7 @@ namespace TechGenics
         /// All data read operations for tblTask
         /// </summary>
         #region Data Read
-              
+
         #endregion
         /// <summary>
         /// All data write operations for tblProject

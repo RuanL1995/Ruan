@@ -424,8 +424,8 @@ namespace TechGenics
             docs.TopLevel = false;
             docs.FormBorderStyle = FormBorderStyle.None;
             docs.Dock = DockStyle.Fill;
-            pnlChildForm.Controls.Add(docs);
-            pnlChildForm.Tag = docs;
+            pnlViewTask.Controls.Add(docs);
+            pnlViewTask.Tag = docs;
             docs.BringToFront();
             docs.Show();
         }
@@ -1444,6 +1444,12 @@ namespace TechGenics
             login_signup login = new login_signup();
             login.Show();
             this.Dispose();
+        }
+
+        private void btnDocuments_Click(object sender, EventArgs e)
+        {
+            Docs docs = new Docs();
+            openDocsFrom(docs); 
         }
     }
 }

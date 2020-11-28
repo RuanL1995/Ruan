@@ -230,3 +230,36 @@ C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenic
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.application
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.exe.manifest
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.application
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\TechGenics.exe.config
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\TechGenics.exe.manifest
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\TechGenics.application
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\TechGenics.exe
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\Control.Draggable.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\Dapper.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.UI.Dialogs.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\VisioForge.Controls.UI.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\VisioForge.MediaFramework.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\VisioForge.Shared.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\VisioForge.Tools.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\VisioForge.Types.dll
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\bin\Debug\Dapper.xml
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.Docs.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.frmCloseOut.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.frmExecution.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.frmInitiation.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.frmPlanning.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.frmSettings.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.frmGoogle.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.frmMainAdmin.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.Properties.Resources.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.loading.resources
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.GenerateResource.cache
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.exe.manifest
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.application
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.csproj.CopyComplete
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.exe
+C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGenics.pdb
