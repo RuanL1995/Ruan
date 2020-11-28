@@ -9,6 +9,6 @@
     [UserId] INT NOT NULL, 
     [ProjectId] INT NOT NULL, 
     [TaskStatus] VARCHAR(50) NULL, 
-    CONSTRAINT [FK_tblTask_tblProject] FOREIGN KEY ([ProjectId]) REFERENCES [tblProject]([ProjectId]),
-    CONSTRAINT [FK_tblTask_tblUser] FOREIGN KEY ([UserId]) REFERENCES [tblUser]([UserId])
+    CONSTRAINT [FK_tblTask_tblProject] FOREIGN KEY ([ProjectId]) REFERENCES [tblProject]([ProjectId]) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT [FK_tblTask_tblUser] FOREIGN KEY ([UserId]) REFERENCES [tblUser]([UserId]) ON DELETE CASCADE ON UPDATE CASCADE
 )

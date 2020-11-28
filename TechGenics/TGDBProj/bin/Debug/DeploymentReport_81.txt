@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [dbo].[FK_tblTask_tblProject] (Foreign Key)
+       [dbo].[FK_tblTask_tblUser] (Foreign Key)
+     Create
+       [dbo].[FK_tblTask_tblProject] (Foreign Key)
+       [dbo].[FK_tblTask_tblUser] (Foreign Key)
+
+** Supporting actions
