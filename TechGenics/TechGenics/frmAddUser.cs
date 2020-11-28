@@ -16,5 +16,27 @@ namespace TechGenics
         {
             InitializeComponent();
         }
+
+        private void frmAddUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

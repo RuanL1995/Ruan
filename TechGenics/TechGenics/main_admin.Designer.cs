@@ -41,7 +41,6 @@
             this.btnNewMem = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
             this.pnlProjectsSub = new System.Windows.Forms.Panel();
-            this.btnRemoveProject = new System.Windows.Forms.Button();
             this.cboPhases = new System.Windows.Forms.ComboBox();
             this.btnNewProj = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
@@ -75,6 +74,7 @@
             this.btnBackTask = new System.Windows.Forms.Button();
             this.lblTaskName = new System.Windows.Forms.Label();
             this.pnlTasks = new System.Windows.Forms.Panel();
+            this.btnRemoveTask = new System.Windows.Forms.Button();
             this.btnShowDocuments = new System.Windows.Forms.Button();
             this.btnCloseTaskPanel = new System.Windows.Forms.Button();
             this.btnAddTasl = new System.Windows.Forms.Button();
@@ -105,8 +105,6 @@
             this.btnFull = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblCurrentUser = new System.Windows.Forms.Label();
-            this.btnRemoveTask = new System.Windows.Forms.Button();
-            this.btnRemoveMember = new System.Windows.Forms.Button();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -151,7 +149,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnClose.Location = new System.Drawing.Point(0, 608);
+            this.btnClose.Location = new System.Drawing.Point(0, 549);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(201, 34);
             this.btnClose.TabIndex = 12;
@@ -168,7 +166,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnLogout.Location = new System.Drawing.Point(0, 574);
+            this.btnLogout.Location = new System.Drawing.Point(0, 515);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(201, 34);
             this.btnLogout.TabIndex = 11;
@@ -185,7 +183,7 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnSettings.Location = new System.Drawing.Point(0, 540);
+            this.btnSettings.Location = new System.Drawing.Point(0, 481);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(201, 34);
             this.btnSettings.TabIndex = 10;
@@ -199,7 +197,7 @@
             this.pnlHelpSub.Controls.Add(this.btnManualA);
             this.pnlHelpSub.Controls.Add(this.btnGoogle);
             this.pnlHelpSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHelpSub.Location = new System.Drawing.Point(0, 475);
+            this.pnlHelpSub.Location = new System.Drawing.Point(0, 416);
             this.pnlHelpSub.Name = "pnlHelpSub";
             this.pnlHelpSub.Size = new System.Drawing.Size(201, 65);
             this.pnlHelpSub.TabIndex = 9;
@@ -243,7 +241,7 @@
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnHelp.Location = new System.Drawing.Point(0, 441);
+            this.btnHelp.Location = new System.Drawing.Point(0, 382);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(201, 34);
             this.btnHelp.TabIndex = 8;
@@ -254,12 +252,11 @@
             // pnlMembersSub
             // 
             this.pnlMembersSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlMembersSub.Controls.Add(this.btnRemoveMember);
             this.pnlMembersSub.Controls.Add(this.btnNewMem);
             this.pnlMembersSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMembersSub.Location = new System.Drawing.Point(0, 372);
+            this.pnlMembersSub.Location = new System.Drawing.Point(0, 345);
             this.pnlMembersSub.Name = "pnlMembersSub";
-            this.pnlMembersSub.Size = new System.Drawing.Size(201, 69);
+            this.pnlMembersSub.Size = new System.Drawing.Size(201, 37);
             this.pnlMembersSub.TabIndex = 7;
             // 
             // btnNewMem
@@ -273,7 +270,7 @@
             this.btnNewMem.Name = "btnNewMem";
             this.btnNewMem.Size = new System.Drawing.Size(186, 24);
             this.btnNewMem.TabIndex = 0;
-            this.btnNewMem.Text = "New Member";
+            this.btnNewMem.Text = "ADD/EDIT/REMOVE";
             this.btnNewMem.UseVisualStyleBackColor = false;
             this.btnNewMem.Click += new System.EventHandler(this.btnNewMem_Click);
             // 
@@ -286,7 +283,7 @@
             this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnMembers.Location = new System.Drawing.Point(0, 338);
+            this.btnMembers.Location = new System.Drawing.Point(0, 311);
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(201, 34);
             this.btnMembers.TabIndex = 6;
@@ -297,30 +294,13 @@
             // pnlProjectsSub
             // 
             this.pnlProjectsSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlProjectsSub.Controls.Add(this.btnRemoveProject);
             this.pnlProjectsSub.Controls.Add(this.cboPhases);
             this.pnlProjectsSub.Controls.Add(this.btnNewProj);
             this.pnlProjectsSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProjectsSub.Location = new System.Drawing.Point(0, 240);
             this.pnlProjectsSub.Name = "pnlProjectsSub";
-            this.pnlProjectsSub.Size = new System.Drawing.Size(201, 98);
+            this.pnlProjectsSub.Size = new System.Drawing.Size(201, 71);
             this.pnlProjectsSub.TabIndex = 5;
-            // 
-            // btnRemoveProject
-            // 
-            this.btnRemoveProject.BackColor = System.Drawing.Color.Black;
-            this.btnRemoveProject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRemoveProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveProject.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnRemoveProject.Location = new System.Drawing.Point(4, 69);
-            this.btnRemoveProject.Name = "btnRemoveProject";
-            this.btnRemoveProject.Size = new System.Drawing.Size(186, 24);
-            this.btnRemoveProject.TabIndex = 2;
-            this.btnRemoveProject.Text = "Remove Project";
-            this.btnRemoveProject.UseVisualStyleBackColor = false;
-            this.btnRemoveProject.Visible = false;
-            this.btnRemoveProject.Click += new System.EventHandler(this.btnRemoveProject_Click);
             // 
             // cboPhases
             // 
@@ -348,7 +328,7 @@
             this.btnNewProj.Name = "btnNewProj";
             this.btnNewProj.Size = new System.Drawing.Size(186, 24);
             this.btnNewProj.TabIndex = 0;
-            this.btnNewProj.Text = "New Project";
+            this.btnNewProj.Text = "ADD/EDIT/REMOVE";
             this.btnNewProj.UseVisualStyleBackColor = false;
             this.btnNewProj.Visible = false;
             this.btnNewProj.Click += new System.EventHandler(this.btnNewProj_Click);
@@ -515,7 +495,7 @@
             this.pnlViewTask.Controls.Add(this.label6);
             this.pnlViewTask.Controls.Add(this.btnBackTask);
             this.pnlViewTask.Controls.Add(this.lblTaskName);
-            this.pnlViewTask.Location = new System.Drawing.Point(2, 3);
+            this.pnlViewTask.Location = new System.Drawing.Point(2, 0);
             this.pnlViewTask.Name = "pnlViewTask";
             this.pnlViewTask.Size = new System.Drawing.Size(884, 632);
             this.pnlViewTask.TabIndex = 9;
@@ -773,6 +753,20 @@
             this.pnlTasks.TabIndex = 0;
             this.pnlTasks.Visible = false;
             // 
+            // btnRemoveTask
+            // 
+            this.btnRemoveTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnRemoveTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRemoveTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveTask.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnRemoveTask.Location = new System.Drawing.Point(439, 577);
+            this.btnRemoveTask.Name = "btnRemoveTask";
+            this.btnRemoveTask.Size = new System.Drawing.Size(131, 24);
+            this.btnRemoveTask.TabIndex = 9;
+            this.btnRemoveTask.Text = "REMOVE TASK";
+            this.btnRemoveTask.UseVisualStyleBackColor = false;
+            this.btnRemoveTask.Visible = false;
+            // 
             // btnShowDocuments
             // 
             this.btnShowDocuments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -807,11 +801,11 @@
             this.btnAddTasl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddTasl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTasl.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnAddTasl.Location = new System.Drawing.Point(302, 577);
+            this.btnAddTasl.Location = new System.Drawing.Point(266, 577);
             this.btnAddTasl.Name = "btnAddTasl";
-            this.btnAddTasl.Size = new System.Drawing.Size(131, 24);
+            this.btnAddTasl.Size = new System.Drawing.Size(167, 24);
             this.btnAddTasl.TabIndex = 1;
-            this.btnAddTasl.Text = "ADD NEW TASK";
+            this.btnAddTasl.Text = "ADD/EDIT/REMOVE TASK";
             this.btnAddTasl.UseVisualStyleBackColor = false;
             this.btnAddTasl.Visible = false;
             this.btnAddTasl.Click += new System.EventHandler(this.btnAddTasl_Click);
@@ -1140,36 +1134,6 @@
             this.lblCurrentUser.TabIndex = 7;
             this.lblCurrentUser.Text = "Welcome Placeholder";
             // 
-            // btnRemoveTask
-            // 
-            this.btnRemoveTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnRemoveTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRemoveTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveTask.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnRemoveTask.Location = new System.Drawing.Point(439, 577);
-            this.btnRemoveTask.Name = "btnRemoveTask";
-            this.btnRemoveTask.Size = new System.Drawing.Size(131, 24);
-            this.btnRemoveTask.TabIndex = 9;
-            this.btnRemoveTask.Text = "REMOVE TASK";
-            this.btnRemoveTask.UseVisualStyleBackColor = false;
-            this.btnRemoveTask.Visible = false;
-            this.btnRemoveTask.Click += new System.EventHandler(this.btnRemoveTask_Click);
-            // 
-            // btnRemoveMember
-            // 
-            this.btnRemoveMember.BackColor = System.Drawing.Color.Black;
-            this.btnRemoveMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRemoveMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveMember.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnRemoveMember.Location = new System.Drawing.Point(4, 39);
-            this.btnRemoveMember.Name = "btnRemoveMember";
-            this.btnRemoveMember.Size = new System.Drawing.Size(186, 24);
-            this.btnRemoveMember.TabIndex = 1;
-            this.btnRemoveMember.Text = "Remove Member";
-            this.btnRemoveMember.UseVisualStyleBackColor = false;
-            this.btnRemoveMember.Click += new System.EventHandler(this.btnRemoveMember_Click);
-            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1285,8 +1249,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtLast;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnRemoveProject;
         private System.Windows.Forms.Button btnRemoveTask;
-        private System.Windows.Forms.Button btnRemoveMember;
     }
 }

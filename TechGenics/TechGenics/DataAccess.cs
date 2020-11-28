@@ -29,6 +29,18 @@ namespace TechGenics
                 return connection.Query<User>("dbo.spUserR1 @UserName", new { UserName = userName }).ToList();
             }
         }
+
+        /// <summary>
+        /// Gets all users
+        /// </summary>
+        /// <returns></returns>
+        public List<User> GetUsers()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                return connection.Query<User>("dbo.spUserR2").ToList();
+            }
+        }
         #endregion
         /// <summary>
         /// All data write operations for tblUser
@@ -52,6 +64,91 @@ namespace TechGenics
                 user.Add(newUser);
 
                 connection.Execute("dbo.spUserC1 @UserName, @UserPassword, @FirstName, @SurName, @Email", user);
+            }
+        }
+        /// <summary>
+        /// Inserts a new user by admin
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="userPassword"></param>
+        /// <param name="firstName"></param>
+        /// <param name="surName"></param>
+        /// <param name="email"></param>
+        /// <param name="initiation"></param>
+        /// <param name="planning"></param>
+        /// <param name="execution"></param>
+        /// <param name="closeOut"></param>
+        internal void InsertUserByAdmin(string userName, string userPassword, string firstName, string surName, string email, bool initiation, bool planning, bool execution, bool closeOut)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                User newUser = new User();
+                newUser.UserName = userName;
+                newUser.UserPassword = userPassword;
+                newUser.FirstName = firstName;
+                newUser.SurName = surName;
+                newUser.Email = email;
+                newUser.Initiation = initiation;
+                newUser.Planning = planning;
+                newUser.Execution = execution;
+                newUser.CloseOut = closeOut;
+
+                List<User> user = new List<User>();
+                user.Add(newUser);
+
+                connection.Execute("dbo.spUserC2 @UserName, @UserPassword, @FirstName, @SurName, @Email, @Initiation, @Planning, @Execution, @CloseOut", user);
+            }
+        }
+        /// <summary>
+        /// Updates a user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="userName"></param>
+        /// <param name="userPassword"></param>
+        /// <param name="firstName"></param>
+        /// <param name="surName"></param>
+        /// <param name="email"></param>
+        /// <param name="initiation"></param>
+        /// <param name="planning"></param>
+        /// <param name="execution"></param>
+        /// <param name="closeOut"></param>
+        internal void UpdateUser(int userId, string userName, string userPassword, string firstName, string surName, string email, bool initiation, bool planning, bool execution, bool closeOut)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                User newUser = new User();
+                newUser.UserId = userId;
+                newUser.UserName = userName;
+                newUser.UserPassword = userPassword;
+                newUser.FirstName = firstName;
+                newUser.SurName = surName;
+                newUser.Email = email;
+                newUser.Initiation = initiation;
+                newUser.Planning = planning;
+                newUser.Execution = execution;
+                newUser.CloseOut = closeOut;
+
+                List<User> user = new List<User>();
+                user.Add(newUser);
+
+                connection.Execute("dbo.spUserU2 @UserId, @UserName, @UserPassword, @FirstName, @SurName, @Email, @Initiation, @Planning, @Execution, @CloseOut", user);
+            }
+        }
+        /// <summary>
+        /// Deletes a user
+        /// </summary>
+        /// <param name="userId"></param>
+        internal void DeleteUser(int userId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                User newUser = new User();
+                newUser.UserId = userId;
+
+                List<User> user = new List<User>();
+                user.Add(newUser);
+
+                connection.Execute("dbo.spUserD2 @UserId", user);
             }
         }
         #endregion
@@ -191,7 +288,13 @@ namespace TechGenics
         /// All data read operations for tblTask
         /// </summary>
         #region Data Read
-
+        public List<ProjectTasks> GetAllTasks()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                return connection.Query<ProjectTasks>("dbo.spTaskR1").ToList();
+            }
+        }
         #endregion
         /// <summary>
         /// All data write operations for tblProject
@@ -212,6 +315,87 @@ namespace TechGenics
                 task.Add(newTask);
 
                 connection.Execute("dbo.spTaskU1 @TaskId, @TaskStatus", task);
+            }
+        }
+        /// <summary>
+        /// Inserts a new task
+        /// </summary>
+        /// <param name="taskName"></param>
+        /// <param name="taskDescription"></param>
+        /// <param name="taskProgress"></param>
+        /// <param name="taskAssignedTo"></param>
+        /// <param name="projectName"></param>
+        /// <param name="userId"></param>
+        /// <param name="projectId"></param>
+        /// <param name="taskStatus"></param>
+        internal void InsertTask(string taskName, string taskDescription, string taskProgress, string taskAssignedTo, string projectName, int userId, int projectId, string taskStatus)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                ProjectTasks newTask = new ProjectTasks();
+                newTask.TaskName = taskName;
+                newTask.TaskDescription = taskDescription;
+                newTask.TaskProgress = taskProgress;
+                newTask.TaskAssignedTo = taskAssignedTo;
+                newTask.ProjectName = projectName;
+                newTask.UserId = userId;
+                newTask.ProjectId = projectId;
+                newTask.TaskStatus = taskStatus;
+
+                List<ProjectTasks> task = new List<ProjectTasks>();
+                task.Add(newTask);
+
+                connection.Execute("dbo.spTaskC1 @TaskName, @TaskDescription, @TaskProgress, @TaskAssignedTo, @ProjectName, @UserId, @ProjectId, @TaskStatus", task);
+            }
+        }
+        /// <summary>
+        /// Updates a task
+        /// </summary>
+        /// <param name="taskId"></param>
+        /// <param name="taskName"></param>
+        /// <param name="taskDescription"></param>
+        /// <param name="taskProgress"></param>
+        /// <param name="taskAssignedTo"></param>
+        /// <param name="projectName"></param>
+        /// <param name="userId"></param>
+        /// <param name="projectId"></param>
+        /// <param name="taskStatus"></param>
+        internal void UpdateTask(int taskId, string taskName, string taskDescription, string taskProgress, string taskAssignedTo, string projectName, int userId, int projectId, string taskStatus)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                ProjectTasks newTask = new ProjectTasks();
+                newTask.TaskId = taskId;
+                newTask.TaskName = taskName;
+                newTask.TaskDescription = taskDescription;
+                newTask.TaskProgress = taskProgress;
+                newTask.TaskAssignedTo = taskAssignedTo;
+                newTask.ProjectName = projectName;
+                newTask.UserId = userId;
+                newTask.ProjectId = projectId;
+                newTask.TaskStatus = taskStatus;
+
+                List<ProjectTasks> task = new List<ProjectTasks>();
+                task.Add(newTask);
+
+                connection.Execute("dbo.spTaskU2 @TaskId, @TaskName, @TaskDescription, @TaskProgress, @TaskAssignedTo, @ProjectName, @UserId, @ProjectId, @TaskStatus", task);
+            }
+        }
+        /// <summary>
+        /// Deletes a task
+        /// </summary>
+        /// <param name="taskId"></param>
+        internal void DeleteTask(int taskId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                ProjectTasks newTask = new ProjectTasks();
+                newTask.TaskId = taskId;             
+
+                List<ProjectTasks> task = new List<ProjectTasks>();
+                task.Add(newTask);
+
+                connection.Execute("dbo.spDeleteTaskRecord @TaskId", task);
             }
         }
         #endregion

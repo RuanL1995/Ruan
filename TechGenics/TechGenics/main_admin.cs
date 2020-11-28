@@ -389,7 +389,6 @@ namespace TechGenics
 
                 btnMembers.Visible = true;
                 btnNewMem.Visible = true;
-                btnRemoveMember.Visible = true;
             }
             else if (isAdmin == false)
             {
@@ -398,7 +397,6 @@ namespace TechGenics
 
                 btnMembers.Visible = false;
                 btnNewMem.Visible = false;
-                btnRemoveMember.Visible = false;
             }
         }
 
@@ -1083,7 +1081,6 @@ namespace TechGenics
                 if (isAdmin == true)
                 {
                     btnNewProj.Visible = true;
-                    btnRemoveProject.Visible = true;
                     locationStartY += 60;
                     projPanelSizeY += 60;
 
@@ -1130,7 +1127,6 @@ namespace TechGenics
                 else if (isAdmin == false)
                 {
                     btnNewProj.Visible = false;
-                    btnRemoveProject.Visible = false;
 
                     DataAccess db = new DataAccess();
                     _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
@@ -1401,6 +1397,13 @@ namespace TechGenics
             lastRemovedLocationY = 0;
         }
 
+        public void refreshTasks()
+        {
+            removeTasks();
+            resetPos();
+            generateTasks(buttonTag);
+        }
+
         private void btnPtoB_Click(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
@@ -1541,12 +1544,8 @@ namespace TechGenics
 
         private void btnNewProj_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnRemoveProject_Click(object sender, EventArgs e)
-        {
-
+            frmAddProject addProject = new frmAddProject();
+            addProject.ShowDialog();
         }
 
         private void btnManualA_Click(object sender, EventArgs e)
@@ -1554,24 +1553,16 @@ namespace TechGenics
 
         }
 
-        private void btnRemoveTask_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddTasl_Click(object sender, EventArgs e)
         {
-
+            frmAddTask addTask = new frmAddTask();
+            addTask.ShowDialog();
         }
 
         private void btnNewMem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnRemoveMember_Click(object sender, EventArgs e)
-        {
-
+            frmAddUser addUser = new frmAddUser();
+            addUser.ShowDialog();
         }
     }
 }

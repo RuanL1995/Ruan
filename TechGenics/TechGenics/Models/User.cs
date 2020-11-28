@@ -14,6 +14,10 @@ namespace TechGenics.Models
         public string FirstName { get; set; }
         public string SurName { get; set; }
         public string Email { get; set; }
+        public bool Initiation { get; set; }
+        public bool Planning { get; set; }
+        public bool Execution { get; set; }
+        public bool CloseOut { get; set; }
 
         //Combines User properties into one combo property
         public string FullInfoUser

@@ -5,10 +5,7 @@
 ** Created On :	28 Oct 2020
 */
 
-	@TaskId int,
-	@TaskName VARCHAR(50),
-	@TaskProgress VARCHAR(50),
-	@TaskAssignedTo VARCHAR(50)
+	@TaskId int
 
 AS
 BEGIN
