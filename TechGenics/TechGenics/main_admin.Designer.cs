@@ -508,11 +508,12 @@
             // 
             this.pnlChildForm.AutoScroll = true;
             this.pnlChildForm.BackColor = System.Drawing.Color.Black;
+            this.pnlChildForm.Controls.Add(this.pnlViewTask);
             this.pnlChildForm.Controls.Add(this.panel1);
             this.pnlChildForm.Controls.Add(this.pnlTasks);
-            this.pnlChildForm.Location = new System.Drawing.Point(244, 51);
+            this.pnlChildForm.Location = new System.Drawing.Point(239, 51);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(884, 658);
+            this.pnlChildForm.Size = new System.Drawing.Size(889, 635);
             this.pnlChildForm.TabIndex = 1;
             this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint);
             // 
@@ -522,7 +523,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 40);
+            this.panel1.Size = new System.Drawing.Size(889, 40);
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
             // 
@@ -539,9 +540,9 @@
             this.pnlTasks.Controls.Add(this.label1);
             this.pnlTasks.Controls.Add(this.pnlBacklog);
             this.pnlTasks.Controls.Add(this.lblTasksHeading);
-            this.pnlTasks.Location = new System.Drawing.Point(0, 38);
+            this.pnlTasks.Location = new System.Drawing.Point(5, 67);
             this.pnlTasks.Name = "pnlTasks";
-            this.pnlTasks.Size = new System.Drawing.Size(884, 617);
+            this.pnlTasks.Size = new System.Drawing.Size(881, 612);
             this.pnlTasks.TabIndex = 0;
             this.pnlTasks.Visible = false;
             // 
@@ -586,6 +587,7 @@
             this.button14.Text = "ADD NEW TASK";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Visible = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label4
             // 
@@ -935,9 +937,9 @@
             this.pnlViewTask.Controls.Add(this.label6);
             this.pnlViewTask.Controls.Add(this.btnBackTask);
             this.pnlViewTask.Controls.Add(this.lblTaskName);
-            this.pnlViewTask.Location = new System.Drawing.Point(244, 89);
+            this.pnlViewTask.Location = new System.Drawing.Point(5, 67);
             this.pnlViewTask.Name = "pnlViewTask";
-            this.pnlViewTask.Size = new System.Drawing.Size(884, 617);
+            this.pnlViewTask.Size = new System.Drawing.Size(884, 591);
             this.pnlViewTask.TabIndex = 9;
             this.pnlViewTask.Visible = false;
             // 
@@ -1179,7 +1181,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1140, 721);
-            this.Controls.Add(this.pnlViewTask);
             this.Controls.Add(this.lblCurrentUser);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.btnFull);

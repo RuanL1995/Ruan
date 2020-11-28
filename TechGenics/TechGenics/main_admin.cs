@@ -1448,11 +1448,21 @@ namespace TechGenics
 
         private void btnShowDocuments_Click(object sender, EventArgs e)
         {
-            pnlViewTask.SendToBack();
+            /*pnlViewTask.SendToBack();
             pnlBacklog.SendToBack();
             Docs docs = new Docs();
             openDocsFrom(docs);
             docs.BringToFront();
+            docs.Show();
+            MessageBox.Show("hello");
+            pnlTasks.Visible = false;
+            pnlTasks.SendToBack();*/
+            openChildForm(new Docs());
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
