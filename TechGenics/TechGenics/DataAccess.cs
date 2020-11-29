@@ -335,6 +335,18 @@ namespace TechGenics
         }
         #endregion
         /// <summary>
+        /// Gets task by id
+        /// </summary>
+        /// <param name="taskId"></param>
+        /// <returns></returns>
+        public List<ProjectTasks> GetTask(int taskId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("TGDB")))
+            {
+                return connection.Query<ProjectTasks>("dbo.spTaskR2 @TaskId", new { TaskId = taskId }).ToList();
+            }
+        }
+        /// <summary>
         /// All data write operations for tblProject
         /// </summary>
         #region Data Write

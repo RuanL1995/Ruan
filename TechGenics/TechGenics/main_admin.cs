@@ -1192,6 +1192,7 @@ namespace TechGenics
         {          
             var button = (Button)sender;
             buttonTag = button.Tag.ToString();
+            lblTasksHeading.Text = button.Name.ToUpper();
 
             for (int i = 0; i < numberOfTasksToRemove; i++)
             {
@@ -1366,7 +1367,30 @@ namespace TechGenics
         {
             if (e.Clicks == 2)
             {
+                string taskTag;
+                var button = (Button)sender;
+                taskTag = button.Tag.ToString();
+
+                DataAccess db = new DataAccess();
+                List<ProjectTasks> _tasks = new List<ProjectTasks>();
+                _tasks = db.GetTask(Int32.Parse(taskTag));
+                DataSet dsTask = new DataSet();
+                dsTask = ListToDataSet.ToDataSet(_tasks);
+
+                string taskDesc = dsTask.Tables[0].Rows[0]["TaskDescription"].ToString();
+                string taskAssigned = dsTask.Tables[0].Rows[0]["TaskAssignedTo"].ToString();
+                string taskProgress = dsTask.Tables[0].Rows[0]["TaskProgress"].ToString();
+                string taskStatus = dsTask.Tables[0].Rows[0]["TaskStatus"].ToString();
+                string projectName = dsTask.Tables[0].Rows[0]["ProjectName"].ToString();
+
+                rtbTaskDesc.Text = taskDesc;
+                txtTaskAssignedTo.Text = taskAssigned;
+                txtTaskProgress.Text = taskProgress;
+                txtTaskStatus.Text = taskStatus;
+                txtProjectName.Text = projectName;
+
                 pnlBacklog.Visible = false;
+                lblTaskName.Text = button.Name.ToUpper();
                 pnlViewTask.Visible = true;
             }     
         }

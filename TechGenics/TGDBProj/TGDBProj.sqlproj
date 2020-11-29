@@ -102,6 +102,7 @@
     <Build Include="dbo\Stored Procedures\User\spUserC2.sql" />
     <Build Include="dbo\Stored Procedures\User\spUserU2.sql" />
     <Build Include="dbo\Stored Procedures\User\spUserD2.sql" />
+    <Build Include="dbo\Stored Procedures\Task\spTaskR2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\TGDB.publish.publish.xml" />

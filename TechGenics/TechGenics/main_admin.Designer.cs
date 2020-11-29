@@ -76,24 +76,14 @@
             this.btnBackLogEx = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
             this.pnlViewTask = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTaskStatus = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtProjectName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTaskProgress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTaskAssignedTo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtLast = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnBackTask = new System.Windows.Forms.Button();
             this.lblTaskName = new System.Windows.Forms.Label();
             this.pnlHide = new System.Windows.Forms.Panel();
@@ -104,6 +94,12 @@
             this.btnFull = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblCurrentUser = new System.Windows.Forms.Label();
+            this.rtbTaskDesc = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -773,24 +769,20 @@
             // 
             this.pnlViewTask.AutoScroll = true;
             this.pnlViewTask.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlViewTask.Controls.Add(this.textBox8);
             this.pnlViewTask.Controls.Add(this.label13);
-            this.pnlViewTask.Controls.Add(this.textBox7);
             this.pnlViewTask.Controls.Add(this.label12);
-            this.pnlViewTask.Controls.Add(this.textBox6);
             this.pnlViewTask.Controls.Add(this.label11);
-            this.pnlViewTask.Controls.Add(this.textBox5);
             this.pnlViewTask.Controls.Add(this.label10);
-            this.pnlViewTask.Controls.Add(this.textBox4);
-            this.pnlViewTask.Controls.Add(this.label9);
-            this.pnlViewTask.Controls.Add(this.textBox3);
-            this.pnlViewTask.Controls.Add(this.label8);
-            this.pnlViewTask.Controls.Add(this.textBox2);
-            this.pnlViewTask.Controls.Add(this.label7);
-            this.pnlViewTask.Controls.Add(this.textBox1);
-            this.pnlViewTask.Controls.Add(this.label5);
-            this.pnlViewTask.Controls.Add(this.txtLast);
             this.pnlViewTask.Controls.Add(this.label6);
+            this.pnlViewTask.Controls.Add(this.rtbTaskDesc);
+            this.pnlViewTask.Controls.Add(this.txtTaskStatus);
+            this.pnlViewTask.Controls.Add(this.label9);
+            this.pnlViewTask.Controls.Add(this.txtProjectName);
+            this.pnlViewTask.Controls.Add(this.label8);
+            this.pnlViewTask.Controls.Add(this.txtTaskProgress);
+            this.pnlViewTask.Controls.Add(this.label7);
+            this.pnlViewTask.Controls.Add(this.txtTaskAssignedTo);
+            this.pnlViewTask.Controls.Add(this.label5);
             this.pnlViewTask.Controls.Add(this.btnBackTask);
             this.pnlViewTask.Controls.Add(this.lblTaskName);
             this.pnlViewTask.Location = new System.Drawing.Point(239, 51);
@@ -799,212 +791,97 @@
             this.pnlViewTask.TabIndex = 9;
             this.pnlViewTask.Visible = false;
             // 
-            // textBox8
+            // txtTaskStatus
             // 
-            this.textBox8.BackColor = System.Drawing.Color.Silver;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Enabled = false;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(162, 453);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(115, 19);
-            this.textBox8.TabIndex = 30;
-            this.textBox8.Text = "Surname";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label13.Location = new System.Drawing.Point(159, 462);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 13);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "_________________";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Silver;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(162, 419);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(115, 19);
-            this.textBox7.TabIndex = 28;
-            this.textBox7.Text = "Surname";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label12.Location = new System.Drawing.Point(159, 428);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 13);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "_________________";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Silver;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(162, 381);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(115, 19);
-            this.textBox6.TabIndex = 26;
-            this.textBox6.Text = "Surname";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label11.Location = new System.Drawing.Point(159, 390);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 13);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "_________________";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Silver;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(162, 347);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(115, 19);
-            this.textBox5.TabIndex = 24;
-            this.textBox5.Text = "Surname";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label10.Location = new System.Drawing.Point(159, 356);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 13);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "_________________";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.Silver;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(162, 306);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(115, 19);
-            this.textBox4.TabIndex = 22;
-            this.textBox4.Text = "Surname";
+            this.txtTaskStatus.BackColor = System.Drawing.Color.Silver;
+            this.txtTaskStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaskStatus.Enabled = false;
+            this.txtTaskStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtTaskStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtTaskStatus.Location = new System.Drawing.Point(357, 339);
+            this.txtTaskStatus.Name = "txtTaskStatus";
+            this.txtTaskStatus.ReadOnly = true;
+            this.txtTaskStatus.Size = new System.Drawing.Size(115, 17);
+            this.txtTaskStatus.TabIndex = 22;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label9.Location = new System.Drawing.Point(159, 315);
+            this.label9.Location = new System.Drawing.Point(354, 348);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 13);
             this.label9.TabIndex = 23;
             this.label9.Text = "_________________";
             // 
-            // textBox3
+            // txtProjectName
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Silver;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(162, 262);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(115, 19);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.Text = "Surname";
+            this.txtProjectName.BackColor = System.Drawing.Color.Silver;
+            this.txtProjectName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProjectName.Enabled = false;
+            this.txtProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtProjectName.ForeColor = System.Drawing.Color.Black;
+            this.txtProjectName.Location = new System.Drawing.Point(357, 395);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.ReadOnly = true;
+            this.txtProjectName.Size = new System.Drawing.Size(115, 17);
+            this.txtProjectName.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label8.Location = new System.Drawing.Point(159, 271);
+            this.label8.Location = new System.Drawing.Point(354, 404);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 13);
             this.label8.TabIndex = 21;
             this.label8.Text = "_________________";
             // 
-            // textBox2
+            // txtTaskProgress
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(162, 228);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 19);
-            this.textBox2.TabIndex = 18;
-            this.textBox2.Text = "Surname";
+            this.txtTaskProgress.BackColor = System.Drawing.Color.Silver;
+            this.txtTaskProgress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaskProgress.Enabled = false;
+            this.txtTaskProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtTaskProgress.ForeColor = System.Drawing.Color.Black;
+            this.txtTaskProgress.Location = new System.Drawing.Point(357, 286);
+            this.txtTaskProgress.Name = "txtTaskProgress";
+            this.txtTaskProgress.ReadOnly = true;
+            this.txtTaskProgress.Size = new System.Drawing.Size(115, 17);
+            this.txtTaskProgress.TabIndex = 18;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label7.Location = new System.Drawing.Point(159, 237);
+            this.label7.Location = new System.Drawing.Point(354, 295);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 13);
             this.label7.TabIndex = 19;
             this.label7.Text = "_________________";
             // 
-            // textBox1
+            // txtTaskAssignedTo
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Silver;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(162, 184);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 19);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "Surname";
+            this.txtTaskAssignedTo.BackColor = System.Drawing.Color.Silver;
+            this.txtTaskAssignedTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaskAssignedTo.Enabled = false;
+            this.txtTaskAssignedTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtTaskAssignedTo.ForeColor = System.Drawing.Color.Black;
+            this.txtTaskAssignedTo.Location = new System.Drawing.Point(357, 234);
+            this.txtTaskAssignedTo.Name = "txtTaskAssignedTo";
+            this.txtTaskAssignedTo.ReadOnly = true;
+            this.txtTaskAssignedTo.Size = new System.Drawing.Size(115, 17);
+            this.txtTaskAssignedTo.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label5.Location = new System.Drawing.Point(159, 193);
+            this.label5.Location = new System.Drawing.Point(354, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "_________________";
-            // 
-            // txtLast
-            // 
-            this.txtLast.BackColor = System.Drawing.Color.Silver;
-            this.txtLast.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLast.Enabled = false;
-            this.txtLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLast.ForeColor = System.Drawing.Color.Black;
-            this.txtLast.Location = new System.Drawing.Point(162, 145);
-            this.txtLast.Name = "txtLast";
-            this.txtLast.Size = new System.Drawing.Size(115, 19);
-            this.txtLast.TabIndex = 14;
-            this.txtLast.Text = "Surname";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label6.Location = new System.Drawing.Point(159, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "_________________";
             // 
             // btnBackTask
             // 
@@ -1118,6 +995,67 @@
             this.lblCurrentUser.TabIndex = 7;
             this.lblCurrentUser.Text = "Welcome Placeholder";
             // 
+            // rtbTaskDesc
+            // 
+            this.rtbTaskDesc.BackColor = System.Drawing.Color.Silver;
+            this.rtbTaskDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.rtbTaskDesc.Location = new System.Drawing.Point(298, 104);
+            this.rtbTaskDesc.Name = "rtbTaskDesc";
+            this.rtbTaskDesc.ReadOnly = true;
+            this.rtbTaskDesc.Size = new System.Drawing.Size(235, 96);
+            this.rtbTaskDesc.TabIndex = 24;
+            this.rtbTaskDesc.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label6.Location = new System.Drawing.Point(347, 213);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 18);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Task Assigened To";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label10.Location = new System.Drawing.Point(357, 79);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 18);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Task Description";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label11.Location = new System.Drawing.Point(361, 265);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(106, 18);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Task Progress";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label12.Location = new System.Drawing.Point(368, 374);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 18);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Project Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label13.Location = new System.Drawing.Point(371, 318);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 18);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Task Status";
+            // 
             // frmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1215,24 +1153,20 @@
         private System.Windows.Forms.Panel pnlViewTask;
         private System.Windows.Forms.Button btnBackTask;
         private System.Windows.Forms.Label lblTaskName;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTaskStatus;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTaskProgress;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTaskAssignedTo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtLast;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnViewTemplateDocs;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox rtbTaskDesc;
     }
 }
