@@ -435,7 +435,6 @@
             this.btnInitiation.TabIndex = 0;
             this.btnInitiation.Text = "Initiation";
             this.btnInitiation.UseVisualStyleBackColor = false;
-            this.btnInitiation.Click += new System.EventHandler(this.btnInitiation_Click);
             this.btnInitiation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnInitiation_MouseUp);
             // 
             // btnPhases
@@ -479,7 +478,6 @@
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(889, 635);
             this.pnlChildForm.TabIndex = 1;
-            this.pnlChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlChildForm_Paint);
             // 
             // pnlTasks
             // 

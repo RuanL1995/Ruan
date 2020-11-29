@@ -256,6 +256,7 @@ namespace TechGenics
         //projects menu
         private void btnProjects_Click(object sender, EventArgs e)
         {
+            pnlChildForm.SendToBack();
             showSubs(pnlProjectsSub);
             //pnlChildForm.BringToFront();
 
@@ -1535,33 +1536,33 @@ namespace TechGenics
             generateTasks(buttonTag);
         }
 
-        private void btnInitiation_Click(object sender, EventArgs e)
-        {
+        //private void btnInitiation_Click(object sender, EventArgs e)
+        //{
 
-            //pnlChildForm.Size = new Size(860, 656);
-            ////pnlChildForm.BringToFront();
-            //leftDock = true;
-        }
-        private void pnlChildForm_Paint(object sender, PaintEventArgs e)
-        {
-            //ControlExtension.Draggable(btnTaskBacklog, true);
-        }
-        private void openInDualViewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        //    //pnlChildForm.Size = new Size(860, 656);
+        //    ////pnlChildForm.BringToFront();
+        //    //leftDock = true;
+        //}
+        //private void pnlChildForm_Paint(object sender, PaintEventArgs e)
+        //{
+        //    //ControlExtension.Draggable(btnTaskBacklog, true);
+        //}
+        //private void openInDualViewToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
 
 
-            if (leftDock == true)
-            {
-                //dock panel right
-                pnlChildForm.Dock = DockStyle.Right;
-                pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
-            }
-            else
-            {
-                pnlChildForm.Dock = DockStyle.Left;
-                pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
-            }
-        }
+        //    if (leftDock == true)
+        //    {
+        //        //dock panel right
+        //        pnlChildForm.Dock = DockStyle.Right;
+        //        pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
+        //    }
+        //    else
+        //    {
+        //        pnlChildForm.Dock = DockStyle.Left;
+        //        pnlChildForm.Size = new System.Drawing.Size(pnlChildForm.Size.Width - 430, pnlChildForm.Size.Height);
+        //    }
+        //}
 
         private void cboPhases_SelectedIndexChanged(object sender, EventArgs e)
         {
