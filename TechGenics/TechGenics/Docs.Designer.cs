@@ -30,7 +30,6 @@
         {
             this.cmbTemplate = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSaveDocToDB = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radExistingDoc = new System.Windows.Forms.RadioButton();
             this.radNewDoc = new System.Windows.Forms.RadioButton();
@@ -76,21 +75,6 @@
             this.label1.Size = new System.Drawing.Size(330, 44);
             this.label1.TabIndex = 4;
             this.label1.Text = "Techgenics Word";
-            // 
-            // btnSaveDocToDB
-            // 
-            this.btnSaveDocToDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnSaveDocToDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveDocToDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveDocToDB.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnSaveDocToDB.Location = new System.Drawing.Point(354, 579);
-            this.btnSaveDocToDB.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSaveDocToDB.Name = "btnSaveDocToDB";
-            this.btnSaveDocToDB.Size = new System.Drawing.Size(143, 27);
-            this.btnSaveDocToDB.TabIndex = 6;
-            this.btnSaveDocToDB.Text = "Save to Database";
-            this.btnSaveDocToDB.UseVisualStyleBackColor = false;
-            this.btnSaveDocToDB.Click += new System.EventHandler(this.btnSaveDocToDB_Click);
             // 
             // groupBox1
             // 
@@ -350,7 +334,6 @@
             this.Controls.Add(this.pnlTemp);
             this.Controls.Add(this.btnDocBack);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnSaveDocToDB);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -370,7 +353,6 @@
         #endregion
         private System.Windows.Forms.ComboBox cmbTemplate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSaveDocToDB;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radExistingDoc;
         private System.Windows.Forms.RadioButton radNewDoc;

@@ -33,7 +33,6 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.gradient1 = new TechGenics.gradient();
             this.btnSettingsLogin = new System.Windows.Forms.Button();
             this.pnlLogin = new System.Windows.Forms.Panel();
@@ -70,6 +69,7 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.gradient1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
@@ -98,17 +98,6 @@
             // 
             this.timer4.Interval = 30;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1070, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "go to admin";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // gradient1
             // 
@@ -593,6 +582,19 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1070, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "go to admin";
+            this.label3.Visible = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // login_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -641,7 +643,6 @@
         private System.Windows.Forms.TextBox txtFirst;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.PictureBox pboPassIcon;
         private System.Windows.Forms.PictureBox pboUserIcon;
@@ -662,6 +663,7 @@
         private System.Windows.Forms.Label lblsExit;
         private System.Windows.Forms.Label lblLExit;
         private System.Windows.Forms.Label lblBLog;
+        private System.Windows.Forms.Label label3;
     }
 }
 
