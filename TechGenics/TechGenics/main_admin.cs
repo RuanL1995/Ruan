@@ -1145,8 +1145,17 @@ namespace TechGenics
                     locationStartY += 30;
                     projPanelSizeY += 30;
 
+                    List<User> _users = new List<User>();
                     DataAccess db = new DataAccess();
-                    _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
+                    _users = db.GetUser(currentUser);
+                    DataSet dsUser = new DataSet();
+                    dsUser = ListToDataSet.ToDataSet(_users);
+                    bool initiation = (bool)dsUser.Tables[0].Rows[0]["Initiation"];
+                    bool planning = (bool)dsUser.Tables[0].Rows[0]["Planning"];
+                    bool execution = (bool)dsUser.Tables[0].Rows[0]["Execution"];
+                    bool closeOut = (bool)dsUser.Tables[0].Rows[0]["CloseOut"];                 
+
+                    _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, initiation, planning, execution, closeOut); 
                     DataSet dsProjectsAndTasks = new DataSet();
                     dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
 
@@ -1237,10 +1246,11 @@ namespace TechGenics
         private void generateTasks(string buttonTag)
         {
             if (isAdmin == true)
-            {
+            {              
                 DataAccess db = new DataAccess();
+
                 _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
-                _GeneratedTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); //Change to read from db
+                _GeneratedTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); 
                 DataSet dsGeneratedTasks = new DataSet();
                 dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
                 DataView view = new DataView(dsGeneratedTasks.Tables[0]);
@@ -1296,9 +1306,18 @@ namespace TechGenics
             }
             else if (isAdmin == false)
             {
+                List<User> _users = new List<User>();
                 DataAccess db = new DataAccess();
+                _users = db.GetUser(currentUser);
+                DataSet dsUser = new DataSet();
+                dsUser = ListToDataSet.ToDataSet(_users);
+                bool initiation = (bool)dsUser.Tables[0].Rows[0]["Initiation"];
+                bool planning = (bool)dsUser.Tables[0].Rows[0]["Planning"];
+                bool execution = (bool)dsUser.Tables[0].Rows[0]["Execution"];
+                bool closeOut = (bool)dsUser.Tables[0].Rows[0]["CloseOut"];
+
                 _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
-                _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, true, false, true, false); //Change to read from db
+                _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, initiation, planning, execution, closeOut); //Change to read from db
                 DataSet dsGeneratedTasks = new DataSet();
                 dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
                 DataView view = new DataView(dsGeneratedTasks.Tables[0]);

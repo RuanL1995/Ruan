@@ -15,7 +15,11 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 		U.UserPassword,	
 		U.FirstName,
 		U.SurName,
-		U.Email
+		U.Email,
+		U.Initiation,
+		U.Planning,
+		U.Execution,
+		U.CloseOut
 	FROM 
 		tblUser U  
 	WHERE U.UserName = @UserName			
