@@ -1214,12 +1214,6 @@ ALTER DATABASE [$(DatabaseName)]
 
 
 GO
-ALTER DATABASE [$(DatabaseName)]
-    SET OFFLINE 
-    WITH ROLLBACK IMMEDIATE;
-
-
-GO
 PRINT N'Update complete.';
 
 

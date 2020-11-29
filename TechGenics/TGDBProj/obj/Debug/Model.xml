@@ -32,7 +32,6 @@
 			<Property Name="IsAnsiWarningsOn" Value="True" />
 			<Property Name="IsArithAbortOn" Value="True" />
 			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
-			<Property Name="IsOffline" Value="True" />
 			<Property Name="IsTornPageProtectionOn" Value="False" />
 			<Property Name="IsFullTextEnabled" Value="True" />
 			<Property Name="PageVerifyMode" Value="3" />
