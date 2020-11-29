@@ -1562,6 +1562,7 @@ namespace TechGenics
         private void btnNewProj_Click(object sender, EventArgs e)
         {
             frmAddProject addProject = new frmAddProject();
+            addProject.StartPosition = FormStartPosition.CenterParent;
             addProject.ShowDialog();
         }
 
@@ -1573,12 +1574,14 @@ namespace TechGenics
         private void btnAddTasl_Click(object sender, EventArgs e)
         {
             frmAddTask addTask = new frmAddTask();
+            addTask.StartPosition = FormStartPosition.CenterParent;
             addTask.ShowDialog();
         }
 
         private void btnNewMem_Click(object sender, EventArgs e)
         {
             frmAddUser addUser = new frmAddUser();
+            addUser.StartPosition = FormStartPosition.CenterParent;
             addUser.ShowDialog();
         }
 

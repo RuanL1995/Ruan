@@ -39,7 +39,7 @@ namespace TechGenics
             cboUserName.DataSource = dtUserNames;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
 
@@ -112,15 +112,11 @@ namespace TechGenics
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            List<User> _users = new List<User>();
             DataAccess db = new DataAccess();
-            _users = db.GetUsers();
-            DataSet dsUsers = new DataSet();
-            dsUsers = ListToDataSet.ToDataSet(_users);
 
-            int userId = 0;
+            int userId = (int)cboUserName.SelectedValue;
             string userName = cboUserName.Text;
             string usePassword = txtUserPassword.Text;
             string firstName = txtFirstName.Text;
@@ -131,26 +127,11 @@ namespace TechGenics
             bool execution = cbxExecution.Checked;
             bool closeOut = cbxCloseOut.Checked;
 
-            bool validateUser = false;
             bool validUserName = false;
             bool validPassword = false;
             bool validFirstName = false;
             bool validLastName = false;
             bool validEmail = false;
-
-            foreach (DataRow row in dsUsers.Tables[0].Rows)
-            {
-                if (row["UserName"].ToString() == userName)
-                {
-                    userId = (int)row["UserId"];
-                    validateUser = true;
-                    break;
-                }
-            }
-            if (validateUser == false)
-            {
-                MessageBox.Show("That user does not exist.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
             if (!String.IsNullOrWhiteSpace(userName))
             {
@@ -197,7 +178,7 @@ namespace TechGenics
                 MessageBox.Show("Please enter an email.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (validateUser == true && validUserName == true && validPassword == true && validFirstName == true && validLastName == true && validEmail == true)
+            if (validUserName == true && validPassword == true && validFirstName == true && validLastName == true && validEmail == true)
             {
                 db.UpdateUser(userId, userName, usePassword, firstName, lastName, email, initiation, planning, execution, closeOut);
                 load();
@@ -205,33 +186,14 @@ namespace TechGenics
             }
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void btnRemove_Click_1(object sender, EventArgs e)
         {
-            List<User> _users = new List<User>();
             DataAccess db = new DataAccess();
-            _users = db.GetUsers();
-            DataSet dsUsers = new DataSet();
-            dsUsers = ListToDataSet.ToDataSet(_users);
 
-            int userId = 0;
+            int userId = (int)cboUserName.SelectedValue;
             string userName = cboUserName.Text;
 
-            bool validateUser = false;
             bool validUserName = false;
-
-            foreach (DataRow row in dsUsers.Tables[0].Rows)
-            {
-                if (row["UserName"].ToString() == userName)
-                {
-                    userId = (int)row["UserId"];
-                    validateUser = true;
-                    break;
-                }
-            }
-            if (validateUser == false)
-            {
-                MessageBox.Show("That user does not exist.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
             if (!String.IsNullOrWhiteSpace(userName))
             {
@@ -242,14 +204,12 @@ namespace TechGenics
                 MessageBox.Show("Please enter a user name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (validateUser == true && validUserName == true)
+            if (validUserName == true)
             {
                 db.DeleteUser(userId);
                 load();
                 MessageBox.Show("The user has been deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-       
     }
 }

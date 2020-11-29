@@ -46,7 +46,7 @@ namespace TechGenics
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
 
@@ -94,37 +94,18 @@ namespace TechGenics
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            List<Projects> _projects = new List<Projects>();
             DataAccess db = new DataAccess();
-            _projects = db.GetProject();
-            DataSet dsProjects = new DataSet();
-            dsProjects = ListToDataSet.ToDataSet(_projects);
 
-            int projectId = 0;
+            int projectId = (int)cboProjectName.SelectedValue;
             string projectName = cboProjectName.Text;
             string projectPhase = cboProjectPhase.Text;
             string projectStatus = txtProjectStatus.Text;
 
-            bool validProject = false;
             bool validProjectName = false;
             bool validProjectPhase = false;
             bool validProjectStatus = false;
-
-            foreach (DataRow row in dsProjects.Tables[0].Rows)
-            {
-                if (row["ProjectName"].ToString() == projectName)
-                {
-                    projectId = (int)row["ProjectId"];
-                    validProject = true;
-                    break;
-                }
-            }
-            if (validProject == false)
-            {
-                MessageBox.Show("That project does not exist.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
             if (!String.IsNullOrWhiteSpace(projectName))
             {
@@ -153,7 +134,7 @@ namespace TechGenics
                 MessageBox.Show("Please enter a project status.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (validProject == true && validProjectName == true && validProjectPhase == true && validProjectStatus == true)
+            if (validProjectName == true && validProjectPhase == true && validProjectStatus == true)
             {
                 db.UpdateProject(projectId, projectName, projectPhase, projectStatus);
                 load();
@@ -161,33 +142,14 @@ namespace TechGenics
             }
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void btnRemove_Click_1(object sender, EventArgs e)
         {
-            List<Projects> _projects = new List<Projects>();
             DataAccess db = new DataAccess();
-            _projects = db.GetProject();
-            DataSet dsProjects = new DataSet();
-            dsProjects = ListToDataSet.ToDataSet(_projects);
 
-            int projectId = 0;
+            int projectId = (int)cboProjectName.SelectedValue;
             string projectName = cboProjectName.Text;
 
-            bool validProject = false;
             bool validProjectName = false;
-
-            foreach (DataRow row in dsProjects.Tables[0].Rows)
-            {
-                if (row["ProjectName"].ToString() == projectName)
-                {
-                    projectId = (int)row["ProjectId"];
-                    validProject = true;
-                    break;
-                }
-            }
-            if (validProject == false)
-            {
-                MessageBox.Show("That project does not exist.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
             if (!String.IsNullOrWhiteSpace(projectName))
             {
@@ -198,14 +160,12 @@ namespace TechGenics
                 MessageBox.Show("Please enter a project name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (validProject == true && validProjectName == true)
+            if (validProjectName == true)
             {
                 db.DeleteProject(projectId);
                 load();
                 MessageBox.Show("The project has been deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        
     }
 }
