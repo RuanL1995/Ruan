@@ -1340,5 +1340,10 @@ namespace TechGenics
 
             }
         }
+
+        private void btnIClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

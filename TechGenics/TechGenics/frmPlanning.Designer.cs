@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlanning));
             this.pnlPlanning = new System.Windows.Forms.Panel();
+            this.btnPClose = new System.Windows.Forms.Button();
             this.lstInfo = new System.Windows.Forms.ListBox();
             this.btnPRev = new System.Windows.Forms.Button();
             this.btnProcPlan = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@
             // pnlPlanning
             // 
             this.pnlPlanning.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlPlanning.Controls.Add(this.btnPClose);
             this.pnlPlanning.Controls.Add(this.lstInfo);
             this.pnlPlanning.Controls.Add(this.btnPRev);
             this.pnlPlanning.Controls.Add(this.btnProcPlan);
@@ -96,6 +98,20 @@
             this.pnlPlanning.Name = "pnlPlanning";
             this.pnlPlanning.Size = new System.Drawing.Size(823, 610);
             this.pnlPlanning.TabIndex = 0;
+            // 
+            // btnPClose
+            // 
+            this.btnPClose.BackColor = System.Drawing.Color.Black;
+            this.btnPClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPClose.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnPClose.Location = new System.Drawing.Point(351, 573);
+            this.btnPClose.Name = "btnPClose";
+            this.btnPClose.Size = new System.Drawing.Size(140, 34);
+            this.btnPClose.TabIndex = 29;
+            this.btnPClose.Text = "Close";
+            this.btnPClose.UseVisualStyleBackColor = false;
+            this.btnPClose.Click += new System.EventHandler(this.btnPClose_Click);
             // 
             // lstInfo
             // 
@@ -128,7 +144,7 @@
             this.btnPRev.BackColor = System.Drawing.Color.Aquamarine;
             this.btnPRev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPRev.Location = new System.Drawing.Point(269, 233);
+            this.btnPRev.Location = new System.Drawing.Point(270, 231);
             this.btnPRev.Name = "btnPRev";
             this.btnPRev.Size = new System.Drawing.Size(330, 31);
             this.btnPRev.TabIndex = 8;
@@ -143,7 +159,7 @@
             this.btnProcPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnProcPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcPlan.Location = new System.Drawing.Point(252, 269);
+            this.btnProcPlan.Location = new System.Drawing.Point(253, 265);
             this.btnProcPlan.Name = "btnProcPlan";
             this.btnProcPlan.Size = new System.Drawing.Size(360, 31);
             this.btnProcPlan.TabIndex = 7;
@@ -158,7 +174,7 @@
             this.btnRiskPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnRiskPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiskPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRiskPlan.Location = new System.Drawing.Point(231, 306);
+            this.btnRiskPlan.Location = new System.Drawing.Point(232, 299);
             this.btnRiskPlan.Name = "btnRiskPlan";
             this.btnRiskPlan.Size = new System.Drawing.Size(408, 31);
             this.btnRiskPlan.TabIndex = 6;
@@ -173,7 +189,7 @@
             this.btnAccPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnAccPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccPlan.Location = new System.Drawing.Point(206, 344);
+            this.btnAccPlan.Location = new System.Drawing.Point(207, 334);
             this.btnAccPlan.Name = "btnAccPlan";
             this.btnAccPlan.Size = new System.Drawing.Size(454, 31);
             this.btnAccPlan.TabIndex = 5;
@@ -188,7 +204,7 @@
             this.btnComPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnComPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComPlan.Location = new System.Drawing.Point(175, 383);
+            this.btnComPlan.Location = new System.Drawing.Point(176, 369);
             this.btnComPlan.Name = "btnComPlan";
             this.btnComPlan.Size = new System.Drawing.Size(506, 31);
             this.btnComPlan.TabIndex = 4;
@@ -203,7 +219,7 @@
             this.btnQualPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnQualPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQualPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQualPlan.Location = new System.Drawing.Point(143, 420);
+            this.btnQualPlan.Location = new System.Drawing.Point(144, 404);
             this.btnQualPlan.Name = "btnQualPlan";
             this.btnQualPlan.Size = new System.Drawing.Size(552, 31);
             this.btnQualPlan.TabIndex = 3;
@@ -218,7 +234,7 @@
             this.btnFinPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnFinPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinPlan.Location = new System.Drawing.Point(116, 459);
+            this.btnFinPlan.Location = new System.Drawing.Point(117, 439);
             this.btnFinPlan.Name = "btnFinPlan";
             this.btnFinPlan.Size = new System.Drawing.Size(606, 31);
             this.btnFinPlan.TabIndex = 2;
@@ -233,7 +249,7 @@
             this.btnResPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnResPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResPlan.Location = new System.Drawing.Point(81, 497);
+            this.btnResPlan.Location = new System.Drawing.Point(82, 474);
             this.btnResPlan.Name = "btnResPlan";
             this.btnResPlan.Size = new System.Drawing.Size(664, 31);
             this.btnResPlan.TabIndex = 1;
@@ -248,7 +264,7 @@
             this.btnProjectPlan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnProjectPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProjectPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProjectPlan.Location = new System.Drawing.Point(52, 537);
+            this.btnProjectPlan.Location = new System.Drawing.Point(53, 509);
             this.btnProjectPlan.Name = "btnProjectPlan";
             this.btnProjectPlan.Size = new System.Drawing.Size(713, 31);
             this.btnProjectPlan.TabIndex = 0;
@@ -274,9 +290,9 @@
             this.pnlInstr.Controls.Add(this.pnlHeading);
             this.pnlInstr.Controls.Add(this.btnHide);
             this.pnlInstr.Controls.Add(this.lstInstr);
-            this.pnlInstr.Location = new System.Drawing.Point(15, 16);
+            this.pnlInstr.Location = new System.Drawing.Point(12, 16);
             this.pnlInstr.Name = "pnlInstr";
-            this.pnlInstr.Size = new System.Drawing.Size(844, 600);
+            this.pnlInstr.Size = new System.Drawing.Size(847, 600);
             this.pnlInstr.TabIndex = 1;
             this.pnlInstr.Visible = false;
             // 
@@ -755,5 +771,6 @@
         private System.Windows.Forms.Button btnViewPhaseRev;
         private System.Windows.Forms.Button btnViewProcPlan;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnPClose;
     }
 }

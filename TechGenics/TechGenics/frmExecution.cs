@@ -2172,5 +2172,10 @@ namespace TechGenics
             lstInfo.Items.Add("deliverables have been produced and the customer has accepted the final solution, the project is ready for closure");
 
         }
+
+        private void btnEClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

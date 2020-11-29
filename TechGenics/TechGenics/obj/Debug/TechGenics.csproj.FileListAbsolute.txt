@@ -266,3 +266,6 @@ C:\Users\Administrator\Source\Repos\Ruan5\TechGenics\TechGenics\obj\Debug\TechGe
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmAddProject.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmAddTask.resources
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmAddUser.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmAddProject.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmAddTask.resources
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmAddUser.resources

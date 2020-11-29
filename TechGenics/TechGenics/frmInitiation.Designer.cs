@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlInitiation = new System.Windows.Forms.Panel();
+            this.btnIClose = new System.Windows.Forms.Button();
             this.lstInfo = new System.Windows.Forms.ListBox();
             this.btnPhaseReview = new System.Windows.Forms.Button();
             this.btnSetupPOffice = new System.Windows.Forms.Button();
@@ -66,6 +67,7 @@
             // 
             // pnlInitiation
             // 
+            this.pnlInitiation.Controls.Add(this.btnIClose);
             this.pnlInitiation.Controls.Add(this.lstInfo);
             this.pnlInitiation.Controls.Add(this.btnPhaseReview);
             this.pnlInitiation.Controls.Add(this.btnSetupPOffice);
@@ -77,6 +79,20 @@
             this.pnlInitiation.Name = "pnlInitiation";
             this.pnlInitiation.Size = new System.Drawing.Size(835, 620);
             this.pnlInitiation.TabIndex = 0;
+            // 
+            // btnIClose
+            // 
+            this.btnIClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnIClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIClose.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnIClose.Location = new System.Drawing.Point(361, 580);
+            this.btnIClose.Name = "btnIClose";
+            this.btnIClose.Size = new System.Drawing.Size(115, 27);
+            this.btnIClose.TabIndex = 21;
+            this.btnIClose.Text = "Close";
+            this.btnIClose.UseVisualStyleBackColor = false;
+            this.btnIClose.Click += new System.EventHandler(this.btnIClose_Click);
             // 
             // lstInfo
             // 
@@ -113,7 +129,7 @@
             this.btnPhaseReview.BackColor = System.Drawing.Color.Aquamarine;
             this.btnPhaseReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhaseReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhaseReview.Location = new System.Drawing.Point(269, 294);
+            this.btnPhaseReview.Location = new System.Drawing.Point(270, 283);
             this.btnPhaseReview.Name = "btnPhaseReview";
             this.btnPhaseReview.Size = new System.Drawing.Size(280, 33);
             this.btnPhaseReview.TabIndex = 5;
@@ -128,7 +144,7 @@
             this.btnSetupPOffice.BackColor = System.Drawing.Color.Aquamarine;
             this.btnSetupPOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetupPOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetupPOffice.Location = new System.Drawing.Point(244, 343);
+            this.btnSetupPOffice.Location = new System.Drawing.Point(245, 332);
             this.btnSetupPOffice.Name = "btnSetupPOffice";
             this.btnSetupPOffice.Size = new System.Drawing.Size(330, 33);
             this.btnSetupPOffice.TabIndex = 4;
@@ -143,7 +159,7 @@
             this.btnAppointPTeam.BackColor = System.Drawing.Color.Aquamarine;
             this.btnAppointPTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppointPTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAppointPTeam.Location = new System.Drawing.Point(216, 392);
+            this.btnAppointPTeam.Location = new System.Drawing.Point(217, 381);
             this.btnAppointPTeam.Name = "btnAppointPTeam";
             this.btnAppointPTeam.Size = new System.Drawing.Size(380, 33);
             this.btnAppointPTeam.TabIndex = 3;
@@ -158,7 +174,7 @@
             this.btnEstPCharter.BackColor = System.Drawing.Color.Aquamarine;
             this.btnEstPCharter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstPCharter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstPCharter.Location = new System.Drawing.Point(181, 440);
+            this.btnEstPCharter.Location = new System.Drawing.Point(182, 429);
             this.btnEstPCharter.Name = "btnEstPCharter";
             this.btnEstPCharter.Size = new System.Drawing.Size(440, 33);
             this.btnEstPCharter.TabIndex = 2;
@@ -173,7 +189,7 @@
             this.btnUndertakeFStudy.BackColor = System.Drawing.Color.Aquamarine;
             this.btnUndertakeFStudy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUndertakeFStudy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUndertakeFStudy.Location = new System.Drawing.Point(160, 490);
+            this.btnUndertakeFStudy.Location = new System.Drawing.Point(161, 479);
             this.btnUndertakeFStudy.Name = "btnUndertakeFStudy";
             this.btnUndertakeFStudy.Size = new System.Drawing.Size(485, 33);
             this.btnUndertakeFStudy.TabIndex = 1;
@@ -188,7 +204,7 @@
             this.btnDevBCase.BackColor = System.Drawing.Color.Aquamarine;
             this.btnDevBCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDevBCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevBCase.Location = new System.Drawing.Point(117, 541);
+            this.btnDevBCase.Location = new System.Drawing.Point(118, 530);
             this.btnDevBCase.Name = "btnDevBCase";
             this.btnDevBCase.Size = new System.Drawing.Size(552, 33);
             this.btnDevBCase.TabIndex = 0;
@@ -221,9 +237,9 @@
             this.pnlInstr.Controls.Add(this.lblProjCharter);
             this.pnlInstr.Controls.Add(this.lblFeasStudy);
             this.pnlInstr.Controls.Add(this.lblBusCase);
-            this.pnlInstr.Location = new System.Drawing.Point(12, 12);
+            this.pnlInstr.Location = new System.Drawing.Point(15, 12);
             this.pnlInstr.Name = "pnlInstr";
-            this.pnlInstr.Size = new System.Drawing.Size(835, 614);
+            this.pnlInstr.Size = new System.Drawing.Size(832, 614);
             this.pnlInstr.TabIndex = 1;
             this.pnlInstr.Visible = false;
             // 
@@ -598,5 +614,6 @@
         private System.Windows.Forms.Button btnViewOffice;
         private System.Windows.Forms.Button btnViewPhase;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnIClose;
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Microsoft.Office.Interop.Word;
 using Application = Microsoft.Office.Interop.Word.Application;
 using Word = Microsoft.Office.Interop.Word;
+using System.IO;
+using DataTable = System.Data.DataTable;
 
 namespace TechGenics
 {
@@ -27,87 +29,174 @@ namespace TechGenics
 
         }
 
-        private void Template_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            object readOnly = true;
-            object visible = true;
-            object save = false;
-            object fileName = "";
-            if (cmbTemplate.SelectedIndex == 0)
-            {
-                //Selects the proposal template.
-                fileName = System.IO.Path.GetFullPath(@"..\..\Templates\Request for Proposal.doc");
-            }
-
-            if (cmbTemplate.SelectedIndex == 1)
-            {
-                //Selects the Feasibility study template.
-                fileName = System.IO.Path.GetFullPath(@"..\..\Templates\Business Case.doc");
-            }
-
-            if (cmbTemplate.SelectedIndex == 2)
-            {
-                //Selects the Business Case template.
-                fileName = System.IO.Path.GetFullPath(@"..\..\Templates\Business Case.doc");
-            }
-            object missing = Type.Missing;
-            object newTemplate = false;
-            object docType = 0;
-            Microsoft.Office.Interop.Word._Document oDoc = null;
-            Microsoft.Office.Interop.Word._Application oWord = new Microsoft.Office.Interop.Word.Application() { Visible = false };
-            oDoc = oWord.Documents.Open(
-                    ref fileName, ref missing, ref readOnly, ref missing,
-                    ref missing, ref missing, ref missing, ref missing,
-                    ref missing, ref missing, ref missing, ref visible,
-                    ref missing, ref missing, ref missing, ref missing);
-            oDoc.ActiveWindow.Selection.WholeStory();
-            //Copies word content
-            oDoc.ActiveWindow.Selection.Copy();
-            IDataObject data = Clipboard.GetDataObject();
-            TextEditor.Rtf = data.GetData(DataFormats.Rtf).ToString();
-            oWord.Quit(ref missing, ref missing, ref missing);
-        }
-
-        private void AutosaveDoc_TextChanged(object sender, EventArgs e)
-        {
-            if (AutoSave.Checked)
-            {
-                if (cmbTemplate.SelectedIndex == 0)
-                {
-                    //Automatically saves the Proposal to the docs folder
-                    TextEditor.SaveFile(System.IO.Path.GetFullPath(@"../../Docs/ProjectName_Proposal.doc"));
-                }
-
-                if (cmbTemplate.SelectedIndex == 1)
-                {
-                    //Automatically saves the feasibility study to the docs folder
-                    TextEditor.SaveFile(System.IO.Path.GetFullPath(@"../../Docs/ProjectName_Feasibility Study.doc"));
-                }
-
-                if (cmbTemplate.SelectedIndex == 2)
-                {
-                    //Automatically saves the business case to the docs folder
-                    TextEditor.SaveFile(System.IO.Path.GetFullPath(@"../../Docs/ProjectName_Business Case.doc"));
-                }
-            }
-        }
-
-        private void AutoSave_IsChecked(object sender, EventArgs e)
-        {
-            if(AutoSave.Checked)
-            {
-                MessageBox.Show("You have activated the AutoSave, this document will be saved as you type.", "AutoSave is On", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("AutoSave is off, this document will be saved as you type.", "AutoSave is Off", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
+       
         private void btnDocBack_Click(object sender, EventArgs e)
         {
 
             this.Dispose();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (rgbExcel.Checked && (cmbOpen.Text == "Planning"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Planning\_Create_New_File_.xlsx";
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbWord.Checked && (cmbOpen.Text == "Planning"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Planning\_Create_New_File_.docx";
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbExcel.Checked && (cmbOpen.Text== "Initiation"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Initiation\_Create_New_File_.xlsx";
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbWord.Checked && (cmbOpen.Text == "Initiation"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Initiation\_Create_New_File_.docx";
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbExcel.Checked && (cmbOpen.Text == "Execution"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Execution\_Create_New_File_.xlsx";
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbWord.Checked && (cmbOpen.Text == "Execution"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Execution\_Create_New_File_.docx";
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbExcel.Checked && (cmbOpen.Text == "CloseOut"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Closure\_Create_New_File_.xlsx";
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbWord.Checked && (cmbOpen.Text == "CloseOut"))
+            {
+                string filename = @"..\..\bin\Debug\Templates\Closure\_Create_New_File_.docx";
+                System.Diagnostics.Process.Start(filename);
+            }
+        }
+
+        private void radExistingDoc_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlTemp.Visible = true;
+            pnlTemp.BringToFront();
+
+            pnlNew.Visible = false;
+        }
+
+        private void rgbInitiation_CheckedChanged(object sender, EventArgs e)
+        {
+            string path = @"..\..\bin\Debug\Templates\Initiation";
+            DataTable table = new DataTable();
+            table.Columns.Add("File Name");
+            table.Columns.Add("File Path");
+
+            string[] files = Directory.GetFiles(path);
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                FileInfo file = new FileInfo(files[i]);
+                table.Rows.Add(file.Name, path + "\\" + file.Name);
+            }
+
+            cmbTemplate.DataSource = table;
+            cmbTemplate.DisplayMember = "File Name";
+            cmbTemplate.ValueMember = "File Path";
+        }
+
+        private void rgbPlanning_CheckedChanged(object sender, EventArgs e)
+        {
+            string path = @"..\..\bin\Debug\Templates\Planning";
+            DataTable table = new DataTable();
+            table.Columns.Add("File Name");
+            table.Columns.Add("File Path");
+
+            string[] files = Directory.GetFiles(path);
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                FileInfo file = new FileInfo(files[i]);
+                table.Rows.Add(file.Name, path + "\\" + file.Name);
+            }
+
+            cmbTemplate.DataSource = table;
+            cmbTemplate.DisplayMember = "File Name";
+            cmbTemplate.ValueMember = "File Path";
+        }
+
+        private void rgbExecution_CheckedChanged(object sender, EventArgs e)
+        {
+            string path = @"..\..\bin\Debug\Templates\Execution";
+            DataTable table = new DataTable();
+            table.Columns.Add("File Name");
+            table.Columns.Add("File Path");
+
+            string[] files = Directory.GetFiles(path);
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                FileInfo file = new FileInfo(files[i]);
+                table.Rows.Add(file.Name, path + "\\" + file.Name);
+            }
+
+            cmbTemplate.DataSource = table;
+            cmbTemplate.DisplayMember = "File Name";
+            cmbTemplate.ValueMember = "File Path";
+        }
+
+        private void rgbCloseOut_CheckedChanged(object sender, EventArgs e)
+        {
+            string path = @"..\..\bin\Debug\Templates\Closure";
+            DataTable table = new DataTable();
+            table.Columns.Add("File Name");
+            table.Columns.Add("File Path");
+
+            string[] files = Directory.GetFiles(path);
+
+            for (int i = 0; i < files.Length; i++)
+            {
+                FileInfo file = new FileInfo(files[i]);
+                table.Rows.Add(file.Name, path + "\\" + file.Name);
+            }
+
+            cmbTemplate.DataSource = table;
+            cmbTemplate.DisplayMember = "File Name";
+            cmbTemplate.ValueMember = "File Path";
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            if (rgbClose.Checked)
+            {
+                string filename = @"..\..\bin\Debug\Templates\Closure\" + cmbTemplate.Text;
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbExecution.Checked)
+            {
+                string filename = @"..\..\bin\Debug\Templates\Execution\" + cmbTemplate.Text;
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbInitiation.Checked)
+            {
+                string filename = @"..\..\bin\Debug\Templates\Initiation\" + cmbTemplate.Text;
+                System.Diagnostics.Process.Start(filename);
+            }
+            else if (rgbPlanning.Checked)
+            {
+                string filename = @"..\..\bin\Debug\Templates\Planning\" + cmbTemplate.Text;
+                System.Diagnostics.Process.Start(filename);
+            }
+        }
+
+        private void radNewDoc_CheckedChanged(object sender, EventArgs e)
+        {
+            pnlNew.Visible = true;
+            pnlTemp.Visible = false;
+            pnlNew.BringToFront();
         }
     }
 }

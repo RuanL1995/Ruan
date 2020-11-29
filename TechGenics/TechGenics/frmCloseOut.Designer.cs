@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlCloseOut = new System.Windows.Forms.Panel();
+            this.btnCClose = new System.Windows.Forms.Button();
             this.btnRev = new System.Windows.Forms.Button();
             this.btnClosure = new System.Windows.Forms.Button();
             this.lstInfo = new System.Windows.Forms.ListBox();
@@ -50,13 +51,28 @@
             // 
             // pnlCloseOut
             // 
+            this.pnlCloseOut.Controls.Add(this.btnCClose);
             this.pnlCloseOut.Controls.Add(this.btnRev);
             this.pnlCloseOut.Controls.Add(this.btnClosure);
             this.pnlCloseOut.Controls.Add(this.lstInfo);
             this.pnlCloseOut.Location = new System.Drawing.Point(22, 12);
             this.pnlCloseOut.Name = "pnlCloseOut";
-            this.pnlCloseOut.Size = new System.Drawing.Size(823, 591);
+            this.pnlCloseOut.Size = new System.Drawing.Size(823, 604);
             this.pnlCloseOut.TabIndex = 0;
+            // 
+            // btnCClose
+            // 
+            this.btnCClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCClose.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnCClose.Location = new System.Drawing.Point(346, 562);
+            this.btnCClose.Name = "btnCClose";
+            this.btnCClose.Size = new System.Drawing.Size(115, 27);
+            this.btnCClose.TabIndex = 17;
+            this.btnCClose.Text = "Close";
+            this.btnCClose.UseVisualStyleBackColor = false;
+            this.btnCClose.Click += new System.EventHandler(this.btnCClose_Click);
             // 
             // btnRev
             // 
@@ -304,5 +320,6 @@
         private System.Windows.Forms.Label lblClosure;
         private System.Windows.Forms.Button btnViewCompletion;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnCClose;
     }
 }

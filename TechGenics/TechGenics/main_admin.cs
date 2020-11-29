@@ -475,7 +475,7 @@ namespace TechGenics
                 btnPlanning.BackColor = SystemColors.AppWorkspace;
                 btnExecution.BackColor = SystemColors.AppWorkspace;
                 btnCloseOut.BackColor = SystemColors.AppWorkspace;
-                //btnNewProj.BackColor = SystemColors.AppWorkspace;
+                btnViewTemplateDocs.BackColor = SystemColors.AppWorkspace;
                 btnNewMem.BackColor = SystemColors.AppWorkspace;
                 btnGoogle.BackColor = SystemColors.AppWorkspace;
                 btnManualA.BackColor = SystemColors.AppWorkspace;
@@ -483,6 +483,8 @@ namespace TechGenics
                 btnFull.BackColor = SystemColors.AppWorkspace;
                 btnMin.BackColor = SystemColors.AppWorkspace;
                 btnMax.BackColor = SystemColors.AppWorkspace;
+                btnNewProj.BackColor = SystemColors.AppWorkspace;
+                btnNewMem.BackColor = SystemColors.AppWorkspace;
                 btnHelp.ForeColor = SystemColors.Desktop;
 
                 btnPhases.BackColor = SystemColors.AppWorkspace;
@@ -532,6 +534,9 @@ namespace TechGenics
                 btnFull.BackColor = SystemColors.Desktop;
                 btnMin.BackColor = SystemColors.Desktop;
                 btnMax.BackColor = SystemColors.Desktop;
+                btnViewTemplateDocs.BackColor = SystemColors.Desktop;
+                btnNewProj.BackColor = SystemColors.Desktop;
+                btnNewMem.BackColor = SystemColors.Desktop;
                 btnHelp.ForeColor = SystemColors.ActiveBorder;
 
                 btnPhases.BackColor = SystemColors.Desktop;

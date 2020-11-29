@@ -42,6 +42,7 @@
             this.btnRiskMan = new System.Windows.Forms.Button();
             this.btnComMan = new System.Windows.Forms.Button();
             this.pnlExecution = new System.Windows.Forms.Panel();
+            this.btnEClose = new System.Windows.Forms.Button();
             this.pnlInfo = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnViewPRev = new System.Windows.Forms.Button();
@@ -109,7 +110,7 @@
                 "ance criteria. Once all of the ",
             "deliverables have been produced and the customer has accepted the final solution," +
                 " the project is ready for closure"});
-            this.lstInfo.Location = new System.Drawing.Point(66, 109);
+            this.lstInfo.Location = new System.Drawing.Point(66, 106);
             this.lstInfo.Name = "lstInfo";
             this.lstInfo.Size = new System.Drawing.Size(727, 208);
             this.lstInfo.TabIndex = 1;
@@ -119,7 +120,7 @@
             this.btnOperate.BackColor = System.Drawing.Color.Aquamarine;
             this.btnOperate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOperate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperate.Location = new System.Drawing.Point(73, 546);
+            this.btnOperate.Location = new System.Drawing.Point(78, 505);
             this.btnOperate.Name = "btnOperate";
             this.btnOperate.Size = new System.Drawing.Size(652, 31);
             this.btnOperate.TabIndex = 2;
@@ -132,7 +133,7 @@
             this.btnCMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnCMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCMan.Location = new System.Drawing.Point(100, 509);
+            this.btnCMan.Location = new System.Drawing.Point(105, 468);
             this.btnCMan.Name = "btnCMan";
             this.btnCMan.Size = new System.Drawing.Size(192, 31);
             this.btnCMan.TabIndex = 3;
@@ -147,7 +148,7 @@
             this.btnTMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnTMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTMan.Location = new System.Drawing.Point(303, 509);
+            this.btnTMan.Location = new System.Drawing.Point(308, 468);
             this.btnTMan.Name = "btnTMan";
             this.btnTMan.Size = new System.Drawing.Size(192, 31);
             this.btnTMan.TabIndex = 4;
@@ -162,7 +163,7 @@
             this.btnCostMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnCostMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCostMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCostMan.Location = new System.Drawing.Point(509, 509);
+            this.btnCostMan.Location = new System.Drawing.Point(514, 468);
             this.btnCostMan.Name = "btnCostMan";
             this.btnCostMan.Size = new System.Drawing.Size(192, 31);
             this.btnCostMan.TabIndex = 5;
@@ -177,7 +178,7 @@
             this.btnAccMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnAccMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccMan.Location = new System.Drawing.Point(122, 472);
+            this.btnAccMan.Location = new System.Drawing.Point(127, 431);
             this.btnAccMan.Name = "btnAccMan";
             this.btnAccMan.Size = new System.Drawing.Size(279, 31);
             this.btnAccMan.TabIndex = 6;
@@ -192,7 +193,7 @@
             this.btnProcMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnProcMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcMan.Location = new System.Drawing.Point(410, 472);
+            this.btnProcMan.Location = new System.Drawing.Point(415, 431);
             this.btnProcMan.Name = "btnProcMan";
             this.btnProcMan.Size = new System.Drawing.Size(266, 31);
             this.btnProcMan.TabIndex = 7;
@@ -207,7 +208,7 @@
             this.btnQualMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnQualMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQualMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQualMan.Location = new System.Drawing.Point(154, 435);
+            this.btnQualMan.Location = new System.Drawing.Point(159, 394);
             this.btnQualMan.Name = "btnQualMan";
             this.btnQualMan.Size = new System.Drawing.Size(480, 31);
             this.btnQualMan.TabIndex = 8;
@@ -222,7 +223,7 @@
             this.btnIssMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnIssMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIssMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIssMan.Location = new System.Drawing.Point(183, 398);
+            this.btnIssMan.Location = new System.Drawing.Point(188, 357);
             this.btnIssMan.Name = "btnIssMan";
             this.btnIssMan.Size = new System.Drawing.Size(208, 31);
             this.btnIssMan.TabIndex = 9;
@@ -237,7 +238,7 @@
             this.btnRiskMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnRiskMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiskMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRiskMan.Location = new System.Drawing.Point(405, 398);
+            this.btnRiskMan.Location = new System.Drawing.Point(410, 357);
             this.btnRiskMan.Name = "btnRiskMan";
             this.btnRiskMan.Size = new System.Drawing.Size(208, 31);
             this.btnRiskMan.TabIndex = 10;
@@ -252,7 +253,7 @@
             this.btnComMan.BackColor = System.Drawing.Color.Aquamarine;
             this.btnComMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComMan.Location = new System.Drawing.Point(234, 361);
+            this.btnComMan.Location = new System.Drawing.Point(239, 320);
             this.btnComMan.Name = "btnComMan";
             this.btnComMan.Size = new System.Drawing.Size(321, 31);
             this.btnComMan.TabIndex = 11;
@@ -264,6 +265,7 @@
             // 
             // pnlExecution
             // 
+            this.pnlExecution.Controls.Add(this.btnEClose);
             this.pnlExecution.Controls.Add(this.btnCPhaseRev);
             this.pnlExecution.Controls.Add(this.btnOperate);
             this.pnlExecution.Controls.Add(this.btnCostMan);
@@ -278,8 +280,22 @@
             this.pnlExecution.Controls.Add(this.lstInfo);
             this.pnlExecution.Location = new System.Drawing.Point(22, 12);
             this.pnlExecution.Name = "pnlExecution";
-            this.pnlExecution.Size = new System.Drawing.Size(824, 597);
+            this.pnlExecution.Size = new System.Drawing.Size(824, 607);
             this.pnlExecution.TabIndex = 12;
+            // 
+            // btnEClose
+            // 
+            this.btnEClose.BackColor = System.Drawing.Color.Black;
+            this.btnEClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEClose.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnEClose.Location = new System.Drawing.Point(329, 567);
+            this.btnEClose.Name = "btnEClose";
+            this.btnEClose.Size = new System.Drawing.Size(140, 34);
+            this.btnEClose.TabIndex = 39;
+            this.btnEClose.Text = "Close";
+            this.btnEClose.UseVisualStyleBackColor = false;
+            this.btnEClose.Click += new System.EventHandler(this.btnEClose_Click);
             // 
             // pnlInfo
             // 
@@ -299,9 +315,9 @@
             this.pnlInfo.Controls.Add(this.btnFirst);
             this.pnlInfo.Controls.Add(this.pnlTopMenu);
             this.pnlInfo.Controls.Add(this.lstInstr);
-            this.pnlInfo.Location = new System.Drawing.Point(25, 12);
+            this.pnlInfo.Location = new System.Drawing.Point(22, 12);
             this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(834, 607);
+            this.pnlInfo.Size = new System.Drawing.Size(837, 607);
             this.pnlInfo.TabIndex = 12;
             this.pnlInfo.Visible = false;
             // 
@@ -747,5 +763,6 @@
         private System.Windows.Forms.Button btnViewPRev;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnEClose;
     }
 }

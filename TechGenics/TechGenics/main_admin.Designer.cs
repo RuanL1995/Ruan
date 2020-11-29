@@ -76,6 +76,12 @@
             this.btnBackLogEx = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
             this.pnlViewTask = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rtbTaskDesc = new System.Windows.Forms.RichTextBox();
             this.txtTaskStatus = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtProjectName = new System.Windows.Forms.TextBox();
@@ -94,12 +100,6 @@
             this.btnFull = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblCurrentUser = new System.Windows.Forms.Label();
-            this.rtbTaskDesc = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.pnlSideMenu.SuspendLayout();
             this.pnlHelpSub.SuspendLayout();
             this.pnlMembersSub.SuspendLayout();
@@ -300,7 +300,7 @@
             // 
             // btnViewTemplateDocs
             // 
-            this.btnViewTemplateDocs.BackColor = System.Drawing.Color.Black;
+            this.btnViewTemplateDocs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnViewTemplateDocs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnViewTemplateDocs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewTemplateDocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -791,6 +791,67 @@
             this.pnlViewTask.TabIndex = 9;
             this.pnlViewTask.Visible = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label13.Location = new System.Drawing.Point(371, 318);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 18);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Task Status";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label12.Location = new System.Drawing.Point(368, 374);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 18);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Project Name";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label11.Location = new System.Drawing.Point(361, 265);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(106, 18);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Task Progress";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label10.Location = new System.Drawing.Point(357, 79);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 18);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Task Description";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label6.Location = new System.Drawing.Point(347, 213);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 18);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Task Assigened To";
+            // 
+            // rtbTaskDesc
+            // 
+            this.rtbTaskDesc.BackColor = System.Drawing.Color.Silver;
+            this.rtbTaskDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.rtbTaskDesc.Location = new System.Drawing.Point(298, 104);
+            this.rtbTaskDesc.Name = "rtbTaskDesc";
+            this.rtbTaskDesc.ReadOnly = true;
+            this.rtbTaskDesc.Size = new System.Drawing.Size(235, 96);
+            this.rtbTaskDesc.TabIndex = 24;
+            this.rtbTaskDesc.Text = "";
+            // 
             // txtTaskStatus
             // 
             this.txtTaskStatus.BackColor = System.Drawing.Color.Silver;
@@ -888,6 +949,7 @@
             this.btnBackTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnBackTask.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnBackTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackTask.ForeColor = System.Drawing.Color.Aquamarine;
             this.btnBackTask.Location = new System.Drawing.Point(711, 577);
             this.btnBackTask.Name = "btnBackTask";
@@ -900,8 +962,9 @@
             // lblTaskName
             // 
             this.lblTaskName.AutoSize = true;
-            this.lblTaskName.BackColor = System.Drawing.Color.Silver;
+            this.lblTaskName.BackColor = System.Drawing.Color.DimGray;
             this.lblTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaskName.ForeColor = System.Drawing.Color.Aquamarine;
             this.lblTaskName.Location = new System.Drawing.Point(281, 39);
             this.lblTaskName.Name = "lblTaskName";
             this.lblTaskName.Size = new System.Drawing.Size(269, 24);
@@ -994,67 +1057,6 @@
             this.lblCurrentUser.Size = new System.Drawing.Size(154, 18);
             this.lblCurrentUser.TabIndex = 7;
             this.lblCurrentUser.Text = "Welcome Placeholder";
-            // 
-            // rtbTaskDesc
-            // 
-            this.rtbTaskDesc.BackColor = System.Drawing.Color.Silver;
-            this.rtbTaskDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.rtbTaskDesc.Location = new System.Drawing.Point(298, 104);
-            this.rtbTaskDesc.Name = "rtbTaskDesc";
-            this.rtbTaskDesc.ReadOnly = true;
-            this.rtbTaskDesc.Size = new System.Drawing.Size(235, 96);
-            this.rtbTaskDesc.TabIndex = 24;
-            this.rtbTaskDesc.Text = "";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(347, 213);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 18);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Task Assigened To";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label10.Location = new System.Drawing.Point(357, 79);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 18);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Task Description";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label11.Location = new System.Drawing.Point(361, 265);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(106, 18);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Task Progress";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label12.Location = new System.Drawing.Point(368, 374);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 18);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Project Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label13.Location = new System.Drawing.Point(371, 318);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 18);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Task Status";
             // 
             // frmMainAdmin
             // 

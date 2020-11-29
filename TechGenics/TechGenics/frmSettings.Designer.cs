@@ -202,8 +202,8 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pnlCustom);
-            this.panel1.Controls.Add(this.rgbCustom);
             this.panel1.Controls.Add(this.btnThemeSave);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.rgbDark);
             this.panel1.Controls.Add(this.rgbLight);
             this.panel1.Location = new System.Drawing.Point(27, 47);
@@ -214,14 +214,14 @@
             // pnlCustom
             // 
             this.pnlCustom.Controls.Add(this.btnCustom);
+            this.pnlCustom.Controls.Add(this.rgbCustom);
             this.pnlCustom.Controls.Add(this.cmboFore);
             this.pnlCustom.Controls.Add(this.cmboBack);
-            this.pnlCustom.Controls.Add(this.label1);
             this.pnlCustom.Controls.Add(this.lblFore);
             this.pnlCustom.Controls.Add(this.lblBack);
-            this.pnlCustom.Location = new System.Drawing.Point(169, 27);
+            this.pnlCustom.Location = new System.Drawing.Point(446, 27);
             this.pnlCustom.Name = "pnlCustom";
-            this.pnlCustom.Size = new System.Drawing.Size(374, 273);
+            this.pnlCustom.Size = new System.Drawing.Size(97, 273);
             this.pnlCustom.TabIndex = 15;
             this.pnlCustom.Visible = false;
             // 
@@ -277,7 +277,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(68, 242);
+            this.label1.Location = new System.Drawing.Point(29, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 15);
             this.label1.TabIndex = 2;
@@ -310,12 +310,13 @@
             this.rgbCustom.AutoSize = true;
             this.rgbCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rgbCustom.ForeColor = System.Drawing.Color.Aquamarine;
-            this.rgbCustom.Location = new System.Drawing.Point(32, 150);
+            this.rgbCustom.Location = new System.Drawing.Point(18, 114);
             this.rgbCustom.Name = "rgbCustom";
             this.rgbCustom.Size = new System.Drawing.Size(79, 22);
             this.rgbCustom.TabIndex = 14;
             this.rgbCustom.Text = "Custom";
             this.rgbCustom.UseVisualStyleBackColor = true;
+            this.rgbCustom.Visible = false;
             this.rgbCustom.CheckedChanged += new System.EventHandler(this.rgbCustom_CheckedChanged);
             // 
             // btnThemeSave
@@ -326,7 +327,7 @@
             this.btnThemeSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemeSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemeSave.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnThemeSave.Location = new System.Drawing.Point(16, 320);
+            this.btnThemeSave.Location = new System.Drawing.Point(53, 251);
             this.btnThemeSave.Name = "btnThemeSave";
             this.btnThemeSave.Size = new System.Drawing.Size(205, 34);
             this.btnThemeSave.TabIndex = 13;
@@ -339,7 +340,7 @@
             this.rgbDark.AutoSize = true;
             this.rgbDark.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rgbDark.ForeColor = System.Drawing.Color.Aquamarine;
-            this.rgbDark.Location = new System.Drawing.Point(31, 105);
+            this.rgbDark.Location = new System.Drawing.Point(189, 62);
             this.rgbDark.Name = "rgbDark";
             this.rgbDark.Size = new System.Drawing.Size(100, 22);
             this.rgbDark.TabIndex = 1;
