@@ -31,19 +31,22 @@ namespace TechGenics
             DataSet dsProjects = new DataSet();
             dsProjects = ListToDataSet.ToDataSet(_projects);
 
-            DataView viewProjectNames = new DataView(dsProjects.Tables[0]);
-            DataTable dtProjectNames = viewProjectNames.ToTable(true, "ProjectId", "ProjectName");
-
-            cboProjectName.ValueMember = "ProjectId";
-            cboProjectName.DisplayMember = "ProjectName";
-            cboProjectName.DataSource = dtProjectNames;
-
-            cboProjectPhase.SelectedIndex = 0;
-
-            if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
+            if (dsProjects.Tables[0].Rows.Count > 0)
             {
-                (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshProjects();
-            }
+                DataView viewProjectNames = new DataView(dsProjects.Tables[0]);
+                DataTable dtProjectNames = viewProjectNames.ToTable(true, "ProjectId", "ProjectName");
+
+                cboProjectName.ValueMember = "ProjectId";
+                cboProjectName.DisplayMember = "ProjectName";
+                cboProjectName.DataSource = dtProjectNames;
+
+                cboProjectPhase.SelectedIndex = 0;
+
+                if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
+                {
+                    (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshProjects();
+                }
+            }           
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)

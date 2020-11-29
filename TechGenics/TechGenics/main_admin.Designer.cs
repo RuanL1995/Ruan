@@ -484,7 +484,6 @@
             this.pnlTasks.AutoScroll = true;
             this.pnlTasks.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlTasks.Controls.Add(this.btnCloseTaskPanel);
-            this.pnlTasks.Controls.Add(this.btnAddTasl);
             this.pnlTasks.Controls.Add(this.label4);
             this.pnlTasks.Controls.Add(this.label3);
             this.pnlTasks.Controls.Add(this.label2);
@@ -517,7 +516,7 @@
             this.btnAddTasl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddTasl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTasl.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnAddTasl.Location = new System.Drawing.Point(540, 577);
+            this.btnAddTasl.Location = new System.Drawing.Point(956, 692);
             this.btnAddTasl.Name = "btnAddTasl";
             this.btnAddTasl.Size = new System.Drawing.Size(167, 24);
             this.btnAddTasl.TabIndex = 1;
@@ -783,7 +782,7 @@
             this.pnlViewTask.Controls.Add(this.label5);
             this.pnlViewTask.Controls.Add(this.btnBackTask);
             this.pnlViewTask.Controls.Add(this.lblTaskName);
-            this.pnlViewTask.Location = new System.Drawing.Point(239, 51);
+            this.pnlViewTask.Location = new System.Drawing.Point(241, 51);
             this.pnlViewTask.Name = "pnlViewTask";
             this.pnlViewTask.Size = new System.Drawing.Size(884, 632);
             this.pnlViewTask.TabIndex = 9;
@@ -1065,6 +1064,7 @@
             this.Controls.Add(this.pnlViewTask);
             this.Controls.Add(this.lblCurrentUser);
             this.Controls.Add(this.pnlChildForm);
+            this.Controls.Add(this.btnAddTasl);
             this.Controls.Add(this.btnFull);
             this.Controls.Add(this.btnMax);
             this.Controls.Add(this.btnMin);

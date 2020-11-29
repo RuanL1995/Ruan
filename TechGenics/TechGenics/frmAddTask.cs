@@ -31,48 +31,62 @@ namespace TechGenics
             DataSet dsTasks = new DataSet();
             dsTasks = ListToDataSet.ToDataSet(_tasks);
 
-            DataView viewAssigned = new DataView(dsTasks.Tables[0]);
-            DataTable dtAssigened = viewAssigned.ToTable(true, "TaskId", "TaskName");
+            if (dsTasks.Tables[0].Rows.Count > 0)
+            {
+                DataView viewAssigned = new DataView(dsTasks.Tables[0]);
+                DataTable dtAssigened = viewAssigned.ToTable(true, "TaskId", "TaskName");
 
-            cboTaskName.ValueMember = "TaskId";
-            cboTaskName.DisplayMember = "TaskName";
-            cboTaskName.DataSource = dtAssigened;          
+                cboTaskName.ValueMember = "TaskId";
+                cboTaskName.DisplayMember = "TaskName";
+                cboTaskName.DataSource = dtAssigened;
+            }
 
+           
             List<User> _users = new List<User>();
             _users = db.GetUsers();
             DataSet dsUsers = new DataSet();
             dsUsers = ListToDataSet.ToDataSet(_users);
 
-            DataView viewUsers = new DataView(dsUsers.Tables[0]);
-            DataTable dtUsers = viewUsers.ToTable(true, "UserId", "UserName");
-
-            cboTaskAssigned.ValueMember = "UserId";
-            cboTaskAssigned.DisplayMember = "UserName";
-            cboTaskAssigned.DataSource = dtUsers;
-
-            List<Projects> _projects = new List<Projects>();
-            _projects = db.GetProject();
-            DataSet dsProjects = new DataSet();
-            dsProjects = ListToDataSet.ToDataSet(_projects);
-
-            DataView viewProjectName = new DataView(dsProjects.Tables[0]);
-            DataTable dtProjectName = viewProjectName.ToTable(true, "ProjectId", "ProjectName");
-
-            cboProjectName.ValueMember = "ProjectId";
-            cboProjectName.DisplayMember = "ProjectName";
-            cboProjectName.DataSource = dtProjectName;
-
-            cboTaskStatus.SelectedIndex = 0;
-
-            if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
+            if (dsUsers.Tables[0].Rows.Count > 0)
             {
-                (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshProjects();
+                DataView viewUsers = new DataView(dsUsers.Tables[0]);
+                DataTable dtUsers = viewUsers.ToTable(true, "UserId", "UserName");
+
+                cboTaskAssigned.ValueMember = "UserId";
+                cboTaskAssigned.DisplayMember = "UserName";
+                cboTaskAssigned.DataSource = dtUsers;
+            }
+                
+
+                List<Projects> _projects = new List<Projects>();
+                _projects = db.GetProject();
+                DataSet dsProjects = new DataSet();
+                dsProjects = ListToDataSet.ToDataSet(_projects);
+
+            if (dsProjects.Tables[0].Rows.Count > 0)
+            {
+                DataView viewProjectName = new DataView(dsProjects.Tables[0]);
+                DataTable dtProjectName = viewProjectName.ToTable(true, "ProjectId", "ProjectName");
+
+                cboProjectName.ValueMember = "ProjectId";
+                cboProjectName.DisplayMember = "ProjectName";
+                cboProjectName.DataSource = dtProjectName;
             }
 
-            if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
-            {
-                (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshTasks();
-            }
+                
+
+                cboTaskStatus.SelectedIndex = 0;
+
+                if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
+                {
+                    (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshProjects();
+                }
+
+                if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
+                {
+                    (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshTasks();
+                }
+            
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)

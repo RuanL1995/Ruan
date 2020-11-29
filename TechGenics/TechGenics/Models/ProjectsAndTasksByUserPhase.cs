@@ -12,7 +12,6 @@ namespace TechGenics.Models
         public string ProjectName { get; set; }
         public string ProjectPhase { get; set; }
         public string ProjectStatus { get; set; }
-        public string DocumentLocation { get; set; }
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public string TaskDescription { get; set; }
