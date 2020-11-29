@@ -25,150 +25,182 @@ namespace TechGenics
 
         private void load()
         {
-            List<Projects> _projects = new List<Projects>();
-            DataAccess db = new DataAccess();
-            _projects = db.GetProject();
-            DataSet dsProjects = new DataSet();
-            dsProjects = ListToDataSet.ToDataSet(_projects);
-
-            if (dsProjects.Tables[0].Rows.Count > 0)
+            try
             {
-                DataView viewProjectNames = new DataView(dsProjects.Tables[0]);
-                DataTable dtProjectNames = viewProjectNames.ToTable(true, "ProjectId", "ProjectName");
+                List<Projects> _projects = new List<Projects>();
+                DataAccess db = new DataAccess();
+                _projects = db.GetProject();
+                DataSet dsProjects = new DataSet();
+                dsProjects = ListToDataSet.ToDataSet(_projects);
 
-                cboProjectName.ValueMember = "ProjectId";
-                cboProjectName.DisplayMember = "ProjectName";
-                cboProjectName.DataSource = dtProjectNames;
-
-                cboProjectPhase.SelectedIndex = 0;
-
-                if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
+                if (dsProjects.Tables[0].Rows.Count > 0)
                 {
-                    (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshProjects();
+                    DataView viewProjectNames = new DataView(dsProjects.Tables[0]);
+                    DataTable dtProjectNames = viewProjectNames.ToTable(true, "ProjectId", "ProjectName");
+
+                    cboProjectName.ValueMember = "ProjectId";
+                    cboProjectName.DisplayMember = "ProjectName";
+                    cboProjectName.DataSource = dtProjectNames;
+
+                    cboProjectPhase.SelectedIndex = 0;
+
+                    if (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] != null)
+                    {
+                        (System.Windows.Forms.Application.OpenForms["frmMainAdmin"] as frmMainAdmin).refreshProjects();
+                    }
                 }
-            }           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-
-            string projectName = cboProjectName.Text;
-            string projectPhase = cboProjectPhase.Text;
-            string projectStatus = txtProjectStatus.Text;
-
-            bool validProjectName = false;
-            bool validProjectPhase = false;
-            bool validProjectStatus = false;
-
-
-            if (!String.IsNullOrWhiteSpace(projectName))
+            try
             {
-                validProjectName = true;
-            }
-            if (validProjectName == false)
-            {
-                MessageBox.Show("Please enter a project name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                DataAccess db = new DataAccess();
 
-            if (!String.IsNullOrWhiteSpace(projectPhase))
-            {
-                validProjectPhase = true;
-            }
-            if (validProjectPhase == false)
-            {
-                MessageBox.Show("Please enter a project phase.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                string projectName = cboProjectName.Text;
+                string projectPhase = cboProjectPhase.Text;
+                string projectStatus = txtProjectStatus.Text;
 
-            if (!String.IsNullOrWhiteSpace(projectStatus))
-            {
-                validProjectStatus = true;
-            }
-            if (validProjectStatus == false)
-            {
-                MessageBox.Show("Please enter a project status.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                bool validProjectName = false;
+                bool validProjectPhase = false;
+                bool validProjectStatus = false;
 
-            if (validProjectName == true && validProjectPhase == true && validProjectStatus == true)
-            {
-                db.InsertProject(projectName, projectPhase, projectStatus);
-                load();
-                MessageBox.Show("The new project has been added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (!String.IsNullOrWhiteSpace(projectName))
+                {
+                    validProjectName = true;
+                }
+                if (validProjectName == false)
+                {
+                    MessageBox.Show("Please enter a project name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (!String.IsNullOrWhiteSpace(projectPhase))
+                {
+                    validProjectPhase = true;
+                }
+                if (validProjectPhase == false)
+                {
+                    MessageBox.Show("Please enter a project phase.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (!String.IsNullOrWhiteSpace(projectStatus))
+                {
+                    validProjectStatus = true;
+                }
+                if (validProjectStatus == false)
+                {
+                    MessageBox.Show("Please enter a project status.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (validProjectName == true && validProjectPhase == true && validProjectStatus == true)
+                {
+                    db.InsertProject(projectName, projectPhase, projectStatus);
+                    load();
+                    MessageBox.Show("The new project has been added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
+            try
+            {
+                DataAccess db = new DataAccess();
 
-            int projectId = (int)cboProjectName.SelectedValue;
-            string projectName = cboProjectName.Text;
-            string projectPhase = cboProjectPhase.Text;
-            string projectStatus = txtProjectStatus.Text;
+                int projectId = (int)cboProjectName.SelectedValue;
+                string projectName = cboProjectName.Text;
+                string projectPhase = cboProjectPhase.Text;
+                string projectStatus = txtProjectStatus.Text;
 
-            bool validProjectName = false;
-            bool validProjectPhase = false;
-            bool validProjectStatus = false;
+                bool validProjectName = false;
+                bool validProjectPhase = false;
+                bool validProjectStatus = false;
 
-            if (!String.IsNullOrWhiteSpace(projectName))
-            {
-                validProjectName = true;
-            }
-            if (validProjectName == false)
-            {
-                MessageBox.Show("Please enter a project name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                if (!String.IsNullOrWhiteSpace(projectName))
+                {
+                    validProjectName = true;
+                }
+                if (validProjectName == false)
+                {
+                    MessageBox.Show("Please enter a project name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            if (!String.IsNullOrWhiteSpace(projectPhase))
-            {
-                validProjectPhase = true;
-            }
-            if (validProjectPhase == false)
-            {
-                MessageBox.Show("Please enter a project phase.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                if (!String.IsNullOrWhiteSpace(projectPhase))
+                {
+                    validProjectPhase = true;
+                }
+                if (validProjectPhase == false)
+                {
+                    MessageBox.Show("Please enter a project phase.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            if (!String.IsNullOrWhiteSpace(projectStatus))
-            {
-                validProjectStatus = true;
-            }
-            if (validProjectStatus == false)
-            {
-                MessageBox.Show("Please enter a project status.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                if (!String.IsNullOrWhiteSpace(projectStatus))
+                {
+                    validProjectStatus = true;
+                }
+                if (validProjectStatus == false)
+                {
+                    MessageBox.Show("Please enter a project status.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            if (validProjectName == true && validProjectPhase == true && validProjectStatus == true)
-            {
-                db.UpdateProject(projectId, projectName, projectPhase, projectStatus);
-                load();
-                MessageBox.Show("The project has been updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (validProjectName == true && validProjectPhase == true && validProjectStatus == true)
+                {
+                    db.UpdateProject(projectId, projectName, projectPhase, projectStatus);
+                    load();
+                    MessageBox.Show("The project has been updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnRemove_Click_1(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-
-            int projectId = (int)cboProjectName.SelectedValue;
-            string projectName = cboProjectName.Text;
-
-            bool validProjectName = false;
-
-            if (!String.IsNullOrWhiteSpace(projectName))
+            try
             {
-                validProjectName = true;
-            }
-            if (validProjectName == false)
-            {
-                MessageBox.Show("Please enter a project name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                DataAccess db = new DataAccess();
 
-            if (validProjectName == true)
-            {
-                db.DeleteProject(projectId);
-                load();
-                MessageBox.Show("The project has been deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int projectId = (int)cboProjectName.SelectedValue;
+                string projectName = cboProjectName.Text;
+
+                bool validProjectName = false;
+
+                if (!String.IsNullOrWhiteSpace(projectName))
+                {
+                    validProjectName = true;
+                }
+                if (validProjectName == false)
+                {
+                    MessageBox.Show("Please enter a project name.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (validProjectName == true)
+                {
+                    db.DeleteProject(projectId);
+                    load();
+                    MessageBox.Show("The project has been deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
     }
 }

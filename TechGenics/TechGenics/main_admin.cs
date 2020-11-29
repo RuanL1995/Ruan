@@ -1084,128 +1084,135 @@ namespace TechGenics
         }
 
         private void generateProjects()
-        {
-            SettingsConstructor settings = new SettingsConstructor();
-            bool byPassLogin = settings.ByPassLogin;
-            if (byPassLogin == true)
-            { }
-            else if(byPassLogin == false)
+        {          
+            try
             {
-                int locationStartX = 4;
-                int locationStartY = 38;
-                int projPanelSizeX = 201;
-                int projPanelSizeY = 65;
-
-                if (isAdmin == true)
+                SettingsConstructor settings = new SettingsConstructor();
+                bool byPassLogin = settings.ByPassLogin;
+                if (byPassLogin == true)
+                { }
+                else if (byPassLogin == false)
                 {
-                    btnNewProj.Visible = true;
-                    locationStartY += 90;
-                    projPanelSizeY += 90;
+                    int locationStartX = 4;
+                    int locationStartY = 38;
+                    int projPanelSizeX = 201;
+                    int projPanelSizeY = 65;
 
-                    DataAccess db = new DataAccess();
-                    _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>(); 
-                    _ProjectsAndTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); //Change to read from db
-                    DataSet dsProjectsAndTasks = new DataSet();
-                    dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
-
-                    if (dsProjectsAndTasks.Tables[0].Rows.Count > 0)
+                    if (isAdmin == true)
                     {
-                        DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
-                        DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus");
-                        DataRow[] projectByPhase;
-                        DataTable dtProjectByPhase;
-                        if (cboPhases.Text == "--All Phases--")
+                        btnNewProj.Visible = true;
+                        locationStartY += 90;
+                        projPanelSizeY += 90;
+
+                        DataAccess db = new DataAccess();
+                        _ProjectsAndTasks = new List<ProjectsAndTasksByUserPhase>();
+                        _ProjectsAndTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); //Change to read from db
+                        DataSet dsProjectsAndTasks = new DataSet();
+                        dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+
+                        if (dsProjectsAndTasks.Tables[0].Rows.Count > 0)
                         {
-                            dtProjectByPhase = distinctProjects;
-                        }
-                        else
-                        {
-                            projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
-                            dtProjectByPhase = distinctProjects.Clone();
-                            foreach (DataRow row in projectByPhase)
+                            DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
+                            DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus");
+                            DataRow[] projectByPhase;
+                            DataTable dtProjectByPhase;
+                            if (cboPhases.Text == "--All Phases--")
                             {
-                                dtProjectByPhase.ImportRow(row);
+                                dtProjectByPhase = distinctProjects;
+                            }
+                            else
+                            {
+                                projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
+                                dtProjectByPhase = distinctProjects.Clone();
+                                foreach (DataRow row in projectByPhase)
+                                {
+                                    dtProjectByPhase.ImportRow(row);
+                                }
+                            }
+
+                            foreach (DataRow row in dtProjectByPhase.Rows)
+                            {
+                                numberOfProjectsToRemove++;
+                                ctrl = btnNewProj.Clone();
+                                ctrl.Name = row.Field<String>("ProjectName");
+                                ctrl.Text = row.Field<String>("ProjectName");
+                                ctrl.Tag = row.Field<Int32>("ProjectId");
+                                ctrl.Location = new Point(locationStartX, locationStartY);
+                                ctrl.Visible = true;
+                                ctrl.Click += project_Click;
+
+                                locationStartY += 30;
+                                pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
+                                projPanelSizeY += 30;
+                                pnlProjectsSub.Controls.Add(ctrl);
                             }
                         }
+                    }
+                    else if (isAdmin == false)
+                    {
+                        btnNewProj.Visible = false;
+                        locationStartY += 30;
+                        projPanelSizeY += 30;
 
-                        foreach (DataRow row in dtProjectByPhase.Rows)
+                        List<User> _users = new List<User>();
+                        DataAccess db = new DataAccess();
+                        _users = db.GetUser(currentUser);
+                        DataSet dsUser = new DataSet();
+                        dsUser = ListToDataSet.ToDataSet(_users);
+
+                        bool initiation = (bool)dsUser.Tables[0].Rows[0]["Initiation"];
+                        bool planning = (bool)dsUser.Tables[0].Rows[0]["Planning"];
+                        bool execution = (bool)dsUser.Tables[0].Rows[0]["Execution"];
+                        bool closeOut = (bool)dsUser.Tables[0].Rows[0]["CloseOut"];
+
+                        _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, initiation, planning, execution, closeOut);
+                        DataSet dsProjectsAndTasks = new DataSet();
+                        dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
+
+                        if (dsProjectsAndTasks.Tables[0].Rows.Count > 0)
                         {
-                            numberOfProjectsToRemove++;
-                            ctrl = btnNewProj.Clone();
-                            ctrl.Name = row.Field<String>("ProjectName");
-                            ctrl.Text = row.Field<String>("ProjectName");
-                            ctrl.Tag = row.Field<Int32>("ProjectId");
-                            ctrl.Location = new Point(locationStartX, locationStartY);
-                            ctrl.Visible = true;
-                            ctrl.Click += project_Click;
+                            DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
+                            DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus");
+                            DataRow[] projectByPhase;
+                            DataTable dtProjectByPhase;
+                            if (cboPhases.Text == "--All Phases--")
+                            {
+                                dtProjectByPhase = distinctProjects;
+                            }
+                            else
+                            {
+                                projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
+                                dtProjectByPhase = distinctProjects.Clone();
+                                foreach (DataRow row in projectByPhase)
+                                {
+                                    dtProjectByPhase.ImportRow(row);
+                                }
+                            }
 
-                            locationStartY += 30;
-                            pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
-                            projPanelSizeY += 30;
-                            pnlProjectsSub.Controls.Add(ctrl);
+                            foreach (DataRow row in dtProjectByPhase.Rows)
+                            {
+                                numberOfProjectsToRemove++;
+                                ctrl = btnNewProj.Clone();
+                                ctrl.Name = row.Field<String>("ProjectName");
+                                ctrl.Text = row.Field<String>("ProjectName");
+                                ctrl.Tag = row.Field<Int32>("ProjectId");
+                                ctrl.Location = new Point(locationStartX, locationStartY);
+                                ctrl.Visible = true;
+                                ctrl.Click += project_Click;
+
+                                locationStartY += 30;
+                                pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
+                                projPanelSizeY += 30;
+                                pnlProjectsSub.Controls.Add(ctrl);
+                            }
                         }
-                    }  
+                    }
                 }
-                else if (isAdmin == false)
-                {
-                    btnNewProj.Visible = false;
-                    locationStartY += 30;
-                    projPanelSizeY += 30;
-
-                    List<User> _users = new List<User>();
-                    DataAccess db = new DataAccess();
-                    _users = db.GetUser(currentUser);
-                    DataSet dsUser = new DataSet();
-                    dsUser = ListToDataSet.ToDataSet(_users);
-
-                    bool initiation = (bool)dsUser.Tables[0].Rows[0]["Initiation"];
-                    bool planning = (bool)dsUser.Tables[0].Rows[0]["Planning"];
-                    bool execution = (bool)dsUser.Tables[0].Rows[0]["Execution"];
-                    bool closeOut = (bool)dsUser.Tables[0].Rows[0]["CloseOut"];                 
-
-                    _ProjectsAndTasks = db.GetProjectAndTaskInfo(currentUser, initiation, planning, execution, closeOut); 
-                    DataSet dsProjectsAndTasks = new DataSet();
-                    dsProjectsAndTasks = ListToDataSet.ToDataSet(_ProjectsAndTasks);
-
-                    if (dsProjectsAndTasks.Tables[0].Rows.Count > 0)
-                    {
-                        DataView view = new DataView(dsProjectsAndTasks.Tables[0]);
-                        DataTable distinctProjects = view.ToTable(true, "ProjectId", "ProjectName", "ProjectPhase", "ProjectStatus");
-                        DataRow[] projectByPhase;
-                        DataTable dtProjectByPhase;
-                        if (cboPhases.Text == "--All Phases--")
-                        {
-                            dtProjectByPhase = distinctProjects;
-                        }
-                        else
-                        {
-                            projectByPhase = distinctProjects.Select("ProjectPhase = '" + cboPhases.Text + "'");
-                            dtProjectByPhase = distinctProjects.Clone();
-                            foreach (DataRow row in projectByPhase)
-                            {
-                                dtProjectByPhase.ImportRow(row);
-                            }
-                        }
-
-                        foreach (DataRow row in dtProjectByPhase.Rows)
-                        {
-                            numberOfProjectsToRemove++;
-                            ctrl = btnNewProj.Clone();
-                            ctrl.Name = row.Field<String>("ProjectName");
-                            ctrl.Text = row.Field<String>("ProjectName");
-                            ctrl.Tag = row.Field<Int32>("ProjectId");
-                            ctrl.Location = new Point(locationStartX, locationStartY);
-                            ctrl.Visible = true;
-                            ctrl.Click += project_Click;
-
-                            locationStartY += 30;
-                            pnlProjectsSub.Size = new Size(projPanelSizeX, projPanelSizeY);
-                            projPanelSizeY += 30;
-                            pnlProjectsSub.Controls.Add(ctrl);
-                        }
-                    }   
-                }              
-            }     
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not generate projects, please review the following error code: " + e.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void project_Click(object sender, EventArgs e)
@@ -1259,141 +1266,148 @@ namespace TechGenics
             }  
         }
         private void generateTasks(string buttonTag)
-        {
-            if (isAdmin == true)
-            {              
-                DataAccess db = new DataAccess();
-
-                _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
-                _GeneratedTasks = db.GetProjectAndTaskInfo(null, true, true, true, true); 
-                DataSet dsGeneratedTasks = new DataSet();
-                dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
-
-                if (dsGeneratedTasks.Tables[0].Rows.Count > 0)
-                {
-                    DataView view = new DataView(dsGeneratedTasks.Tables[0]);
-                    DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
-
-                    DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
-                    dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
-
-                    foreach (DataRow row in dtGeneratedTasksFilterRow)
-                    {
-                        dtGeneratedTasksFilter.ImportRow(row);
-                    }
-
-                    foreach (DataRow row in dtGeneratedTasksFilter.Rows)
-                    {
-                        numberOfTasksToRemove++;
-                        ctrlTask = btnBackLogEx.Clone();
-                        ctrlTask.Name = row.Field<String>("TaskName");
-                        ctrlTask.Text = row.Field<String>("TaskName");
-                        ctrlTask.Tag = row.Field<Int32>("TaskId");
-
-                        if (row.Field<String>("TaskStatus") == "Backlog")
-                        {
-                            ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
-                            backlogLocationStartY += 90;
-                            lastBacklogLocationY = backlogLocationStartY;
-                        }
-                        else if (row.Field<String>("TaskStatus") == "Progress")
-                        {
-                            ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
-                            progressLocationStartY += 90;
-                            lastProgressLocationY = progressLocationStartY;
-                        }
-                        else if (row.Field<String>("TaskStatus") == "Completed")
-                        {
-                            ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
-                            completedLocationStartY += 90;
-                            lastCompletedLocationY = completedLocationStartY;
-                        }
-                        else if (row.Field<String>("TaskStatus") == "Removed")
-                        {
-                            ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
-                            removedLocationStartY += 90;
-                            lastRemovedLocationY = removedLocationStartY;
-                        }
-
-                        ctrlTask.Visible = true;
-                        ctrlTask.Click += task_Click;
-                        ctrlTask.MouseDown += task_MouseDown;
-
-                        pnlBacklog.Controls.Add(ctrlTask);
-                    }
-                }  
-            }
-            else if (isAdmin == false)
+        {           
+            try
             {
-                List<User> _users = new List<User>();
-                DataAccess db = new DataAccess();
-                _users = db.GetUser(currentUser);
-                DataSet dsUser = new DataSet();
-                dsUser = ListToDataSet.ToDataSet(_users);
-                bool initiation = (bool)dsUser.Tables[0].Rows[0]["Initiation"];
-                bool planning = (bool)dsUser.Tables[0].Rows[0]["Planning"];
-                bool execution = (bool)dsUser.Tables[0].Rows[0]["Execution"];
-                bool closeOut = (bool)dsUser.Tables[0].Rows[0]["CloseOut"];
-
-                _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
-                _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, initiation, planning, execution, closeOut); //Change to read from db
-                DataSet dsGeneratedTasks = new DataSet();
-                dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
-
-                if (dsGeneratedTasks.Tables[0].Rows.Count > 0)
+                if (isAdmin == true)
                 {
-                    DataView view = new DataView(dsGeneratedTasks.Tables[0]);
-                    DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
+                    DataAccess db = new DataAccess();
 
-                    DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
-                    dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
+                    _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
+                    _GeneratedTasks = db.GetProjectAndTaskInfo(null, true, true, true, true);
+                    DataSet dsGeneratedTasks = new DataSet();
+                    dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
 
-                    foreach (DataRow row in dtGeneratedTasksFilterRow)
+                    if (dsGeneratedTasks.Tables[0].Rows.Count > 0)
                     {
-                        dtGeneratedTasksFilter.ImportRow(row);
-                    }
+                        DataView view = new DataView(dsGeneratedTasks.Tables[0]);
+                        DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
 
-                    foreach (DataRow row in dtGeneratedTasksFilter.Rows)
+                        DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
+                        dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
+
+                        foreach (DataRow row in dtGeneratedTasksFilterRow)
+                        {
+                            dtGeneratedTasksFilter.ImportRow(row);
+                        }
+
+                        foreach (DataRow row in dtGeneratedTasksFilter.Rows)
+                        {
+                            numberOfTasksToRemove++;
+                            ctrlTask = btnBackLogEx.Clone();
+                            ctrlTask.Name = row.Field<String>("TaskName");
+                            ctrlTask.Text = row.Field<String>("TaskName");
+                            ctrlTask.Tag = row.Field<Int32>("TaskId");
+
+                            if (row.Field<String>("TaskStatus") == "Backlog")
+                            {
+                                ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
+                                backlogLocationStartY += 90;
+                                lastBacklogLocationY = backlogLocationStartY;
+                            }
+                            else if (row.Field<String>("TaskStatus") == "Progress")
+                            {
+                                ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
+                                progressLocationStartY += 90;
+                                lastProgressLocationY = progressLocationStartY;
+                            }
+                            else if (row.Field<String>("TaskStatus") == "Completed")
+                            {
+                                ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
+                                completedLocationStartY += 90;
+                                lastCompletedLocationY = completedLocationStartY;
+                            }
+                            else if (row.Field<String>("TaskStatus") == "Removed")
+                            {
+                                ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
+                                removedLocationStartY += 90;
+                                lastRemovedLocationY = removedLocationStartY;
+                            }
+
+                            ctrlTask.Visible = true;
+                            ctrlTask.Click += task_Click;
+                            ctrlTask.MouseDown += task_MouseDown;
+
+                            pnlBacklog.Controls.Add(ctrlTask);
+                        }
+                    }
+                }
+                else if (isAdmin == false)
+                {
+                    List<User> _users = new List<User>();
+                    DataAccess db = new DataAccess();
+                    _users = db.GetUser(currentUser);
+                    DataSet dsUser = new DataSet();
+                    dsUser = ListToDataSet.ToDataSet(_users);
+                    bool initiation = (bool)dsUser.Tables[0].Rows[0]["Initiation"];
+                    bool planning = (bool)dsUser.Tables[0].Rows[0]["Planning"];
+                    bool execution = (bool)dsUser.Tables[0].Rows[0]["Execution"];
+                    bool closeOut = (bool)dsUser.Tables[0].Rows[0]["CloseOut"];
+
+                    _GeneratedTasks = new List<ProjectsAndTasksByUserPhase>();
+                    _GeneratedTasks = db.GetProjectAndTaskInfo(currentUser, initiation, planning, execution, closeOut); //Change to read from db
+                    DataSet dsGeneratedTasks = new DataSet();
+                    dsGeneratedTasks = ListToDataSet.ToDataSet(_GeneratedTasks);
+
+                    if (dsGeneratedTasks.Tables[0].Rows.Count > 0)
                     {
-                        numberOfTasksToRemove++;
-                        ctrlTask = btnBackLogEx.Clone();
-                        ctrlTask.Name = row.Field<String>("TaskName");
-                        ctrlTask.Text = row.Field<String>("TaskName");
-                        ctrlTask.Tag = row.Field<Int32>("TaskId");
+                        DataView view = new DataView(dsGeneratedTasks.Tables[0]);
+                        DataTable dtGeneratedTasks = view.ToTable();/*dsGeneratedTasks.Tables[0].Select("ProjectPhase = '" + cboPhases.Text + "'");*/
 
-                        if (row.Field<String>("TaskStatus") == "Backlog")
+                        DataRow[] dtGeneratedTasksFilterRow = dtGeneratedTasks.Select("ProjectId = '" + buttonTag + "'");
+                        dtGeneratedTasksFilter = dtGeneratedTasks.Clone();
+
+                        foreach (DataRow row in dtGeneratedTasksFilterRow)
                         {
-                            ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
-                            backlogLocationStartY += 90;
-                            lastBacklogLocationY = backlogLocationStartY;
-                        }
-                        else if (row.Field<String>("TaskStatus") == "Progress")
-                        {
-                            ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
-                            progressLocationStartY += 90;
-                            lastProgressLocationY = progressLocationStartY;
-                        }
-                        else if (row.Field<String>("TaskStatus") == "Completed")
-                        {
-                            ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
-                            completedLocationStartY += 90;
-                            lastCompletedLocationY = completedLocationStartY;
-                        }
-                        else if (row.Field<String>("TaskStatus") == "Removed")
-                        {
-                            ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
-                            removedLocationStartY += 90;
-                            lastRemovedLocationY = removedLocationStartY;
+                            dtGeneratedTasksFilter.ImportRow(row);
                         }
 
-                        ctrlTask.Visible = true;
-                        ctrlTask.Click += task_Click;
-                        ctrlTask.MouseDown += task_MouseDown;
+                        foreach (DataRow row in dtGeneratedTasksFilter.Rows)
+                        {
+                            numberOfTasksToRemove++;
+                            ctrlTask = btnBackLogEx.Clone();
+                            ctrlTask.Name = row.Field<String>("TaskName");
+                            ctrlTask.Text = row.Field<String>("TaskName");
+                            ctrlTask.Tag = row.Field<Int32>("TaskId");
 
-                        pnlBacklog.Controls.Add(ctrlTask);
+                            if (row.Field<String>("TaskStatus") == "Backlog")
+                            {
+                                ctrlTask.Location = new Point(backlogLocationStartX, backlogLocationStartY);
+                                backlogLocationStartY += 90;
+                                lastBacklogLocationY = backlogLocationStartY;
+                            }
+                            else if (row.Field<String>("TaskStatus") == "Progress")
+                            {
+                                ctrlTask.Location = new Point(progressLocationStartX, progressLocationStartY);
+                                progressLocationStartY += 90;
+                                lastProgressLocationY = progressLocationStartY;
+                            }
+                            else if (row.Field<String>("TaskStatus") == "Completed")
+                            {
+                                ctrlTask.Location = new Point(completedLocationStartX, completedLocationStartY);
+                                completedLocationStartY += 90;
+                                lastCompletedLocationY = completedLocationStartY;
+                            }
+                            else if (row.Field<String>("TaskStatus") == "Removed")
+                            {
+                                ctrlTask.Location = new Point(removedLocationStartX, removedLocationStartY);
+                                removedLocationStartY += 90;
+                                lastRemovedLocationY = removedLocationStartY;
+                            }
+
+                            ctrlTask.Visible = true;
+                            ctrlTask.Click += task_Click;
+                            ctrlTask.MouseDown += task_MouseDown;
+
+                            pnlBacklog.Controls.Add(ctrlTask);
+                        }
                     }
-                }      
-            }          
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Could not generate tasks, please review the following error code: " + e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
         }
 
         private void task_Click(object sender, EventArgs e)
