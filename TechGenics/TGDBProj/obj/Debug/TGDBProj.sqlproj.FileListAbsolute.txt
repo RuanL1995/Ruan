@@ -42,7 +42,3 @@ C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TGDBProj\obj\Debug\predeplo
 C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
 C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\Model.xml
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\refactor.xml
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\postdeploy.sql
-C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\predeploy.sql

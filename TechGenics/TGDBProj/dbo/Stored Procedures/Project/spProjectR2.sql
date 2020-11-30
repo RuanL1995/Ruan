@@ -30,9 +30,10 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 		U.UserName
 	INTO #FilterByUser
 	FROM 
-		tblTask T
-		INNER JOIN tblUser U ON T.UserId = U.UserId
-		INNER JOIN tblProject P ON T.ProjectId = P.ProjectId
+		tblProject P
+		LEFT JOIN tblTask T ON T.ProjectId = P.ProjectId
+		LEFT JOIN tblUser U ON T.UserId = U.UserId
+		
 	WHERE 
 			(@CurrentUser IS NULL OR T.TaskAssignedTo  = @CurrentUser)
 
