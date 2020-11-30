@@ -1648,7 +1648,11 @@ namespace TechGenics
 
         private void btnManualA_Click(object sender, EventArgs e)
         {
+            string filename = "User_Manual.pdf";
 
+
+
+            System.Diagnostics.Process.Start(filename);
         }
 
         private void btnAddTasl_Click(object sender, EventArgs e)

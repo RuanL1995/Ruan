@@ -55,7 +55,6 @@
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlTasks = new System.Windows.Forms.Panel();
             this.btnCloseTaskPanel = new System.Windows.Forms.Button();
-            this.btnAddTasl = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@
             this.btnDividerMid = new System.Windows.Forms.Button();
             this.btnBackLogEx = new System.Windows.Forms.Button();
             this.lblTasksHeading = new System.Windows.Forms.Label();
+            this.btnAddTasl = new System.Windows.Forms.Button();
             this.pnlViewTask = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -510,21 +510,6 @@
             this.btnCloseTaskPanel.UseVisualStyleBackColor = false;
             this.btnCloseTaskPanel.Click += new System.EventHandler(this.btnCloseTaskPanel_Click);
             // 
-            // btnAddTasl
-            // 
-            this.btnAddTasl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnAddTasl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddTasl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTasl.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnAddTasl.Location = new System.Drawing.Point(956, 692);
-            this.btnAddTasl.Name = "btnAddTasl";
-            this.btnAddTasl.Size = new System.Drawing.Size(167, 24);
-            this.btnAddTasl.TabIndex = 1;
-            this.btnAddTasl.Text = "ADD/EDIT/REMOVE TASK";
-            this.btnAddTasl.UseVisualStyleBackColor = false;
-            this.btnAddTasl.Visible = false;
-            this.btnAddTasl.Click += new System.EventHandler(this.btnAddTasl_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -761,6 +746,21 @@
             this.lblTasksHeading.Size = new System.Drawing.Size(318, 24);
             this.lblTasksHeading.TabIndex = 0;
             this.lblTasksHeading.Text = "TASKS FOR \"INSERT PROJ NAME\"";
+            // 
+            // btnAddTasl
+            // 
+            this.btnAddTasl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnAddTasl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddTasl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTasl.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnAddTasl.Location = new System.Drawing.Point(956, 692);
+            this.btnAddTasl.Name = "btnAddTasl";
+            this.btnAddTasl.Size = new System.Drawing.Size(167, 24);
+            this.btnAddTasl.TabIndex = 1;
+            this.btnAddTasl.Text = "ADD/EDIT/REMOVE TASK";
+            this.btnAddTasl.UseVisualStyleBackColor = false;
+            this.btnAddTasl.Visible = false;
+            this.btnAddTasl.Click += new System.EventHandler(this.btnAddTasl_Click);
             // 
             // pnlViewTask
             // 

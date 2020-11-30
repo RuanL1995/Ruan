@@ -724,11 +724,12 @@ namespace TechGenics
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            pnlSignUp.Visible = false;
-            pnlSignUp.SendToBack();
+            //pnlSignUp.Visible = false;
+            //pnlSignUp.SendToBack();
 
             pnlLogin.Visible = true;
-            pnlLogin.BringToFront();
+            pnlLogin.Enabled = true;
+            timer3.Start();
         }
 
         private void btnSExit_MouseHover(object sender, EventArgs e)

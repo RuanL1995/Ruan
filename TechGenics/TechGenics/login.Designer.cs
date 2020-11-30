@@ -35,6 +35,7 @@
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.gradient1 = new TechGenics.gradient();
             this.btnSettingsLogin = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.lblLExit = new System.Windows.Forms.Label();
             this.btnLExit = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.txtFirst = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.gradient1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboPassIcon)).BeginInit();
@@ -129,6 +129,19 @@
             this.btnSettingsLogin.UseVisualStyleBackColor = false;
             this.btnSettingsLogin.Click += new System.EventHandler(this.btnSettingsLogin_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1070, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "go to admin";
+            this.label3.Visible = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Black;
@@ -144,7 +157,7 @@
             this.pnlLogin.Controls.Add(this.lblForgotPassword);
             this.pnlLogin.Controls.Add(this.label1);
             this.pnlLogin.Controls.Add(this.label2);
-            this.pnlLogin.Location = new System.Drawing.Point(34, 84);
+            this.pnlLogin.Location = new System.Drawing.Point(433, 85);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(379, 549);
             this.pnlLogin.TabIndex = 11;
@@ -581,19 +594,6 @@
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Enabled = false;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1070, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "go to admin";
-            this.label3.Visible = false;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // login_signup
             // 
