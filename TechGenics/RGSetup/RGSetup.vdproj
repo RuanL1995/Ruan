@@ -267,7 +267,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\RGSetup.msi"
+        "OutputFilename" = "8:Debug\\TG.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -290,6 +290,11 @@
                     {
                     "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.Express.11.0"
+                    {
+                    "Name" = "8:SQL Server 2012 Express"
+                    "ProductCode" = "8:Microsoft.SqlServer.Express.11.0"
                     }
                 }
             }
@@ -762,7 +767,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RGSetup"
         "ProductCode" = "8:{E5819F04-FD30-4EFB-A025-C26A14D525E5}"
-        "PackageCode" = "8:{08A243A8-D472-4DEC-9453-B4014B7B8DD8}"
+        "PackageCode" = "8:{8F738E29-DEA7-4834-8B50-20D0C75BF6C9}"
         "UpgradeCode" = "8:{4CD2F56A-E459-4B63-87CA-0B90333737AE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
