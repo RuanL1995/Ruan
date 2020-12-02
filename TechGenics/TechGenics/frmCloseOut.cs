@@ -308,13 +308,13 @@ namespace TechGenics
 
         private void btnViewClosure_Click(object sender, EventArgs e)
         {
-            string filename = "Project_Closure_Report.pdf";
+            string filename = @"..\..\Info_Temps\Project_Closure_Report.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewCompletion_Click(object sender, EventArgs e)
         {
-            string filename = "Post_Implementation_Review.pdf";
+            string filename = @"..\..\Info_Temps\Post_Implementation_Review.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 

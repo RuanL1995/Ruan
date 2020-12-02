@@ -291,7 +291,7 @@
             this.cmbOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbOpen.FormattingEnabled = true;
             this.cmbOpen.Items.AddRange(new object[] {
-            "Initiation ",
+            "Initiation",
             "Planning",
             "Execution",
             "CloseOut"});
@@ -339,6 +339,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Docs";
             this.Text = "Docs";
+            this.Load += new System.EventHandler(this.Docs_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.pnlTemp.ResumeLayout(false);

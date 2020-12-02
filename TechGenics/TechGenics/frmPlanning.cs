@@ -1326,55 +1326,55 @@ namespace TechGenics
 
         private void btnViewProjectPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Project_Plan.pdf";
+            string filename = @"..\..\Info_Temps\Project_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewResPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Resource_Plan.pdf";
+            string filename = @"..\..\Info_Temps\Resource_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewFinPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Financial_Plan.pdf";
+            string filename = @"..\..\Info_Temps\Financial_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewQPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Quality_Plan.pdf";
+            string filename = @"..\..\Info_Temps\Quality_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewComPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Communications_Plan.pdf";
+            string filename = @"..\..\Info_Temps\Communications_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewAPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Acceptance_Plan.pdf";
+            string filename = @"..\..\Info_Temps\Acceptance_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewRiskPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Risk_Form.pdf";
+            string filename = @"..\..\Info_Temps\Risk_Form.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewPhaseRev_Click(object sender, EventArgs e)
         {
-            string filename = "Phase_Review_Form_Planning.pdf";
+            string filename = @"..\..\Info_Temps\Phase_Review_Form_Planning.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewProcPlan_Click(object sender, EventArgs e)
         {
-            string filename = "Procurement_Plan.pdf";
+            string filename = @"..\..\Info_Temps\Procurement_Plan.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 

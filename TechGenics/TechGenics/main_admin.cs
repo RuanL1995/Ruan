@@ -1648,7 +1648,7 @@ namespace TechGenics
 
         private void btnManualA_Click(object sender, EventArgs e)
         {
-            string filename = "User_Manual.pdf";
+            string filename = @"..\..\Info_Temps\User_Manual.pdf";
 
 
 

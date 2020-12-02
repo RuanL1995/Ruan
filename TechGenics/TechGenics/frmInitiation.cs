@@ -814,37 +814,37 @@ namespace TechGenics
 
         private void btnViewBusCase_Click(object sender, EventArgs e)
         {
-            string filename = "Business_Case.pdf";
+            string filename = @"..\..\Info_Temps\Business_Case.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewFeasStudy_Click(object sender, EventArgs e)
         {
-            string filename = "Feasibility_Study.pdf";
+            string filename = @"..\..\Info_Temps\Feasibility_Study.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewCharter_Click(object sender, EventArgs e)
         {
-            string filename = "Project_Charter.pdf";
+            string filename = @"..\..\Info_Temps\Project_Charter.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewTeam_Click(object sender, EventArgs e)
         {
-            string filename = "Job_Description.pdf";
+            string filename = @"..\..\Info_Temps\Job_Description.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewOffice_Click(object sender, EventArgs e)
         {
-            string filename = "Project_Office_Checklist.pdf";
+            string filename = @"..\..\Info_Temps\Project_Office_Checklist.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 
         private void btnViewPhase_Click(object sender, EventArgs e)
         {
-            string filename = "Phase_Review_Form_Initiation.pdf";
+            string filename = @"..\..\Info_Temps\Phase_Review_Form_Initiation.pdf";
             System.Diagnostics.Process.Start(filename);
         }
 

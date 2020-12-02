@@ -40,42 +40,42 @@ namespace TechGenics
         {
             if (rgbExcel.Checked && (cmbOpen.Text == "Planning"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Planning\_Create_New_File_.xlsx";
+                string filename = @"..\..\Templates\Planning\_Create_New_File_.xlsx";
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "Planning"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Planning\_Create_New_File_.docx";
+                string filename = @"..\..\Templates\Planning\_Create_New_File_.docx";
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbExcel.Checked && (cmbOpen.Text== "Initiation"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Initiation\_Create_New_File_.xlsx";
+                string filename = @"..\..\Templates\Initiation\_Create_New_File_.xlsx";
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "Initiation"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Initiation\_Create_New_File_.docx";
+                string filename = @"..\..\Templates\Initiation\_Create_New_File_.docx";
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbExcel.Checked && (cmbOpen.Text == "Execution"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Execution\_Create_New_File_.xlsx";
+                string filename = @"..\..\Templates\Execution\_Create_New_File_.xlsx";
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "Execution"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Execution\_Create_New_File_.docx";
+                string filename = @"..\..\Templates\Execution\_Create_New_File_.docx";
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbExcel.Checked && (cmbOpen.Text == "CloseOut"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Closure\_Create_New_File_.xlsx";
+                string filename = @"..\..\Templates\Closure\_Create_New_File_.xlsx";
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "CloseOut"))
             {
-                string filename = @"..\..\bin\Debug\Templates\Closure\_Create_New_File_.docx";
+                string filename = @"..\..\Templates\Closure\_Create_New_File_.docx";
                 System.Diagnostics.Process.Start(filename);
             }
         }
@@ -90,7 +90,7 @@ namespace TechGenics
 
         private void rgbInitiation_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\bin\Debug\Templates\Initiation";
+            string path = @"..\..\Templates\Initiation";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
@@ -110,7 +110,7 @@ namespace TechGenics
 
         private void rgbPlanning_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\bin\Debug\Templates\Planning";
+            string path = @"..\..\Templates\Planning";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
@@ -130,7 +130,7 @@ namespace TechGenics
 
         private void rgbExecution_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\bin\Debug\Templates\Execution";
+            string path = @"..\..\Templates\Execution";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
@@ -150,7 +150,7 @@ namespace TechGenics
 
         private void rgbCloseOut_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\bin\Debug\Templates\Closure";
+            string path = @"..\..\Templates\Closure";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
@@ -172,22 +172,22 @@ namespace TechGenics
         {
             if (rgbClose.Checked)
             {
-                string filename = @"..\..\bin\Debug\Templates\Closure\" + cmbTemplate.Text;
+                string filename = @"..\..\Templates\Closure\" + cmbTemplate.Text;
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbExecution.Checked)
             {
-                string filename = @"..\..\bin\Debug\Templates\Execution\" + cmbTemplate.Text;
+                string filename = @"..\..\Templates\Execution\" + cmbTemplate.Text;
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbInitiation.Checked)
             {
-                string filename = @"..\..\bin\Debug\Templates\Initiation\" + cmbTemplate.Text;
+                string filename = @"..\..\Templates\Initiation\" + cmbTemplate.Text;
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbPlanning.Checked)
             {
-                string filename = @"..\..\bin\Debug\Templates\Planning\" + cmbTemplate.Text;
+                string filename = @"..\..\Templates\Planning\" + cmbTemplate.Text;
                 System.Diagnostics.Process.Start(filename);
             }
         }
@@ -197,6 +197,11 @@ namespace TechGenics
             pnlNew.Visible = true;
             pnlTemp.Visible = false;
             pnlNew.BringToFront();
+        }
+
+        private void Docs_Load(object sender, EventArgs e)
+        {
+            cmbOpen.Text = "Initiation";
         }
     }
 }

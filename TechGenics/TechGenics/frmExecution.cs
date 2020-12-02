@@ -1577,9 +1577,9 @@ namespace TechGenics
 
         private void btnViewTimeMan_Click(object sender, EventArgs e)
         {
-            string filename = "Time_Management_Process.pdf";
-            string filename2 = "Timesheet_Form.pdf";
-            string filename3 = "Timesheet_Register.pdf";
+            string filename = @"..\..\Info_Temps\Time_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Timesheet_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Timesheet_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1588,9 +1588,9 @@ namespace TechGenics
 
         private void btnViewCostMan_Click(object sender, EventArgs e)
         {
-            string filename = "Cost_Management_Process.pdf";
-            string filename2 = "Expense_Form.pdf";
-            string filename3 = "Expense_Register.pdf";
+            string filename = @"..\..\Info_Temps\Cost_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Expense_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Expense_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1599,9 +1599,9 @@ namespace TechGenics
 
         private void btnViewQualityMan_Click(object sender, EventArgs e)
         {
-            string filename = "Quality_Management_Process.pdf";
-            string filename2 = "Quality_Review_Form.pdf";
-            string filename3 = "Quality_Register.pdf";
+            string filename = @"..\..\Info_Temps\Quality_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Quality_Review_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Quality_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1610,9 +1610,9 @@ namespace TechGenics
 
         private void btnViewChangeMan_Click(object sender, EventArgs e)
         {
-            string filename = "Change_Management_Process.pdf";
-            string filename2 = "Change_Request_Form.pdf";
-            string filename3 = "Change_Register.pdf";
+            string filename = @"..\..\Info_Temps\Change_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Change_Request_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Change_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1621,9 +1621,9 @@ namespace TechGenics
 
         private void btnViewRiskMan_Click(object sender, EventArgs e)
         {
-            string filename = "Risk_Management_Process.pdf";
-            string filename2 = "Risk_Form.pdf";
-            string filename3 = "Risk_Register.pdf";
+            string filename = @"..\..\Info_Temps\Risk_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Risk_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Risk_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1632,9 +1632,9 @@ namespace TechGenics
 
         private void btnViewIssueMan_Click(object sender, EventArgs e)
         {
-            string filename = "Issue_Management_Process.pdf";
-            string filename2 = "Issue_Form.pdf";
-            string filename3 = "Issue_Register.pdf";
+            string filename = @"..\..\Info_Temps\Issue_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Issue_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Issue_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1643,9 +1643,9 @@ namespace TechGenics
 
         private void btnViewProcMan_Click(object sender, EventArgs e)
         {
-            string filename = "Procurement_Management_Process.pdf";
-            string filename2 = "Purchase_Order_Form.pdf";
-            string filename3 = "Procurement_Register.pdf";
+            string filename = @"..\..\Info_Temps\Procurement_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Purchase_Order_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Procurement_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1654,9 +1654,9 @@ namespace TechGenics
 
         private void btnViewAccMan_Click(object sender, EventArgs e)
         {
-            string filename = "Acceptance_Management_Process.pdf";
-            string filename2 = "Acceptance_Form.pdf";
-            string filename3 = "Acceptance_Register.pdf";
+            string filename = @"..\..\Info_Temps\Acceptance_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Acceptance_Form.pdf";
+            string filename3 = @"..\..\Info_Temps\Acceptance_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1665,9 +1665,9 @@ namespace TechGenics
 
         private void btnViewComMan_Click(object sender, EventArgs e)
         {
-            string filename = "Communication_Management_Process.pdf";
-            string filename2 = "Project_Status_Report.pdf";
-            string filename3 = "Communications_Register.pdf";
+            string filename = @"..\..\Info_Temps\Communication_Management_Process.pdf";
+            string filename2 = @"..\..\Info_Temps\Project_Status_Report.pdf";
+            string filename3 = @"..\..\Info_Temps\Communications_Register.pdf";
 
             System.Diagnostics.Process.Start(filename);
             System.Diagnostics.Process.Start(filename2);
@@ -1678,7 +1678,7 @@ namespace TechGenics
 
         private void btnViewPRev_Click(object sender, EventArgs e)
         {
-            string filename = "Phase_Review_Form_Execution.pdf";
+            string filename = @"..\..\Info_Temps\Phase_Review_Form_Execution.pdf";
             
             
 
