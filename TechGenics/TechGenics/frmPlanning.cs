@@ -1326,56 +1326,93 @@ namespace TechGenics
 
         private void btnViewProjectPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Project_Plan.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Project_Plan.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
+            
         }
 
         private void btnViewResPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Resource_Plan.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Resource_Plan.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewFinPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Financial_Plan.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Financial_Plan.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewQPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Quality_Plan.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Quality_Plan.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewComPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Communications_Plan.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Communications_Plan.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewAPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Acceptance_Plan.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Acceptance_Plan.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewRiskPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Risk_Form.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Risk_Form.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewPhaseRev_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Phase_Review_Form_Planning.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Phase_Review_Form_Planning.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewProcPlan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Procurement_Plan.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Procurement_Plan.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

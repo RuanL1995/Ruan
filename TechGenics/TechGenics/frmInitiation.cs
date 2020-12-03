@@ -814,38 +814,63 @@ namespace TechGenics
 
         private void btnViewBusCase_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Business_Case.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Business_Case.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewFeasStudy_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Feasibility_Study.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Feasibility_Study.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewCharter_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Project_Charter.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Project_Charter.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
+            
         }
 
         private void btnViewTeam_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Job_Description.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Job_Description.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewOffice_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Project_Office_Checklist.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Project_Office_Checklist.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void btnViewPhase_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Phase_Review_Form_Initiation.pdf";
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Project_Office_Checklist.pdf";
+
             System.Diagnostics.Process.Start(filename);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -246,7 +246,7 @@
             this.pnlNew.Controls.Add(this.cmbOpen);
             this.pnlNew.Controls.Add(this.rgbExcel);
             this.pnlNew.Controls.Add(this.rgbWord);
-            this.pnlNew.Location = new System.Drawing.Point(208, 231);
+            this.pnlNew.Location = new System.Drawing.Point(211, 228);
             this.pnlNew.Name = "pnlNew";
             this.pnlNew.Size = new System.Drawing.Size(476, 255);
             this.pnlNew.TabIndex = 13;

@@ -1577,113 +1577,238 @@ namespace TechGenics
 
         private void btnViewTimeMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Time_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Timesheet_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Timesheet_Register.pdf";
+
+            //Time management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Time_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Timesheet form
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Timesheet_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Timesheet register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Timesheet_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+
         }
 
         private void btnViewCostMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Cost_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Expense_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Expense_Register.pdf";
+            //Cost management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Cost_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Expense form
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Expense_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Expense register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Expense_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+                        
         }
 
         private void btnViewQualityMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Quality_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Quality_Review_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Quality_Register.pdf";
+            //Quality management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Quality_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Quality review
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Quality_Review_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Quality register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Quality_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+
         }
 
         private void btnViewChangeMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Change_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Change_Request_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Change_Register.pdf";
+            //Change management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Change_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Change request
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Change_Request_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Change register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Change_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+
         }
 
         private void btnViewRiskMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Risk_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Risk_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Risk_Register.pdf";
+            //Risk management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Risk_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Risk form
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Risk_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Risk register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Risk_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+                        
         }
 
         private void btnViewIssueMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Issue_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Issue_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Issue_Register.pdf";
+            //Issue management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Issue_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //issue form
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Issue_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Issue register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Issue_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+
         }
 
         private void btnViewProcMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Procurement_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Purchase_Order_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Procurement_Register.pdf";
+            //Procurement management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Procurement_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Purchase order
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Purchase_Order_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Procurement register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Procurement_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+            
         }
 
         private void btnViewAccMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Acceptance_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Acceptance_Form.pdf";
-            string filename3 = @"..\..\Info_Temps\Acceptance_Register.pdf";
+            //Acceptance management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Acceptance_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Acceptance form
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Acceptance_Form.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Acceptance register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Acceptance_Register.pdf";
             System.Diagnostics.Process.Start(filename3);
         }
 
         private void btnViewComMan_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Communication_Management_Process.pdf";
-            string filename2 = @"..\..\Info_Temps\Project_Status_Report.pdf";
-            string filename3 = @"..\..\Info_Temps\Communications_Register.pdf";
+            //Communication management
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Communication_Management_Process.pdf";
 
             System.Diagnostics.Process.Start(filename);
+
+            //Project status
+            string assemblyPath2 = Application.StartupPath;
+
+            string filename2 = Application.StartupPath + "\\Info_Temps\\Project_Status_Report.pdf";
+
             System.Diagnostics.Process.Start(filename2);
+
+            //Communications register
+            string assemblyPath3 = Application.StartupPath;
+
+            string filename3 = Application.StartupPath + "\\Info_Temps\\Communications_Register.pdf";
+
             System.Diagnostics.Process.Start(filename3);
+
         }
 
         
 
         private void btnViewPRev_Click(object sender, EventArgs e)
         {
-            string filename = @"..\..\Info_Temps\Phase_Review_Form_Execution.pdf";
-            
-            
+            string assemblyPath = Application.StartupPath;
+
+            string filename = Application.StartupPath + "\\Info_Temps\\Phase_Review_Form_Execution.pdf";
 
             System.Diagnostics.Process.Start(filename);
-            
+                        
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Office.Interop.Word;
-using Application = Microsoft.Office.Interop.Word.Application;
+//using Microsoft.Office.Interop.Word;
+//using Application = Microsoft.Office.Interop.Word.Application;
 using Word = Microsoft.Office.Interop.Word;
 using System.IO;
 using DataTable = System.Data.DataTable;
+using TechGenics.Models;
+using System.Runtime.Remoting.Contexts;
+using Microsoft.VisualBasic;
 
 namespace TechGenics
 {
@@ -20,6 +23,7 @@ namespace TechGenics
         public Docs()
         {
             InitializeComponent();
+            controls.SetInitial(this);
         }
 
         private void btnSaveDocToDB_Click(object sender, EventArgs e)
@@ -40,42 +44,67 @@ namespace TechGenics
         {
             if (rgbExcel.Checked && (cmbOpen.Text == "Planning"))
             {
-                string filename = @"..\..\Templates\Planning\_Create_New_File_.xlsx";
+                string assemblyPath = Application.StartupPath;
+                
+                string filename = Application.StartupPath + "\\Templates\\Planning\\_Create_New_File_.xlsx";
+
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "Planning"))
             {
-                string filename = @"..\..\Templates\Planning\_Create_New_File_.docx";
+                
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Planning\\_Create_New_File_.docx";
+
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbExcel.Checked && (cmbOpen.Text== "Initiation"))
             {
-                string filename = @"..\..\Templates\Initiation\_Create_New_File_.xlsx";
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Initiation\\_Create_New_File_.xlsx";
+
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "Initiation"))
             {
-                string filename = @"..\..\Templates\Initiation\_Create_New_File_.docx";
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Initiation\\_Create_New_File_.docx";
+
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbExcel.Checked && (cmbOpen.Text == "Execution"))
             {
-                string filename = @"..\..\Templates\Execution\_Create_New_File_.xlsx";
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Execution\\_Create_New_File_.xlsx";
+
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "Execution"))
             {
-                string filename = @"..\..\Templates\Execution\_Create_New_File_.docx";
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Execution\\_Create_New_File_.docx";
+
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbExcel.Checked && (cmbOpen.Text == "CloseOut"))
             {
-                string filename = @"..\..\Templates\Closure\_Create_New_File_.xlsx";
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Closure\\_Create_New_File_.xlsx";
+
                 System.Diagnostics.Process.Start(filename);
             }
             else if (rgbWord.Checked && (cmbOpen.Text == "CloseOut"))
             {
-                string filename = @"..\..\Templates\Closure\_Create_New_File_.docx";
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Closure\\_Create_New_File_.docx";
+
                 System.Diagnostics.Process.Start(filename);
             }
         }
@@ -172,23 +201,39 @@ namespace TechGenics
         {
             if (rgbClose.Checked)
             {
-                string filename = @"..\..\Templates\Closure\" + cmbTemplate.Text;
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Closure\\" + cmbTemplate.Text;
+
                 System.Diagnostics.Process.Start(filename);
+
             }
             else if (rgbExecution.Checked)
             {
-                string filename = @"..\..\Templates\Execution\" + cmbTemplate.Text;
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Execution\\" + cmbTemplate.Text;
+
                 System.Diagnostics.Process.Start(filename);
+
             }
             else if (rgbInitiation.Checked)
             {
-                string filename = @"..\..\Templates\Initiation\" + cmbTemplate.Text;
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Initiation\\" + cmbTemplate.Text;
+
                 System.Diagnostics.Process.Start(filename);
+
             }
             else if (rgbPlanning.Checked)
             {
-                string filename = @"..\..\Templates\Planning\" + cmbTemplate.Text;
+                string assemblyPath = Application.StartupPath;
+
+                string filename = Application.StartupPath + "\\Templates\\Planning\\" + cmbTemplate.Text;
+
                 System.Diagnostics.Process.Start(filename);
+
             }
         }
 
