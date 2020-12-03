@@ -1673,11 +1673,16 @@ namespace TechGenics
         {
             //getting the full path including the filename
             string assemblyPath = Application.StartupPath;
-            MessageBox.Show(assemblyPath);
+            //MessageBox.Show(assemblyPath);
             //removing the filename from the path
             //int i = assemblyPath.Length - 1;
             //while (assemblyPath[i] != '\\') --i;
             //string path = assemblyPath.Substring(0, i);
+
+            string filename = Application.StartupPath + "Info_Temps\\User_Manual.pdf";
+
+
+            System.Diagnostics.Process.Start(filename);
 
 
             openChildForm(new Docs());
