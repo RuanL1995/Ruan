@@ -1,0 +1,3900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.4" DspName="Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="110" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="TGDBProj.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\NESS\DESKTOP\REPO\RUAN\TECHGENICS\TGDBPROJ\OBJ\DEBUG\TGDBPROJ.DLL" />
+			<Metadata Name="AssemblyName" Value="TGDBProj" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[0]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[tblUser].[Initiation]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[0]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[tblUser].[Planning]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[0]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[tblUser].[Execution]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[0]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[tblUser].[CloseOut]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[tblProject].[ProjectId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblProject]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[tblAdmin].[AdminId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblAdmin]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[tblTask].[TaskId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[tblUser].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_tblTask_tblProject]">
+			<Property Name="OnUpdateAction" Value="1" />
+			<Property Name="OnDeleteAction" Value="1" />
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[tblProject]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_tblTask_tblUser]">
+			<Property Name="OnUpdateAction" Value="1" />
+			<Property Name="OnDeleteAction" Value="1" />
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[tblTask].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spAdminC1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	INSERT INTO dbo.tblAdmin
+	(
+	    AdminName,
+	    AdminPassword,
+	    AdminFirstName,
+	    AdminSurName,
+	    AdminEmail
+	)
+	VALUES
+	(   
+		@AdminName,
+	    @AdminPassword, 
+	    @AdminFirstName, 
+	    @AdminSurName, 
+	    @AdminEmail   
+	)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblAdmin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminFirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminSurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminEmail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAdminC1].[@AdminName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAdminC1].[@AdminPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAdminC1].[@AdminFirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAdminC1].[@AdminSurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAdminC1].[@AdminEmail]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAdminC1].[@AdminName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAdminC1].[@AdminPassword]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAdminC1].[@AdminFirstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAdminC1].[@AdminSurName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAdminC1].[@AdminEmail]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="554" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spAdminC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new admin to the admin table&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;7 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@AdminName VARCHAR(50),&#xD;&#xA;@AdminPassword VARCHAR(50),&#xD;&#xA;@AdminFirstName VARCHAR(50),&#xD;&#xA;@AdminSurName VARCHAR(50),&#xD;&#xA;@AdminEmail VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spAdminR1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT 
+		A.AdminId,
+		A.AdminName,
+		A.AdminPassword,	
+		A.AdminFirstName,
+		A.AdminSurName,
+		A.AdminEmail
+	FROM 
+		tblAdmin A  
+	WHERE A.AdminName = @AdminName			
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblAdmin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminFirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminSurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblAdmin].[AdminEmail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAdminR1].[@AdminName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAdminR1].[@AdminName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="412" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spAdminR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all Admins and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;10 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@AdminName VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spDeletePhaseRecord]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+DELETE 
+	FROM
+		tblPhase		
+	WHERE 
+		PhaseId = @PhaseId 
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[spDeletePhaseRecord].[@PhaseId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spDeletePhaseRecord].[@PhaseId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="262" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeletePhaseRecord]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Delete an existing record in the phase table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@PhaseId int&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spDeleteProjectRecord]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+DELETE 
+	FROM
+		tblProject		
+	WHERE 
+		ProjectId = @ProjectId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblProject]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spDeleteProjectRecord].[@ProjectId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spDeleteProjectRecord].[@ProjectId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="271" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeleteProjectRecord]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Delete an existing record in the project table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@ProjectId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spDeleteTaskRecord]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+DELETE 
+	FROM
+		tblTask		
+	WHERE 
+		TaskId = @TaskId 
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spDeleteTaskRecord].[@TaskId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spDeleteTaskRecord].[@TaskId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="257" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeleteTaskRecord]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Delete an existing record in the phase table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@TaskId int&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spDeleteUserRecord]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+DELETE 
+	FROM
+		tblUser		
+	WHERE 
+		UserId = @UserId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spDeleteUserRecord].[@UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spDeleteUserRecord].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="255" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeleteUserRecord]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Delete an existing record in the user table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@UserId int&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spPhaseC1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	INSERT INTO dbo.tblPhase
+	(
+	    PhaseName
+	)
+	VALUES
+	(   
+		@PhaseName
+	)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[spPhaseC1].[@PhaseName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spPhaseC1].[@PhaseName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="271" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spPhaseC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new phase to the phase table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;@PhaseName VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spPhaseR1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT 
+		PH.PhaseId,
+		PH.PhaseName
+	FROM 
+		tblPhase PH	
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="276" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spPhaseR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all Phases and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;17 Oct 2020&#xD;&#xA;*/&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spProjectC1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	INSERT INTO dbo.tblProject
+	(
+	    ProjectName,
+	    ProjectPhase,
+	    ProjectStatus
+	)
+	VALUES
+	(   
+		@ProjectName,
+	    @ProjectPhase, 
+	    @ProjectStatus
+	)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblProject]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectPhase]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectC1].[@ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectC1].[@ProjectPhase]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectC1].[@ProjectStatus]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectC1].[@ProjectName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectC1].[@ProjectPhase]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectC1].[@ProjectStatus]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="426" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spProjectC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new project to the project table&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;15 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@ProjectName VARCHAR(50),&#xD;&#xA;@ProjectPhase VARCHAR(50),&#xD;&#xA;@ProjectStatus VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spProjectPhaseR1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT 
+		PPH.ProjectId,
+		PPH.PhaseId
+	FROM 
+		tblProjectPhase PPH		
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="301" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spProjectPhaseR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all ProjectPhases and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;10 Oct 2020&#xD;&#xA;*/&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spProjectR1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT 
+		P.ProjectId,
+		P.ProjectName,
+		P.ProjectPhase,
+		P.ProjectStatus
+	FROM 
+		tblProject P 		
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblProject]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectPhase]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectStatus]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="324" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spProjectR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all Projects and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;18 Oct 2020&#xD;&#xA;*/&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spProjectR2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+	SELECT 
+		P.ProjectId,
+		P.ProjectName,
+		P.ProjectPhase,
+		P.ProjectStatus,
+		P.DocumentLocation,
+		T.TaskId,
+		T.TaskName,
+		T.TaskDescription,
+		T.TaskProgress,
+		T.TaskAssignedTo,  
+		T.TaskStatus,
+		U.UserId,
+		U.UserName
+	INTO #FilterByUser
+	FROM 
+		tblProject P
+		LEFT JOIN tblTask T ON T.ProjectId = P.ProjectId
+		LEFT JOIN tblUser U ON T.UserId = U.UserId
+		
+	WHERE 
+			(@CurrentUser IS NULL OR T.TaskAssignedTo  = @CurrentUser)
+
+		
+	SELECT * FROM #FilterByUser
+	WHERE 
+		ProjectPhase LIKE 
+		 CASE 
+			WHEN @Initiation = 1 THEN 
+			'Initiation'			
+			END
+		OR ProjectPhase LIKE 
+		 CASE 			
+			WHEN @Planning = 1 THEN 
+			'Planning'			
+			END
+		OR ProjectPhase LIKE 
+		 CASE 
+			WHEN @Execution = 1 THEN 
+			'Execution'
+			END
+		OR ProjectPhase LIKE 
+		 CASE 
+			WHEN @CloseOut = 1 THEN 
+			'CloseOUt'
+			END			
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblProject]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectPhase]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[DocumentLocation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectR2].[@CurrentUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectR2].[#FilterByUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectR2].[#FilterByUser].[ProjectPhase]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectR2].[@Initiation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectR2].[@Planning]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectR2].[@Execution]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spProjectR2].[@CloseOut]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[spProjectR2].[#FilterByUser]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[ProjectId]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblProject].[ProjectId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[ProjectName]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblProject].[ProjectName]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[ProjectPhase]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblProject].[ProjectPhase]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[ProjectStatus]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblProject].[ProjectStatus]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[DocumentLocation]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblProject].[DocumentLocation]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[TaskId]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblTask].[TaskId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[TaskName]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblTask].[TaskName]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[TaskDescription]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblTask].[TaskDescription]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[TaskProgress]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblTask].[TaskProgress]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[TaskAssignedTo]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblTask].[TaskAssignedTo]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[TaskStatus]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblTask].[TaskStatus]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[UserId]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblUser].[UserId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[spProjectR2].[#FilterByUser].[UserName]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[tblUser].[UserName]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectR2].[@CurrentUser]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectR2].[@Initiation]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectR2].[@Planning]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectR2].[@Execution]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spProjectR2].[@CloseOut]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1241" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spProjectR2]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets list of all logged in users projects and tasks based on phase user belongs to&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;18 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@CurrentUser VARCHAR(50),&#xD;&#xA;@Initiation Bit = 0,&#xD;&#xA;@Planning Bit = 0,&#xD;&#xA;@Execution Bit = 0,&#xD;&#xA;@CloseOut Bit = 0&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spTaskC1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	INSERT INTO dbo.tblTask
+	(
+	    TaskName,
+		TaskDescription,
+		TaskProgress,
+		TaskAssignedTo,
+		ProjectName,
+		UserId,
+		ProjectId,
+		TaskStatus
+	)
+	VALUES
+	(   
+		@TaskName,
+		@TaskDescription,
+		@TaskProgress,
+		@TaskAssignedTo,
+		@ProjectName,
+		@UserId,
+		@ProjectId,
+		@TaskStatus
+	)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@TaskDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskC1].[@TaskStatus]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@TaskName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@TaskDescription]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@TaskProgress]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@TaskAssignedTo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@ProjectName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@ProjectId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskC1].[@TaskStatus]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="673" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spTaskC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new task to the task table&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;@TaskName VARCHAR(50),&#xD;&#xA;@TaskDescription VARCHAR(50), &#xD;&#xA;@TaskProgress VARCHAR(50), &#xD;&#xA;@TaskAssignedTo VARCHAR(50), &#xD;&#xA;@ProjectName VARCHAR(50), &#xD;&#xA;@UserId INT, &#xD;&#xA;@ProjectId INT, &#xD;&#xA;@TaskStatus VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spTaskR1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT
+		T.TaskId,
+		T.TaskName,
+		T.TaskDescription,
+		T.TaskProgress,
+		T.TaskAssignedTo,
+		T.ProjectName,
+		T.UserId,
+		T.ProjectId,
+		T.TaskStatus
+	FROM 
+		tblTask T
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskStatus]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="393" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spTaskR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all tasks and info&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spTaskR2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT
+		T.TaskId,
+		T.TaskName,
+		T.TaskDescription,
+		T.TaskProgress,
+		T.TaskAssignedTo,
+		T.ProjectName,
+		T.UserId,
+		T.ProjectId,
+		T.TaskStatus
+	FROM 
+		tblTask T
+	WHERE 
+		T.TaskId = @TaskId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskR2].[@TaskId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskR2].[@TaskId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="425" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spTaskR2]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a task by task id&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;@TaskId INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spTaskU1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+UPDATE tblTask
+	SET
+		TaskStatus = @TaskStatus
+	WHERE 
+		TaskId = @TaskId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU1].[@TaskStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU1].[@TaskId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU1].[@TaskId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU1].[@TaskStatus]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="279" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spTaskU1]&#xD;&#xA;&#x9;/*&#xD;&#xA;** Purpose :&#x9;Updates a tasks status when moved&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;&#x9;@TaskId INT,&#xD;&#xA;&#x9;@TaskStatus VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spTaskU2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+UPDATE tblTask
+	SET
+		TaskName = @TaskName,
+		TaskDescription = @TaskDescription,
+		TaskProgress = @TaskProgress,
+		TaskAssignedTo = @TaskAssignedTo, 
+		ProjectName = @ProjectName,
+		UserId = @UserId,
+		ProjectId  = @ProjectId, 
+		TaskStatus = @TaskStatus
+	WHERE 
+		TaskId = @TaskId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@TaskDescription]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@TaskStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spTaskU2].[@TaskId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@TaskId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@TaskName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@TaskDescription]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@TaskProgress]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@TaskAssignedTo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@ProjectName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@ProjectId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spTaskU2].[@TaskStatus]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="660" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spTaskU2]&#xD;&#xA;&#x9;/*&#xD;&#xA;** Purpose :&#x9;Updates a task&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;&#x9;@TaskId INT,&#xD;&#xA;&#x9;@TaskName VARCHAR(50),&#xD;&#xA;&#x9;@TaskDescription VARCHAR(50), &#xD;&#xA;&#x9;@TaskProgress VARCHAR(50), &#xD;&#xA;&#x9;@TaskAssignedTo VARCHAR(50), &#xD;&#xA;&#x9;@ProjectName VARCHAR(50), &#xD;&#xA;&#x9;@UserId INT, &#xD;&#xA;&#x9;@ProjectId INT, &#xD;&#xA;&#x9;@TaskStatus VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdate]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+UPDATE tblUser
+	SET
+		UserName = @UserName,
+		UserPassword = @UserPassword,
+		FirstName = @FirstName,
+		SurName = @SurName,
+		Email = @Email
+	WHERE 
+		UserId = @UserId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdate].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdate].[@UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdate].[@FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdate].[@SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdate].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdate].[@UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdate].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdate].[@UserName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdate].[@UserPassword]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdate].[@FirstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdate].[@SurName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdate].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="491" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdate]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Updates an existing record in the user table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@UserId int,&#xD;&#xA;&#x9;@UserName VARCHAR(50),&#xD;&#xA;&#x9;@UserPassword VARCHAR(50),&#xD;&#xA;&#x9;@FirstName VARCHAR(50),&#xD;&#xA;&#x9;@SurName VARCHAR(50),&#xD;&#xA;&#x9;@Email VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdatePhaseRecord]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+UPDATE tblPhase
+	SET
+		PhaseName = @PhaseName
+	WHERE 
+		PhaseId = @PhaseId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[spUpdatePhaseRecord].[@PhaseName]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[spUpdatePhaseRecord].[@PhaseId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePhaseRecord].[@PhaseId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePhaseRecord].[@PhaseName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="307" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdatePhaseRecord]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Updates an existing record in the phase table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@PhaseId int,&#xD;&#xA;&#x9;@PhaseName VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdateProjectRecord]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+UPDATE tblProject
+	SET
+		ProjectName = @ProjectName,
+		ProjectPhase = @ProjectPhase,
+		ProjectStatus = @ProjectStatus
+	WHERE 
+		ProjectId = @ProjectId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblProject]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateProjectRecord].[@ProjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectPhase]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateProjectRecord].[@ProjectPhase]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateProjectRecord].[@ProjectStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblProject].[ProjectId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateProjectRecord].[@ProjectId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateProjectRecord].[@ProjectId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateProjectRecord].[@ProjectName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateProjectRecord].[@ProjectPhase]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateProjectRecord].[@ProjectStatus]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="452" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdateProjectRecord]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Updates an existing record in the project table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@ProjectId int,&#xD;&#xA;&#x9;@ProjectName VARCHAR(50),&#xD;&#xA;&#x9;@ProjectPhase VARCHAR(50),&#xD;&#xA;&#x9;@ProjectStatus VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdateTaskRecord]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+UPDATE tblTask
+	SET
+		TaskName = @TaskName,
+		TaskProgress = @TaskProgress,
+		TaskAssignedTo = @TaskAssignedTo
+	WHERE 
+		TaskId = @TaskId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblTask]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateTaskRecord].[@TaskName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateTaskRecord].[@TaskProgress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateTaskRecord].[@TaskAssignedTo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblTask].[TaskId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateTaskRecord].[@TaskId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTaskRecord].[@TaskId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTaskRecord].[@TaskName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTaskRecord].[@TaskProgress]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTaskRecord].[@TaskAssignedTo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="427" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdateTaskRecord]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Updates an existing record in the phase table&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@TaskId int,&#xD;&#xA;&#x9;@TaskName VARCHAR(50),&#xD;&#xA;&#x9;@TaskProgress VARCHAR(50),&#xD;&#xA;&#x9;@TaskAssignedTo VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUserC1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	INSERT INTO dbo.tblUser
+	(
+	    UserName,
+	    UserPassword,
+	    FirstName,
+	    SurName,
+	    Email
+	)
+	VALUES
+	(   
+		@UserName,
+	    @UserPassword, 
+	    @FirstName, 
+	    @SurName, 
+	    @Email   
+	)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC1].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC1].[@UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC1].[@FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC1].[@SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC1].[@Email]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC1].[@UserName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC1].[@UserPassword]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC1].[@FirstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC1].[@SurName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC1].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="499" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserC1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new user to the user table&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;7 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@UserName VARCHAR(50),&#xD;&#xA;@UserPassword VARCHAR(50),&#xD;&#xA;@FirstName VARCHAR(50),&#xD;&#xA;@SurName VARCHAR(50),&#xD;&#xA;@Email VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUserC2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	INSERT INTO dbo.tblUser
+	(
+	    UserName,
+		UserPassword, 
+		FirstName, 
+		SurName, 
+		Email, 
+		Initiation, 
+		Planning,
+		Execution,
+		CloseOut
+	)
+	VALUES
+	(   
+		@UserName,
+		@UserPassword, 
+		@FirstName, 
+		@SurName, 
+		@Email, 
+		@Initiation, 
+		@Planning,
+		@Execution,
+		@CloseOut
+	)
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Initiation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Planning]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Execution]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[CloseOut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@Initiation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@Planning]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@Execution]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserC2].[@CloseOut]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@UserName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@UserPassword]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@FirstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@SurName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@Initiation]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@Planning]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@Execution]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserC2].[@CloseOut]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="648" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserC2]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Adds a new user&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;@UserName VARCHAR(50),&#xD;&#xA;@UserPassword VARCHAR(50), &#xD;&#xA;@FirstName VARCHAR(50), &#xD;&#xA;@SurName VARCHAR(50), &#xD;&#xA;@Email VARCHAR(50), &#xD;&#xA;@Initiation BIT, &#xD;&#xA;@Planning BIT,&#xD;&#xA;@Execution BIT,&#xD;&#xA;@CloseOut BIT&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUserD2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+DELETE 
+	FROM
+		tblUser	
+	WHERE 
+		UserId = @UserId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserD2].[@UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserD2].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="222" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserD2]&#xD;&#xA;/*&#xD;&#xA;** Purpose :&#x9;Delete an existing user&#xD;&#xA;** Created By :&#x9;Rockz&#xD;&#xA;** Created On :&#x9;28 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;&#x9;@UserId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUserProjectR1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT 
+		UP.UserId,
+		UP.ProjectId
+	FROM 
+		tblUserProject UP  		
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="296" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserProjectR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all UserProjects and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;15 Oct 2020&#xD;&#xA;*/&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUserR1]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT 
+		U.UserId,
+		U.UserName,
+		U.UserPassword,	
+		U.FirstName,
+		U.SurName,
+		U.Email,
+		U.Initiation,
+		U.Planning,
+		U.Execution,
+		U.CloseOut
+	FROM 
+		tblUser U  
+	WHERE U.UserName = @UserName			
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Initiation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Planning]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Execution]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[CloseOut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserR1].[@UserName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserR1].[@UserName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="451" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserR1]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all Users and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;10 Oct 2020&#xD;&#xA;*/&#xD;&#xA;@UserName VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUserR2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+
+	SELECT 
+		U.UserId,
+		U.UserName,
+		U.UserPassword,	
+		U.FirstName,
+		U.SurName,
+		U.Email,
+		U.Initiation,
+		U.Planning,
+		U.Execution,
+		U.CloseOut
+	FROM 
+		tblUser U  			
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Initiation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Planning]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Execution]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[CloseOut]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="399" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserR2]&#xD;&#xA;/*&#xD;&#xA;** Purpose : Gets a list of all Users and info&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;10 Oct 2020&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUserU2]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+UPDATE tblUser
+	SET
+		UserName = @UserName,
+		UserPassword = @UserPassword,
+		FirstName = @FirstName,
+		SurName = @SurName, 
+		Email = @Email,
+		Initiation = @Initiation,
+		Planning  = @Planning, 
+		Execution = @Execution,
+		CloseOut = @CloseOut
+	WHERE 
+		UserId = @UserId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblUser]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@UserName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@UserPassword]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@SurName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Initiation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@Initiation]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Planning]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@Planning]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[Execution]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@Execution]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[CloseOut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@CloseOut]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblUser].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUserU2].[@UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@UserName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@UserPassword]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@FirstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@SurName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@Initiation]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@Planning]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@Execution]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUserU2].[@CloseOut]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="642" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUserU2]&#xD;&#xA;&#x9;/*&#xD;&#xA;** Purpose :&#x9;Updates a user&#xD;&#xA;** Created By :&#x9;Ruan&#xD;&#xA;** Created On :&#x9;22 Nov 2020&#xD;&#xA;*/&#xD;&#xA;&#x9;@UserId INT,&#xD;&#xA;&#x9;@UserName VARCHAR(50),&#xD;&#xA;&#x9;@UserPassword VARCHAR(50), &#xD;&#xA;&#x9;@FirstName VARCHAR(50), &#xD;&#xA;&#x9;@SurName VARCHAR(50), &#xD;&#xA;&#x9;@Email VARCHAR(50), &#xD;&#xA;&#x9;@Initiation BIT, &#xD;&#xA;&#x9;@Planning BIT,&#xD;&#xA;&#x9;@Execution BIT,&#xD;&#xA;&#x9;@CloseOut BIT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[tblAdmin]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblAdmin].[AdminId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="8" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblAdmin].[AdminName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblAdmin].[AdminPassword]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblAdmin].[AdminFirstName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblAdmin].[AdminSurName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblAdmin].[AdminEmail]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[tblProject]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblProject].[ProjectId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="7" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblProject].[ProjectName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblProject].[ProjectPhase]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblProject].[ProjectStatus]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblProject].[DocumentLocation]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[tblTask]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="9" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskDescription]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskProgress]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskAssignedTo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[ProjectName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[ProjectId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblTask].[TaskStatus]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="11" />
+			<AttachedAnnotation Disambiguator="12" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[tblUser]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="10" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[UserName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[UserPassword]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[FirstName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[SurName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[Email]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[Initiation]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[Planning]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[Execution]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[tblUser].[CloseOut]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+	</Model>
+</DataSchemaModel>

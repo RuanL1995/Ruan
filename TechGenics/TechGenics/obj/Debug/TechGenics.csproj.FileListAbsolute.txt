@@ -41,7 +41,6 @@ C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.exe
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\TechGenics.pdb
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\Dapper.dll
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\bin\Debug\Dapper.xml
-C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.csprojAssemblyReference.cache
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.login_signup.resources
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.frmMainAdmin.resources
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TechGenics\obj\Debug\TechGenics.Properties.Resources.resources

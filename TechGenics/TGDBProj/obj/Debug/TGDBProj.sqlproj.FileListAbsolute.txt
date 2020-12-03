@@ -18,7 +18,6 @@ C:\Users\Rockz\Documents\GitHub\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj.dacpac
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj.dll
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj.pdb
-C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
 C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb
 C:\Users\Rockz\Documents\GitHub\Ruan\TechGenics\TGDBProj\bin\Debug\TGDBProj.dacpac
@@ -42,3 +41,7 @@ C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TGDBProj\obj\Debug\predeplo
 C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TGDBProj\obj\Debug\TGDBProj.dll
 C:\Users\Administrator\Source\Repos\Ruan3\TechGenics\TGDBProj\obj\Debug\TGDBProj.pdb
 C:\Users\Ruan\Desktop\Work\2020\2nd Sem\ITRI 624 - ISE\Ruan\TechGenics\TGDBProj\obj\Debug\TGDBProj.sqlprojAssemblyReference.cache
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\Model.xml
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\refactor.xml
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\postdeploy.sql
+C:\Users\Ness\Desktop\Repo\Ruan\TechGenics\TGDBProj\obj\Debug\predeploy.sql
