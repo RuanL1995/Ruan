@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic;
 using TechGenics.Models;
-
+using System.Runtime.Remoting.Contexts;
 
 namespace TechGenics
 {
@@ -1671,6 +1671,15 @@ namespace TechGenics
 
         private void btnViewTemplateDocs_Click(object sender, EventArgs e)
         {
+            //getting the full path including the filename
+            string assemblyPath = Application.StartupPath;
+            MessageBox.Show(assemblyPath);
+            //removing the filename from the path
+            //int i = assemblyPath.Length - 1;
+            //while (assemblyPath[i] != '\\') --i;
+            //string path = assemblyPath.Substring(0, i);
+
+
             openChildForm(new Docs());
         }
     }
