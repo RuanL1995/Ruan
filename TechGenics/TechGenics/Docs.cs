@@ -119,7 +119,7 @@ namespace TechGenics
 
         private void rgbInitiation_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\Templates\Initiation";
+            string path = Application.StartupPath + "\\Templates\\Initiation";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
@@ -139,7 +139,7 @@ namespace TechGenics
 
         private void rgbPlanning_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\Templates\Planning";
+            string path = Application.StartupPath + "\\Templates\\Planning";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
@@ -159,7 +159,7 @@ namespace TechGenics
 
         private void rgbExecution_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\Templates\Execution";
+            string path = Application.StartupPath + "\\Templates\\Execution";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
@@ -179,7 +179,7 @@ namespace TechGenics
 
         private void rgbCloseOut_CheckedChanged(object sender, EventArgs e)
         {
-            string path = @"..\..\Templates\Closure";
+            string path = Application.StartupPath + "\\Templates\\Closure";
             DataTable table = new DataTable();
             table.Columns.Add("File Name");
             table.Columns.Add("File Path");
