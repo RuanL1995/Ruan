@@ -34,7 +34,6 @@
             this.radBtnManualConString = new System.Windows.Forms.RadioButton();
             this.pnlDiagramsSub = new System.Windows.Forms.Panel();
             this.btnSaveSettings = new System.Windows.Forms.Button();
-            this.btnMain = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -42,13 +41,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlCustom = new System.Windows.Forms.Panel();
             this.btnCustom = new System.Windows.Forms.Button();
+            this.rgbCustom = new System.Windows.Forms.RadioButton();
             this.cmboFore = new System.Windows.Forms.ComboBox();
             this.cmboBack = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblFore = new System.Windows.Forms.Label();
             this.lblBack = new System.Windows.Forms.Label();
-            this.rgbCustom = new System.Windows.Forms.RadioButton();
             this.btnThemeSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.rgbDark = new System.Windows.Forms.RadioButton();
             this.rgbLight = new System.Windows.Forms.RadioButton();
             this.lblSettings = new System.Windows.Forms.Label();
@@ -133,22 +132,6 @@
             this.btnSaveSettings.UseVisualStyleBackColor = false;
             this.btnSaveSettings.Click += new System.EventHandler(this.btnSaveSettings_Click);
             // 
-            // btnMain
-            // 
-            this.btnMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMain.BackColor = System.Drawing.Color.Black;
-            this.btnMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMain.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnMain.Location = new System.Drawing.Point(370, 306);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(205, 34);
-            this.btnMain.TabIndex = 13;
-            this.btnMain.Text = "Back to Main";
-            this.btnMain.UseVisualStyleBackColor = false;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -163,7 +146,6 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Black;
             this.tabPage1.Controls.Add(this.btnPhases);
-            this.tabPage1.Controls.Add(this.btnMain);
             this.tabPage1.Controls.Add(this.pnlDiagramsSub);
             this.tabPage1.Controls.Add(this.btnSaveSettings);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -236,6 +218,20 @@
             this.btnCustom.Text = "Example Text";
             this.btnCustom.UseVisualStyleBackColor = false;
             // 
+            // rgbCustom
+            // 
+            this.rgbCustom.AutoSize = true;
+            this.rgbCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rgbCustom.ForeColor = System.Drawing.Color.Aquamarine;
+            this.rgbCustom.Location = new System.Drawing.Point(18, 114);
+            this.rgbCustom.Name = "rgbCustom";
+            this.rgbCustom.Size = new System.Drawing.Size(79, 22);
+            this.rgbCustom.TabIndex = 14;
+            this.rgbCustom.Text = "Custom";
+            this.rgbCustom.UseVisualStyleBackColor = true;
+            this.rgbCustom.Visible = false;
+            this.rgbCustom.CheckedChanged += new System.EventHandler(this.rgbCustom_CheckedChanged);
+            // 
             // cmboFore
             // 
             this.cmboFore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,17 +268,6 @@
             this.cmboBack.TabIndex = 3;
             this.cmboBack.SelectedIndexChanged += new System.EventHandler(this.cmboBack_SelectedIndexChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(29, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Note: Main system colours will not be changed";
-            // 
             // lblFore
             // 
             this.lblFore.AutoSize = true;
@@ -305,20 +290,6 @@
             this.lblBack.TabIndex = 0;
             this.lblBack.Text = "Background:";
             // 
-            // rgbCustom
-            // 
-            this.rgbCustom.AutoSize = true;
-            this.rgbCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rgbCustom.ForeColor = System.Drawing.Color.Aquamarine;
-            this.rgbCustom.Location = new System.Drawing.Point(18, 114);
-            this.rgbCustom.Name = "rgbCustom";
-            this.rgbCustom.Size = new System.Drawing.Size(79, 22);
-            this.rgbCustom.TabIndex = 14;
-            this.rgbCustom.Text = "Custom";
-            this.rgbCustom.UseVisualStyleBackColor = true;
-            this.rgbCustom.Visible = false;
-            this.rgbCustom.CheckedChanged += new System.EventHandler(this.rgbCustom_CheckedChanged);
-            // 
             // btnThemeSave
             // 
             this.btnThemeSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -334,6 +305,17 @@
             this.btnThemeSave.Text = "Save";
             this.btnThemeSave.UseVisualStyleBackColor = false;
             this.btnThemeSave.Click += new System.EventHandler(this.btnThemeSave_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(29, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Note: Main system colours will not be changed";
             // 
             // rgbDark
             // 
@@ -406,7 +388,6 @@
         private System.Windows.Forms.RadioButton radBtnManualConString;
         private System.Windows.Forms.Panel pnlDiagramsSub;
         private System.Windows.Forms.Button btnSaveSettings;
-        private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

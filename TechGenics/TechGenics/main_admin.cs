@@ -1656,7 +1656,7 @@ namespace TechGenics
             //while (assemblyPath[i] != '\\') --i;
             //string path = assemblyPath.Substring(0, i);
 
-            string filename = Application.StartupPath + "\\Info_Temps\\User_Manual.pdf";
+            string filename = Application.StartupPath + "\\Info_Temps\\User_Manual_Final.pdf";
 
 
             System.Diagnostics.Process.Start(filename);

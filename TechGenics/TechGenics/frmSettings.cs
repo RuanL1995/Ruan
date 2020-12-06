@@ -40,6 +40,16 @@ namespace TechGenics
 
         private void radBtnManualConString_CheckedChanged(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnSaveSettings_Click(object sender, EventArgs e)
+        {
+            if (radBtnAutoConString.Checked == true)
+            {
+                SettingsConstructor settings = new SettingsConstructor();
+                settings.UseManualConString = false;
+            }
             if (radBtnManualConString.Checked == true)
             {
                 //Example con string Data Source=DESKTOP-7GT4A2S\SQLEXPRESS;Initial Catalog=TGDB;Integrated Security=True
@@ -48,20 +58,12 @@ namespace TechGenics
                 settings.ManualConString = manualConstring;
                 settings.UseManualConString = true;
             }
-        }
-
-        private void btnSaveSettings_Click(object sender, EventArgs e)
-        {
             this.Dispose();
         }
 
         private void radBtnAutoConString_CheckedChanged(object sender, EventArgs e)
         {
-            if (radBtnManualConString.Checked == true)
-            {
-                SettingsConstructor settings = new SettingsConstructor();
-                settings.UseManualConString = false;
-            }
+            
         }
 
         private void btnPhases_Click(object sender, EventArgs e)
@@ -78,6 +80,7 @@ namespace TechGenics
 
         private void btnThemeSave_Click(object sender, EventArgs e)
         {
+
             if(rgbDark.Checked)
             {
                 
@@ -253,7 +256,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.ActiveCaptionText;
                 pnlDiagramsSub.BackColor = SystemColors.ActiveCaptionText;
                 btnSaveSettings.BackColor = SystemColors.ActiveCaptionText;
-                btnMain.BackColor = SystemColors.ActiveCaptionText;
                 btnThemeSave.BackColor = SystemColors.ActiveCaptionText; 
                 btnTheme.BackColor = SystemColors.ActiveCaptionText;
 
@@ -270,7 +272,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.AppWorkspace;
                 pnlDiagramsSub.BackColor = SystemColors.AppWorkspace;
                 btnSaveSettings.BackColor = SystemColors.AppWorkspace;
-                btnMain.BackColor = SystemColors.AppWorkspace;
                 btnThemeSave.BackColor = SystemColors.AppWorkspace;
                 btnTheme.BackColor = SystemColors.AppWorkspace;
 
@@ -351,7 +352,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.ActiveCaption;
                 pnlDiagramsSub.BackColor = SystemColors.ActiveCaption;
                 btnSaveSettings.BackColor = SystemColors.ActiveCaption;
-                btnMain.BackColor = SystemColors.ActiveCaption;
                 btnThemeSave.BackColor = SystemColors.ActiveCaption;
                 btnTheme.BackColor = SystemColors.ActiveCaption;
             }
@@ -367,7 +367,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.Highlight;
                 pnlDiagramsSub.BackColor = SystemColors.Highlight;
                 btnSaveSettings.BackColor = SystemColors.Highlight;
-                btnMain.BackColor = SystemColors.Highlight;
                 btnThemeSave.BackColor = SystemColors.Highlight;
                 btnTheme.BackColor = SystemColors.Highlight;
             }
@@ -383,7 +382,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.Info;
                 pnlDiagramsSub.BackColor = SystemColors.Info;
                 btnSaveSettings.BackColor = SystemColors.Info;
-                btnMain.BackColor = SystemColors.Info;
                 btnThemeSave.BackColor = SystemColors.Info;
                 btnTheme.BackColor = SystemColors.Info;
             }
@@ -399,7 +397,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.ControlDark;
                 pnlDiagramsSub.BackColor = SystemColors.ControlDark;
                 btnSaveSettings.BackColor = SystemColors.ControlDark;
-                btnMain.BackColor = SystemColors.ControlDark;
                 btnThemeSave.BackColor = SystemColors.ControlDark;
                 btnTheme.BackColor = SystemColors.ControlDark;
             }
@@ -415,7 +412,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.ControlDarkDark;
                 pnlDiagramsSub.BackColor = SystemColors.ControlDarkDark;
                 btnSaveSettings.BackColor = SystemColors.ControlDarkDark;
-                btnMain.BackColor = SystemColors.ControlDarkDark;
                 btnThemeSave.BackColor = SystemColors.ControlDarkDark;
                 btnTheme.BackColor = SystemColors.ControlDarkDark;
             }
@@ -431,7 +427,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.Desktop;
                 pnlDiagramsSub.BackColor = SystemColors.Desktop;
                 btnSaveSettings.BackColor = SystemColors.Desktop;
-                btnMain.BackColor = SystemColors.Desktop;
                 btnThemeSave.BackColor = SystemColors.Desktop;
                 btnTheme.BackColor = SystemColors.Desktop;
             }
@@ -447,7 +442,6 @@ namespace TechGenics
                 btnPhases.BackColor = SystemColors.Window;
                 pnlDiagramsSub.BackColor = SystemColors.Window;
                 btnSaveSettings.BackColor = SystemColors.Window;
-                btnMain.BackColor = SystemColors.Window;
                 btnThemeSave.BackColor = SystemColors.Window;
                 btnTheme.BackColor = SystemColors.Window;
             }
@@ -464,7 +458,6 @@ namespace TechGenics
                 btnPhases.ForeColor = SystemColors.ActiveCaption;
                 pnlDiagramsSub.ForeColor = SystemColors.ActiveCaption;
                 btnSaveSettings.ForeColor = SystemColors.ActiveCaption;
-                btnMain.ForeColor = SystemColors.ActiveCaption;
                 btnThemeSave.ForeColor = SystemColors.ActiveCaption;
                 btnTheme.ForeColor = SystemColors.ActiveCaption;
             }
@@ -480,7 +473,6 @@ namespace TechGenics
                 btnPhases.ForeColor = SystemColors.Highlight;
                 pnlDiagramsSub.ForeColor = SystemColors.Highlight;
                 btnSaveSettings.ForeColor = SystemColors.Highlight;
-                btnMain.ForeColor = SystemColors.Highlight;
                 btnThemeSave.ForeColor = SystemColors.Highlight;
                 btnTheme.ForeColor = SystemColors.Highlight;
             }
@@ -496,7 +488,6 @@ namespace TechGenics
                 btnPhases.ForeColor = SystemColors.Info;
                 pnlDiagramsSub.ForeColor = SystemColors.Info;
                 btnSaveSettings.ForeColor = SystemColors.Info;
-                btnMain.ForeColor = SystemColors.Info;
                 btnThemeSave.ForeColor = SystemColors.Info;
                 btnTheme.ForeColor = SystemColors.Info;
             }
@@ -512,7 +503,6 @@ namespace TechGenics
                 btnPhases.ForeColor = SystemColors.ControlDark;
                 pnlDiagramsSub.ForeColor = SystemColors.ControlDark;
                 btnSaveSettings.ForeColor = SystemColors.ControlDark;
-                btnMain.ForeColor = SystemColors.ControlDark;
                 btnThemeSave.ForeColor = SystemColors.ControlDark;
                 btnTheme.ForeColor = SystemColors.ControlDark;
             }
@@ -528,7 +518,6 @@ namespace TechGenics
                 btnPhases.ForeColor = SystemColors.ControlDarkDark;
                 pnlDiagramsSub.ForeColor = SystemColors.ControlDarkDark;
                 btnSaveSettings.ForeColor = SystemColors.ControlDarkDark;
-                btnMain.ForeColor = SystemColors.ControlDarkDark;
                 btnThemeSave.ForeColor = SystemColors.ControlDarkDark;
                 btnTheme.ForeColor = SystemColors.ControlDarkDark;
             }
@@ -544,7 +533,6 @@ namespace TechGenics
                 btnPhases.ForeColor = SystemColors.Desktop;
                 pnlDiagramsSub.ForeColor = SystemColors.Desktop;
                 btnSaveSettings.ForeColor = SystemColors.Desktop;
-                btnMain.ForeColor = SystemColors.Desktop;
                 btnThemeSave.ForeColor = SystemColors.Desktop;
                 btnTheme.ForeColor = SystemColors.Desktop;
             }
@@ -560,7 +548,6 @@ namespace TechGenics
                 btnPhases.ForeColor = SystemColors.Window;
                 pnlDiagramsSub.ForeColor = SystemColors.Window;
                 btnSaveSettings.ForeColor = SystemColors.Window;
-                btnMain.ForeColor = SystemColors.Window;
                 btnThemeSave.ForeColor = SystemColors.Window;
                 btnTheme.ForeColor = SystemColors.Window;
             }
